@@ -295,8 +295,8 @@ Quand le code testé dépend d'autre chose (base de données, service externe, h
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center;">
-Dans ce module, on utilise <b>Mockito</b> (tp2 avancé, tp3). Pas obligatoire au CC3.
+<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center; font-size: 0.95rem;">
+Dans ce module, l'outillage tests mis en pratique est surtout <b>ApprovalTests</b> (kata à sortie textuelle, cf. TP2 Minesweeper) et le <b>pair programming ping-pong</b> (TP3). <b>Mockito</b> est disponible en dépendance si vous en avez besoin, mais n'est pas exercé ici. Pas obligatoire au CC3.
 </div>
 
 ---
@@ -1069,26 +1069,32 @@ Ces tests <b>ne valident pas</b> que le code est juste - ils le <b>pinnent</b>.
 
 ## 🎯 Le pattern du TP4
 
-Chaque exercice du TP4 suit le même squelette :
+Chaque exercice du TP4 suit le même squelette, avec **deux familles de tests** :
 
 ```mermaid
 graph LR
-    A[1. Lire le code<br/>smelly] --> B[2. Lire les tests<br/>de caractérisation<br/>déjà écrits]
-    B --> C[3. Vérifier qu'ils<br/>passent en l'état]
-    C --> D[4. Refactorer<br/>par petits pas]
-    D --> E[5. Tests toujours<br/>verts à chaque pas]
+    A[1. Lire le code<br/>smelly] --> B[2. Vérifier que<br/>les caractérisations<br/>passent en vert]
+    B --> C[3. Identifier le smell<br/>+ choisir le refactoring]
+    C --> D[4. Refactorer par<br/>petits pas - caract<br/>reste verte]
+    D --> E[5. Retirer @Disabled<br/>des tests de structure<br/>que le refactoring débloque]
     E --> F[6. Commit à<br/>chaque étape sûre]
 
     style A fill:#e74c3c,color:#fff
-    style B fill:#e8a838,color:#fff
-    style C fill:#27ae60,color:#fff
+    style B fill:#27ae60,color:#fff
+    style C fill:#e8a838,color:#fff
     style D fill:#4a90d9,color:#fff
     style E fill:#27ae60,color:#fff
     style F fill:#2c3e50,color:#fff
 ```
 
-<div style="margin-top: 0.5rem; background: #fff3cd; padding: 1rem; border-radius: 8px; text-align: center;">
-⚠️ <b>Si un test casse</b>, ne le modifiez pas pour le faire passer. Annulez votre refactoring (<code>git reset</code>, <code>Ctrl+Z</code>). Votre « refactoring » était un <b>bug</b>.
+<div style="margin-top: 0.5rem; background: #eef6fb; padding: 0.8rem 1rem; border-left: 4px solid #4a90d9; border-radius: 6px; font-size: 0.95rem;">
+<b>Deux filets de tests, deux rôles</b> :<br/>
+• <b>Caractérisation</b> (active, verte dès le départ) : pin le comportement. Elle doit <b>rester verte</b> après chaque transformation - c'est votre garde-fou anti-régression.<br/>
+• <b>Structure</b> (<code>@Disabled</code> au départ) : vérifie que votre refactoring a produit la bonne extraction (méthode, constante, classe, record). Vous la débloquez <b>au fur et à mesure</b>. Elle prouve que le geste a été fait, pas juste que rien n'est cassé.
+</div>
+
+<div style="margin-top: 0.5rem; background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; text-align: center;">
+⚠️ <b>Si une caractérisation casse</b>, ne la modifiez pas pour la faire passer. Annulez votre dernière transformation (<code>git restore .</code>). Votre « refactoring » était un <b>bug</b>.
 </div>
 
 ---
@@ -1361,9 +1367,8 @@ Driver / navigator, ping-pong TDD.
 <div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1;">
 <div style="font-size: 1.4rem; font-weight: bold;">🧹 TP4</div>
 <div style="font-size: 0.95rem; margin-top: 0.4rem;">
-4 exercices de refactoring :<br/>
-Facture (Long Method), Animal (Polymorphisme), Notification (Parameter Object), <b>Gilded Rose</b>.<br/><br/>
-Tests de caractérisation fournis.
+6 exercices de refactoring : Facture (Extract Method), CalculPrix (Magic Number), Menu (Extract Class), Animal (Polymorphisme), ServiceNotification (Parameter Object), <b>Gilded Rose</b>.<br/><br/>
+Caractérisation <b>active et verte</b> + tests de structure <code>@Disabled</code> à débloquer.
 </div>
 </div>
 
