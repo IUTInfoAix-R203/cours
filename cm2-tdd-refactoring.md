@@ -1046,13 +1046,10 @@ Principe <b>Open/Closed</b> : ouvert à l'extension, fermé à la modification.
 
 Un refactoring **manuel** est risqué. Un oubli, un mauvais remplacement → comportement changé.
 
-**IntelliJ IDEA** (utilisé par les pros, gratuit en Community) et **VS Code** (avec extensions Java) proposent des refactorings **automatiques et sûrs** :
+Les TP se font dans le **Codespace VS Code** avec l'extension Java officielle (Red Hat). Les gestes de refactoring passent par deux entrées :
 
-- `F6` : Rename (change **toutes** les occurrences, imports inclus)
-- `Ctrl+Alt+M` : Extract Method
-- `Ctrl+Alt+V` : Extract Variable
-- `Ctrl+Alt+F` : Extract Field
-- `Ctrl+Alt+C` : Extract Constant
+- **`Ctrl+.`** (ou `Cmd+.` sur Mac) : menu **Quick Fix + Refactor** contextuel. Propose *Extract to method*, *Extract to constant*, *Extract to variable / field*, *Move...*, *Inline...*, *Add unimplemented methods* selon ce que le curseur touche.
+- **`F2`** : **Rename** (propage partout, imports + Javadoc inclus).
 
 </div>
 <div style="flex: 1;">
@@ -1065,10 +1062,14 @@ Un refactoring **manuel** est risqué. Un oubli, un mauvais remplacement → com
 
 </div>
 
-<div style="margin-top: 1rem; background: #fff3cd; padding: 1rem; border-radius: 8px;">
+<div style="margin-top: 1rem; background: #fff3cd; padding: 1rem; border-radius: 8px; font-size: 0.95rem;">
 
-**Au TP4**, on abuse des raccourcis IntelliJ / VS Code.
+**Au TP4**, on abuse de <code>Ctrl+.</code> et <code>F2</code>. Le README liste la correspondance raccourci → refactoring pour chaque exercice.
 
+</div>
+
+<div style="margin-top: 0.5rem; font-size: 0.85rem; color: #666;">
+<em>IntelliJ IDEA fait les mêmes refactorings avec <code>Ctrl+Alt+M</code>, <code>Ctrl+Alt+V</code>, <code>Shift+F6</code>... si vous préférez l'utiliser en dehors des TP.</em>
 </div>
 
 </div>
@@ -1482,7 +1483,7 @@ IUT d'Aix-Marseille - Département Informatique
 </div>
 
 <div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 12px; font-size: 1.1rem;">
-<b>🎯 Dès maintenant</b> : ouvrez votre IDE, tentez le <em>Rename</em> (F6 / F2), l'<em>Extract Method</em> (Ctrl+Alt+M). Le plus tôt vos doigts connaissent ces gestes, le mieux vous vivrez les TP3 et TP4.
+<b>🎯 Dès maintenant</b> : dans votre Codespace, essayez <code>F2</code> pour renommer un identifiant, puis sélectionnez quelques lignes et lancez <code>Ctrl+.</code> → <em>Extract to method</em>. Le plus tôt vos doigts connaissent ces deux gestes, le mieux vous vivrez les TP3 et TP4.
 </div>
 
 <div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
