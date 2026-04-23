@@ -78,8 +78,8 @@ TP3 Kata + TP4 Refactoring
 <div style="flex: 1;">
 
 **⏱️ Volume horaire** : 22 h
-- CM (4 h) + TD (5 h) + TP (13 h)
-- Test écrit (2 h, le 15 juin)
+- CM (4 h) + TD (4 h) + TP (12 h)
+- Test écrit (2 h, le 18 juin)
 
 </div>
 </div>
@@ -1124,7 +1124,7 @@ Le TP2 a un fichier `.github/copilot-instructions.md` qui configure Copilot comm
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
-<b>Au CC3 (15 juin), vous coderez sur feuille, sans outil.</b> Copilot est un tuteur pendant les TP ; vos réflexes doivent être les vôtres.
+<b>Au CC3 (18 juin), vous coderez sur feuille, sans outil.</b> Copilot est un tuteur pendant les TP ; vos réflexes doivent être les vôtres.
 </div>
 
 ---
