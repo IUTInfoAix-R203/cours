@@ -897,6 +897,46 @@ Je vais faire la démo suivante, posez des questions pendant :
 
 ---
 
+## 🔗 De l'historique propre au code qui tient
+
+<div style="display: flex; gap: 1.5rem; align-items: center; margin-top: 1rem;">
+
+<div style="flex: 1;">
+
+Avec Git, on a pris soin de la **trace** de notre travail : chaque commit raconte un pas, chaque PR invite le regard d'un autre, chaque rebase redresse l'histoire qu'on laissera derrière nous.
+
+Mais une belle histoire ne garantit pas que **le code actuel marche**. Vous pouvez avoir le plus propre des historiques et une base de code qu'on n'ose plus modifier.
+
+L'autre moitié du métier de l'artisan, c'est de **vérifier** son ouvrage. Pas à la livraison - **à chaque geste**. C'est là qu'intervient le TDD.
+
+</div>
+
+<div style="flex: 0.9;">
+
+<div style="background: #4a90d9; color: white; padding: 1rem 1.2rem; border-radius: 10px; text-align: center;">
+<b>Git</b><br/>
+<span style="font-size: 0.95rem;">la trace propre du travail</span>
+</div>
+
+<div style="text-align: center; font-size: 1.8rem; margin: 0.3rem 0;">+</div>
+
+<div style="background: #27ae60; color: white; padding: 1rem 1.2rem; border-radius: 10px; text-align: center;">
+<b>Tests</b><br/>
+<span style="font-size: 0.95rem;">l'ouvrage qui tient</span>
+</div>
+
+<div style="text-align: center; font-size: 1.8rem; margin: 0.3rem 0;">=</div>
+
+<div style="background: #e8a838; color: white; padding: 1rem 1.2rem; border-radius: 10px; text-align: center;">
+<b>Le geste complet<br/>de l'artisan</b>
+</div>
+
+</div>
+
+</div>
+
+---
+
 <!-- _class: lead -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
