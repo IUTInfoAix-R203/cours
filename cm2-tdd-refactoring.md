@@ -451,6 +451,38 @@ Dans ce module, on se concentre sur la <b>base</b> : les tests unitaires.
 
 ---
 
+## 🌄 Où s'arrête le TDD ?
+
+<div style="display: flex; gap: 1.2rem; margin-top: 0.8rem;">
+
+<div style="flex: 1; background: #e6f5ec; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #27ae60;">
+<b>Ce que le TDD fait bien</b>
+<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
+<li>Cadrer une <b>intention</b> avant de coder</li>
+<li>Donner un <b>filet</b> pour refactorer sereinement</li>
+<li>Produire une <b>documentation vivante</b> du comportement</li>
+<li>Forcer un <b>découplage</b> (sinon le test devient injouable)</li>
+</ul>
+</div>
+
+<div style="flex: 1; background: #fde8e6; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
+<b>Ce que le TDD ne fait PAS</b>
+<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
+<li><b>Garantir</b> que le produit est utile pour le client</li>
+<li>Remplacer la <b>revue de code</b> et le <b>pair programming</b></li>
+<li>Couvrir les bugs d'<b>intégration</b>, de <b>perf</b>, d'<b>ergonomie</b></li>
+<li>Dispenser de <b>penser</b> - un test tautologique passera toujours</li>
+</ul>
+</div>
+
+</div>
+
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ L'artisan connaît ses outils - et leurs <b>limites</b>. Un marteau ne visse pas une vis, même très bien utilisé. Le TDD est un outil puissant pour <b>le code qui prend en charge une logique claire</b> ; il ne remplace ni les tests d'intégration, ni la relecture humaine, ni l'entretien avec le client qui dira si l'ouvrage correspond à son besoin.
+</div>
+
+---
+
 <!-- _class: lead -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
@@ -1157,6 +1189,38 @@ Ajouter Conjured **directement** dans le code spaghetti est très risqué. Le re
 </div>
 
 </div>
+</div>
+
+---
+
+## 🌄 Où s'arrête le refactoring ?
+
+<div style="display: flex; gap: 1.2rem; margin-top: 0.8rem;">
+
+<div style="flex: 1; background: #e6f5ec; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #27ae60;">
+<b>Refactorer vaut le coup quand...</b>
+<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
+<li>vous <b>allez toucher</b> cette zone dans les prochains mois</li>
+<li>le smell <b>ralentit</b> concrètement une feature ou un bug fix</li>
+<li>vous avez des tests qui <b>prouvent</b> que rien ne casse</li>
+<li>c'est <b>l'endroit précis</b> où vous intervenez (règle du scout)</li>
+</ul>
+</div>
+
+<div style="flex: 1; background: #fde8e6; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
+<b>Refactorer est un piège quand...</b>
+<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
+<li>le code <b>marche</b>, est <b>stable</b> et <b>personne ne le touche</b></li>
+<li>vous le faites juste parce que « c'est pas joli »</li>
+<li>il n'y a pas de <b>tests</b> pour sécuriser - vous allez casser</li>
+<li>vous refactorez <b>et</b> ajoutez une feature en même temps</li>
+</ul>
+</div>
+
+</div>
+
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ L'artisan qui retourne son atelier <b>tous les jours</b> ne travaille plus - il range. Le refactoring a un <b>coût</b> : du temps, un risque résiduel, une PR à relire. On le justifie toujours par un bénéfice concret à venir, pas par un idéal d'esthétique.
 </div>
 
 ---
