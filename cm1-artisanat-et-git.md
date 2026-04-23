@@ -202,7 +202,7 @@ Un **artisan du logiciel** ne se contente pas de livrer du code qui compile. Il 
 
 > En tant qu'aspirants <b>Software Craftsmen</b>, nous visons non seulement :
 
-| Au-delà de… | … nous voulons : |
+| Au-delà de... | ... nous voulons : |
 |---|---|
 | du logiciel qui marche | du logiciel **bien conçu** |
 | répondre au changement | **ajouter régulièrement de la valeur** |
@@ -224,7 +224,7 @@ Inspiré du <em>Manifeste Agile</em> (2001) - mais il ajoute un niveau d'exigenc
 
 Plus un bug est détecté **tard**, plus il coûte cher à corriger. Ordre de grandeur connu :
 
-| Détecté pendant… | Coût relatif |
+| Détecté pendant... | Coût relatif |
 |---|---|
 | Le développement | 1x |
 | Les tests | 6x |
