@@ -47,14 +47,14 @@ Ce CM prépare <b>TP3 - Kata</b> (séance 3) et <b>TP4 - Refactoring</b> (séanc
 <div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center; opacity: 0.55;">
 <b>✓ CM1</b><br/><span style="font-size: 0.9rem;">Artisanat + Git + TDD intro</span>
 </div>
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center; opacity: 0.55;">
-<b>✓ TP1</b><br/><span style="font-size: 0.9rem;">Git avancé</span>
-</div>
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center; opacity: 0.55;">
-<b>✓ TP2</b><br/><span style="font-size: 0.9rem;">TDD baby-steps</span>
-</div>
 <div style="background: #e8a838; color: white; padding: 1rem; border-radius: 10px; flex: 1.3; text-align: center; border: 3px solid #c87d00;">
 <b>📍 CM2 (vous êtes ici)</b><br/><span style="font-size: 0.9rem;">TDD + Refactoring</span>
+</div>
+<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
+<b>TP1</b><br/><span style="font-size: 0.9rem;">Git avancé</span>
+</div>
+<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
+<b>TP2</b><br/><span style="font-size: 0.9rem;">TDD baby-steps</span>
 </div>
 <div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
 <b>TP3</b><br/><span style="font-size: 0.9rem;">Kata + pair prog</span>
@@ -68,7 +68,7 @@ Ce CM prépare <b>TP3 - Kata</b> (séance 3) et <b>TP4 - Refactoring</b> (séanc
 </div>
 
 <div style="margin-top: 1.5rem; font-size: 1.1rem; text-align: center;">
-Ce que vous avez goûté au TP2, on va l'<b>approfondir</b>. Et on attaque le <b>refactoring</b> : transformer du code existant sans le casser.
+Le CM1 a ouvert le TDD ; on l'<b>approfondit</b> aujourd'hui. Puis on attaque le <b>refactoring</b> : transformer du code existant sans le casser. L'après-midi, on met tout ça en pratique sur TP1 (Git) et TP2 (TDD).
 </div>
 
 <div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
@@ -136,7 +136,7 @@ Ces lois semblent extrêmes. Elles sont là pour <b>forcer les baby-steps</b>.<b
 
 ---
 
-## 🎯 Les 3 stratégies de Kent Beck (rappel TP2)
+## 🎯 Les 3 stratégies de Kent Beck (reprise du CM1)
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
 

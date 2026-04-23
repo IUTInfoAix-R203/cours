@@ -1198,10 +1198,14 @@ Le TP2 a un fichier `.github/copilot-instructions.md` qui configure Copilot comm
 
 # Ce qu'on fait maintenant
 
-**🔀 TP1 - Git avancé** (cette semaine, ~2h non noté)
+Le module R2.03 se concentre sur **4 semaines**. Ce CM1 (semaine du 27 avril) est la seule séance de cette semaine.
+
+**Semaine prochaine (4 mai)** : vous enchaînez **CM2 le matin** puis **TP1 + TP2 l'après-midi**.
+
+**🔀 TP1 - Git avancé** (~2h, non noté)
 Rebase, cherry-pick, Conventional Commits, PR + review.
 
-**✅ TP2 - TDD** (semaine prochaine, 6h noté)
+**✅ TP2 - TDD** (~4h, noté)
 Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
 
 **👉 Lien Classroom** sur [github.com/IUTInfoAix-R203/tp](https://github.com/IUTInfoAix-R203/tp)
@@ -1212,6 +1216,6 @@ Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
 
 # À suivre : CM2 - TDD avancé et refactoring
 
-Dans 2 semaines, semaine du 4 mai.
+**Semaine prochaine (4 mai), le matin avant les TP.**
 
 Au programme : approfondir le TDD, découvrir les kata en pair programming, et préparer le refactoring du TP4.
