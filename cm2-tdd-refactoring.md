@@ -544,6 +544,50 @@ Dans ce module, on se concentre sur la <b>base</b> : les tests unitaires.
 
 ---
 
+## 🧬 Bonus : la couverture ne suffit pas
+
+<div style="display: flex; gap: 1.5rem; margin-top: 0.4rem;">
+<div style="flex: 1.1;">
+
+**La couverture de code** (JaCoCo, IntelliJ Coverage) dit : *« quelles lignes ont été exécutées par les tests ? »*
+
+C'est utile... mais ça ne dit **pas** si vos tests détectent de vrais bugs. Exemple piège :
+
+```java
+int diviser(int a, int b) {
+  return a / b;  // ligne 100% couverte
+}
+
+@Test void test() { diviser(10, 2); }  // aucun assert !
+```
+
+La ligne est couverte à 100 %. Aucun bug ne sera détecté.
+
+</div>
+<div style="flex: 1;">
+
+<div style="background: #e6f0f9; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #4a90d9;">
+<b>Mutation testing</b> (outil <b>PIT</b> en Java) répond à une question plus dure : <em>« si je modifie subtilement le code de production, est-ce que mes tests le détectent ? »</em>
+</div>
+
+<div style="margin-top: 0.8rem; background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.95rem;">
+<b>Exemple de mutation</b> : PIT remplace <code>a + b</code> par <code>a - b</code>. Si votre test passe toujours, votre test était <b>tautologique</b>. Si le test casse : bien, il avait du sens.
+</div>
+
+<div style="margin-top: 0.8rem; text-align: center; font-size: 0.95rem;">
+<b>Score PIT</b> = % de mutations détectées par la suite de tests.<br/>
+Un score 80 % raconte <em>vraiment</em> la qualité des tests.
+</div>
+
+</div>
+</div>
+
+<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.7rem 1rem; border-radius: 8px; font-size: 0.95rem; text-align: center;">
+<b>Hors scope R2.03</b>, mais à connaître : quand une entreprise est sérieuse sur la qualité des tests, elle regarde <b>le score mutation</b>, pas seulement la couverture. Outil gratuit : <a href="https://pitest.org" style="color: #e8a838;">pitest.org</a>.
+</div>
+
+---
+
 ## 🌄 Où s'arrête le TDD ?
 
 <div style="display: flex; gap: 1.2rem; margin-top: 0.8rem;">
@@ -1394,7 +1438,48 @@ Un nom plus clair, une méthode extraite, un test ajouté.
 
 ---
 
-## 🧱 SOLID - le S : Single Responsibility
+## 🧱 SOLID : 5 principes de Robert C. Martin
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 0.6rem; margin-top: 0.5rem; font-size: 0.9rem;">
+
+<div style="background: #e74c3c; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
+<div style="font-size: 2rem; font-weight: bold;">S</div>
+<div>Single<br/>Responsibility</div>
+</div>
+
+<div style="background: #e8a838; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
+<div style="font-size: 2rem; font-weight: bold;">O</div>
+<div>Open /<br/>Closed</div>
+</div>
+
+<div style="background: #27ae60; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
+<div style="font-size: 2rem; font-weight: bold;">L</div>
+<div>Liskov<br/>Substitution</div>
+</div>
+
+<div style="background: #4a90d9; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
+<div style="font-size: 2rem; font-weight: bold;">I</div>
+<div>Interface<br/>Segregation</div>
+</div>
+
+<div style="background: #8e44ad; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
+<div style="font-size: 2rem; font-weight: bold;">D</div>
+<div>Dependency<br/>Inversion</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; text-align: center; font-size: 1.05rem;">
+5 principes de conception orientée objet. On les voit un par un, avec un exemple chacun. Objectif : <b>reconnaître le nom</b> et avoir <b>un exemple mental</b>.
+</div>
+
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
+🛠️ SOLID, c'est <b>l'équivalent des règles du métier</b> pour l'artisan du logiciel : on peut coder sans les connaître, mais on coderait mieux en les connaissant. Vous n'avez pas à tout maîtriser dès le BUT1 - vous devez pouvoir <b>reconnaître</b> chaque principe quand un·e collègue y fera référence.
+</div>
+
+---
+
+## 🧱 S - Single Responsibility Principle
 
 Une classe doit avoir **une seule raison de changer**.
 
@@ -1434,7 +1519,179 @@ Chaque classe : **une** raison de changer.
 </div>
 
 <div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
-SOLID = 5 principes de Robert C. Martin. Le <b>S</b> suffit déjà à améliorer énormément votre code.
+C'est le refactoring <b>Extract Class</b> appliqué systématiquement. Le <b>TP4 exercice 3</b> en fait une démo : <code>Menu</code> fait à la fois l'affichage ET la gestion de l'historique → on extrait <code>Historique</code>.
+</div>
+
+---
+
+## 🧱 O - Open / Closed Principle
+
+Une classe doit être **ouverte à l'extension**, **fermée à la modification**.
+
+<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
+<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**❌ Chaque nouveau type modifie la méthode**
+
+```java
+String faireDuBruit(Animal a) {
+  switch (a.type) {
+    case "chien": return "Wouaf";
+    case "chat":  return "Miaou";
+    // ajouter un cas = modifier CETTE méthode
+  }
+}
+```
+
+</div>
+<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**✅ Chaque nouveau type est une nouvelle classe**
+
+```java
+abstract class Animal {
+  abstract String faireDuBruit();
+}
+class Chien extends Animal { String faireDuBruit() { return "Wouaf"; } }
+class Chat  extends Animal { String faireDuBruit() { return "Miaou"; } }
+// nouveau type = nouvelle classe, CODE EXISTANT non touché
+```
+
+</div>
+</div>
+
+<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
+C'est exactement le refactoring <b>Replace Conditional with Polymorphism</b>. <b>TP4 exercice 4</b> (Animal) et <b>exercice 6</b> (Gilded Rose).
+</div>
+
+---
+
+## 🧱 L - Liskov Substitution Principle
+
+Une sous-classe doit pouvoir **remplacer** sa classe mère **sans casser** le code qui l'utilise.
+
+<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
+<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**❌ Carre extends Rectangle qui casse la logique**
+
+```java
+class Rectangle {
+  void setLargeur(int l) { ... }
+  void setHauteur(int h) { ... }
+}
+class Carre extends Rectangle {
+  // force largeur == hauteur !
+  void setLargeur(int l) { this.largeur = l; this.hauteur = l; }
+}
+// Code appelant : r.setLargeur(5); r.setHauteur(3);
+// -> surprise si r est un Carre : largeur devient 3
+```
+
+</div>
+<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**✅ Hiérarchie qui respecte le contrat**
+
+```java
+interface Forme { int aire(); }
+class Rectangle implements Forme { ... }
+class Carre implements Forme { ... }
+// Chacune implémente aire(), aucune ne "ment"
+// sur le comportement attendu.
+```
+
+</div>
+</div>
+
+<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
+Règle pratique : <b>si vous devez overrider pour désactiver ou contredire la classe mère, c'est une alerte LSP</b>. Préférez la composition ou une interface commune.
+</div>
+
+---
+
+## 🧱 I - Interface Segregation Principle
+
+**Mieux vaut plusieurs interfaces ciblées** qu'une grosse interface fourre-tout.
+
+<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
+<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**❌ Machine à tout faire**
+
+```java
+interface Machine {
+  void imprimer(Doc d);
+  void scanner(Doc d);
+  void envoyerFax(Doc d);
+}
+// Une Imprimante simple doit implémenter
+// scanner() et envoyerFax() pour rien.
+// -> UnsupportedOperationException partout.
+```
+
+</div>
+<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**✅ Interfaces séparées, cumulables**
+
+```java
+interface Imprimante { void imprimer(Doc d); }
+interface Scanner    { void scanner(Doc d); }
+interface Fax        { void envoyerFax(Doc d); }
+
+class ImprimanteSimple implements Imprimante { ... }
+class MultiFonction implements Imprimante, Scanner, Fax { ... }
+```
+
+</div>
+</div>
+
+<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
+Règle pratique : <b>une interface = un rôle</b>. Si une classe implémente l'interface mais jette <code>UnsupportedOperationException</code> sur la moitié des méthodes, elle a besoin d'une interface plus ciblée.
+</div>
+
+---
+
+## 🧱 D - Dependency Inversion Principle
+
+**Dépendez d'abstractions** (interfaces), **pas d'implémentations concrètes**.
+
+<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
+<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**❌ Couplage dur à MySQL**
+
+```java
+class GestionUtilisateurs {
+  private MySQLRepository db = new MySQLRepository();
+  // Impossible de tester sans une vraie BDD MySQL.
+  // Impossible de changer pour Postgres sans réécrire.
+}
+```
+
+</div>
+<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
+
+**✅ Dépendance via interface**
+
+```java
+interface UtilisateurRepository {
+  Optional<Utilisateur> trouver(int id);
+}
+
+class GestionUtilisateurs {
+  private final UtilisateurRepository repo;
+  // injecté au constructeur : MySQL en prod,
+  // repo en mémoire en test
+}
+```
+
+</div>
+</div>
+
+<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
+C'est ce qui rend les <b>test doubles</b> possibles (slide test doubles plus tôt). Sans DIP, pas de stub, pas de mock propre.
 </div>
 
 ---
