@@ -71,6 +71,10 @@ Ce CM prépare <b>TP3 - Kata</b> (séance 3) et <b>TP4 - Refactoring</b> (séanc
 Ce que vous avez goûté au TP2, on va l'<b>approfondir</b>. Et on attaque le <b>refactoring</b> : transformer du code existant sans le casser.
 </div>
 
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ <b>En CM1 on a vu <em>pourquoi</em> l'artisan prend soin de son code.</b> Aujourd'hui, on voit <b>comment il s'y prend au quotidien</b> : tester avant, refactorer souvent, nommer juste. Les gestes qui transforment l'intention en habitude.
+</div>
+
 ---
 
 <!-- _class: lead -->
@@ -80,6 +84,11 @@ Ce que vous avez goûté au TP2, on va l'<b>approfondir</b>. Et on attaque le <b
 # Partie 1 - TDD approfondi
 
 On a vu le cycle RED-GREEN-REFACTOR. Maintenant, comment en tirer le maximum ?
+
+<div style="margin-top: 1.5rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ <b>Un artisan n'expose jamais un outil qu'il n'a pas essayé lui-même.</b><br/>
+Le TDD, c'est exactement ce geste : <b>écrire le test d'abord</b>, c'est s'obliger à savoir ce que l'outil doit faire <em>avant</em> de le forger. La table ne part chez le client qu'une fois essayée sur l'établi.
+</div>
 
 ---
 
@@ -667,6 +676,11 @@ Un état (jeu en cours) + un comportement (marquer un point) → l'affichage du 
 
 Du code qui marche, mais qui pue. On fait quoi ?
 
+<div style="margin-top: 1.5rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ <b>Un artisan entretient ses outils.</b><br/>
+Le menuisier aiguise sa scie entre deux chantiers. Le chef récure ses couteaux en fin de service. Pas par perfectionnisme — parce que demain ils s'en servent <em>encore</em>. Refactorer, c'est exactement ce geste : on ne le fait pas pour faire joli, on le fait pour <b>rester rapide ensuite</b>. Le code qu'on lit cette semaine, c'est celui qu'on modifiera le mois prochain.
+</div>
+
 ---
 
 ## 👃 Qu'est-ce qu'un code smell ?
@@ -1176,7 +1190,11 @@ Chaque fois que vous <b>touchez</b> un fichier, vous le laissez <b>un peu mieux<
 Un nom plus clair, une méthode extraite, un test ajouté.
 </div>
 
-<div style="margin-top: 1rem; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ C'est <b>le geste de l'artisan qui range son atelier</b> avant de partir. Pas pour la démonstration, pas pour la photo - parce que demain matin il veut retrouver un atelier où il peut travailler vite. La règle du scout appliquée au code, c'est la même économie : l'artisan soigne son environnement parce que <em>c'est là qu'il vit</em>.
+</div>
+
+<div style="margin-top: 0.8rem; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
 💡 <b>Effet cumulé</b> : 20 développeurs qui améliorent 2 lignes à chaque PR = la base de code s'<b>auto-nettoie</b>. Inverse du cercle vicieux de la dette technique.
 </div>
 
@@ -1401,4 +1419,8 @@ IUT d'Aix-Marseille - Département Informatique
 
 <div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 12px; font-size: 1.1rem;">
 <b>🎯 Dès maintenant</b> : ouvrez votre IDE, tentez le <em>Rename</em> (F6 / F2), l'<em>Extract Method</em> (Ctrl+Alt+M). Le plus tôt vos doigts connaissent ces gestes, le mieux vous vivrez les TP3 et TP4.
+</div>
+
+<div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ <b>L'artisan, au fond, c'est vous.</b> Le CM1 a posé le <em>pourquoi</em> — du code dont on peut être fier, qu'on n'a pas peur de relire dans six mois. Ce CM2 a posé les <em>gestes</em> — tester avant, refactorer souvent, nommer juste, ranger en partant. À partir du TP3, le seul objectif est que ces gestes deviennent des <b>réflexes</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
 </div>
