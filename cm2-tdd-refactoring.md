@@ -209,7 +209,7 @@ Même quand la solution semble évidente. <b>Pourquoi</b> : fake it vérifie que
 </div>
 
 <div style="margin-top: 0.8rem; background: #fde8e6; border-left: 5px solid #e74c3c; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
-⚠️ <b>Anti-pattern fréquent en BUT1</b> : « je sais déjà comment coder, je vais directement en obvious. » Résultat : le test n'est jamais rouge, vous ne savez pas s'il vérifie vraiment quelque chose. <b>Fake it d'abord</b>, toujours - même 10 secondes, pour voir le test passer du rouge au vert.
+⚠️ <b>Anti-pattern fréquent en BUT1</b> : "je sais déjà comment coder, je vais directement en obvious." Résultat : le test n'est jamais rouge, vous ne savez pas s'il vérifie vraiment quelque chose. <b>Fake it d'abord</b>, toujours - même 10 secondes, pour voir le test passer du rouge au vert.
 </div>
 
 ---
@@ -223,7 +223,7 @@ Même quand la solution semble évidente. <b>Pourquoi</b> : fake it vérifie que
 | **F**ast | Rapide (quelques ms) | On les lance des dizaines de fois par heure |
 | **I**ndependent | Indépendants entre eux | Changer l'ordre ne doit rien casser |
 | **R**epeatable | Reproductible | Pas de dépendance au réseau, à l'heure, à un fichier temporaire |
-| **S**elf-validating | Auto-vérifiant | Rouge ou vert, pas de « regardez le log » |
+| **S**elf-validating | Auto-vérifiant | Rouge ou vert, pas de "regardez le log" |
 | **T**imely | Écrit au bon moment | **Avant** le code, pas après |
 
 </div>
@@ -549,7 +549,7 @@ Dans ce module, on se concentre sur la <b>base</b> : les tests unitaires.
 <div style="display: flex; gap: 1.5rem; margin-top: 0.4rem;">
 <div style="flex: 1.1;">
 
-**La couverture de code** (JaCoCo, IntelliJ Coverage) dit : *« quelles lignes ont été exécutées par les tests ? »*
+**La couverture de code** (JaCoCo, IntelliJ Coverage) dit : *"quelles lignes ont été exécutées par les tests ?"*
 
 C'est utile... mais ça ne dit **pas** si vos tests détectent de vrais bugs. Exemple piège :
 
@@ -567,7 +567,7 @@ La ligne est couverte à 100 %. Aucun bug ne sera détecté.
 <div style="flex: 1;">
 
 <div style="background: #e6f0f9; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #4a90d9;">
-<b>Mutation testing</b> (outil <b>PIT</b> en Java) répond à une question plus dure : <em>« si je modifie subtilement le code de production, est-ce que mes tests le détectent ? »</em>
+<b>Mutation testing</b> (outil <b>PIT</b> en Java) répond à une question plus dure : <em>"si je modifie subtilement le code de production, est-ce que mes tests le détectent ?"</em>
 </div>
 
 <div style="margin-top: 0.8rem; background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.95rem;">
@@ -658,7 +658,7 @@ Le but, c'est d'améliorer **votre façon** de le résoudre.
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; font-size: 0.95rem;">
-Analogie : un pianiste ne joue pas ses gammes pour « réussir les gammes ». Il les joue pour <b>garder la main</b>.
+Analogie : un pianiste ne joue pas ses gammes pour "réussir les gammes". Il les joue pour <b>garder la main</b>.
 </div>
 
 </div>
@@ -713,7 +713,7 @@ Au TP3, on en fera <b>5</b> : Années bissextiles, Tennis, Gestion employés, Pa
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
 
 <div style="background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>🏃 1ère fois</b> : je galère, je découvre les règles. Je code « quelque chose qui marche ».
+<b>🏃 1ère fois</b> : je galère, je découvre les règles. Je code "quelque chose qui marche".
 </div>
 
 <div style="background: #e6f5ec; padding: 1rem; border-radius: 10px;">
@@ -764,7 +764,7 @@ On <b>échange</b> les rôles toutes les 7 à 10 minutes.
 
 - Moins de bugs (deux cerveaux sur chaque ligne)
 - Montée en compétences croisée
-- Moins de « bus factor » sur le code
+- Moins de "bus factor" sur le code
 - Revue de code permanente, en temps réel
 - Effet antisomnolent 😴
 
@@ -773,7 +773,7 @@ On <b>échange</b> les rôles toutes les 7 à 10 minutes.
 <div style="margin-top: 1rem; background: #fde8e6; padding: 1rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
 
 **⚠ Attention**
-- Pas le même que « un qui code, un qui regarde son téléphone »
+- Pas le même que "un qui code, un qui regarde son téléphone"
 - Fatigant - faire des pauses toutes les heures
 
 </div>
@@ -802,7 +802,7 @@ Un cas particulier très puissant de pair programming :
 <b>✅ Avantage 1</b> : chacun des deux <b>devine l'intention</b> de l'autre. Excellent pour le design.
 </div>
 <div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>✅ Avantage 2</b> : impossible d'écrire du code « en douce » sans test. Le coéquipier impose la discipline.
+<b>✅ Avantage 2</b> : impossible d'écrire du code "en douce" sans test. Le coéquipier impose la discipline.
 </div>
 <div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
 <b>✅ Avantage 3</b> : on voit <b>immédiatement</b> si un test est mal écrit - l'autre ne sait pas quoi coder.
@@ -847,7 +847,7 @@ Du code qui marche, mais qui pue. On fait quoi ?
 
 <div style="margin-top: 1.5rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
 🛠️ <b>Un artisan entretient ses outils.</b><br/>
-Le menuisier aiguise sa scie entre deux chantiers. Le chef récure ses couteaux en fin de service. Pas par perfectionnisme — parce que demain ils s'en servent <em>encore</em>. Refactorer, c'est exactement ce geste : on ne le fait pas pour faire joli, on le fait pour <b>rester rapide ensuite</b>. Le code qu'on lit cette semaine, c'est celui qu'on modifiera le mois prochain.
+Le menuisier aiguise sa scie entre deux chantiers. Le chef récure ses couteaux en fin de service. Pas par perfectionnisme - parce que demain ils s'en servent <em>encore</em>. Refactorer, c'est exactement ce geste : on ne le fait pas pour faire joli, on le fait pour <b>rester rapide ensuite</b>. Le code qu'on lit cette semaine, c'est celui qu'on modifiera le mois prochain.
 </div>
 
 ---
@@ -861,7 +861,7 @@ Terme inventé par **Kent Beck** et popularisé par **Martin Fowler** (*Refactor
 
 Un **code smell** est un **indice** que quelque chose ne va pas dans votre code. Pas un bug, pas une erreur de compilation - juste un signal qui dit :
 
-> « Attention, cette zone devient difficile à maintenir. »
+> "Attention, cette zone devient difficile à maintenir."
 
 Un peu comme un aliment qui sent bizarre : **pas forcément périmé, mais il faut regarder de près.**
 
@@ -873,7 +873,7 @@ Un peu comme un aliment qui sent bizarre : **pas forcément périmé, mais il fa
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 0.9rem;">
-« If it stinks, change it. » - Kent Beck
+"If it stinks, change it." - Kent Beck
 </div>
 
 </div>
@@ -1225,7 +1225,7 @@ Concept de **Michael Feathers** (*Working Effectively with Legacy Code*, 2004).
 
 **Problème** : on veut refactorer, mais sans tests on n'a pas de filet.
 
-**Solution** : des **characterization tests** - des tests qui **décrivent le comportement actuel** du code, qu'il soit « juste » ou non.
+**Solution** : des **characterization tests** - des tests qui **décrivent le comportement actuel** du code, qu'il soit "juste" ou non.
 
 </div>
 <div style="flex: 1;">
@@ -1278,7 +1278,7 @@ graph LR
 </div>
 
 <div style="margin-top: 0.5rem; background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; text-align: center;">
-⚠️ <b>Si une caractérisation casse</b>, ne la modifiez pas pour la faire passer. Annulez votre dernière transformation (<code>git restore .</code>). Votre « refactoring » était un <b>bug</b>.
+⚠️ <b>Si une caractérisation casse</b>, ne la modifiez pas pour la faire passer. Annulez votre dernière transformation (<code>git restore .</code>). Votre "refactoring" était un <b>bug</b>.
 </div>
 
 ---
@@ -1349,7 +1349,7 @@ Ajouter Conjured **directement** dans le code spaghetti est très risqué. Le re
 <b>Refactorer est un piège quand...</b>
 <ul style="font-size: 0.95rem; margin-top: 0.3rem;">
 <li>le code <b>marche</b>, est <b>stable</b> et <b>personne ne le touche</b></li>
-<li>vous le faites juste parce que « c'est pas joli »</li>
+<li>vous le faites juste parce que "c'est pas joli"</li>
 <li>il n'y a pas de <b>tests</b> pour sécuriser - vous allez casser</li>
 <li>vous refactorez <b>et</b> ajoutez une feature en même temps</li>
 </ul>
@@ -1377,7 +1377,7 @@ Quelques principes transverses à retenir pour la vie.
 
 <div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.3rem; line-height: 1.6; text-align: center;">
 
-> « Leave the campground cleaner than you found it. »
+> "Leave the campground cleaner than you found it."
 >
 > **Laisse le campement plus propre que tu ne l'as trouvé.**
 
@@ -1405,7 +1405,7 @@ Un nom plus clair, une méthode extraite, un test ajouté.
 ## 🏷️ Le nommage : première victoire
 
 <div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; font-size: 1.1rem; text-align: center; margin-bottom: 0.8rem;">
-« There are only <b>two hard things</b> in Computer Science: cache invalidation and <b>naming things</b>. » - Phil Karlton
+"There are only <b>two hard things</b> in Computer Science: cache invalidation and <b>naming things</b>." - Phil Karlton
 </div>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; font-size: 0.92rem;">
@@ -1837,5 +1837,5 @@ IUT d'Aix-Marseille - Département Informatique
 </div>
 
 <div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
-🛠️ <b>L'artisan, au fond, c'est vous.</b> Le CM1 a posé le <em>pourquoi</em> — du code dont on peut être fier, qu'on n'a pas peur de relire dans six mois. Ce CM2 a posé les <em>gestes</em> — tester avant, refactorer souvent, nommer juste, ranger en partant. À partir du TP3, le seul objectif est que ces gestes deviennent des <b>réflexes</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
+🛠️ <b>L'artisan, au fond, c'est vous.</b> Le CM1 a posé le <em>pourquoi</em> - du code dont on peut être fier, qu'on n'a pas peur de relire dans six mois. Ce CM2 a posé les <em>gestes</em> - tester avant, refactorer souvent, nommer juste, ranger en partant. À partir du TP3, le seul objectif est que ces gestes deviennent des <b>réflexes</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
 </div>

@@ -188,7 +188,7 @@ Un **artisan du logiciel** ne se contente pas de livrer du code qui compile. Il 
 <div style="flex: 1; text-align: center;">
 
 <div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.2rem;">
-« <b>Software Craftsmanship</b> » est un mouvement né dans les années 2000, en réaction à l'industrialisation du logiciel qui pressait les développeurs à livrer vite au détriment de la qualité.
+"<b>Software Craftsmanship</b>" est un mouvement né dans les années 2000, en réaction à l'industrialisation du logiciel qui pressait les développeurs à livrer vite au détriment de la qualité.
 </div>
 
 </div>
