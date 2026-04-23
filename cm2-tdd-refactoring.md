@@ -119,6 +119,40 @@ graph LR
 
 ---
 
+## 💰 Pourquoi ce cycle, économiquement
+
+<div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
+<div style="flex: 1.1;">
+
+Le CM1 a montré la **courbe du coût d'un bug** : 1x en dev, 6x aux tests, 15x en pré-prod, **100x chez le client**.
+
+Le TDD attaque la courbe **au point le moins cher**. Chaque cycle RED-GREEN-REFACTOR est un bug potentiel **détecté avant qu'il existe** : vous écrivez d'abord la condition qui devra être vraie, puis le code qui la rend vraie.
+
+Un test qui passe en 200 ms sur votre machine évite :
+- quelques heures de debug quand le bug remonterait d'un user
+- parfois plusieurs jours si le bug dort plusieurs releases
+- parfois une perte cliente si le comportement est visible côté produit
+
+</div>
+<div style="flex: 1;">
+
+<div style="background: #e6f5ec; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #27ae60;">
+<b>1 test écrit = 1 bug potentiel neutralisé<br/>au moment le moins cher</b>
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1rem;">
+Le TDD ne ralentit pas le développement. Il le <b>déplace</b> : on passe du temps à tester <em>avant</em> au lieu de débugger <em>après</em>. La vitesse apparente baisse le premier jour, la vitesse réelle monte dès la deuxième semaine.
+</div>
+
+<div style="margin-top: 1rem; font-size: 0.95rem; color: #555; text-align: center;">
+<em>Étude Capers Jones : les projets avec tests systématiques livrent en moyenne <b>30 % plus vite</b> sur les équipes matures.</em>
+</div>
+
+</div>
+</div>
+
+---
+
 ## 🚦 Les 3 lois du TDD (Uncle Bob)
 
 <div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.25rem; line-height: 1.7;">
@@ -136,49 +170,46 @@ Ces lois semblent extrêmes. Elles sont là pour <b>forcer les baby-steps</b>.<b
 
 ---
 
-## 🎯 Les 3 stratégies de Kent Beck (reprise du CM1)
+## 🎯 Fake it / Triangulation / Obvious : laquelle choisir ?
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
+On les a vues au CM1. Au TP2, vous vous êtes probablement demandé : *laquelle appliquer à ce test-là ?* Voici la **décision rapide** :
 
-<div style="background: #fff3cd; padding: 1.2rem; border-radius: 10px; border-left: 5px solid #e8a838;">
-<div style="font-size: 1.3rem;"><b>🎭 Fake it</b></div>
-<div style="margin-top: 0.3rem; font-size: 0.95rem;">Je rends <b>exactement</b> ce que le test attend.</div>
+<div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
 
-```java
-// Test : assertThat(add(1,2)).isEqualTo(3)
-int add(int a, int b) { return 3; }
-```
-<div style="font-size: 0.85rem; margin-top: 0.3rem;">✔ Confirme que le test passe</div>
-<div style="font-size: 0.85rem;">✔ Force à écrire un <b>2e test</b></div>
+<div style="flex: 1; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
+<b>🎭 Fake it d'abord, toujours</b>
+<div style="font-size: 0.95rem; margin-top: 0.3rem;">
+Même quand la solution semble évidente. <b>Pourquoi</b> : fake it vérifie que le <em>test</em> est juste, avant de se soucier du code.
+</div>
+<div style="font-size: 0.85rem; margin-top: 0.4rem; background: rgba(255,255,255,0.1); padding: 0.4rem 0.6rem; border-radius: 4px;">
+<em>Le test passe avec une constante en dur ? OK, le test est bien formulé.</em>
+</div>
 </div>
 
-<div style="background: #d1ecf1; padding: 1.2rem; border-radius: 10px; border-left: 5px solid #17a2b8;">
-<div style="font-size: 1.3rem;"><b>📐 Triangulation</b></div>
-<div style="margin-top: 0.3rem; font-size: 0.95rem;">J'ajoute un 2e test pour <b>forcer la généralisation</b>.</div>
-
-```java
-assertThat(add(1,2)).isEqualTo(3);
-assertThat(add(2,3)).isEqualTo(5);
-// → return a + b;
-```
-<div style="font-size: 0.85rem; margin-top: 0.3rem;">✔ Très sûr, peu de sauts</div>
+<div style="flex: 1; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
+<b>📐 Triangulation quand...</b>
+<div style="font-size: 0.95rem; margin-top: 0.3rem;">
+... le 2e ou 3e test vous <b>force</b> à généraliser. Ajoutez un cas différent, et le comportement commun émerge <em>tout seul</em>.
+</div>
+<div style="font-size: 0.85rem; margin-top: 0.4rem; background: rgba(255,255,255,0.1); padding: 0.4rem 0.6rem; border-radius: 4px;">
+<em>FizzBuzz : après 3 tests (1, 3, 5), la logique if/else se dessine.</em>
+</div>
 </div>
 
-<div style="background: #d4edda; padding: 1.2rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<div style="font-size: 1.3rem;"><b>💡 Obvious</b></div>
-<div style="margin-top: 0.3rem; font-size: 0.95rem;">La solution est <b>évidente</b> : je la code directement.</div>
-
-```java
-int add(int a, int b) { return a + b; }
-```
-<div style="font-size: 0.85rem; margin-top: 0.3rem;">✔ Rapide quand ça va</div>
-<div style="font-size: 0.85rem;">⚠ Risque de se tromper</div>
+<div style="flex: 1; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
+<b>💡 Obvious seulement si...</b>
+<div style="font-size: 0.95rem; margin-top: 0.3rem;">
+... la solution <b>tient en une ligne</b> et vous ne pouvez <em>pas</em> vous tromper. <b>Doute</b> = pas obvious.
+</div>
+<div style="font-size: 0.85rem; margin-top: 0.4rem; background: rgba(255,255,255,0.1); padding: 0.4rem 0.6rem; border-radius: 4px;">
+<em>return a + b; dans un addArithmetique(int, int).</em>
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 0.8rem; text-align: center; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px;">
-<b>Règle d'or</b> : plus c'est compliqué, plus on ralentit (fake-it → triangulation). L'obvious, c'est pour les cas triviaux.
+<div style="margin-top: 0.8rem; background: #fde8e6; border-left: 5px solid #e74c3c; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
+⚠️ <b>Anti-pattern fréquent en BUT1</b> : « je sais déjà comment coder, je vais directement en obvious. » Résultat : le test n'est jamais rouge, vous ne savez pas s'il vérifie vraiment quelque chose. <b>Fake it d'abord</b>, toujours - même 10 secondes, pour voir le test passer du rouge au vert.
 </div>
 
 ---
@@ -199,6 +230,10 @@ int add(int a, int b) { return a + b; }
 
 <div style="margin-top: 1rem; text-align: center; font-size: 1.1rem;">
 Robert C. Martin (<em>Clean Code</em>, 2008)
+</div>
+
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
+🛠️ F.I.R.S.T., c'est la <b>check-list de l'artisan</b> qui vérifie que son banc de tests reste un banc, pas un gouffre. Un test lent, fragile, dépendant des voisins, c'est un outil émoussé qu'il faut <b>affûter ou jeter</b>.
 </div>
 
 ---
@@ -274,6 +309,64 @@ On ne sait **pas ce qui est testé**, ni **quel comportement** est attendu.
 On lit le test comme une **spécification**.
 
 </div>
+</div>
+
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
+<b>🥋 Ce qu'on vise au TP3</b> (kata Tennis) : des tests qui racontent une partie, pas des numéros.
+<pre style="background: rgba(0,0,0,0.04); padding: 0.5rem 0.7rem; border-radius: 4px; margin-top: 0.4rem; font-size: 0.9rem;">@Test void partie_tombe_a_egalite_apres_deux_points_partout()
+@Test void le_serveur_gagne_la_partie_apres_quatre_points()
+@Test void avantage_au_receveur_apres_egalite_puis_point_receveur()</pre>
+</div>
+
+---
+
+## 🥋 Grounding : ces principes sur un vrai kata
+
+Le kata **Tennis** du TP3 illustre tout ce qu'on vient de voir. Voici 3 tests pris dans leur ordre d'écriture :
+
+<div style="display: flex; gap: 1rem; margin-top: 0.4rem;">
+
+<div style="flex: 1; background: #e6f5ec; padding: 0.9rem; border-radius: 8px; border-left: 4px solid #27ae60;">
+<b>Test 1 - Fake it</b>
+<pre style="font-size: 0.82rem; margin-top: 0.3rem;">@Test
+void debut_de_partie_est_0_0() {
+  assertThat(new Tennis().score())
+    .isEqualTo("0-0");
+}
+
+// Impl: return "0-0";</pre>
+<div style="font-size: 0.85rem; margin-top: 0.3rem;">Le test passe avec une constante. On sait que le test est juste.</div>
+</div>
+
+<div style="flex: 1; background: #fff3cd; padding: 0.9rem; border-radius: 8px; border-left: 4px solid #e8a838;">
+<b>Test 2 - Triangulation</b>
+<pre style="font-size: 0.82rem; margin-top: 0.3rem;">@Test
+void apres_point_serveur_15_0() {
+  Tennis t = new Tennis();
+  t.pointPourServeur();
+  assertThat(t.score())
+    .isEqualTo("15-0");
+}</pre>
+<div style="font-size: 0.85rem; margin-top: 0.3rem;">Force à stocker un état. La constante ne suffit plus.</div>
+</div>
+
+<div style="flex: 1; background: #e6f0f9; padding: 0.9rem; border-radius: 8px; border-left: 4px solid #4a90d9;">
+<b>Test 3 - Triangulation</b>
+<pre style="font-size: 0.82rem; margin-top: 0.3rem;">@Test
+void apres_deux_points_serveur_30_0() {
+  Tennis t = new Tennis();
+  t.pointPourServeur();
+  t.pointPourServeur();
+  assertThat(t.score())
+    .isEqualTo("30-0");
+}</pre>
+<div style="font-size: 0.85rem; margin-top: 0.3rem;">Force une vraie table (0, 15, 30, 40). La logique émerge.</div>
+</div>
+
+</div>
+
+<div style="margin-top: 0.6rem; text-align: center; font-size: 0.95rem; color: #555;">
+<em>Chaque test est <b>un pas</b>. La conception s'invente au fur et à mesure - pas avant.</em>
 </div>
 
 ---
