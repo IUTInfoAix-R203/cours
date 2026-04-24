@@ -443,7 +443,7 @@ Derrière chaque pilier du module, un <b>geste métier</b> que pratique l'artisa
 Vous allez coder <b>en équipe</b>, <b>sur plusieurs semaines</b>, un projet réel. Les gestes de R2.03 - historique propre, tests, refactoring, review - y deviennent immédiatement utiles.
 </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 2rem 0;">
 <div style="background: #4a90d9; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
 <div style="font-size: 2.2rem;">🔀</div>
 <div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">Git</div>
@@ -469,36 +469,36 @@ Vous allez coder <b>en équipe</b>, <b>sur plusieurs semaines</b>, un projet ré
 
 ## 🎯 Compétences BUT visées
 
-Le référentiel BUT cible ici trois idées simples :
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois apprentissages critiques du <a href="https://cache.media.education.gouv.fr/file/SP4-MESRI-26-5-2022/14/6/spe617_annexe15_1426146.pdf" style="color: inherit;"><b>PN BUT Informatique 2022</b> (annexe 15)</a> sont couverts ici.
+</p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #4a90d9; color: white; padding: 1.2rem; border-radius: 10px;">
-<div style="font-weight: bold; font-size: 1.2rem;">C1</div>
-<div style="font-size: 0.95rem; margin-top: 0.3rem;">Développer des applications informatiques simples</div>
-<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;">
-<b>AC2</b> : Élaborer des conceptions simples<br/>
-<b>AC3</b> : Faire des essais et évaluer leurs résultats en regard des spécifications
-</div>
-</div>
-<div style="background: #27ae60; color: white; padding: 1.2rem; border-radius: 10px;">
-<div style="font-weight: bold; font-size: 1.2rem;">C4</div>
-<div style="font-size: 0.95rem; margin-top: 0.3rem;">Concevoir et mettre en place une base de données</div>
-<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;">
-<b>AC2</b> : Visualiser des données<br/>
-<i>(traces et outils de débogage)</i>
-</div>
-</div>
-<div style="background: #e74c3c; color: white; padding: 1.2rem; border-radius: 10px;">
-<div style="font-weight: bold; font-size: 1.2rem;">C5</div>
-<div style="font-size: 0.95rem; margin-top: 0.3rem;">Identifier les besoins métiers des clients</div>
-<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;">
-<b>AC2</b> : Mettre en place les outils de gestion de projet<br/>
-<i>(Git / GitHub)</i>
-</div>
-</div>
+
+<div style="background: #4a90d9; color: white; padding: 1.4rem 1.2rem; border-radius: 12px;">
+<div style="font-size: 2.4rem;">📐</div>
+<div style="font-weight: bold; font-size: 2rem; margin-top: 0.2rem;">AC11.02</div>
+<div style="font-size: 1.5rem; margin-top: 0.5rem; font-weight: bold;">Élaborer des conceptions simples</div>
+<div style="margin-top: 0.7rem; font-size: 1.4rem; opacity: 0.9;">Compétence 1<br/><em>Développer des applications informatiques simples</em></div>
 </div>
 
-<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center;">
+<div style="background: #27ae60; color: white; padding: 1.4rem 1.2rem; border-radius: 12px;">
+<div style="font-size: 2.4rem;">🧪</div>
+<div style="font-weight: bold; font-size: 2rem; margin-top: 0.2rem;">AC11.03</div>
+<div style="font-size: 1.5rem; margin-top: 0.5rem; font-weight: bold;">Faire des essais et évaluer leurs résultats</div>
+<div style="margin-top: 0.7rem; font-size: 1.4rem; opacity: 0.9;">Compétence 1<br/><em>Développer des applications informatiques simples</em></div>
+</div>
+
+<div style="background: #e74c3c; color: white; padding: 1.4rem 1.2rem; border-radius: 12px;">
+<div style="font-size: 2.4rem;">🔀</div>
+<div style="font-weight: bold; font-size: 2rem; margin-top: 0.2rem;">AC15.02</div>
+<div style="font-size: 1.5rem; margin-top: 0.5rem; font-weight: bold;">Mettre en place les outils de gestion de projet</div>
+<div style="margin-top: 0.7rem; font-size: 1.4rem; opacity: 0.9;">Compétence 5<br/><em>Identifier les besoins métiers et techniques des clients</em></div>
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
 Mots-clés officiels du PN : <b>Qualité</b>, <b>Test</b>, <b>Gestion de version</b>. C'est exactement le coeur de ce module.
 </div>
 
