@@ -508,6 +508,8 @@ Mots-clés officiels du PN : <b>Qualité</b>, <b>Test</b>, <b>Gestion de version
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
+![bg left:50%](assets/git-archives.jpg)
+
 # Partie 2 - Git professionnel
 
 Retour aux bases, puis les concepts avancés qui changent la vie.
