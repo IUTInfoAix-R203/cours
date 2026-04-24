@@ -748,7 +748,7 @@ Une PR n'est pas un formulaire administratif. C'est une <b>invitation à discute
 
 ---
 
-## 🔍 Faire une bonne review
+## 🔍 Comment faire une bonne review ?
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
 Reviewer, ce n'est pas dire "oui". C'est <b>lire le code avec les yeux d'un collègue dans 6 mois</b>, et mettre son nom en face de ce qui partira en prod.
@@ -788,30 +788,38 @@ Reviewer, ce n'est pas dire "oui". C'est <b>lire le code avec les yeux d'un coll
 
 ## 🤖 Review automatique par Copilot
 
-Dans vos Codespaces, **Copilot Code Review** peut commenter automatiquement une PR ouverte.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Dans vos Codespaces, <b>Copilot Code Review</b> peut commenter automatiquement une PR ouverte. Utile, mais ne remplace pas une vraie revue.
+</p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ Ce qu'il fait bien</b>
-<ul style="margin-top: 0.3rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="background: #27ae60; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+
+<div style="font-size: 1.4rem; font-weight: bold; margin-top: 0.2rem;"> <span style="font-size: 2.2rem;">👁️</span> Ce qu'il fait bien</div>
+<ul style="margin-top: 0.5rem; padding-left: 1.3rem; font-size: 1.4rem; line-height: 1.7;">
 <li>Détecter les fautes de frappe</li>
 <li>Signaler les noms confus</li>
 <li>Proposer des simplifications</li>
-<li>Trouver des bugs évidents</li>
+<li>Trouver des bugs</li>
 </ul>
-</div>
-<div style="background: #e8a838; color: white; padding: 1rem; border-radius: 10px;">
-<b>⚠️ Ses limites</b>
-<ul style="margin-top: 0.3rem;">
-<li>Ne comprend pas toujours l'intention métier</li>
-<li>Peut suggérer des choses hors sujet</li>
-<li>Ne remplace <b>pas</b> la review humaine</li>
-</ul>
-</div>
 </div>
 
-<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1.1rem; text-align: center;">
-💡 Gardez la bonne hiérarchie : <b>Copilot suggère</b>, un <b>humain décide</b>. Une vraie review commence par comprendre l'intention du code.
+<div style="background: #e74c3c; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+
+<div style="font-size: 1.4rem; font-weight: bold; margin-top: 0.2rem;"><span style="font-size: 2.2rem;">⚠️</span> Ses limites</div>
+<ul style="margin-top: 0.5rem; padding-left: 1.3rem; font-size: 1.4rem; line-height: 1.7;">
+<li>Ne comprend pas toujours l'intention métier</li>
+<li>Peut suggérer des choses hors sujet</li>
+<li>Peut <b>halluciner</b> un code faux qui semble bon</li>
+<li>Ne peut pas trouver tous les bugs</li>
+</ul>
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
+<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">💡</span> <b>Copilot suggère</b> mais c'est <b>un humain qui décide.</b> Une vraie review commence par comprendre l'intention du contributeur et de vérifier qu'elle est correctement mise en oeuvre dans le code.
 </div>
 
 ---
