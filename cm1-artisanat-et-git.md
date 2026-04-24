@@ -156,9 +156,9 @@ TP1 Git : mise à niveau, non noté. Le plus gros coefficient porte sur le <b>ra
 ---
 
 ## Environnement de travail
-
-Tout le module se fait sur **GitHub Codespaces** : aucune installation locale nécessaire.
-
+<p style="font-size : 1.5rem;">
+Tout le module se fait sur <b>GitHub Codespaces</b> dans votre navigateur sans installation :
+</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
 <div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">☕</div>
@@ -186,7 +186,7 @@ Tout le module se fait sur **GitHub Codespaces** : aucune installation locale n�
 </div>
 </div>
 
-<div style="background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 10px; text-align: center; margin-top: 1rem; font-size: 1.2rem;">
+<div style="background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 10px; text-align: center; margin-top: 1rem; font-size: 1.5rem;">
 🌐 Dépôt étudiant : <a href="https://github.com/IUTInfoAix-R203/tp" style="color: #a0d8f8;">github.com/IUTInfoAix-R203/tp</a>
 </div>
 
