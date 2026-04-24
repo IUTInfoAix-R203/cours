@@ -948,7 +948,7 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 ---
 
-## ⚖️ La règle d'or
+## ⚖️ La règle d'or pour choisir entre merge et rebase
 
 <div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; text-align: center; font-size: 1.7rem; margin-top: 2rem;">
 <b>Rebase</b> tes commits <b>tant que la branche n'est pas partagée </b>.<br/>
@@ -970,6 +970,70 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 <div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.2rem;"><span style="font-size: 2rem;">💀</span> Danger</div>
 <div style="font-size: 1.4rem; margin-top: 0.4rem;">Je rebase <code>main</code> (partagée par toute l'équipe).</div>
 </div>
+</div>
+
+---
+
+## ✏️ Rebase interactif : nettoyer l'historique
+
+<p style="font-size: 1.5rem; color: #666;"><code>git rebase -i HEAD~3</code> ouvre un éditeur qui liste les 3 derniers commits, un par ligne, avec une action modifiable devant chacun.</p>
+
+```
+pick a1b2c3 wip
+pick d4e5f6 maj
+pick g7h8i9 fix typo
+
+# Rebase ...
+# p, pick = use commit
+# r, reword = use commit, but edit commit message
+# s, squash = use commit, meld into previous
+# f, fixup = like squash, but discard this commit's message
+# d, drop = remove commit
+```
+
+Les 3 actions vraiment utiles au quotidien :
+
+- **`reword`** : corriger un message de commit
+- **`squash`** / **`fixup`** : fusionner les petits commits de travail
+- **`drop`** : retirer un commit vraiment indésirable
+
+<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-size: 1.5rem;">
+<b>reword</b> + <b>squash</b> + <b>drop</b> : 95% des cas d'usage au quotidien.
+</div>
+
+---
+
+## ✏️ Rebase interactif : exemple concret
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
+<b>❌ Avant</b>
+
+```
+a1b2c3 wip
+d4e5f6 maj
+g7h8i9 fix typo
+h1j2k3 oh j'avais oublié un test
+m4n5o6 deuxième essai
+```
+
+Historique illisible. Que s'est-il réellement passé ?
+
+</div>
+<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
+<b>✅ Après rebase interactif</b>
+
+```
+x7y8z9 feat(auth): ajoute login OAuth Google
+```
+
+Un seul commit, message clair. L'histoire racontée au futur lecteur est : "à cette date, on a ajouté OAuth Google".
+
+</div>
+</div>
+
+<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
+Refaire son historique avant la PR, c'est un acte de <b>courtoisie</b> envers le relecteur.
 </div>
 
 ---
@@ -1016,74 +1080,6 @@ graph LR
 </div>
 
 </div>
-</div>
-
----
-
-## ✏️ Rebase interactif : nettoyer l'historique
-
-`git rebase -i HEAD~3` ouvre un éditeur qui liste les 3 derniers commits :
-
-<div style="background: #2c3e50; color: #eee; padding: 1rem; border-radius: 8px; font-family: monospace; margin-top: 1rem; font-size: 1rem;">
-
-```
-pick a1b2c3 wip
-pick d4e5f6 maj
-pick g7h8i9 fix typo
-
-# Rebase ...
-# p, pick = use commit
-# r, reword = use commit, but edit commit message
-# s, squash = use commit, meld into previous
-# f, fixup = like squash, but discard this commit's message
-# d, drop = remove commit
-```
-
-</div>
-
-<div style="margin-top: 1rem;">
-
-Les 3 actions vraiment utiles au quotidien :
-
-- **`reword`** : corriger un message de commit
-- **`squash`** / **`fixup`** : fusionner les petits commits de travail
-- **`drop`** : retirer un commit vraiment indésirable
-
-</div>
-
----
-
-## ✏️ Rebase interactif : exemple concret
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>❌ Avant</b>
-
-```
-a1b2c3 wip
-d4e5f6 maj
-g7h8i9 fix typo
-h1j2k3 oh j'avais oublié un test
-m4n5o6 deuxième essai
-```
-
-Historique illisible. Que s'est-il réellement passé ?
-
-</div>
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ Après rebase interactif</b>
-
-```
-x7y8z9 feat(auth): ajoute login OAuth Google
-```
-
-Un seul commit, message clair. L'histoire racontée au futur lecteur est : "à cette date, on a ajouté OAuth Google".
-
-</div>
-</div>
-
-<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
-Refaire son historique avant la PR, c'est un acte de <b>courtoisie</b> envers le relecteur.
 </div>
 
 ---
