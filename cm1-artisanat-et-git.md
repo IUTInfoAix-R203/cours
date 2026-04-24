@@ -345,37 +345,56 @@ Conséquence : <b>Faillite !</b><br/><br/> Cause : un drapeau mal réinitialisé
 
 ## 💳 La dette technique
 
-<div style="display: flex; gap: 2rem; margin-top: 1rem; align-items: center;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Métaphore de <b>Ward Cunningham</b> (1992) : écrire du code sale pour livrer vite, c'est comme <b>emprunter</b> de l'argent. Ça aide à court terme — mais il faut <b>rembourser</b>, <b>avec intérêts</b>.
+</p>
 
-Métaphore de **Ward Cunningham** (1992) : écrire du code sale pour livrer vite, c'est comme emprunter de l'argent.
+<div style="display: flex; align-items: center; gap: 0.6rem; margin: 2rem 0;">
 
-Ça aide à court terme. Mais il faut **rembourser**, **avec intérêts**.
+<div style="flex: 1; background: #27ae60; color: white; padding: 1.1rem 0.8rem; border-radius: 10px; text-align: center;">
+<div style="font-size: 3rem;">⚡</div>
+<div style="font-weight: bold; font-size: 1.6rem; margin-top: 0.2rem;">Livrer vite</div>
+<div style="font-size: 1.4rem; opacity: 0.9; margin-top: 0.3rem;">gain court terme</div>
+</div>
 
-Quand la dette technique est élevée :
+<div style="font-size: 2rem; color: #888;">→</div>
 
-- Chaque nouvelle fonctionnalité prend plus de temps
-- Les bugs se multiplient
-- L'équipe **ralentit**, démotivée
-- Le projet peut **mourir**
+<div style="flex: 1; background: #e8a838; color: white; padding: 1.1rem 0.8rem; border-radius: 10px; text-align: center;">
+<div style="font-size: 3rem;">💳</div>
+<div style="font-weight: bold; font-size: 1.6rem; margin-top: 0.2rem;">Dette accumulée</div>
+<div style="font-size: 1.4rem; opacity: 0.9; margin-top: 0.3rem;">coût caché</div>
+</div>
+
+<div style="font-size: 2rem; color: #888;">→</div>
+
+<div style="flex: 1; background: #e74c3c; color: white; padding: 1.1rem 0.8rem; border-radius: 10px; text-align: center;">
+<div style="font-size: 3rem;">🐌</div>
+<div style="font-weight: bold; font-size: 1.6rem; margin-top: 0.2rem;">Ralentissement</div>
+<div style="font-size: 1.4rem; opacity: 0.9; margin-top: 0.3rem;">perte long terme</div>
+</div>
 
 </div>
-<div style="flex: 1;">
 
-```mermaid
-graph LR
-    A[Code propre] -->|livraison| B[Valeur]
-    C[Dette technique] -->|ralentit| B
-    C -->|augmente| D[Bugs]
-    D -->|augmente| C
-    B -->|permet de rembourser| C
-    
-    style A fill:#27ae60,color:#fff
-    style B fill:#4a90d9,color:#fff
-    style C fill:#e74c3c,color:#fff
-    style D fill:#c0392b,color:#fff
-```
+<div style="margin: 1.2rem 0; font-size: 1.5rem; font-weight: bold;">
+Quand la dette augmente :
+</div>
 
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 0.6rem;">
+<div style="background: #2c3e50; color: white; padding: 1rem 0.8rem; border-radius: 10px; text-align: center;">
+<div style="font-size: 2.2rem;">⏳</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem;">Les features sont plus lentes à livrer</div>
+</div>
+<div style="background: #2c3e50; color: white; padding: 1rem 0.8rem; border-radius: 10px; text-align: center;">
+<div style="font-size: 2.2rem;">🐛</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem;">Les bugs se multiplient en production</div>
+</div>
+<div style="background: #2c3e50; color: white; padding: 1rem 0.8rem; border-radius: 10px; text-align: center;">
+<div style="font-size: 2.2rem;">😩</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem;">L'équipe se sent démotivée</div>
+</div>
+<div style="background: #2c3e50; color: white; padding: 1rem 0.8rem; border-radius: 10px; text-align: center;">
+<div style="font-size: 2.2rem;">💀</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem;">Le projet finit par mourir</div>
 </div>
 </div>
 
