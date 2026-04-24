@@ -206,26 +206,40 @@ Pourquoi on parle de "qualité" ?
 
 ## 🔨 Qu'est-ce que l'artisanat logiciel ?
 
-<div style="display: flex; gap: 2rem; margin-top: 1rem; align-items: center;">
-<div style="flex: 1;">
+<p style="font-size : 1.5rem;">
+Un <b>artisan meunuisier</b> livre une table <b>bien finie</b>, robuste, belle, facile à réparer. Un <b>artisan logiciel</b> livre du code qui doit être :
+</p>
 
-Un **artisan** ne se contente pas de livrer une table qui tient debout. Il la livre **bien finie**, **robuste**, **belle**, facile à réparer et qui résistera aux années.
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; margin: 3rem 0;">
 
-Un **artisan du logiciel** ne se contente pas de livrer du code qui compile. Il livre du code qui est :
-
-- **Lisible** par un autre humain
-- **Testé** pour éviter les régressions
-- **Simple** à modifier quand les besoins évoluent
-- **Relu** par des pairs avant fusion
-
-</div>
-<div style="flex: 1; text-align: center;">
-
-<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.2rem;">
-"<b>Software Craftsmanship</b>" est un mouvement né dans les années 2000, en réaction à l'industrialisation du logiciel qui pressait les développeurs à livrer vite au détriment de la qualité.
+<div style="background: #4a90d9; color: white; padding: 1.2rem 0.8rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.5rem;">📖</div>
+<div style="font-size: 1.3rem; font-weight: bold; margin-top: 0.3rem;">Lisible</div>
+<div style="font-size: 1.1rem; margin-top: 0.3rem; opacity: 0.95;">par un autre humain</div>
 </div>
 
+<div style="background: #27ae60; color: white; padding: 1.2rem 0.8rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.5rem;">✅</div>
+<div style="font-size: 1.3rem; font-weight: bold; margin-top: 0.3rem;">Testé</div>
+<div style="font-size: 1.1rem; margin-top: 0.3rem; opacity: 0.95;">pour éviter les régressions</div>
 </div>
+
+<div style="background: #e8a838; color: white; padding: 1.2rem 0.8rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.5rem;">🔧</div>
+<div style="font-size: 1.3rem; font-weight: bold; margin-top: 0.3rem;">Simple</div>
+<div style="font-size: 1.1rem; margin-top: 0.3rem; opacity: 0.95;">à modifier quand les besoins évoluent</div>
+</div>
+
+<div style="background: #e74c3c; color: white; padding: 1.2rem 0.8rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.5rem;">👥</div>
+<div style="font-size: 1.3rem; font-weight: bold; margin-top: 0.3rem;">Relu</div>
+<div style="font-size: 1.1rem; margin-top: 0.3rem; opacity: 0.95;">par des pairs avant fusion</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem 1.5rem; border-radius: 10px; font-size: 1.5rem; text-align: left;">
+Le <b>"Software Craftsmanship"</b> est mouvement né dans les années 2000, en réaction à l'industrialisation du monde du logiciel qui pressait les développeurs à livrer vite au détriment de la qualité.
 </div>
 
 ---
