@@ -668,42 +668,40 @@ Un standard universel pour structurer vos messages et rendre votre historique li
 
 ## 🔄 GitHub Flow : le workflow en 4 étapes
 
-Le workflow standard en équipe (simplifié de Vincent Driessen) :
-
-<div style="margin-top: 1rem;">
-
-```mermaid
-graph LR
-    A[main stable] -->|créer| B[branche feature]
-    B -->|commits| B
-    B -->|push| C[Pull Request]
-    C -->|review| D[feedback]
-    D -->|corrections| B
-    C -->|approved| E[merge]
-    E --> A
-    
-    style A fill:#4a90d9,color:#fff
-    style B fill:#e8a838,color:#fff
-    style C fill:#8e44ad,color:#fff
-    style D fill:#f39c12,color:#fff
-    style E fill:#27ae60,color:#fff
-```
-
-</div>
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le workflow standard en équipe, proposé par <b>Scott Chacon</b> (GitHub, 2011). Simple : une seule branche de référence (<code>main</code>) et des branches éphémères par fonctionnalité.
+</p>
 
 <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1; text-align: center;">
-<b>1.</b> Une branche par fonctionnalité
+<div style="background: #4a90d9; color: white; padding: 0.9rem 0.6rem; border-radius: 10px; flex: 1; text-align: center;">
+<div style="font-size: 2rem;">🌱</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.2rem;">1. Branche</div>
+<div style="font-size: 1.3rem; margin-top: 0.2rem; opacity: 0.9;">une par fonctionnalité</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1; text-align: center;">
-<b>2.</b> Commits atomiques + Conventional
+<div style="background: #e8a838; color: white; padding: 0.9rem 0.6rem; border-radius: 10px; flex: 1; text-align: center;">
+<div style="font-size: 2rem;">📸</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.2rem;">2. Commits</div>
+<div style="font-size: 1.3rem; margin-top: 0.2rem; opacity: 0.9;">atomiques + Conventional</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1; text-align: center;">
-<b>3.</b> Pull Request dès qu'on est prêt à montrer
+<div style="background: #8e44ad; color: white; padding: 0.9rem 0.6rem; border-radius: 10px; flex: 1; text-align: center;">
+<div style="font-size: 2rem;">🔍</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.2rem;">3. Pull Request</div>
+<div style="font-size: 1.3rem; margin-top: 0.2rem; opacity: 0.9;">dès qu'on est prêt à montrer</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1; text-align: center;">
-<b>4.</b> Merge après review
+<div style="background: #27ae60; color: white; padding: 0.9rem 0.6rem; border-radius: 10px; flex: 1; text-align: center;">
+<div style="font-size: 2rem;">✅</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.2rem;">4. Merge</div>
+<div style="font-size: 1.3rem; margin-top: 0.2rem; opacity: 0.9;">après review</div>
 </div>
+</div>
+
+
+<div style="text-align: center; margin-top: 0.8rem;">
+<img src="assets/github-flow.svg" alt="GitHub Flow : main, feature branch, PR, review, merge" style="width: 55%;" />
+</div>
+
+<div style="margin-top: -1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
+<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">🎯</span> Règle d'or : <b>jamais de commit direct sur <code>main</code></b>. Tout passe par une PR.
 </div>
 
 ---
