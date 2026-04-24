@@ -247,29 +247,29 @@ Le <b>"Software Craftsmanship"</b> est mouvement né dans les années 2000, en r
 ## 🔨 Le manifeste de l'artisanat logiciel (2009)
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Snowbird, Utah, décembre 2008. En écho au Manifeste Agile de 2001, 4 principes, toujours sur le même modèle : <b>non seulement X, mais aussi Y</b>.
+✊ Snowbird, Utah, décembre 2008 — en écho au Manifeste Agile de 2001, 4 principes, toujours sur le même modèle : <b>non seulement X, mais aussi Y</b>.
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
 
 <div style="background: #4a90d9; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
-<div style="font-size: 1.3rem; opacity: 0.75;">Non seulement du logiciel qui marche,</div>
-<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi du logiciel bien conçu.</div>
+<div style="font-size: 1.4rem; opacity: 0.75;">Non seulement du logiciel qui marche,</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;"><span style="font-size: 2rem; vertical-align: middle; margin-right: 0.3rem;">⚒️</span> mais aussi du logiciel bien conçu.</div>
 </div>
 
 <div style="background: #27ae60; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
-<div style="font-size: 1.3rem; opacity: 0.75;">Non seulement répondre au changement,</div>
-<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi ajouter de la valeur régulièrement.</div>
+<div style="font-size: 1.4rem; opacity: 0.75;">Non seulement répondre au changement,</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;"><span style="font-size: 2rem; vertical-align: middle; margin-right: 0.3rem;">📈</span> mais aussi ajouter de la valeur régulièrement.</div>
 </div>
 
 <div style="background: #e8a838; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
 <div style="font-size: 1.4rem; opacity: 0.75;">Non seulement des individus et des interactions,</div>
-<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi une communauté de professionnels.</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;"><span style="font-size: 2rem; vertical-align: middle; margin-right: 0.3rem;">🤝</span> mais aussi une communauté de professionnels.</div>
 </div>
 
 <div style="background: #e74c3c; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
 <div style="font-size: 1.4rem; opacity: 0.75;">Non seulement collaborer avec le client,</div>
-<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi des partenariats productifs.</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;"><span style="font-size: 2rem; vertical-align: middle; margin-right: 0.3rem;">🏛️</span> mais aussi des partenariats productifs.</div>
 </div>
 
 </div>
