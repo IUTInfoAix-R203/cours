@@ -580,49 +580,82 @@ Il vous suffit de retenir <b>3 concepts</b> pour suivre le reste du cours :
 
 ---
 
-## 📝 Conventional Commits : le message qui documente
+## 📝 Pourquoi un bon message de commit ?
 
-<div style="display: flex; gap: 2rem; margin-top: 1rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le message que vous écrivez <b>aujourd'hui</b> sera relu par <b>quelqu'un d'autre</b> (ou vous-même) dans 6 mois, pour comprendre pourquoi telle ligne a été écrite.
+</p>
 
-Le message de commit que vous écrivez **aujourd'hui** sera relu par **quelqu'un d'autre** (ou vous-même) dans 6 mois, pour comprendre pourquoi telle ligne a été écrite.
+<div style="display: flex; gap: 1.5rem; margin: 3rem 0;">
 
-Format **Conventional Commits** :
-
-```
-<type>(<scope>): <description>
-```
-
-**Types classiques** :
-- `feat` : nouvelle fonctionnalité
-- `fix` : correction de bug
-- `docs` : documentation
-- `refactor` : réorganisation
-- `test` : ajout ou fix de tests
-- `chore` : maintenance
-
-</div>
-<div style="flex: 1;">
-
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ Bons messages</b>
-<pre style="background: rgba(0,0,0,0.2); padding: 0.6rem; border-radius: 4px; font-size: 0.85rem; margin-top: 0.5rem;">feat(auth): ajoute login via OAuth Google
-fix(cart): corrige le total quand la remise est 0
-docs(readme): detaille l'installation locale
-refactor(facture): extrait appliquerTVA</pre>
-</div>
-
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
-<b>❌ Mauvais messages</b>
-<pre style="background: rgba(0,0,0,0.2); padding: 0.6rem; border-radius: 4px; font-size: 0.85rem; margin-top: 0.5rem;">wip
+<div style="flex: 1; background: #e74c3c; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">🙅 Mauvais messages</div>
+<pre style="background: transparent; padding: 0.5rem 0; font-size: 1.2rem; margin-top: 0.5rem; line-height: 1.6; color: white; border: none; box-shadow: none;">
+wip
 fix
-maj
 trucs
 ca marche enfin putain
 update file</pre>
 </div>
 
+<div style="flex: 1; background: #27ae60; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">✅ Bons messages</div>
+<pre style="background: transparent; padding: 0.5rem 0; font-size: 1.2rem; margin-top: 0.5rem; line-height: 1.6; color: white; border: none; box-shadow: none;">feat(auth): ajoute login via OAuth Google
+fix(cart): corrige le total quand la remise est 0
+docs(readme): detaille l'installation locale
+refactor(facture): extrait appliquerTVA</pre>
 </div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
+<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">🎯</span> Un message clair aujourd'hui = l'origine d'un bug est retrouvé en 30 secondes dans 6 mois.
+</div>
+
+---
+
+## 📝 Le format Conventional Commits
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un standard universel pour structurer vos messages et rendre votre historique lisible par tous.
+</p>
+
+<div style="text-align: center; margin-top: 1.2rem; background: #f5f7fa; border: 2px dashed #bdc3c7; padding: 1.2rem; border-radius: 10px; font-family: monospace; font-size: 1.6rem;">
+<b>&lt;type&gt;</b>(<b>&lt;scope&gt;</b>) : <b>&lt;description&gt;</b>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 1.2rem;">
+
+<div style="background: #4a90d9; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
+<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">feat</div>
+<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">nouvelle fonctionnalité</div>
+</div>
+
+<div style="background: #e74c3c; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
+<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">fix</div>
+<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">correction de bug</div>
+</div>
+
+<div style="background: #17a2b8; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
+<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">docs</div>
+<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">documentation</div>
+</div>
+
+<div style="background: #e8a838; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
+<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">refactor</div>
+<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">réorganisation sans changer le comportement</div>
+</div>
+
+<div style="background: #27ae60; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
+<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">test</div>
+<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">ajout ou fix de tests</div>
+</div>
+
+<div style="background: #8e44ad; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
+<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">chore</div>
+<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">maintenance, config, outils</div>
+</div>
+
 </div>
 
 ---
