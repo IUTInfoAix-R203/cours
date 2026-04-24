@@ -160,27 +160,27 @@ TP1 Git : mise à niveau, non noté. Le plus gros coefficient porte sur le <b>ra
 Tout le module se fait sur <b>GitHub Codespaces</b> dans votre navigateur sans installation :
 </p>
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.5rem;">
-<div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
+<div style="background: #e8a838; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">☕</div>
 <div style="font-weight: bold; margin-top: 0.3rem;">Java 25</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
+<div style="background: #27ae60; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">🧪</div>
 <div style="font-weight: bold; margin-top: 0.3rem;">JUnit 6 + AssertJ</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
+<div style="background: #e74c3c; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">📦</div>
 <div style="font-weight: bold; margin-top: 0.3rem;">Maven (via mvnw)</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
+<div style="background: #4a90d9; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">🔀</div>
 <div style="font-weight: bold; margin-top: 0.3rem;">Git + gh CLI</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
+<div style="background: #8e44ad; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">🤖</div>
 <div style="font-weight: bold; margin-top: 0.3rem;">Copilot Chat</div>
 </div>
-<div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
+<div style="background: #17a2b8; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">📊</div>
 <div style="font-weight: bold; margin-top: 0.3rem;">ApprovalTests</div>
 </div>
