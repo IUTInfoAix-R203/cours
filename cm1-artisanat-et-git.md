@@ -824,60 +824,126 @@ Dans vos Codespaces, <b>Copilot Code Review</b> peut commenter automatiquement u
 
 ---
 
-## 🔀 Merge vs rebase : deux façons d'intégrer une branche
+<!-- _transition: fade -->
 
-<div style="display: flex; gap: 1rem; margin-top: 1rem;">
-<div style="flex: 1;">
+## 🔀 `git merge` — avant la fusion
 
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px; text-align: center;">
-<b>git merge</b>
+<style scoped>
+h2 { view-transition-name: titre-integration; }
+.git-diagram { view-transition-name: git-diagram; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la première façons de les intégrer à la branche <code>main</code> : <code>git merge</code>.
+</p>
+
+<div class="git-diagram" style="text-align: center; margin-top: 3rem;">
+<img src="assets/git-before.svg" alt="Situation initiale : main A-B-C, ma-feature avec D non fusionné" style="width: 55%; max-width: 550px;" />
 </div>
 
-```mermaid
-graph LR
-    A[A] --> B[B]
-    B --> C[C]
-    B --> D[D]
-    C --> E[M merge]
-    D --> E
-    
-    style A fill:#bdc3c7
-    style B fill:#bdc3c7
-    style C fill:#4a90d9,color:#fff
-    style D fill:#e8a838,color:#fff
-    style E fill:#27ae60,color:#fff
-```
+<div style="margin-top: 4rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.4rem; text-align: center;">
+<span style="font-size: 1.8rem; vertical-align: middle; margin-right: 0.4rem;">🕐</span> <b>Situation initiale</b> : la branche <code>main</code> continue d'avancer (commit C) pendant que la branche <code>ma-feature</code> travaille sur D puis sur E.
+</div>
 
-<ul style="margin-top: 0.5rem; font-size: 0.9rem;">
-<li>✅ Préserve l'historique réel</li>
-<li>❌ Crée un commit de merge, historique "en arête de poisson"</li>
+---
+
+<!-- _transition: fade -->
+
+## 🔀 `git merge` — après la fusion
+
+<style scoped>
+h2 { view-transition-name: titre-integration; }
+.git-diagram { view-transition-name: git-diagram; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la première façons de les intégrer à la branche <code>main</code> : <code>git merge</code>. Après cette opération un nouveau commit de merge fait la jointure entre les deux branches.
+</p>
+
+<div class="git-diagram" style="text-align: center; margin-top: 1rem;">
+<img src="assets/git-merge.svg" alt="git merge : branche fusionnée via commit de merge M" style="width: 55%; max-width: 550px;" />
+</div>
+
+<div style="display: flex; gap: 1.5rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="flex: 1; background: #27ae60; color: white; padding: 1rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">✅ Avantages</div>
+<ul style="margin-top: 0.4rem; padding-left: 1.2rem; font-size: 1.4rem; line-height: 1.6;">
+<li>Préserve l'<b>historique réel</b> du travail</li>
+<li>Les SHA des commits restent <b>stables</b> (partageables sans risque)</li>
 </ul>
-
-</div>
-<div style="flex: 1;">
-
-<div style="background: #e8a838; color: white; padding: 1rem; border-radius: 10px; text-align: center;">
-<b>git rebase</b>
 </div>
 
-```mermaid
-graph LR
-    A[A] --> B[B]
-    B --> C[C]
-    C --> Dp[D']
-    
-    style A fill:#bdc3c7
-    style B fill:#bdc3c7
-    style C fill:#4a90d9,color:#fff
-    style Dp fill:#e8a838,color:#fff
-```
-
-<ul style="margin-top: 0.5rem; font-size: 0.9rem;">
-<li>✅ Historique linéaire, lisible</li>
-<li>⚠️ Réécrit les commits (nouveaux SHA)</li>
+<div style="flex: 1; background: #e74c3c; color: white; padding: 1rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">⚠️ Inconvénients</div>
+<ul style="margin-top: 0.4rem; padding-left: 1.2rem; font-size: 1.4rem; line-height: 1.6;">
+<li>Crée un <b>commit de merge</b> en plus</li>
+<li>Historique "<b>en arête de poisson</b>", plus difficile à relire</li>
 </ul>
+</div>
 
 </div>
+
+---
+
+<!-- _transition: fade -->
+
+## 🔀 `git rebase` — avant le rebase
+
+<style scoped>
+h2 { view-transition-name: titre-integration; }
+.git-diagram { view-transition-name: git-diagram; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la seconde façons de les intégrer à la branche <code>main</code> : <code>git rebase</code>.
+</p>
+
+<div class="git-diagram" style="text-align: center; margin-top: 4rem;">
+<img src="assets/git-before.svg" alt="Situation initiale : main A-B-C, ma-feature avec D" style="width: 55%; max-width: 550px;" />
+</div>
+
+<div style="margin-top: 2.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.4rem; text-align: center;">
+<span style="font-size: 1.8rem; vertical-align: middle; margin-right: 0.4rem;">🕐</span> <b>Même situation initiale</b> : on part de <code>main</code> = A-B-C et <code>ma-feature</code> = D-E.
+</div>
+
+---
+
+<!-- _transition: fade -->
+
+## 🔀 `git rebase` — après le rebase
+
+<style scoped>
+h2 { view-transition-name: titre-integration; }
+.git-diagram { view-transition-name: git-diagram; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la seconde façons de les intégrer à la branche <code>main</code> : <code>git rebase</code>. Le rebase <b>rejoue</b> les commits D et E sur la pointe de <code>main</code>. D et E devienent D' et E' : même contenu, mais nouveau commit avec un nouveau SHA.
+</p>
+
+<div class="git-diagram" style="text-align: center; margin-top: 4rem;">
+<img src="assets/git-rebase.svg" alt="git rebase : branche rejouée linéairement sur main" style="width: 55%; max-width: 550px;" />
+</div>
+
+<div style="display: flex; gap: 1.5rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="flex: 1; background: #27ae60; color: white; padding: 1rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">✅ Avantages</div>
+<ul style="margin-top: 0.4rem; padding-left: 1.2rem; font-size: 1.4rem; line-height: 1.6;">
+<li>Historique totalement <b>linéaire</b>, lisible comme une histoire</li>
+<li>Pas de commit de merge parasite</li>
+</ul>
+</div>
+
+<div style="flex: 1; background: #e74c3c; color: white; padding: 1rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">⚠️ Inconvénients</div>
+<ul style="margin-top: 0.4rem; padding-left: 1.2rem; font-size: 1.4rem; line-height: 1.6;">
+<li><b>Réécrit les commits</b> : nouveaux SHA</li>
+<li>Dangereux sur une branche <b>déjà partagée</b> avec d'autres</li>
+</ul>
+</div>
+
 </div>
 
 ---
