@@ -196,6 +196,8 @@ Tout le module se fait sur <b>GitHub Codespaces</b> dans votre navigateur sans i
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
+![bg left:40%](assets/artisan-menuisier.jpg)
+
 # Partie 1 - Artisanat logiciel
 
 Pourquoi on parle de "qualité" ?
