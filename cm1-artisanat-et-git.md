@@ -616,7 +616,7 @@ refactor(facture): extrait appliquerTVA</pre>
 
 ## 📝 Le format Conventional Commits
 
-<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+<p style="font-size: 1.5rem; margin-top: -1.3rem;">
 Un standard universel pour structurer vos messages et rendre votre historique lisible par tous.
 </p>
 
@@ -624,36 +624,42 @@ Un standard universel pour structurer vos messages et rendre votre historique li
 <b>&lt;type&gt;</b>(<b>&lt;scope&gt;</b>) : <b>&lt;description&gt;</b>
 </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 1.2rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.2rem;">
 
-<div style="background: #4a90d9; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
-<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">feat</div>
-<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">nouvelle fonctionnalité</div>
+<div style="background: #4a90d9; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.4rem;">✨</div>
+<div style="font-family: monospace; font-size: 1.6rem; font-weight: bold; margin-top: 0.3rem;">feat</div>
+<div style="font-size: 1.4rem; opacity: 0.95; margin-top: 0.3rem;">nouvelle fonctionnalité</div>
 </div>
 
-<div style="background: #e74c3c; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
-<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">fix</div>
-<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">correction de bug</div>
+<div style="background: #e74c3c; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.4rem;">🐛</div>
+<div style="font-family: monospace; font-size: 1.6rem; font-weight: bold; margin-top: 0.3rem;">fix</div>
+<div style="font-size: 1.4rem; opacity: 0.95; margin-top: 0.3rem;">correction de bug</div>
 </div>
 
-<div style="background: #17a2b8; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
-<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">docs</div>
-<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">documentation</div>
+<div style="background: #17a2b8; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.4rem;">📝</div>
+<div style="font-family: monospace; font-size: 1.6rem; font-weight: bold; margin-top: 0.3rem;">docs</div>
+<div style="font-size: 1.4rem; opacity: 0.95; margin-top: 0.3rem;">documentation</div>
 </div>
 
-<div style="background: #e8a838; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
-<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">refactor</div>
-<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">réorganisation sans changer le comportement</div>
+<div style="background: #e8a838; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.4rem;">♻️</div>
+<div style="font-family: monospace; font-size: 1.6rem; font-weight: bold; margin-top: 0.3rem;">refactor</div>
+<div style="font-size: 1.4rem; opacity: 0.95; margin-top: 0.3rem;">réorganisation sans changer le comportement</div>
 </div>
 
-<div style="background: #27ae60; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
-<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">test</div>
-<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">ajout ou fix de tests</div>
+<div style="background: #27ae60; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.4rem;">✅</div>
+<div style="font-family: monospace; font-size: 1.6rem; font-weight: bold; margin-top: 0.3rem;">test</div>
+<div style="font-size: 1.4rem; opacity: 0.95; margin-top: 0.3rem;">ajout ou fix de tests</div>
 </div>
 
-<div style="background: #8e44ad; color: white; padding: 0.8rem 1rem; border-radius: 10px;">
-<div style="font-family: monospace; font-size: 1.3rem; font-weight: bold;">chore</div>
-<div style="font-size: 1rem; opacity: 0.9; margin-top: 0.2rem;">maintenance, config, outils</div>
+<div style="background: #8e44ad; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.4rem;">🔧</div>
+<div style="font-family: monospace; font-size: 1.6rem; font-weight: bold; margin-top: 0.3rem;">chore</div>
+<div style="font-size: 1.4rem; opacity: 0.95; margin-top: 0.3rem;">maintenance, config, outils</div>
 </div>
 
 </div>
