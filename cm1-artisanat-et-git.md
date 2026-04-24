@@ -42,46 +42,21 @@ blockquote { font-size: 0.92rem; }
 
 ## Organisation du module
 
-<div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
-<div style="background: #4a90d9; color: white; padding: 1.2rem; border-radius: 12px 12px 0 0; flex: 1; text-align: center;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+<div style="background: #4a90d9; color: white; padding: 1.4rem; border-radius: 12px; text-align: center;">
 <div style="font-size: 1.8rem; font-weight: bold;">CM1</div>
-<div style="margin-top: 0.3rem;">Artisanat + Git</div>
+<div style="margin-top: 0.3rem;">Artisanat + Git + TDD intro</div>
+<div style="margin-top: 0.8rem; background: rgba(255,255,255,0.18); border-radius: 8px; padding: 0.6rem; font-weight: bold;">→ TP1 Git + TP2 TDD</div>
 </div>
-<div style="background: #e8a838; color: white; padding: 1.2rem; border-radius: 12px 12px 0 0; flex: 1; text-align: center;">
+<div style="background: #e8a838; color: white; padding: 1.4rem; border-radius: 12px; text-align: center;">
 <div style="font-size: 1.8rem; font-weight: bold;">CM2</div>
-<div style="margin-top: 0.3rem;">TDD + Refactoring</div>
+<div style="margin-top: 0.3rem;">TDD avancé + refactoring</div>
+<div style="margin-top: 0.8rem; background: rgba(255,255,255,0.18); border-radius: 8px; padding: 0.6rem; font-weight: bold;">→ TP3 Kata + TP4 Refactoring</div>
 </div>
 </div>
 
-<div style="display: flex; gap: 0.8rem; text-align: center; font-size: 1.5rem; color: #999;">
-<div style="flex: 1;">↓</div>
-<div style="flex: 1;">↓</div>
-</div>
-
-<div style="display: flex; gap: 0.8rem;">
-<div style="background: #d0e2f3; color: #2c5f8a; padding: 0.8rem; border-radius: 0 0 12px 12px; flex: 1; text-align: center; font-weight: bold;">
-TP1 Git + TP2 TDD
-</div>
-<div style="background: #fae5c0; color: #8a6a1f; padding: 0.8rem; border-radius: 0 0 12px 12px; flex: 1; text-align: center; font-weight: bold;">
-TP3 Kata + TP4 Refactoring
-</div>
-</div>
-
-<div style="display: flex; gap: 2rem; margin-top: 1.5rem;">
-<div style="flex: 1;">
-
-**👥 Équipe pédagogique**
-- S. Nedjar (responsable)
-- S. Nabitz, L. Sakli Miled
-
-</div>
-<div style="flex: 1;">
-
-**⏱️ Volume horaire** : 22 h
-- CM (4 h) + TD (4 h) + TP (12 h)
-- Test écrit (2 h, le 18 juin)
-
-</div>
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.1rem;">
+Chaque CM prépare les <b>gestes concrets</b> mis en pratique dans les TP qui suivent.
 </div>
 
 ---
@@ -94,13 +69,13 @@ Trois notes, un objectif : vérifier que vous **maîtrisez des gestes de métier
 <div style="background: #4a90d9; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; flex: 1; text-align: center;">
 <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">📝</div>
 <div style="font-weight: bold; font-size: 1.5rem;">CC1</div>
-<div style="margin-top: 0.5rem; opacity: 0.9;">Moyenne autograding TP2, TP3, TP4</div>
+<div style="margin-top: 0.5rem; opacity: 0.9;">Autograding de TP2, TP3, TP4</div>
 <div style="margin-top: 0.5rem; font-weight: bold; font-size: 1.2rem; background: rgba(255,255,255,0.2); border-radius: 6px; padding: 0.2rem;">coeff. 10</div>
 </div>
 <div style="background: #e8a838; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; flex: 1; text-align: center;">
 <div style="font-size: 3.5rem; margin-bottom: 0.5rem;">🤝</div>
 <div style="font-weight: bold; font-size: 1.5rem;">CC2</div>
-<div style="margin-top: 0.5rem; opacity: 0.9;">Participation + qualité des reviews PR</div>
+<div style="margin-top: 0.5rem; opacity: 0.9;">Participation et qualité des reviews</div>
 <div style="margin-top: 0.5rem; font-weight: bold; font-size: 1.2rem; background: rgba(255,255,255,0.2); border-radius: 6px; padding: 0.2rem;">coeff. 10</div>
 </div>
 <div style="background: #e74c3c; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; flex: 1; text-align: center;">
@@ -118,7 +93,7 @@ Trois notes, un objectif : vérifier que vous **maîtrisez des gestes de métier
 </div>
 
 <div style="margin-top: 0.8rem; font-size: 0.95rem; color: #666; text-align: center;">
-Le TP1 Git est un TP de mise à niveau - non noté.
+TP1 Git : mise à niveau, non noté. Le plus gros coefficient porte sur le <b>raisonnement TDD</b>, pas sur la vitesse de frappe.
 </div>
 
 ---
@@ -146,7 +121,7 @@ Tout le module se fait sur **GitHub Codespaces** : aucune installation locale n�
 </div>
 <div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">🤖</div>
-<div style="font-weight: bold; margin-top: 0.3rem;">Copilot Chat (tuteur)</div>
+<div style="font-weight: bold; margin-top: 0.3rem;">Copilot Chat</div>
 </div>
 <div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">📊</div>
@@ -154,8 +129,8 @@ Tout le module se fait sur **GitHub Codespaces** : aucune installation locale n�
 </div>
 </div>
 
-<div style="background: #2c3e50; color: white; padding: 1.2rem 2rem; border-radius: 10px; text-align: center; margin-top: 1.5rem; font-size: 1.4rem;">
-🌐 Page d'accueil étudiants : <a href="https://github.com/IUTInfoAix-R203/tp" style="color: #a0d8f8;">github.com/IUTInfoAix-R203/tp</a>
+<div style="background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 10px; text-align: center; margin-top: 1rem; font-size: 1.2rem;">
+🌐 Dépôt étudiant : <a href="https://github.com/IUTInfoAix-R203/tp" style="color: #a0d8f8;">github.com/IUTInfoAix-R203/tp</a>
 </div>
 
 ---
@@ -198,21 +173,14 @@ Un **artisan du logiciel** ne se contente pas de livrer du code qui compile. Il 
 
 ## 🔨 Le manifeste de l'artisanat logiciel (2009)
 
-<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.3rem; line-height: 1.6;">
+<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.25rem; line-height: 1.6;">
 
-> En tant qu'aspirants <b>Software Craftsmen</b>, nous visons non seulement :
-
-| Au-delà de... | ... nous voulons : |
-|---|---|
-| du logiciel qui marche | du logiciel **bien conçu** |
-| répondre au changement | **ajouter régulièrement de la valeur** |
-| individus et interactions | une **communauté de professionnels** |
-| collaborer avec le client | des **partenariats productifs** |
+> En tant qu'aspirants <b>Software Craftsmen</b>, nous visons non seulement du logiciel qui marche, mais du logiciel <b>bien conçu</b>, porté par une <b>communauté de professionnels</b> qui ajoute de la valeur durablement.
 
 </div>
 
-<div style="margin-top: 1rem; text-align: center; color: #666;">
-Inspiré du <em>Manifeste Agile</em> (2001) - mais il ajoute un niveau d'exigence sur la <b>qualité intrinsèque</b> du code, pas juste sur le processus.
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+💡 <b>L'idée à retenir</b> : l'agilité parle beaucoup de <b>processus</b> ; l'artisanat rappelle qu'il faut aussi une exigence sur la <b>qualité du code</b> lui-même.
 </div>
 
 ---
@@ -294,59 +262,55 @@ Ce module vous équipe des **4 outils fondamentaux** de l'artisan logiciel :
 <div style="background: #4a90d9; color: white; padding: 1.5rem; border-radius: 12px;">
 <div style="font-size: 2rem;">🔀 <b>Git avancé</b></div>
 <div style="margin-top: 0.3rem;">Votre historique est une documentation exécutable. Branches, PR, reviews, rebase.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP1 (ce vendredi)</div>
+<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP1</div>
 </div>
 <div style="background: #27ae60; color: white; padding: 1.5rem; border-radius: 12px;">
 <div style="font-size: 2rem;">✅ <b>TDD</b></div>
 <div style="margin-top: 0.3rem;">Écrire les tests <em>avant</em> le code. Spécification exécutable, filet de sécurité.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP2 (semaine prochaine)</div>
+<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP2</div>
 </div>
 <div style="background: #e8a838; color: white; padding: 1.5rem; border-radius: 12px;">
 <div style="font-size: 2rem;">🥋 <b>Kata & pair programming</b></div>
 <div style="margin-top: 0.3rem;">Entraîner son geste technique à deux. Driver / navigator, ping-pong.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP3 (dans 2 semaines)</div>
+<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP3</div>
 </div>
 <div style="background: #e74c3c; color: white; padding: 1.5rem; border-radius: 12px;">
 <div style="font-size: 2rem;">🧹 <b>Refactoring</b></div>
 <div style="margin-top: 0.3rem;">Transformer du code existant sans changer son comportement. Protégé par les tests.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP4 (dans 3 semaines)</div>
+<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP4</div>
 </div>
 </div>
 
 ---
 
-## 🧭 Où se situe R2.03 dans votre parcours BUT ?
+## 🧭 Pourquoi ce module compte tout de suite
 
-<div style="display: flex; gap: 1rem; margin-top: 1rem;">
-<div style="background: #bdc3c7; color: #2c3e50; padding: 1rem; border-radius: 10px; flex: 1;">
-<b>R1.01 (S1)</b> - bases programmation C++
-</div>
-<div style="background: #bdc3c7; color: #2c3e50; padding: 1rem; border-radius: 10px; flex: 1;">
-<b>R2.01 (S2)</b> - POO Java (en parallèle)
-</div>
-<div style="background: #3498db; color: white; padding: 1rem; border-radius: 10px; flex: 1; font-weight: bold;">
-<b>R2.03</b> - vous êtes ici
-</div>
-</div>
-
-<div style="margin-top: 1.5rem; text-align: center; color: #666; font-size: 1.5rem;">
-↓
-</div>
-
-<div style="background: #e74c3c; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 0.5rem;">
+<div style="background: #e74c3c; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
 <b>SAÉ 2.01 - Développement d'une application</b><br/>
-Vous allez coder <b>en équipe</b>, <b>sur plusieurs semaines</b>, un projet réel. Toutes les compétences de R2.03 (Git pro, tests, refactoring) y seront <b>immédiatement utiles</b>. Pas dans un lointain "après les études" - dans 3 semaines.
+Vous allez coder <b>en équipe</b>, <b>sur plusieurs semaines</b>, un projet réel. Les gestes de R2.03 - historique propre, tests, refactoring, review - y deviennent immédiatement utiles.
 </div>
 
-<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1.1rem; text-align: center;">
-Tout ce qu'on apprend aujourd'hui, vous l'utilisez concrètement dans ~3 semaines.
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+<div style="background: #e6f0f9; padding: 1rem; border-radius: 10px; text-align: center;">
+<b>Git</b><br/>pour collaborer sans se marcher dessus
+</div>
+<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px; text-align: center;">
+<b>Tests</b><br/>pour modifier sans paniquer
+</div>
+<div style="background: #fff3cd; padding: 1rem; border-radius: 10px; text-align: center;">
+<b>Refactoring</b><br/>pour garder le projet vivable
+</div>
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1.1rem; text-align: center;">
+Ce qu'on voit ici n'est pas "pour plus tard" : c'est ce qui rend un projet d'équipe tenable.
 </div>
 
 ---
 
 ## 🎯 Compétences BUT visées
 
-Le référentiel BUT cible **trois compétences** pour R2.03 :
+Le référentiel BUT cible ici trois idées simples :
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
 <div style="background: #4a90d9; color: white; padding: 1.2rem; border-radius: 10px;">
@@ -376,7 +340,7 @@ Le référentiel BUT cible **trois compétences** pour R2.03 :
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center;">
-Mots-clés officiels du PN : <b>Qualité, Test, Gestion de version</b>.
+Mots-clés officiels du PN : <b>Qualité</b>, <b>Test</b>, <b>Gestion de version</b>. C'est exactement le coeur de ce module.
 </div>
 
 ---
@@ -423,37 +387,38 @@ La moitié de ce TP1 consiste à corriger les mauvaises habitudes prises au S1. 
 
 ## 🔀 Rappel express : le modèle Git
 
-Un commit est un **snapshot** du projet à un instant donné, avec un ou plusieurs **parents**.
+Il vous suffit de bien tenir **3 idées** pour suivre le reste du cours :
 
 <div style="text-align: center; margin-top: 1rem;">
 
 ```mermaid
 graph LR
-    A[A : init] --> B[B : ajoute feature X]
-    B --> C[C : corrige typo]
-    B --> D[D : experimentation]
-    C --> E[E : merge D]
-    D --> E
+    A[A] --> B[B]
+    B --> C[C]
+    B --> D[D]
     
     style A fill:#bdc3c7
     style B fill:#bdc3c7
     style C fill:#4a90d9,color:#fff
     style D fill:#e8a838,color:#fff
-    style E fill:#27ae60,color:#fff
 ```
 
 </div>
 
 <div style="display: flex; gap: 1rem; margin-top: 1rem;">
 <div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>HEAD</b> : pointeur sur le commit courant dans votre worktree
+<b>Commit</b> : une photo de votre projet à un instant donné
 </div>
 <div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>Branche</b> : pointeur <em>mobile</em> sur un commit (avance avec chaque commit)
+<b>Branche</b> : une étiquette mobile qui avance avec vos commits
 </div>
 <div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>Tag</b> : pointeur <em>fixe</em> sur un commit (ne bouge plus)
+<b>HEAD</b> : l'endroit où vous êtes en train de travailler
 </div>
+</div>
+
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ Pour `TP1`, ça suffit : <b>des commits sur une branche</b>, puis une <b>PR</b> pour les intégrer proprement.
 </div>
 
 ---
@@ -587,7 +552,7 @@ Ce qu'elle permet :
 
 ## 🤖 Review automatique par Copilot
 
-Dans vos Codespaces, **Copilot Code Review** s'active automatiquement à chaque PR ouverte.
+Dans vos Codespaces, **Copilot Code Review** peut commenter automatiquement une PR ouverte.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
 <div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px;">
@@ -610,7 +575,7 @@ Dans vos Codespaces, **Copilot Code Review** s'active automatiquement à chaque 
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1.1rem; text-align: center;">
-En binôme au TP3 (kata), chacun fera <b>au moins 2 reviews</b> sur la PR de l'autre. Discutez avec l'auteur, ne validez pas aveuglément.
+💡 Gardez la bonne hiérarchie : <b>Copilot suggère</b>, un <b>humain décide</b>. Une vraie review commence par comprendre l'intention du code.
 </div>
 
 ---
@@ -695,24 +660,23 @@ Pourquoi ? Le rebase <b>change les SHAs</b>. Si ton coéquipier a déjà basé d
 
 ---
 
-## 🍒 Cherry-pick : prendre un seul commit
+## 🍒 Outil de secours : cherry-pick
 
 <div style="display: flex; gap: 2rem; margin-top: 1rem;">
 <div style="flex: 1;">
 
-**Situation** : tu as un commit `ABCD` sur la branche `feat-experimental` qui contient un correctif de typo.
+**Usage** : récupérer **un seul commit utile** sans reprendre toute la branche.
 
-Tu veux **juste ce correctif** sur `main`, sans tirer tout le reste de la branche.
+Exemple : un petit correctif est sur une branche expérimentale, et vous le voulez aussi sur `main`.
 
 ```bash
 git checkout main
 git cherry-pick ABCD
 ```
 
-**Cas d'usage** :
-- Rapatrier un hotfix isolé
-- Récupérer un commit d'un collègue
-- Re-appliquer un commit "perdu" après un reset
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
+À connaître, mais ce n'est pas le coeur de `TP1`. Le geste central reste : <b>branche courte → PR → review → intégration</b>.
+</div>
 
 </div>
 <div style="flex: 1;">
@@ -734,7 +698,7 @@ graph LR
 ```
 
 <div style="background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.9rem;">
-⚠️ Cherry-pick copie le commit → <b>nouveau SHA</b>. Si tu finis par merger la branche plus tard, les deux commits cohabiteront.
+⚠️ Cherry-pick copie le commit : vous récupérez l'idée, pas le même SHA.
 </div>
 
 </div>
@@ -765,13 +729,11 @@ pick g7h8i9 fix typo
 
 <div style="margin-top: 1rem;">
 
-Vous pouvez :
+Les 3 actions vraiment utiles au quotidien :
 
-- **`reword`** pour corriger un message de commit (`wip` → `feat(auth): ajoute login OAuth`)
-- **`squash`** pour fusionner plusieurs commits en un seul
-- **`fixup`** comme squash mais en jetant le message
-- **`drop`** pour supprimer un commit entier
-- **réordonner** les lignes pour réordonner les commits
+- **`reword`** : corriger un message de commit
+- **`squash`** / **`fixup`** : fusionner les petits commits de travail
+- **`drop`** : retirer un commit vraiment indésirable
 
 </div>
 
@@ -812,9 +774,9 @@ Refaire son historique avant la PR, c'est un acte de <b>courtoisie</b> envers le
 
 ---
 
-## 🆘 Reflog : le filet de sécurité
+## 🆘 Outil de secours : reflog
 
-**Situation cauchemar** : tu tapes `git reset --hard HEAD~5` et tu réalises que tu viens d'effacer 5 commits. **Pas de panique.**
+**Situation cauchemar** : vous tapez `git reset --hard HEAD~5` et réalisez que vous venez d'effacer 5 commits. **Pas de panique.**
 
 <div style="margin-top: 1rem;">
 
@@ -835,11 +797,11 @@ d4e5f6 HEAD@{2}: commit: wip
 
 <div style="display: flex; gap: 1rem; margin-top: 1rem;">
 <div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-Retour à l'état d'avant le reset :
+Pour revenir à l'état d'avant :
 <pre style="background: rgba(0,0,0,0.2); padding: 0.4rem; border-radius: 4px; margin-top: 0.5rem;">git reset --hard g7h8i9</pre>
 </div>
 <div style="background: #27ae60; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>Git conserve ces commits "orphelins"<br/>pendant 90 jours</b> par défaut. Tant qu'il reste dans ce délai, <b>rien n'est vraiment perdu</b>.
+Le message important : <b>Git garde une mémoire locale de vos déplacements</b>. Reflog sert surtout à récupérer après une mauvaise manoeuvre.
 </div>
 </div>
 
@@ -862,16 +824,10 @@ Retour à l'état d'avant le reset :
 <b>✅ git push --force-with-lease</b><br/>Refuse le push si quelqu'un a poussé entre-temps.
 </div>
 
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>❌ git branch -D feature</b><br/>Supprime même une branche non fusionnée.
-</div>
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ git branch -d feature</b><br/>Refuse de supprimer si des commits sont non fusionnés.
-</div>
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
-Règle de survie : <b>toute commande destructrice a une variante sûre</b>. Utilisez-la par défaut.
+Règle de survie : <b>privilégiez toujours la variante qui refuse d'écraser silencieusement le travail</b>.
 </div>
 
 ---
@@ -1141,7 +1097,7 @@ Observez le rythme : <b>activer → rouge → écrire → vert → commit</b>. N
 
 ## 🤖 Copilot Chat : votre tuteur, pas votre code-monkey
 
-Le TP2 a un fichier `.github/copilot-instructions.md` qui configure Copilot comme **tuteur TDD** :
+Au TP2, Copilot est configuré comme **tuteur TDD** : il peut aider à raisonner, mais pas court-circuiter la démarche.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
 <div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
@@ -1149,7 +1105,7 @@ Le TP2 a un fichier `.github/copilot-instructions.md` qui configure Copilot comm
 <ul style="margin-top: 0.3rem;">
 <li>Expliquer un concept TDD</li>
 <li>Vous orienter vers la Javadoc</li>
-<li>Suggérer du code <b>quand vous lui demandez 3 fois</b> (escalade)</li>
+<li>Vous aider à débloquer une impasse</li>
 <li>Refuser de coder à votre place si un test n'est pas encore activé</li>
 </ul>
 </div>
@@ -1164,32 +1120,7 @@ Le TP2 a un fichier `.github/copilot-instructions.md` qui configure Copilot comm
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
-<b>Au CC3 (18 juin), vous coderez sur feuille, sans outil.</b> Copilot est un tuteur pendant les TP ; vos réflexes doivent être les vôtres.
-</div>
-
----
-
-## 📚 Pour aller plus loin
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 10px;">
-<b>🔀 Git</b>
-<ul style="margin-top: 0.3rem; font-size: 0.95rem;">
-<li><a href="https://git-scm.com/book/fr/v2" style="color: #a0d8f8;">Pro Git</a> (livre gratuit, français)</li>
-<li><a href="https://learngitbranching.js.org/?locale=fr_FR" style="color: #a0d8f8;">Learn Git Branching</a> (tuto interactif)</li>
-<li><a href="https://www.conventionalcommits.org/fr/" style="color: #a0d8f8;">Conventional Commits</a> (spec)</li>
-<li><a href="https://ohshitgit.com/fr" style="color: #a0d8f8;">Oh Shit, Git !?!</a> (recettes de sauvetage)</li>
-</ul>
-</div>
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ TDD</b>
-<ul style="margin-top: 0.3rem; font-size: 0.95rem;">
-<li><em>Test-Driven Development by Example</em> - Kent Beck (2002)</li>
-<li><em>The Art of Unit Testing</em> - Roy Osherove (3e éd. 2024)</li>
-<li><a href="https://junit.org/junit5/docs/current/user-guide/" style="color: #a0d8f8;">JUnit 5 User Guide</a></li>
-<li><a href="https://assertj.github.io/doc/" style="color: #a0d8f8;">AssertJ</a></li>
-</ul>
-</div>
+Copilot est un <b>tuteur</b> pendant les TP ; au contrôle, vos réflexes doivent être les vôtres.
 </div>
 
 ---
@@ -1198,17 +1129,21 @@ Le TP2 a un fichier `.github/copilot-instructions.md` qui configure Copilot comm
 
 # Ce qu'on fait maintenant
 
-Le module R2.03 se concentre sur **4 semaines**. Ce CM1 (semaine du 27 avril) est la seule séance de cette semaine.
-
-**Semaine prochaine (4 mai)** : vous enchaînez **CM2 le matin** puis **TP1 + TP2 l'après-midi**.
+Le prochain cap est simple : mettre en pratique les deux moitiés du cours d'aujourd'hui.
 
 **🔀 TP1 - Git avancé** (~2h, non noté)
-Rebase, cherry-pick, Conventional Commits, PR + review.
+Historique lisible, PR, review, intégration propre.
 
 **✅ TP2 - TDD** (~4h, noté)
 Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
 
-**👉 Lien Classroom** sur [github.com/IUTInfoAix-R203/tp](https://github.com/IUTInfoAix-R203/tp)
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+🎯 <b>Dès le prochain TP</b> : écrivez des commits relisibles, ouvrez une PR comme une vraie conversation, et laissez toujours un test vous dire quand vous avez cassé quelque chose.
+</div>
+
+<div style="margin-top: 1rem; text-align: center;">
+👉 Lien Classroom : [github.com/IUTInfoAix-R203/tp](https://github.com/IUTInfoAix-R203/tp)
+</div>
 
 ---
 
@@ -1216,6 +1151,4 @@ Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
 
 # À suivre : CM2 - TDD avancé et refactoring
 
-**Semaine prochaine (4 mai), le matin avant les TP.**
-
-Au programme : approfondir le TDD, découvrir les kata en pair programming, et préparer le refactoring du TP4.
+On y approfondira le TDD, on découvrira les kata en pair programming, et on préparera le refactoring du TP4.

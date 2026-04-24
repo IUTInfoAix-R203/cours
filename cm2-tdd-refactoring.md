@@ -21,7 +21,7 @@ IUT d'Aix-Marseille - BUT Informatique, 1re année
 <div style="background: #27ae60; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">✅</div>
 <b>TDD approfondi</b><br/>
-<span style="font-size: 0.9rem; opacity: 0.9;">F.I.R.S.T., stratégies de Beck, test doubles</span>
+<span style="font-size: 0.9rem; opacity: 0.9;">F.I.R.S.T., stratégies de Beck, ApprovalTests</span>
 </div>
 <div style="background: #e8a838; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">🥋</div>
@@ -36,7 +36,7 @@ IUT d'Aix-Marseille - BUT Informatique, 1re année
 </div>
 
 <div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.1rem;">
-Ce CM prépare <b>TP3 - Kata</b> (séance 3) et <b>TP4 - Refactoring</b> (séance 4).
+Ce CM prépare <b>TP3 - Kata</b> et <b>TP4 - Refactoring</b>.
 </div>
 
 ---
@@ -51,12 +51,6 @@ Ce CM prépare <b>TP3 - Kata</b> (séance 3) et <b>TP4 - Refactoring</b> (séanc
 <b>📍 CM2 (vous êtes ici)</b><br/><span style="font-size: 0.9rem;">TDD + Refactoring</span>
 </div>
 <div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
-<b>TP1</b><br/><span style="font-size: 0.9rem;">Git avancé</span>
-</div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
-<b>TP2</b><br/><span style="font-size: 0.9rem;">TDD baby-steps</span>
-</div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
 <b>TP3</b><br/><span style="font-size: 0.9rem;">Kata + pair prog</span>
 </div>
 <div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
@@ -68,7 +62,7 @@ Ce CM prépare <b>TP3 - Kata</b> (séance 3) et <b>TP4 - Refactoring</b> (séanc
 </div>
 
 <div style="margin-top: 1.5rem; font-size: 1.1rem; text-align: center;">
-Le CM1 a ouvert le TDD ; on l'<b>approfondit</b> aujourd'hui. Puis on attaque le <b>refactoring</b> : transformer du code existant sans le casser. L'après-midi, on met tout ça en pratique sur TP1 (Git) et TP2 (TDD).
+Le socle posé en CM1 puis en TP1/TP2 est là. Aujourd'hui, on l'<b>approfondit</b> et on prépare directement <b>TP3</b>, <b>TP4</b> et la logique du <b>CC3</b>.
 </div>
 
 <div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
@@ -124,14 +118,11 @@ graph LR
 <div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
 <div style="flex: 1.1;">
 
-Le CM1 a montré la **courbe du coût d'un bug** : 1x en dev, 6x aux tests, 15x en pré-prod, **100x chez le client**.
+Le CM1 a montré la **courbe du coût d'un bug** : plus on le découvre tard, plus il coûte cher.
 
-Le TDD attaque la courbe **au point le moins cher**. Chaque cycle RED-GREEN-REFACTOR est un bug potentiel **détecté avant qu'il existe** : vous écrivez d'abord la condition qui devra être vraie, puis le code qui la rend vraie.
+Le TDD attaque cette courbe **au moment le moins cher** : vous écrivez d'abord la condition qui devra être vraie, puis le code qui la rend vraie.
 
-Un test qui passe en 200 ms sur votre machine évite :
-- quelques heures de debug quand le bug remonterait d'un user
-- parfois plusieurs jours si le bug dort plusieurs releases
-- parfois une perte cliente si le comportement est visible côté produit
+Autrement dit : au lieu de passer du temps à **débugger après**, vous investissez quelques secondes à **sécuriser avant**.
 
 </div>
 <div style="flex: 1;">
@@ -141,11 +132,7 @@ Un test qui passe en 200 ms sur votre machine évite :
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1rem;">
-Le TDD ne ralentit pas le développement. Il le <b>déplace</b> : on passe du temps à tester <em>avant</em> au lieu de débugger <em>après</em>. La vitesse apparente baisse le premier jour, la vitesse réelle monte dès la deuxième semaine.
-</div>
-
-<div style="margin-top: 1rem; font-size: 0.95rem; color: #555; text-align: center;">
-<em>Étude Capers Jones : les projets avec tests systématiques livrent en moyenne <b>30 % plus vite</b> sur les équipes matures.</em>
+Le TDD ne supprime pas le travail ; il le <b>déplace vers le moment où il est le moins coûteux</b>.
 </div>
 
 </div>
@@ -371,58 +358,26 @@ void apres_deux_points_serveur_30_0() {
 
 ---
 
-## 🎭 Les test doubles (bref aperçu)
+## 🎭 Test doubles : à quoi ça sert ?
 
-Quand le code testé dépend d'autre chose (base de données, service externe, horloge), on utilise un **double** - un objet qui remplace la vraie dépendance dans le test.
+Quand le code testé dépend d'autre chose (base de données, service externe, horloge), on peut remplacer la vraie dépendance par un **double**.
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
 
 <div style="background: #e6f0f9; padding: 1rem; border-radius: 10px;">
-<b>🪨 Stub</b> : renvoie une réponse prédéfinie.<br/>
-<em>Exemple</em> : un repo qui renvoie toujours la même liste d'utilisateurs.
+<b>🪨 Stub / Fake</b><br/>
+Renvoyer une réponse contrôlée ou une implémentation simplifiée.
 </div>
 
 <div style="background: #fff3cd; padding: 1rem; border-radius: 10px;">
-<b>🎯 Mock</b> : vérifie <b>comment</b> il est appelé.<br/>
-<em>Exemple</em> : vérifier que <code>envoyerEmail</code> a bien été appelé 1 fois.
-</div>
-
-<div style="background: #d1ecf1; padding: 1rem; border-radius: 10px;">
-<b>🕵️ Spy</b> : double qui enregistre les appels tout en utilisant la vraie implémentation.
-</div>
-
-<div style="background: #d4edda; padding: 1rem; border-radius: 10px;">
-<b>🎪 Fake</b> : implémentation alternative simplifiée (ex : repo en mémoire au lieu d'une vraie BDD).
+<b>🎯 Mock / Spy</b><br/>
+Observer comment une dépendance est appelée.
 </div>
 
 </div>
 
 <div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center; font-size: 0.95rem;">
-Dans ce module, l'outillage tests mis en pratique est surtout <b>ApprovalTests</b> (kata à sortie textuelle, cf. TP2 Minesweeper) et le <b>pair programming ping-pong</b> (TP3). <b>Mockito</b> est disponible en dépendance si vous en avez besoin, mais n'est pas exercé ici. Pas obligatoire au CC3.
-</div>
-
----
-
-## 🎯 Exemple Mockito
-
-```java
-@Test
-void envoie_un_email_quand_la_commande_est_validee() {
-  // Arrange : on crée un mock
-  EmailService email = mock(EmailService.class);
-  GestionCommande g = new GestionCommande(email);
-
-  // Act
-  g.valider(new Commande("alice@iut.fr", 42));
-
-  // Assert : on vérifie l'appel
-  verify(email).envoyer("alice@iut.fr", "Commande 42 confirmée");
-}
-```
-
-<div style="margin-top: 0.8rem; background: #fff3cd; padding: 1rem; border-radius: 8px;">
-⚠️ <b>Ne pas abuser des mocks</b>. Un mock remplace une vraie dépendance : s'il est mal configuré, le test peut passer alors que le code est cassé.<br/>
-Règle pragmatique : <b>mocker seulement ce qu'on ne contrôle pas</b> (I/O, réseau, horloge).
+Dans ce module, l'outillage vraiment pratiqué est surtout <b>ApprovalTests</b> (TP2) et le <b>pair programming ping-pong</b> (TP3). Retenez surtout <b>l'idée générale</b> : isoler ce qu'on ne contrôle pas.
 </div>
 
 ---
@@ -513,77 +468,37 @@ Utilisé au TP2 exercice 5 (Démineur) - gain énorme sur les grandes grilles.
 
 ## 📊 Pyramide des tests
 
-```mermaid
-graph BT
-    subgraph P[" "]
-        E2E["E2E / IHM<br/>peu, lents, fragiles"]
-        INT["Intégration<br/>modéré, plus lents"]
-        U["Tests unitaires<br/>beaucoup, rapides, précis"]
-    end
-
-    style U fill:#27ae60,color:#fff
-    style INT fill:#e8a838,color:#fff
-    style E2E fill:#e74c3c,color:#fff
-```
-
 <div style="margin-top: 0.5rem; display: flex; gap: 1rem;">
 <div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 8px;">
-<b>Beaucoup</b> de tests unitaires (vite, ciblés) : la base de la pyramide.
+<b>Beaucoup</b> de tests unitaires : rapides, ciblés, relancés tout le temps.
 </div>
 <div style="flex: 1; background: #fff3cd; padding: 1rem; border-radius: 8px;">
-<b>Moins</b> de tests d'intégration (plusieurs classes ensemble).
+<b>Moins</b> de tests d'intégration : plusieurs briques ensemble.
 </div>
 <div style="flex: 1; background: #fde8e6; padding: 1rem; border-radius: 8px;">
-<b>Encore moins</b> de tests bout-en-bout (lents, cassants).
+<b>Encore moins</b> de tests bout-en-bout : lents, fragiles, coûteux.
 </div>
 </div>
 
 <div style="margin-top: 0.5rem; text-align: center; font-size: 1rem; color: #555;">
-Dans ce module, on se concentre sur la <b>base</b> : les tests unitaires.
+Dans ce module, on travaille surtout la <b>base</b> : les tests unitaires. C'est là que le TDD vit vraiment.
 </div>
 
 ---
 
-## 🧬 Bonus : la couverture ne suffit pas
+## 🧬 Aparté : couverture != qualité des tests
 
-<div style="display: flex; gap: 1.5rem; margin-top: 0.4rem;">
-<div style="flex: 1.1;">
-
-**La couverture de code** (JaCoCo, IntelliJ Coverage) dit : *"quelles lignes ont été exécutées par les tests ?"*
-
-C'est utile... mais ça ne dit **pas** si vos tests détectent de vrais bugs. Exemple piège :
-
-```java
-int diviser(int a, int b) {
-  return a / b;  // ligne 100% couverte
-}
-
-@Test void test() { diviser(10, 2); }  // aucun assert !
-```
-
-La ligne est couverte à 100 %. Aucun bug ne sera détecté.
-
-</div>
-<div style="flex: 1;">
-
-<div style="background: #e6f0f9; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #4a90d9;">
-<b>Mutation testing</b> (outil <b>PIT</b> en Java) répond à une question plus dure : <em>"si je modifie subtilement le code de production, est-ce que mes tests le détectent ?"</em>
+<div style="background: #e6f0f9; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #4a90d9; margin-top: 0.5rem;">
+<b>Couverture</b> = "quelles lignes ont été exécutées ?"<br/>
+<b>Qualité des tests</b> = "est-ce qu'ils détectent vraiment un bug ?"
 </div>
 
 <div style="margin-top: 0.8rem; background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.95rem;">
-<b>Exemple de mutation</b> : PIT remplace <code>a + b</code> par <code>a - b</code>. Si votre test passe toujours, votre test était <b>tautologique</b>. Si le test casse : bien, il avait du sens.
-</div>
-
-<div style="margin-top: 0.8rem; text-align: center; font-size: 0.95rem;">
-<b>Score PIT</b> = % de mutations détectées par la suite de tests.<br/>
-Un score 80 % raconte <em>vraiment</em> la qualité des tests.
-</div>
-
-</div>
+Une ligne peut être couverte à 100 % avec un test sans assertion. La couverture est utile, mais elle ne suffit pas à dire qu'une suite de tests est bonne.
 </div>
 
 <div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.7rem 1rem; border-radius: 8px; font-size: 0.95rem; text-align: center;">
-<b>Hors scope R2.03</b>, mais à connaître : quand une entreprise est sérieuse sur la qualité des tests, elle regarde <b>le score mutation</b>, pas seulement la couverture. Outil gratuit : <a href="https://pitest.org" style="color: #e8a838;">pitest.org</a>.
+À retenir sans en faire une obsession : un beau pourcentage de couverture ne prouve pas, à lui seul, qu'une suite de tests est utile.
 </div>
 
 ---
@@ -671,28 +586,18 @@ Analogie : un pianiste ne joue pas ses gammes pour "réussir les gammes". Il les
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.5rem; font-size: 0.95rem;">
 
 <div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🎳 Bowling (Uncle Bob)</b><br/>
-Calcul d'un score de bowling. Simple, mais plein de pièges sur les strikes et spares.
+<b>🗓️ Années bissextiles</b><br/>
+Petit kata idéal pour travailler les règles booléennes.
 </div>
 
 <div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🎾 Tennis (various)</b><br/>
+<b>🎾 Tennis scoring</b><br/>
 Afficher le score d'un jeu de tennis. Idéal pour les state machines.
 </div>
 
 <div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
 <b>🎲 Yahtzee</b><br/>
 Scorer les combinaisons d'un jet de 5 dés. Bon terrain pour la stratégie.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🔢 String Calculator (Osherove)</b><br/>
-Parser une chaîne et additionner les nombres. Progression en 9 étapes.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🗓️ Années bissextiles</b><br/>
-Multi-règles booléennes. Premier kata idéal.
 </div>
 
 <div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
@@ -881,7 +786,7 @@ Un peu comme un aliment qui sent bizarre : **pas forcément périmé, mais il fa
 
 ---
 
-## 📚 Les code smells les plus courants (1/2)
+## 📚 Les smells qu'on va surtout rencontrer au TP4
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.3rem; font-size: 0.92rem;">
 
@@ -893,7 +798,7 @@ Une méthode de 50 lignes qu'on scroll pour la lire.<br/>
 
 <div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
 <b>🏢 Large Class</b><br/>
-Une classe qui fait tout (God class).<br/>
+Une classe qui fait trop de choses.<br/>
 <em>Solution</em> : Extract Class.
 </div>
 
@@ -916,55 +821,21 @@ Le même bloc copié-collé en 3 endroits.<br/>
 </div>
 
 <div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🌳 Nested Conditionals</b><br/>
-Des <code>if</code> imbriqués sur 5 niveaux.<br/>
-<em>Solution</em> : Guard Clauses, Extract Method.
-</div>
-
-</div>
-
----
-
-## 📚 Les code smells les plus courants (2/2)
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.3rem; font-size: 0.92rem;">
-
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🔌 Feature Envy</b><br/>
-Une méthode de A qui manipule surtout des données de B.<br/>
-<em>Solution</em> : Move Method.
-</div>
-
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🧩 Data Clumps</b><br/>
-Les mêmes 3 paramètres qui voyagent ensemble partout.<br/>
-<em>Solution</em> : Extract Class.
-</div>
-
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🔣 Primitive Obsession</b><br/>
-<code>String email</code>, <code>int codePostal</code> partout au lieu de vrais types.<br/>
-<em>Solution</em> : Replace Primitive with Object.
-</div>
-
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
 <b>🔀 Switch Statements</b><br/>
 Un <code>switch</code> sur un type, dupliqué en 5 endroits.<br/>
 <em>Solution</em> : Replace Conditional with Polymorphism.
 </div>
 
 <div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>💬 Comments qui expliquent le code</b><br/>
-Un commentaire qui traduit ce que fait un bloc.<br/>
-<em>Solution</em> : Extract Method avec un bon nom.
+<b>🧩 Data Clumps / Primitive Obsession</b><br/>
+Des données voyagent toujours ensemble sans avoir de vrai type.<br/>
+<em>Solution</em> : Introduce Parameter Object / Replace Primitive with Object.
 </div>
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🏷️ Mauvais nommage</b><br/>
-<code>int x, y, z</code>, <code>void doStuff()</code>.<br/>
-<em>Solution</em> : Rename.
 </div>
 
+<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center;">
+Retenez surtout le réflexe : <b>un smell n'est pas une faute</b>, c'est un signal qu'une zone du code va devenir pénible à modifier.
 </div>
 
 ---
@@ -1004,52 +875,15 @@ Changer ce que fait une méthode, ajouter une fonctionnalité, corriger un bug.<
 
 ## 📖 Le catalogue de Fowler (70+ refactorings)
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.3rem; font-size: 0.95rem;">
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🏷️ Rename</b><br/>
-Renommer variable, méthode, classe. Le plus fréquent.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>✂️ Extract Method</b><br/>
-Sortir un bloc dans une méthode nommée.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>📌 Inline</b><br/>
-L'inverse : replacer le corps d'une méthode dans l'appelant.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>📦 Extract Class</b><br/>
-Sortir un groupe de champs + méthodes dans une nouvelle classe.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>➡️ Move Method</b><br/>
-Déplacer une méthode vers la classe qu'elle utilise le plus.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🎁 Introduce Parameter Object</b><br/>
-Grouper des paramètres qui voyagent ensemble dans un objet.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🦎 Replace Conditional with Polymorphism</b><br/>
-Un <code>switch</code> → une hiérarchie de classes.
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🔢 Replace Magic Number with Constant</b><br/>
-<code>0.2</code> → <code>TAUX_TVA</code>.
-</div>
-
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.8rem; margin-top: 0.3rem; font-size: 0.95rem;">
+<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>🏷️ Rename</b><br/>Le plus fréquent.</div>
+<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>✂️ Extract Method</b><br/>Pour rendre une intention lisible.</div>
+<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>📦 Extract Class</b><br/>Quand une classe fait trop de choses.</div>
+<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>🦎 Polymorphism</b><br/>Quand un switch devient pénible.</div>
 </div>
 
 <div style="margin-top: 0.7rem; text-align: center; background: #2c3e50; color: white; padding: 0.7rem; border-radius: 8px; font-size: 0.95rem;">
-Référence : <a href="https://refactoring.com/catalog/" style="color: #a0d8f8;">refactoring.com/catalog</a> - le catalogue complet en ligne.
+Il existe un <b>vocabulaire commun</b> pour nommer ces transformations. Les TP4 vous font justement pratiquer quelques entrées très classiques de ce catalogue.
 </div>
 
 ---
@@ -1367,9 +1201,9 @@ Ajouter Conjured **directement** dans le code spaghetti est très risqué. Le re
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
-# Clean Code - touches finales
+# Quelques gestes à garder
 
-Quelques principes transverses à retenir pour la vie.
+Trois habitudes simples pour la suite : ranger un peu, nommer mieux, commenter moins.
 
 ---
 
@@ -1438,264 +1272,6 @@ Un nom plus clair, une méthode extraite, un test ajouté.
 
 ---
 
-## 🧱 SOLID : 5 principes de Robert C. Martin
-
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 0.6rem; margin-top: 0.5rem; font-size: 0.9rem;">
-
-<div style="background: #e74c3c; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
-<div style="font-size: 2rem; font-weight: bold;">S</div>
-<div>Single<br/>Responsibility</div>
-</div>
-
-<div style="background: #e8a838; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
-<div style="font-size: 2rem; font-weight: bold;">O</div>
-<div>Open /<br/>Closed</div>
-</div>
-
-<div style="background: #27ae60; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
-<div style="font-size: 2rem; font-weight: bold;">L</div>
-<div>Liskov<br/>Substitution</div>
-</div>
-
-<div style="background: #4a90d9; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
-<div style="font-size: 2rem; font-weight: bold;">I</div>
-<div>Interface<br/>Segregation</div>
-</div>
-
-<div style="background: #8e44ad; color: white; padding: 0.9rem; border-radius: 8px; text-align: center;">
-<div style="font-size: 2rem; font-weight: bold;">D</div>
-<div>Dependency<br/>Inversion</div>
-</div>
-
-</div>
-
-<div style="margin-top: 1rem; text-align: center; font-size: 1.05rem;">
-5 principes de conception orientée objet. On les voit un par un, avec un exemple chacun. Objectif : <b>reconnaître le nom</b> et avoir <b>un exemple mental</b>.
-</div>
-
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
-🛠️ SOLID, c'est <b>l'équivalent des règles du métier</b> pour l'artisan du logiciel : on peut coder sans les connaître, mais on coderait mieux en les connaissant. Vous n'avez pas à tout maîtriser dès le BUT1 - vous devez pouvoir <b>reconnaître</b> chaque principe quand un·e collègue y fera référence.
-</div>
-
----
-
-## 🧱 S - Single Responsibility Principle
-
-Une classe doit avoir **une seule raison de changer**.
-
-<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
-<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**❌ Employe qui fait tout**
-
-```java
-class Employe {
-  double calculerSalaire() { ... }
-  void sauvegarderEnBDD() { ... }
-  String genererRapportPDF() { ... }
-  void envoyerEmailBulletin() { ... }
-}
-```
-
-Raisons de changer : règles RH, schéma BDD, format PDF, SMTP... → **4 raisons** = trop.
-
-</div>
-<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**✅ Chacun son rôle**
-
-```java
-class Employe { /* données + comportement métier */ }
-
-class CalculSalaire { ... }
-class EmployeRepository { ... }
-class RapportGenerator { ... }
-class BulletinMailer { ... }
-```
-
-Chaque classe : **une** raison de changer.
-
-</div>
-</div>
-
-<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
-C'est le refactoring <b>Extract Class</b> appliqué systématiquement. Le <b>TP4 exercice 3</b> en fait une démo : <code>Menu</code> fait à la fois l'affichage ET la gestion de l'historique → on extrait <code>Historique</code>.
-</div>
-
----
-
-## 🧱 O - Open / Closed Principle
-
-Une classe doit être **ouverte à l'extension**, **fermée à la modification**.
-
-<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
-<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**❌ Chaque nouveau type modifie la méthode**
-
-```java
-String faireDuBruit(Animal a) {
-  switch (a.type) {
-    case "chien": return "Wouaf";
-    case "chat":  return "Miaou";
-    // ajouter un cas = modifier CETTE méthode
-  }
-}
-```
-
-</div>
-<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**✅ Chaque nouveau type est une nouvelle classe**
-
-```java
-abstract class Animal {
-  abstract String faireDuBruit();
-}
-class Chien extends Animal { String faireDuBruit() { return "Wouaf"; } }
-class Chat  extends Animal { String faireDuBruit() { return "Miaou"; } }
-// nouveau type = nouvelle classe, CODE EXISTANT non touché
-```
-
-</div>
-</div>
-
-<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
-C'est exactement le refactoring <b>Replace Conditional with Polymorphism</b>. <b>TP4 exercice 4</b> (Animal) et <b>exercice 6</b> (Gilded Rose).
-</div>
-
----
-
-## 🧱 L - Liskov Substitution Principle
-
-Une sous-classe doit pouvoir **remplacer** sa classe mère **sans casser** le code qui l'utilise.
-
-<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
-<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**❌ Carre extends Rectangle qui casse la logique**
-
-```java
-class Rectangle {
-  void setLargeur(int l) { ... }
-  void setHauteur(int h) { ... }
-}
-class Carre extends Rectangle {
-  // force largeur == hauteur !
-  void setLargeur(int l) { this.largeur = l; this.hauteur = l; }
-}
-// Code appelant : r.setLargeur(5); r.setHauteur(3);
-// -> surprise si r est un Carre : largeur devient 3
-```
-
-</div>
-<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**✅ Hiérarchie qui respecte le contrat**
-
-```java
-interface Forme { int aire(); }
-class Rectangle implements Forme { ... }
-class Carre implements Forme { ... }
-// Chacune implémente aire(), aucune ne "ment"
-// sur le comportement attendu.
-```
-
-</div>
-</div>
-
-<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
-Règle pratique : <b>si vous devez overrider pour désactiver ou contredire la classe mère, c'est une alerte LSP</b>. Préférez la composition ou une interface commune.
-</div>
-
----
-
-## 🧱 I - Interface Segregation Principle
-
-**Mieux vaut plusieurs interfaces ciblées** qu'une grosse interface fourre-tout.
-
-<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
-<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**❌ Machine à tout faire**
-
-```java
-interface Machine {
-  void imprimer(Doc d);
-  void scanner(Doc d);
-  void envoyerFax(Doc d);
-}
-// Une Imprimante simple doit implémenter
-// scanner() et envoyerFax() pour rien.
-// -> UnsupportedOperationException partout.
-```
-
-</div>
-<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**✅ Interfaces séparées, cumulables**
-
-```java
-interface Imprimante { void imprimer(Doc d); }
-interface Scanner    { void scanner(Doc d); }
-interface Fax        { void envoyerFax(Doc d); }
-
-class ImprimanteSimple implements Imprimante { ... }
-class MultiFonction implements Imprimante, Scanner, Fax { ... }
-```
-
-</div>
-</div>
-
-<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
-Règle pratique : <b>une interface = un rôle</b>. Si une classe implémente l'interface mais jette <code>UnsupportedOperationException</code> sur la moitié des méthodes, elle a besoin d'une interface plus ciblée.
-</div>
-
----
-
-## 🧱 D - Dependency Inversion Principle
-
-**Dépendez d'abstractions** (interfaces), **pas d'implémentations concrètes**.
-
-<div style="display: flex; gap: 1rem; margin-top: 0.3rem;">
-<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**❌ Couplage dur à MySQL**
-
-```java
-class GestionUtilisateurs {
-  private MySQLRepository db = new MySQLRepository();
-  // Impossible de tester sans une vraie BDD MySQL.
-  // Impossible de changer pour Postgres sans réécrire.
-}
-```
-
-</div>
-<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.85rem;">
-
-**✅ Dépendance via interface**
-
-```java
-interface UtilisateurRepository {
-  Optional<Utilisateur> trouver(int id);
-}
-
-class GestionUtilisateurs {
-  private final UtilisateurRepository repo;
-  // injecté au constructeur : MySQL en prod,
-  // repo en mémoire en test
-}
-```
-
-</div>
-</div>
-
-<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 6px; font-size: 0.95rem; text-align: center;">
-C'est ce qui rend les <b>test doubles</b> possibles (slide test doubles plus tôt). Sans DIP, pas de stub, pas de mock propre.
-</div>
-
----
-
 ## 💬 Les commentaires : utiliser avec parcimonie
 
 <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
@@ -1732,55 +1308,13 @@ if (id <= 0) throw ...;
 
 ---
 
-## 📚 Les livres à lire (un jour)
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.3rem; font-size: 0.95rem;">
-
-<div style="background: #e6f0f9; padding: 0.8rem; border-radius: 8px;">
-<b>📖 Refactoring</b> (Fowler, 1999/2018)<br/>
-<em>La bible. Catalogue de 70+ refactorings avec exemples.</em>
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem; border-radius: 8px;">
-<b>📖 Clean Code</b> (Martin, 2008)<br/>
-<em>Règles de nommage, fonctions, commentaires, classes.</em>
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem; border-radius: 8px;">
-<b>📖 Test-Driven Development: By Example</b> (Beck, 2002)<br/>
-<em>Le TDD expliqué par son inventeur, en 200 pages.</em>
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem; border-radius: 8px;">
-<b>📖 Working Effectively with Legacy Code</b> (Feathers, 2004)<br/>
-<em>Comment sauver du code sans tests.</em>
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem; border-radius: 8px;">
-<b>📖 The Pragmatic Programmer</b> (Hunt & Thomas, 1999/2019)<br/>
-<em>100 conseils transverses. Un classique.</em>
-</div>
-
-<div style="background: #e6f0f9; padding: 0.8rem; border-radius: 8px;">
-<b>📖 The Mikado Method</b> (Ellnestam, 2014)<br/>
-<em>Une méthode pour attaquer de gros refactorings.</em>
-</div>
-
-</div>
-
-<div style="margin-top: 0.7rem; text-align: center; background: #2c3e50; color: white; padding: 0.6rem; border-radius: 8px; font-size: 0.95rem;">
-💡 Commencez par <b>Clean Code</b> (chapitres 1 à 3) et <b>Refactoring</b> (chapitres 1 + 3).
-</div>
-
----
-
 <!-- _class: lead -->
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
 # Pour la suite
 
-TP3 demain. TP4 la semaine d'après. CC3 à la fin.
+Le prochain cap est simple : mettre ces gestes en pratique, d'abord à deux, puis sur du legacy.
 
 ---
 
