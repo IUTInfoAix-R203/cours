@@ -282,31 +282,63 @@ Le <b>"Software Craftsmanship"</b> est mouvement né dans les années 2000, en r
 
 ## 📉 Pourquoi c'est important : le coût des bugs
 
-<div style="display: flex; gap: 2rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Plus un bug est détecté <b>tard</b>, plus il coûte cher à corriger. Ordre de grandeur (<a href="https://staff.emu.edu.tr/alexanderchefranov/Documents/CMPE412/Boehm1981%20COCOMO.pdf" style="color: inherit;">Boehm, 1981</a>) :
+</p>
 
-Plus un bug est détecté **tard**, plus il coûte cher à corriger. Ordre de grandeur connu :
+<div style="display: flex; gap: 2rem; margin-top: 0.8rem; align-items: center;">
+<div style="flex: 1.3;">
 
-| Détecté pendant... | Coût relatif |
-|---|---|
-| Le développement | 1x |
-| Les tests | 6x |
-| La pré-production | 15x |
-| **Chez le client** | **100x** |
+<div style="display: grid; gap: 2.6rem;">
+
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 190px; font-size: 1.5rem; color: #555;">Développement</div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.5rem; overflow: hidden;">
+<div style="background: #27ae60; width: 1%; height: 100%;"></div>
+</div>
+<div style="width: 70px; text-align: right; font-weight: bold; font-size: 1.3rem; color: #27ae60;">1x</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 190px; font-size: 1.5rem; color: #555;">Tests</div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.5rem; overflow: hidden;">
+<div style="background: #e8a838; width: 6%; height: 100%;"></div>
+</div>
+<div style="width: 70px; text-align: right; font-weight: bold; font-size: 1.3rem; color: #e8a838;">6x</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 190px; font-size: 1.5rem; color: #555;">Pré-production</div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.5rem; overflow: hidden;">
+<div style="background: #e67e22; width: 15%; height: 100%;"></div>
+</div>
+<div style="width: 70px; text-align: right; font-weight: bold; font-size: 1.3rem; color: #e67e22;">15x</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 190px; font-size: 1.5rem; color: #555;"><b>Chez le client</b></div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.5rem; overflow: hidden;">
+<div style="background: #e74c3c; width: 100%; height: 100%;"></div>
+</div>
+<div style="width: 70px; text-align: right; font-weight: bold; font-size: 1.5rem; color: #e74c3c;">100x</div>
+</div>
+
+</div>
 
 </div>
 <div style="flex: 1;">
 
-<div style="background: #e74c3c; color: white; padding: 1.5rem; border-radius: 12px;">
-<b>Cas célèbre : Knight Capital (2012)</b><br/>
-Un bug dans un déploiement de trading automatique a fait perdre <b>440 millions de dollars en 45 minutes</b>. Rang de bourse : faillite. Cause : un drapeau mal réinitialisé dans un module obsolète.
+<div style="background: #e74c3c; color: white; padding: 1.3rem 1.5rem; border-radius: 12px; font-size: 1.4rem;">
+<div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.6rem;">💥 Knight Capital (2012)</div>
+Un bug de déploiement sur un système de trading a fait perdre <b>440 M$ en 45 minutes</b>.<br/><br/>
+Conséquence : <b>Faillite !</b><br/><br/> Cause : un drapeau mal réinitialisé dans un module obsolète.
 </div>
 
-<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1.1rem;">
+</div>
+</div>
+
+<div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem;">
 ➡️ La qualité du code n'est pas un luxe d'esthète : c'est une question de <b>survie économique</b>.
-</div>
-
-</div>
 </div>
 
 ---
