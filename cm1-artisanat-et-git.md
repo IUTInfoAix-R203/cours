@@ -246,14 +246,36 @@ Le <b>"Software Craftsmanship"</b> est mouvement né dans les années 2000, en r
 
 ## 🔨 Le manifeste de l'artisanat logiciel (2009)
 
-<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.25rem; line-height: 1.6;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Snowbird, Utah, décembre 2008. En écho au Manifeste Agile de 2001, 4 principes, toujours sur le même modèle : <b>non seulement X, mais aussi Y</b>.
+</p>
 
-> En tant qu'aspirants <b>Software Craftsmen</b>, nous visons non seulement du logiciel qui marche, mais du logiciel <b>bien conçu</b>, porté par une <b>communauté de professionnels</b> qui ajoute de la valeur durablement.
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+
+<div style="background: #4a90d9; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.3rem; opacity: 0.75;">Non seulement du logiciel qui marche,</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi du logiciel bien conçu.</div>
+</div>
+
+<div style="background: #27ae60; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.3rem; opacity: 0.75;">Non seulement répondre au changement,</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi ajouter de la valeur régulièrement.</div>
+</div>
+
+<div style="background: #e8a838; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.4rem; opacity: 0.75;">Non seulement des individus et des interactions,</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi une communauté de professionnels.</div>
+</div>
+
+<div style="background: #e74c3c; color: white; padding: 1.2rem 1.3rem; border-radius: 12px;">
+<div style="font-size: 1.4rem; opacity: 0.75;">Non seulement collaborer avec le client,</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">mais aussi des partenariats productifs.</div>
+</div>
 
 </div>
 
-<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
-💡 <b>L'idée à retenir</b> : l'agilité parle beaucoup de <b>processus</b> ; l'artisanat rappelle qu'il faut aussi une exigence sur la <b>qualité du code</b> lui-même.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem;">
+💡 <b>L'idée à retenir</b> : le manifeste ne <b>rejette pas</b> l'agilité, il la <b>complète</b>. Les processus agiles ne suffisent pas : il faut aussi une exigence sur la <b>qualité du code</b> lui-même.
 </div>
 
 ---
