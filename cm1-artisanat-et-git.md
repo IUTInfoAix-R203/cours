@@ -118,7 +118,9 @@ Chaque CM prépare les <b>gestes concrets</b> mis en pratique dans les TP qui su
 
 ## Évaluation
 
-Trois notes, un objectif : vérifier que vous **maîtrisez des gestes de métier**, pas juste que votre code tourne.
+<p style="font-size : 1.5rem;">
+Trois notes, un objectif : vérifier que vous <b>maîtrisez des gestes de métier</b>, pas juste que votre code tourne.
+</p>
 
 <div style="display: flex; gap: 1.5rem; margin-top: 1rem;">
 <div style="background: #4a90d9; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; flex: 1; text-align: center;">
@@ -141,13 +143,13 @@ Trois notes, un objectif : vérifier que vous **maîtrisez des gestes de métier
 </div>
 </div>
 
-<div style="display: flex; height: 1.2rem; border-radius: 8px; overflow: hidden; margin-top: 1.2rem;">
+<div style="display: flex; height: 2rem; border-radius: 8px; overflow: hidden; margin-top: 1.2rem;">
 <div style="background: #4a90d9; flex: 10; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold;">17%</div>
 <div style="background: #e8a838; flex: 10; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold;">17%</div>
 <div style="background: #e74c3c; flex: 40; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.7rem; font-weight: bold;">66%</div>
 </div>
 
-<div style="margin-top: 0.8rem; font-size: 0.95rem; color: #666; text-align: center;">
+<div style="margin-top: 0.8rem; font-size: 1.2rem; color: #666; text-align: center;">
 TP1 Git : mise à niveau, non noté. Le plus gros coefficient porte sur le <b>raisonnement TDD</b>, pas sur la vitesse de frappe.
 </div>
 
