@@ -25,24 +25,36 @@ IUT d'Aix-Marseille - BUT Informatique, première année
 ## Le module R2.03 en un coup d'oeil
 
 <style scoped>
-blockquote { font-size: 0.92rem; }
+blockquote { font-size: 1rem; margin-bottom: 0; }
 </style>
 
 > Apprendre à produire du code **propre**, **testé**, **relu** et **maintenable**. Passer de "ça marche sur ma machine" à un vrai réflexe professionnel.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; font-size: 1.5rem;">
-<div style="background: #4a90d9; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
-🔀 <b>Git professionnel</b><br/>Rebase, cherry-pick, PR, review
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
+<div style="background: #4a90d9; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2rem;">🔀</div>
+<div style="font-size: 1.6rem; font-weight: bold; margin-top: 0.4rem;">Git professionnel</div>
+<div style="font-size: 1.05rem; margin-top: 0.4rem; opacity: 0.95;">Rebase, cherry-pick, PR, review</div>
 </div>
-<div style="background: #27ae60; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
-✅ <b>TDD baby-steps</b><br/>RED - GREEN - REFACTOR
+
+<div style="background: #27ae60; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2rem;">✅</div>
+<div style="font-size: 1.6rem; font-weight: bold; margin-top: 0.4rem;">TDD baby-steps</div>
+<div style="font-size: 1.05rem; margin-top: 0.4rem; opacity: 0.95;">RED → GREEN → REFACTOR</div>
 </div>
-<div style="background: #e8a838; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
-🥋 <b>Kata & pair programming</b><br/>Driver / navigator, ping-pong
+
+<div style="background: #e8a838; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2rem;">🥋</div>
+<div style="font-size: 1.6rem; font-weight: bold; margin-top: 0.4rem;">Kata &amp; pair programming</div>
+<div style="font-size: 1.05rem; margin-top: 0.4rem; opacity: 0.95;">Driver, navigator, ping-pong</div>
 </div>
-<div style="background: #e74c3c; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
-🧹 <b>Refactoring</b><br/>Code smells, transformations de Fowler
+
+<div style="background: #e74c3c; color: white; padding: 1.8rem 1.2rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2rem;">🧹</div>
+<div style="font-size: 1.6rem; font-weight: bold; margin-top: 0.4rem;">Refactoring</div>
+<div style="font-size: 1.05rem; margin-top: 0.4rem; opacity: 0.95;">Code smells et transformations de Fowler</div>
 </div>
+
 </div>
 
 ---
