@@ -78,6 +78,42 @@ blockquote { font-size: 1rem; margin-bottom: 0; }
 Chaque CM prépare les <b>gestes concrets</b> mis en pratique dans les TP qui suivent.
 </div>
 
+<div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: flex-start; padding: 0 0.5rem; position: relative;">
+
+<div style="position: absolute; top: 0.6rem; left: 3%; right: 3%; height: 3px; background: #bdc3c7; border-radius: 2px; z-index: 0;"></div>
+
+<div style="flex: 1; text-align: center; position: relative; z-index: 1;">
+<div style="width: 14px; height: 14px; background: #4a90d9; border: 3px solid white; border-radius: 50%; margin: 0 auto; box-shadow: 0 0 0 2px #4a90d9;"></div>
+<div style="margin-top: 0.4rem; font-size: 0.8rem; color: #888;">Sem. 1 · 27 avril</div>
+<div style="font-weight: bold; color: #4a90d9; margin-top: 0.1rem;">CM1</div>
+</div>
+
+<div style="flex: 1.2; text-align: center; position: relative; z-index: 1;">
+<div style="width: 14px; height: 14px; background: #e8a838; border: 3px solid white; border-radius: 50%; margin: 0 auto; box-shadow: 0 0 0 2px #e8a838;"></div>
+<div style="margin-top: 0.4rem; font-size: 0.8rem; color: #888;">Sem. 2 · 4 mai</div>
+<div style="font-weight: bold; color: #e8a838; margin-top: 0.1rem;">CM2 + TP1 + TP2</div>
+</div>
+
+<div style="flex: 1; text-align: center; position: relative; z-index: 1;">
+<div style="width: 14px; height: 14px; background: #27ae60; border: 3px solid white; border-radius: 50%; margin: 0 auto; box-shadow: 0 0 0 2px #27ae60;"></div>
+<div style="margin-top: 0.4rem; font-size: 0.8rem; color: #888;">Sem. 3 · 11 mai</div>
+<div style="font-weight: bold; color: #27ae60; margin-top: 0.1rem;">TP3</div>
+</div>
+
+<div style="flex: 1; text-align: center; position: relative; z-index: 1;">
+<div style="width: 14px; height: 14px; background: #e74c3c; border: 3px solid white; border-radius: 50%; margin: 0 auto; box-shadow: 0 0 0 2px #e74c3c;"></div>
+<div style="margin-top: 0.4rem; font-size: 0.8rem; color: #888;">Sem. 4 · 18 mai</div>
+<div style="font-weight: bold; color: #e74c3c; margin-top: 0.1rem;">TP4</div>
+</div>
+
+<div style="flex: 1; text-align: center; position: relative; z-index: 1;">
+<div style="width: 14px; height: 14px; background: #2c3e50; border: 3px solid white; border-radius: 50%; margin: 0 auto; box-shadow: 0 0 0 2px #2c3e50;"></div>
+<div style="margin-top: 0.4rem; font-size: 0.8rem; color: #888;">18 juin</div>
+<div style="font-weight: bold; color: #2c3e50; margin-top: 0.1rem;">CC3</div>
+</div>
+
+</div>
+
 ---
 
 ## Évaluation
