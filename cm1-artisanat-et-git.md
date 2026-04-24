@@ -552,38 +552,30 @@ La moitié de ce TP1 corrige les mauvaises habitudes du S1. L'autre moitié, ce 
 
 ## 🔀 Rappel express : le modèle Git
 
-Il vous suffit de bien tenir **3 idées** pour suivre le reste du cours :
-
-<div style="text-align: center; margin-top: 1rem;">
-
-```mermaid
-graph LR
-    A[A] --> B[B]
-    B --> C[C]
-    B --> D[D]
-    
-    style A fill:#bdc3c7
-    style B fill:#bdc3c7
-    style C fill:#4a90d9,color:#fff
-    style D fill:#e8a838,color:#fff
-```
-
+<div style="text-align: center; margin-top: 0.5rem;">
+<img src="assets/git-model.svg" alt="Modèle Git : branches et commits" style="width: 50%;" />
 </div>
 
-<div style="display: flex; gap: 1rem; margin-top: 1rem;">
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>Commit</b> : une photo de votre projet à un instant donné
-</div>
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>Branche</b> : une étiquette mobile qui avance avec vos commits
-</div>
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>HEAD</b> : l'endroit où vous êtes en train de travailler
-</div>
-</div>
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Il vous suffit de retenir <b>3 concepts</b> pour suivre le reste du cours :
+</p>
 
-<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
-🛠️ Pour `TP1`, ça suffit : <b>des commits sur une branche</b>, puis une <b>PR</b> pour les intégrer proprement.
+<div style="display: flex; gap: 1rem; margin-top: 2rem;">
+<div style="background: #4a90d9; color: white; padding: 1rem 1.2rem; border-radius: 10px; flex: 1; text-align: center;">
+<div style="font-size: 2.2rem;">📸</div>
+<div style="font-size: 1.5rem; font-weight: bold; margin-top: 0.2rem;">Commit</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.9;">une photo du projet à un instant donné</div>
+</div>
+<div style="background: #27ae60; color: white; padding: 1rem 1.2rem; border-radius: 10px; flex: 1; text-align: center;">
+<div style="font-size: 2.2rem;">🌱</div>
+<div style="font-size: 1.5rem; font-weight: bold; margin-top: 0.2rem;">Branche</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.9;">une étiquette mobile qui avance avec vos commits</div>
+</div>
+<div style="background: #e8a838; color: white; padding: 1rem 1.2rem; border-radius: 10px; flex: 1; text-align: center;">
+<div style="font-size: 2.2rem;">📍</div>
+<div style="font-size: 1.5rem; font-weight: bold; margin-top: 0.2rem;">HEAD</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.9;">l'endroit où vous êtes en train de travailler</div>
+</div>
 </div>
 
 ---
