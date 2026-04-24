@@ -400,31 +400,38 @@ Quand la dette augmente :
 
 ---
 
-## 🧱 Les 4 piliers du module R2.03
+## 🛠️ Les 4 gestes de l'artisan du logiciel
 
-Ce module vous équipe des **4 outils fondamentaux** de l'artisan logiciel :
+<p style="font-size: 1.5rem; margin-top: -0.7rem;">
+Derrière chaque pilier du module, un <b>geste métier</b> que pratique l'artisan, pas juste un outil technique.
+</p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #4a90d9; color: white; padding: 1.5rem; border-radius: 12px;">
-<div style="font-size: 2rem;">🔀 <b>Git avancé</b></div>
-<div style="margin-top: 0.3rem;">Votre historique est une documentation exécutable. Branches, PR, reviews, rebase.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP1</div>
+
+<div style="background: #4a90d9; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">🔀 Laisser une trace</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.9; font-style: italic;">Comme le menuisier qui date et signe ses ouvrages : on doit pouvoir revenir, comprendre, reprendre.</div>
+<div style="margin-top: 0.5rem; font-size: 1.3rem; background: rgba(255,255,255,0.15); padding: 0.4rem 0.7rem; border-radius: 6px;">Git avancé, branches, PR, review <span style="opacity: 0.8;">→ TP1</span></div>
 </div>
-<div style="background: #27ae60; color: white; padding: 1.5rem; border-radius: 12px;">
-<div style="font-size: 2rem;">✅ <b>TDD</b></div>
-<div style="margin-top: 0.3rem;">Écrire les tests <em>avant</em> le code. Spécification exécutable, filet de sécurité.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP2</div>
+
+<div style="background: #27ae60; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">✅ Essayer avant de livrer</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.9; font-style: italic;">Comme la table qu'on essaie sur l'établi avant de la remettre au client : l'outil doit fonctionner avant de quitter l'atelier.</div>
+<div style="margin-top: 0.5rem; font-size: 1.3rem; background: rgba(255,255,255,0.15); padding: 0.4rem 0.7rem; border-radius: 6px;">TDD, RED-GREEN-REFACTOR <span style="opacity: 0.8;">→ TP2</span></div>
 </div>
-<div style="background: #e8a838; color: white; padding: 1.5rem; border-radius: 12px;">
-<div style="font-size: 2rem;">🥋 <b>Kata & pair programming</b></div>
-<div style="margin-top: 0.3rem;">Entraîner son geste technique à deux. Driver / navigator, ping-pong.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP3</div>
+
+<div style="background: #e8a838; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">🥋 Répéter pour apprendre</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.9; font-style: italic;">Comme l'apprenti qui refait cent fois le même geste : la main retient ce que la tête oublie.</div>
+<div style="margin-top: 0.5rem; font-size: 1.3rem; background: rgba(255,255,255,0.15); padding: 0.4rem 0.7rem; border-radius: 6px;">Kata, pair programming, ping-pong <span style="opacity: 0.8;">→ TP3</span></div>
 </div>
-<div style="background: #e74c3c; color: white; padding: 1.5rem; border-radius: 12px;">
-<div style="font-size: 2rem;">🧹 <b>Refactoring</b></div>
-<div style="margin-top: 0.3rem;">Transformer du code existant sans changer son comportement. Protégé par les tests.</div>
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.9;">→ TP4</div>
+
+<div style="background: #e74c3c; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.5rem; font-weight: bold;">🧹 Entretenir ses outils</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.9; font-style: italic;">Comme le chef qui aiguise ses couteaux en fin de service : demain on s'en resservira, autant qu'ils coupent.</div>
+<div style="margin-top: 0.5rem; font-size: 1.3rem; background: rgba(255,255,255,0.15); padding: 0.4rem 0.7rem; border-radius: 6px;">Refactoring, code smells, Fowler <span style="opacity: 0.8;">→ TP4</span></div>
 </div>
+
 </div>
 
 ---
