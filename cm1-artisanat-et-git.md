@@ -706,40 +706,82 @@ Le workflow standard en équipe, proposé par <b>Scott Chacon</b> (GitHub, 2011)
 
 ---
 
-## 🔍 Pull Request : une conversation, pas un dépôt de code
+## 🔍 Pull Request : une conversation
 
-<div style="display: flex; gap: 2rem; margin-top: 1rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Une PR n'est pas un formulaire administratif. C'est une <b>invitation à discuter</b> du code que vous proposez d'intégrer à la branche <code>main</code>.
+</p>
 
-Une PR n'est pas un formulaire administratif. C'est une **invitation à discuter** du code que vous proposez d'intégrer.
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 1.2rem;">Ce qu'elle permet :</div>
 
-Ce qu'elle permet :
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; margin-top: 0.6rem;">
 
-- **Comprendre** votre intention (le message de PR est comme un mini-post-it)
-- **Questionner** vos choix (un pair peut avoir une meilleure idée)
-- **Vérifier automatiquement** les tests, la qualité, les conventions
-- **Documenter** l'historique des décisions
+<div style="background: #4a90d9; color: white; padding: 1.1rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 3.6rem;">🗣️</div>
+<div style="font-weight: bold; font-size: 1.7rem; margin-top: 0.3rem;">Comprendre</div>
+<div style="font-size: 1.5rem; opacity: 0.9; margin-top: 0.2rem;">votre intention</div>
+</div>
+
+<div style="background: #e8a838; color: white; padding: 1.1rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 3.6rem;">❓</div>
+<div style="font-weight: bold; font-size: 1.7rem; margin-top: 0.3rem;">Questionner</div>
+<div style="font-size: 1.5rem; opacity: 0.9; margin-top: 0.2rem;">vos choix de conception</div>
+</div>
+
+<div style="background: #17a2b8; color: white; padding: 1.1rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 3.6rem;">🤖</div>
+<div style="font-weight: bold; font-size: 1.7rem; margin-top: 0.3rem;">Vérifier</div>
+<div style="font-size: 1.5rem; opacity: 0.9; margin-top: 0.2rem;">tests, qualité, conventions</div>
+</div>
+
+<div style="background: #27ae60; color: white; padding: 1.1rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 3.6rem;">📝</div>
+<div style="font-weight: bold; font-size: 1.7rem; margin-top: 0.3rem;">Documenter</div>
+<div style="font-size: 1.5rem; opacity: 0.9; margin-top: 0.2rem;">l'historique des décisions</div>
+</div>
 
 </div>
-<div style="flex: 1;">
 
-<div style="background: #8e44ad; color: white; padding: 1.2rem; border-radius: 10px;">
-<b>Checklist d'une bonne review</b>
-<ul style="margin-top: 0.5rem;">
-<li>Le code est-il lisible sans commentaire ?</li>
-<li>Les noms sont-ils parlants ?</li>
-<li>Y a-t-il des tests ? Passent-ils ?</li>
-<li>Pas de code commenté qui traîne ?</li>
-<li>Pas de <code>TODO</code> ou <code>FIXME</code> orphelins ?</li>
-<li>La PR ne fait-elle qu'<em>une</em> chose ?</li>
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
+<span style="font-size: 2.6rem; vertical-align: middle; margin-right: 0.4rem;">💡</span> Une PR qui vaut le coup : <b>un diff ciblé qui se lit, un contexte qui se comprend</b>.
+</div>
+
+---
+
+## 🔍 Faire une bonne review
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Reviewer, ce n'est pas dire "oui". C'est <b>lire le code avec les yeux d'un collègue dans 6 mois</b>, et mettre son nom en face de ce qui partira en prod.
+</p>
+
+<div style="display: flex; gap: 1.5rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="flex: 1; background: #8e44ad; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.6rem; font-weight: bold;"><span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">✅</span> Checklist d'une bonne review</div>
+<ul style="margin-top: 0.5rem; padding-left: 1.3rem; font-size: 1.3rem; line-height: 1.7;">
+<li>Le code est-il <b>lisible</b> ?</li>
+<li>Les <b>noms de variable</b> sont-ils parlants ?</li>
+<li>Y a-t-il des <b>tests</b> ? Passent-ils ?</li>
+<li>Pas de <code>TODO</code> / <code>FIXME</code> orphelins ?</li>
+<li>La PR ne fait-elle qu'<em>une seule</em> chose ?</li>
 </ul>
 </div>
 
-<div style="background: #e74c3c; color: white; padding: 0.8rem 1rem; border-radius: 8px; margin-top: 0.8rem; font-size: 0.95rem;">
-❌ "LGTM" (Looks Good To Me) sans lire <b>n'est pas</b> une review. C'est un tampon, qui en plus engage votre nom.
+<div style="flex: 1; background: #e74c3c; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+<div style="font-size: 1.6rem; font-weight: bold;"><span style="font-size: 2.6rem; vertical-align: middle; margin-right: 0.4rem;">🙅</span> Ce qui n'est PAS une review</div>
+<ul style="margin-top: 0.5rem; padding-left: 1.3rem; font-size: 1.3rem; line-height: 1.7;">
+<li><b>"LGTM"</b> sans lire le diff</li>
+<li>Approuver <b>sans tester</b> la branche en local</li>
+<li>Commenter les <b>fautes de frappe</b>, jamais le fond</li>
+<li>Valider sans attendre <b>la validation du CI</b></li>
+<li>Bloquer la PR sur un <b>détail subjectif</b> (style personnel)</li>
+</ul>
 </div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
+<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">🎯</span> Une bonne review prend <b>15 minutes</b>. Un bug en prod prend <b>15 heures</b>.
 </div>
 
 ---
