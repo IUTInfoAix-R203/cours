@@ -518,20 +518,24 @@ Retour aux bases, puis les concepts avancés qui changent la vie.
 
 ## 🔀 Ce que vous savez déjà (plus ou moins bien)
 
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
 Au S1, vous avez utilisé Git. Vérifiez avec moi :
+</p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-✅ <b>Je sais</b> :
-<ul style="margin: 0.3rem 0; padding-left: 1.2rem;">
-<li><code>git clone</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code></li>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.8rem;">
+<div style="background: #27ae60; color: white; padding: 1rem 1.2rem; border-radius: 12px; font-size: 1.5rem;">
+<div style="font-size: 1.6rem; font-weight: bold;">✅ Je sais</div>
+<ul style="margin: 0.4rem 0 0 0; padding-left: 1.2rem; line-height: 1.6;">
+<li><code style="font-size: 0.95em;">git clone</code>, <code style="font-size: 0.95em;">add</code>, <code style="font-size: 0.95em;">commit</code>, <code style="font-size: 0.95em;">push</code></li>
 <li>Créer une branche</li>
 <li>Ouvrir un fork sur GitHub</li>
+<li>😭 Pleurer quand un collègue écrase mes modifications</li>
+<li>😭😭 Pleurer encore plus quand j'ai un conflit de fusion</li>
 </ul>
 </div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-❌ <b>Je ne sais pas (encore)</b> :
-<ul style="margin: 0.3rem 0; padding-left: 1.2rem;">
+<div style="background: #e74c3c; color: white; padding: 1rem 1.2rem; border-radius: 12px; font-size: 1.5rem;">
+<div style="font-size: 1.6rem; font-weight: bold;">🤔 Je ne sais pas (encore)</div>
+<ul style="margin: 0.4rem 0 0 0; padding-left: 1.2rem; line-height: 1.6;">
 <li>Écrire un message de commit lisible 6 mois plus tard</li>
 <li>Intégrer une branche proprement (rebase vs merge)</li>
 <li>Rattraper un commit perdu sans paniquer</li>
@@ -540,8 +544,8 @@ Au S1, vous avez utilisé Git. Vérifiez avec moi :
 </div>
 </div>
 
-<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center;">
-La moitié de ce TP1 consiste à corriger les mauvaises habitudes prises au S1. L'autre moitié, à découvrir ce qui fait la différence en équipe.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.8rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+La moitié de ce TP1 corrige les mauvaises habitudes du S1. L'autre moitié, ce qui fait la différence en équipe.
 </div>
 
 ---
