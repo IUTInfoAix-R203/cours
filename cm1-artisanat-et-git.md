@@ -950,21 +950,25 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 ## ⚖️ La règle d'or
 
-<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; text-align: center; font-size: 1.8rem; margin-top: 2rem;">
-<b>Rebase</b> tes commits <b>tant que la branche est locale</b>.<br/>
-<b>Merge</b> dès qu'elle est <b>partagée</b> avec d'autres.
+<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; text-align: center; font-size: 1.7rem; margin-top: 2rem;">
+<b>Rebase</b> tes commits <b>tant que la branche n'est pas partagée </b>.<br/>
+<b>Merge</b> dès qu'elle est <b>partagée</b> avec d'autres personnes.
 </div>
 
-<div style="margin-top: 1.5rem; font-size: 1.1rem; text-align: center; color: #666;">
-Pourquoi ? Le rebase <b>change les SHAs</b>. Si ton coéquipier a déjà basé du travail sur ta branche publique, ton rebase lui fait perdre ses commits.
+<div style="margin-top: 1.5rem; font-size: 1.5rem; text-align: center;">
+<b>Pourquoi ?</b> Le rebase <b>change les SHAs</b>. Si ton coéquipier a déjà basé du travail sur ta branche publique, ton rebase lui fait <b>perdre ses commits</b>.
 </div>
 
-<div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>✅ OK</b> : je rebase ma branche locale <code>feat-login</code> avant de la pousser
+<div style="display: flex; gap: 1.5rem; margin-top: 1.5rem; align-items: stretch;">
+<div style="flex: 1; background: #27ae60; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.2rem;"><span style="font-size: 2rem;">✅</span> OK</div>
+<div style="font-size: 1.4rem; margin-top: 0.4rem;">Je rebase ma branche personnelle <code>feat-login</code> avant de créer une PR.</div>
 </div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-<b>❌ Danger</b> : je rebase <code>main</code> (partagée par toute l'équipe)
+<div style="flex: 1; background: #e74c3c; color: white; padding: 1.2rem 1.4rem; border-radius: 12px;">
+
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.2rem;"><span style="font-size: 2rem;">💀</span> Danger</div>
+<div style="font-size: 1.4rem; margin-top: 0.4rem;">Je rebase <code>main</code> (partagée par toute l'équipe).</div>
 </div>
 </div>
 
