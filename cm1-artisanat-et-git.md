@@ -438,25 +438,31 @@ Derrière chaque pilier du module, un <b>geste métier</b> que pratique l'artisa
 
 ## 🧭 Pourquoi ce module compte tout de suite
 
-<div style="background: #e74c3c; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
-<b>SAÉ 2.01 - Développement d'une application</b><br/>
+<div style="background: #eef2f7; border-left: 6px solid #2c3e50; padding: 1.1rem 1.4rem; border-radius: 8px; margin-top: 1rem; font-size: 1.5rem;">
+<b style="color: #2c3e50;">SAÉ 2.01 - Développement d'une application :</b>
 Vous allez coder <b>en équipe</b>, <b>sur plusieurs semaines</b>, un projet réel. Les gestes de R2.03 - historique propre, tests, refactoring, review - y deviennent immédiatement utiles.
 </div>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #e6f0f9; padding: 1rem; border-radius: 10px; text-align: center;">
-<b>Git</b><br/>pour collaborer sans se marcher dessus
+<div style="background: #4a90d9; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.2rem;">🔀</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">Git</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.95;">pour collaborer sans se marcher dessus</div>
 </div>
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px; text-align: center;">
-<b>Tests</b><br/>pour modifier sans paniquer
+<div style="background: #27ae60; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.2rem;">✅</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">Tests</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.95;">pour modifier sans paniquer</div>
 </div>
-<div style="background: #fff3cd; padding: 1rem; border-radius: 10px; text-align: center;">
-<b>Refactoring</b><br/>pour garder le projet vivable
+<div style="background: #e74c3c; color: white; padding: 1.2rem 1rem; border-radius: 12px; text-align: center;">
+<div style="font-size: 2.2rem;">🧹</div>
+<div style="font-weight: bold; font-size: 1.5rem; margin-top: 0.3rem;">Refactoring</div>
+<div style="font-size: 1.4rem; margin-top: 0.3rem; opacity: 0.95;">pour garder le projet vivable</div>
 </div>
 </div>
 
-<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1.1rem; text-align: center;">
-Ce qu'on voit ici n'est pas "pour plus tard" : c'est ce qui rend un projet d'équipe tenable.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
+<span style="font-size: 2.2rem; vertical-align: middle; margin-right: 0.4rem;">🎯</span> Ce qu'on voit ici n'est pas "pour plus tard" : c'est ce qui rend un projet d'équipe tenable.
 </div>
 
 ---
