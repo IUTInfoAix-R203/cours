@@ -1117,33 +1117,32 @@ git cherry-pick D</pre>
 
 ## 🆘 Outil de secours : reflog
 
-**Situation cauchemar** : vous tapez `git reset --hard HEAD~5` et réalisez que vous venez d'effacer 5 commits. **Pas de panique.**
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Vous tapez <code>git reset --hard HEAD~5</code> et réalisez que vous venez d'effacer 5 commits. <b>Pas de panique</b> : Git garde une mémoire locale de tous vos déplacements.
+</p>
 
-<div style="margin-top: 1rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; align-items: stretch;">
 
-```bash
-git reflog
-```
-
-Affiche TOUTES tes actions récentes, même celles que tu crois avoir "annulées" :
-
-</div>
-
-```
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+<div style="background: #2c3e50; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold;">1️⃣ Lister les déplacements</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.3rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 0 !important; font-family: 'Courier New', Consolas, monospace; white-space: pre; flex: 1;">$ git reflog
 a1b2c3 HEAD@{0}: reset: moving to HEAD~5
-g7h8i9 HEAD@{1}: commit: feat: ajoute fonctionnalité X  ← ici !
+g7h8i9 HEAD@{1}: commit: feat: ajoute X  ← ici !
 d4e5f6 HEAD@{2}: commit: wip
-...
-```
+...</pre>
+</div>
 
-<div style="display: flex; gap: 1rem; margin-top: 1rem;">
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-Pour revenir à l'état d'avant :
-<pre style="background: rgba(0,0,0,0.2); padding: 0.4rem; border-radius: 4px; margin-top: 0.5rem;">git reset --hard g7h8i9</pre>
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+<div style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold;">2️⃣ Revenir au commit perdu</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.3rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 0 !important; font-family: 'Courier New', Consolas, monospace; white-space: pre; flex: 1;">$ git reset --hard g7h8i9
+HEAD is now at g7h8i9 feat: ajoute X
+✅ Vos commits sont récupérés.</pre>
 </div>
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 8px; flex: 1;">
-Le message important : <b>Git garde une mémoire locale de vos déplacements</b>. Reflog sert surtout à récupérer après une mauvaise manoeuvre.
+
 </div>
+
+<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+<code>reflog</code> est votre <b>filet de sécurité</b> : tant qu'un commit a existé localement, il reste récupérable pendant ~30 jours.
 </div>
 
 ---
