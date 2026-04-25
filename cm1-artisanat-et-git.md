@@ -830,7 +830,7 @@ Dans vos Codespaces, <b>Copilot Code Review</b> peut commenter automatiquement u
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
-.git-diagram { view-transition-name: git-diagram; }
+.git-diagram img { view-transition-name: git-diagram; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
@@ -847,13 +847,11 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 ---
 
-<!-- _transition: fade -->
-
 ## 🔀 `git merge` — après la fusion
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
-.git-diagram { view-transition-name: git-diagram; }
+.git-diagram img { view-transition-name: git-diagram; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
@@ -892,7 +890,7 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
-.git-diagram { view-transition-name: git-diagram; }
+.git-diagram img { view-transition-name: git-diagram; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
@@ -909,13 +907,11 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 ---
 
-<!-- _transition: fade -->
-
 ## 🔀 `git rebase` — après le rebase
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
-.git-diagram { view-transition-name: git-diagram; }
+.git-diagram img { view-transition-name: git-diagram; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
@@ -1038,53 +1034,83 @@ m4n5o6 deuxième essai</pre>
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-Refaire son historique avant la PR, c'est un acte de <b>courtoisie</b> envers le relecteur.
+Refaire son historique avant la PR, c'est un acte de <b>respect</b> envers le relecteur.
 </div>
 
 ---
 
-## 🍒 Outil de secours : cherry-pick
+<!-- _transition: fade -->
 
-<div style="display: flex; gap: 2rem; margin-top: 1rem;">
-<div style="flex: 1;">
+## 🍒 `cherry-pick` — avant
 
-**Usage** : récupérer **un seul commit utile** sans reprendre toute la branche.
+<style scoped>
+h2 { view-transition-name: titre-cherry; }
+.git-diagram-cherry img { view-transition-name: git-diagram-cherry; }
+</style>
 
-Exemple : un petit correctif est sur une branche expérimentale, et vous le voulez aussi sur `main`.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Sur une branche expérimentale <code>exp</code>, le commit <code>D</code> contient un correctif utile. Vous voulez <b>juste ce commit-là</b> sur <code>main</code>, sans embarquer <code>C</code> ni <code>E</code>.
+</p>
 
-```bash
-git checkout main
-git cherry-pick ABCD
-```
+<div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 2rem; align-items: center; margin-top: 2rem;">
 
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
-À connaître, mais ce n'est pas le coeur de `TP1`. Le geste central reste : <b>branche courte → PR → review → intégration</b>.
+<div style="font-size: 1.5rem;">
+
+**Le besoin :**
+
+- Récupérer **uniquement D** sur `main`
+- Laisser `C` et `E` sur `exp` (encore en cours)
+- Sans `merge` (qui rapatrierait tout)
+- Sans `rebase` (qui réécrirait `exp`)
+
+</div>
+
+<div class="git-diagram-cherry" style="text-align: center;">
+<img src="assets/git-cherry-pick-before.svg" alt="Situation initiale : main A-B, exp C-D-E avec D mis en valeur" style="width: 100%; max-width: 500px;" />
 </div>
 
 </div>
-<div style="flex: 1;">
 
-```mermaid
-graph LR
-    A[A] --> B[B]
-    B --> C[C]
-    C --> D[D hotfix]
-    D --> E[E suite exp]
-    B -->|cherry-pick D| Dp[D']
-    
-    style A fill:#bdc3c7
-    style B fill:#4a90d9,color:#fff
-    style C fill:#e8a838,color:#fff
-    style D fill:#e74c3c,color:#fff
-    style E fill:#e8a838,color:#fff
-    style Dp fill:#e74c3c,color:#fff
-```
+<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
+🕐 <b>Situation initiale</b> : <code>main</code> = A-B, <code>exp</code> = C-D-E.
+</div>
 
-<div style="background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; margin-top: 0.5rem; font-size: 0.9rem;">
-⚠️ Cherry-pick copie le commit : vous récupérez l'idée, pas le même SHA.
+---
+
+## 🍒 `cherry-pick` — après
+
+<style scoped>
+h2 { view-transition-name: titre-cherry; }
+.git-diagram-cherry img { view-transition-name: git-diagram-cherry; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+<code>cherry-pick</code> <b>copie</b> le commit <code>D</code> sur la pointe de <code>main</code>. Il devient <code>D'</code> : même contenu, mais nouveau commit avec un <b>nouveau SHA</b>.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 2rem; align-items: center; margin-top: 2rem;">
+
+<div>
+
+<pre style="margin: 0; padding: 0.9rem 1.1rem; font-size: 1.5rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 8px !important; font-family: 'Courier New', Consolas, monospace; white-space: pre;">git checkout main
+git cherry-pick D</pre>
+
+<div style="margin-top: 1rem; font-size: 1.5rem;">
+
+`exp` reste **intacte** : C, D et E sont toujours là pour continuer la branche expérimentale plus tard.
+
 </div>
 
 </div>
+
+<div class="git-diagram-cherry" style="text-align: center;">
+<img src="assets/git-cherry-pick-after.svg" alt="git cherry-pick : commit D copié sur main en D'" style="width: 100%; max-width: 500px;" />
+</div>
+
+</div>
+
+<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+⚠️ Cherry-pick <b>copie</b> le commit : vous récupérez l'idée, pas le même SHA.
 </div>
 
 ---
