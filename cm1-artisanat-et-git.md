@@ -1015,34 +1015,29 @@ pick g7h8i9 fix typo
 
 ## ✏️ Rebase interactif : exemple concret
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>❌ Avant</b>
+<p style="font-size: 1.5rem;">Cinq commits de travail accumulés au fil de la journée, à fusionner en un seul commit propre prêt pour la PR.</p>
 
-```
-a1b2c3 wip
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: stretch; margin: 3rem 0;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold;">🤦 Avant</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.4rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 0 !important; font-family: 'Courier New', Consolas, monospace; white-space: pre; flex: 1;">a1b2c3 wip
 d4e5f6 maj
 g7h8i9 fix typo
 h1j2k3 oh j'avais oublié un test
-m4n5o6 deuxième essai
-```
-
-Historique illisible. Que s'est-il réellement passé ?
-
-</div>
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ Après rebase interactif</b>
-
-```
-x7y8z9 feat(auth): ajoute login OAuth Google
-```
-
-Un seul commit, message clair. L'histoire racontée au futur lecteur est : "à cette date, on a ajouté OAuth Google".
-
-</div>
+m4n5o6 deuxième essai</pre>
+<div style="background: #fdecea; padding: 0.9rem 1rem; font-size: 1.15rem;">L'historique est illisible. Que s'est-il vraiment passé ?</div>
 </div>
 
-<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold;">🎯 Après rebase interactif</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.4rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 0 !important; font-family: 'Courier New', Consolas, monospace; white-space: pre-wrap; word-break: break-all; flex: 1;">x7y8z9 feat(auth): ajoute login OAuth Google</pre>
+<div style="background: #e8f6ec; padding: 0.9rem 0.9rem; font-size: 1.15rem;">Le message est clair. On sait ce qui a été ajouté et <b>pourquoi</b>.</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
 Refaire son historique avant la PR, c'est un acte de <b>courtoisie</b> envers le relecteur.
 </div>
 
