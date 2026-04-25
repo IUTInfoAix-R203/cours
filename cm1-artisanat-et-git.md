@@ -976,29 +976,39 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 ## ✏️ Rebase interactif : nettoyer l'historique
 
-<p style="font-size: 1.5rem; color: #666;"><code>git rebase -i HEAD~3</code> ouvre un éditeur qui liste les 3 derniers commits, un par ligne, avec une action modifiable devant chacun.</p>
 
-```
-pick a1b2c3 wip
+<p style="font-size: 1.5rem;"><code>git rebase -i HEAD~3</code> ouvre un éditeur qui liste les 3 derniers commits, un par ligne, avec une action modifiable devant chacun.</p>
+
+<div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 1.5rem; margin-top: 0.5rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; box-shadow: 0 2px 6px rgba(0,0,0,0.15);">
+<div style="background: #2c3e50; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold; border-radius: 10px 10px 0 0;">📝 Éditeur ouvert par <code style="background:transparent;color:#fff;">rebase -i</code></div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.4rem; line-height: 1.35; border: none; box-shadow: none; font-family: 'Courier New', Consolas, monospace; white-space: pre; border-radius: 0 0 10px 10px;">pick a1b2c3 wip
 pick d4e5f6 maj
 pick g7h8i9 fix typo
+&#35; Rebase ...
+&#35; p, pick   = use commit
+&#35; r, reword = edit message
+&#35; s, squash = meld into previous
+&#35; f, fixup  = like squash, no msg
+&#35; d, drop   = remove commit</pre>
+</div>
 
-# Rebase ...
-# p, pick = use commit
-# r, reword = use commit, but edit commit message
-# s, squash = use commit, meld into previous
-# f, fixup = like squash, but discard this commit's message
-# d, drop = remove commit
-```
+<div style="background: #fff; border: 2px solid #4a90d9; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column;">
+<div style="background: #4a90d9; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold;">🎯 3 actions utiles au quotidien</div>
+<div style="padding: 0.8rem 1rem; font-size: 1.4rem; line-height: 1.6;">
 
-Les 3 actions vraiment utiles au quotidien :
+- **`reword`** — corriger un message de commit
+- **`squash`** / **`fixup`** — fusionner les petits commits de travail
+- **`drop`** — retirer un commit indésirable
 
-- **`reword`** : corriger un message de commit
-- **`squash`** / **`fixup`** : fusionner les petits commits de travail
-- **`drop`** : retirer un commit vraiment indésirable
+</div>
+</div>
+
+</div>
 
 <div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; text-align: center; font-size: 1.5rem;">
-<b>reword</b> + <b>squash</b> + <b>drop</b> : 95% des cas d'usage au quotidien.
+<b>reword</b> + <b>squash</b> + <b>drop</b> : 95% des cas d'usage.
 </div>
 
 ---
