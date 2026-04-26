@@ -1948,16 +1948,16 @@ Mettre en pratique les <b>deux moitiés</b> du cours d'aujourd'hui.
 
 <div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.18);">
 <div style="background: #4a90d9; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">🔀 TP1 — Git avancé</div>
-<div style="background: #eaf2fb; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.3rem;">
-<div style="font-size: 1.1rem; color: #888; margin-bottom: 0.4rem;">~2 h · non noté</div>
+<div style="background: #eaf2fb; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+<div style="font-size: 1.4rem; color: #888; margin-bottom: 0.4rem;">2 h : non noté</div>
 Historique lisible, PR, review, intégration propre.
 </div>
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.18);">
 <div style="background: #27ae60; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">✅ TP2 — TDD</div>
-<div style="background: #e8f6ec; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.3rem;">
-<div style="font-size: 1.1rem; color: #888; margin-bottom: 0.4rem;">~4 h · noté (CC1)</div>
+<div style="background: #e8f6ec; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+<div style="font-size: 1.4rem; color: #888; margin-bottom: 0.4rem;">4 h : noté (CC1)</div>
 Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
 </div>
 </div>
@@ -1975,7 +1975,34 @@ Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
 ---
 
 <!-- _class: lead -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
 
-# À suivre : CM2 - TDD avancé et refactoring
+# À suivre : CM2
 
-On y approfondira le TDD, on découvrira les kata en pair programming, et on préparera le refactoring du TP4.
+<p style="font-size: 1.5rem; color: #555; margin-top: -0.3rem;">
+On approfondira le TDD, on découvrira le <b>pair programming</b>, et on préparera le <b>refactoring</b> du TP4.
+</p>
+
+<div style="display: flex; justify-content: center; gap: 2rem; margin-top: 4rem;">
+
+<div style="text-align: center;">
+<div style="font-size: 5rem;">✅</div>
+<div style="font-size: 1.4rem; font-weight: bold; color: #27ae60; margin-top: 0.3rem;">TDD avancé</div>
+</div>
+
+<div style="text-align: center;">
+<div style="font-size: 5rem;">🥋</div>
+<div style="font-size: 1.4rem; font-weight: bold; color: #e8a838; margin-top: 0.3rem;">Kata &amp; pair programming</div>
+</div>
+
+<div style="text-align: center;">
+<div style="font-size: 5rem;">🧹</div>
+<div style="font-size: 1.4rem; font-weight: bold; color: #e74c3c; margin-top: 0.3rem;">Refactoring</div>
+</div>
+
+</div>
+
+<div style="margin-top: 4rem; text-align: center; font-size: 1.3rem; color: #888;">
+📅 Sem. 2 · 4 mai 2026
+</div>
