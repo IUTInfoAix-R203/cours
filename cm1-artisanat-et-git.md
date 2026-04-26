@@ -1247,40 +1247,38 @@ Cycle complet en direct : <b>brancher, commiter, rebaser, pousser sans casser le
 
 ## 🔗 De l'historique propre au code qui tient
 
-<div style="display: flex; gap: 1.5rem; align-items: center; margin-top: 1rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Git assure la <b>trace</b> propre de votre travail. Mais une belle histoire ne garantit pas que <b>le code actuel marche</b>. Il vous faut l'autre moitié du métier.
+</p>
 
-<div style="flex: 1;">
+<div style="display: flex; align-items: stretch; justify-content: center; gap: 1.2rem; margin-top: 3rem;">
 
-Avec Git, on a pris soin de la **trace** de notre travail : chaque commit raconte un pas, chaque PR invite le regard d'un autre, chaque rebase redresse l'histoire qu'on laissera derrière nous.
-
-Mais une belle histoire ne garantit pas que **le code actuel marche**. Vous pouvez avoir le plus propre des historiques et une base de code qu'on n'ose plus modifier.
-
-L'autre moitié du métier de l'artisan, c'est de **vérifier** son ouvrage. Pas à la livraison - **à chaque geste**. C'est là qu'intervient le TDD.
-
+<div style="flex: 1; max-width: 320px; background: #4a90d9; color: white; padding: 1.5rem 1rem; border-radius: 14px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="font-size: 3.5rem; line-height: 1;">🔀</div>
+<div style="font-size: 1.8rem; font-weight: bold; margin-top: 0.5rem;">Git</div>
+<div style="font-size: 1.2rem; opacity: 0.95; margin-top: 0.3rem;">la trace propre du travail</div>
 </div>
 
-<div style="flex: 0.9;">
+<div style="display: flex; align-items: center; font-size: 3rem; color: #555; font-weight: bold;">+</div>
 
-<div style="background: #4a90d9; color: white; padding: 1rem 1.2rem; border-radius: 10px; text-align: center;">
-<b>Git</b><br/>
-<span style="font-size: 0.95rem;">la trace propre du travail</span>
+<div style="flex: 1; max-width: 320px; background: #27ae60; color: white; padding: 1.5rem 1rem; border-radius: 14px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="font-size: 3.5rem; line-height: 1;">✅</div>
+<div style="font-size: 1.8rem; font-weight: bold; margin-top: 0.5rem;">Tests</div>
+<div style="font-size: 1.2rem; opacity: 0.95; margin-top: 0.3rem;">l'ouvrage qui tient</div>
 </div>
 
-<div style="text-align: center; font-size: 1.8rem; margin: 0.3rem 0;">+</div>
+<div style="display: flex; align-items: center; font-size: 3rem; color: #555; font-weight: bold;">=</div>
 
-<div style="background: #27ae60; color: white; padding: 1rem 1.2rem; border-radius: 10px; text-align: center;">
-<b>Tests</b><br/>
-<span style="font-size: 0.95rem;">l'ouvrage qui tient</span>
-</div>
-
-<div style="text-align: center; font-size: 1.8rem; margin: 0.3rem 0;">=</div>
-
-<div style="background: #e8a838; color: white; padding: 1rem 1.2rem; border-radius: 10px; text-align: center;">
-<b>Le geste complet<br/>de l'artisan</b>
+<div style="flex: 1.1; max-width: 360px; background: #e8a838; color: white; padding: 1.5rem 1rem; border-radius: 14px; text-align: center; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="font-size: 3.5rem; line-height: 1;">🔨</div>
+<div style="font-size: 1.8rem; font-weight: bold; margin-top: 0.5rem;">Artisan</div>
+<div style="font-size: 1.2rem; opacity: 0.95; margin-top: 0.3rem;">le geste complet</div>
 </div>
 
 </div>
 
+<div style="margin-top: 3rem; background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center; font-size: 1.5rem;">
+Vérifier son ouvrage <b>à chaque geste</b>, pas à la livraison. C'est là qu'intervient le <b>TDD</b>.
 </div>
 
 ---
