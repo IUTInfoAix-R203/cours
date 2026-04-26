@@ -1289,45 +1289,60 @@ Vérifier son ouvrage <b>à chaque geste</b>, pas à la livraison. C'est là qu'
 
 # Partie 3 - Introduction au TDD
 
-Écrire les tests avant le code. Oui, vraiment.
+Quand tester un logiciel vous aide à mieux le concevoir !
 
 ---
 
 ## 🐛 Le problème du code "ça marche sur ma machine"
 
-<div style="display: flex; gap: 2rem; margin-top: 1rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois situations qu'on a toutes et tous vécues, et qui ont <b>une seule cause profonde</b>.
+</p>
 
-Combien de fois avez-vous :
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
 
-- Livré un TP qui marchait chez vous mais pas chez le prof ?
-- Corrigé un bug et fait réapparaître un autre que vous aviez résolu il y a 3 jours ?
-- Modifié une fonction en ayant peur que ça casse ailleurs ?
+<div style="background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.9rem 1rem; border-radius: 8px; font-size: 1.5rem;">
+<div style="margin-top: 0.3rem;"><span style="font-size: 2rem; line-height: 1;">📦</span> Vous livrez un TP qui marchait chez vous, et il <b>plante</b> chez le prof.</div>
+</div>
 
-Toutes ces situations ont la **même cause profonde** : vous n'avez pas de filet de tests qui vous dit quand vous avez cassé quelque chose.
+<div style="background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.9rem 1rem; border-radius: 8px; font-size: 1.5rem;">
+<div style="margin-top: 0.3rem;"><span style="font-size: 2rem; line-height: 1;">🔄</span> Vous corrigez un bug et un <b>autre</b> que vous aviez résolu il y a 3 jours <b>réapparaît</b>.</div>
+</div>
+
+<div style="background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.9rem 1rem; border-radius: 8px; font-size: 1.5rem;">
+<div style="margin-top: 0.3rem;"><span style="font-size: 2rem; line-height: 1;">😰</span> Vous modifiez une fonction en ayant <b>peur</b> que ça casse ailleurs.</div>
+</div>
 
 </div>
-<div style="flex: 1;">
 
-<div style="background: #e74c3c; color: white; padding: 1.2rem; border-radius: 10px;">
-<b>Sans tests</b>
-<ul style="margin-top: 0.3rem;">
-<li>Vous avez <b>peur</b> de modifier le code</li>
-<li>Vous <b>perdez du temps</b> à tester manuellement</li>
-<li>Les bugs se <b>multiplient silencieusement</b></li>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.2rem;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">💀 Sans tests</div>
+<div style="background: #fdecea; padding: 0.7rem 1rem; flex: 1; font-size: 1.5rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li><b>Peur</b> de modifier le code</li>
+<li><b>Temps perdu</b> à tester manuellement</li>
+<li>Bugs qui <b>se multiplient silencieusement</b></li>
 </ul>
 </div>
+</div>
 
-<div style="background: #27ae60; color: white; padding: 1.2rem; border-radius: 10px; margin-top: 1rem;">
-<b>Avec tests</b>
-<ul style="margin-top: 0.3rem;">
-<li>Vous modifiez <b>sereinement</b></li>
-<li>Le feedback est <b>instantané</b> (secondes)</li>
-<li>Vous <b>documentez</b> le comportement attendu</li>
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🛡️ Avec tests</div>
+<div style="background: #e8f6ec; padding: 0.7rem 1rem; flex: 1; font-size: 1.5rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Modification <b>sereine</b></li>
+<li>Feedback <b>instantané</b> (secondes)</li>
+<li>Comportement attendu <b>documenté</b></li>
 </ul>
 </div>
+</div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+La cause profonde : <b>aucun filet de tests</b> qui vous prévient quand vous cassez quelque chose.
 </div>
 
 ---
