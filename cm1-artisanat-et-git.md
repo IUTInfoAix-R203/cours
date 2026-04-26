@@ -1690,7 +1690,7 @@ Quand le code marche déjà, écrire des tests devient fastidieux. Et on ne sait
 ## ✅ TDD : l'idée contre-intuitive
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Le <b>D</b> de TDD, c'est <b>Driven</b> — <i>dirigé</i>. Un test à la fois <b>commande</b> ce que vous codez ensuite. La conception <b>émerge</b> du cycle, elle n'est pas planifiée à l'avance.
+Le <b>D</b> de TDD, c'est <b>Driven</b> — <i>dirigé</i>. Un test à la fois <b>commande</b> ce que vous codez ensuite. La conception <b>émerge pas à pas</b>, elle n'est pas planifiée à l'avance.
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; align-items: stretch;">
@@ -1719,7 +1719,7 @@ TDD inverse la logique : on exprime <b>un besoin</b> sous forme de test, puis on
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.4rem;">
-⚠️ TDD ≠ <b>Test First</b> (écrire tous les tests d'avance, puis coder). TDD c'est <b>un test à la fois</b>, dans un cycle court qu'on va voir maintenant.
+⚠️ TDD ≠ <b>Test First</b> (écrire tous les tests d'avance, puis coder). TDD c'est <b>un test à la fois</b>, suivi d'un petit pas de code, suivi d'un nettoyage. Une procédure précise, qu'on va découvrir maintenant.
 </div>
 
 ---
