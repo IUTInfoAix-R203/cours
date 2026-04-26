@@ -1287,9 +1287,11 @@ Vérifier son ouvrage <b>à chaque geste</b>, pas à la livraison. C'est là qu'
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
+![bg left:50%](assets/tdd-climbing.jpg)
+
 # Partie 3 - Introduction au TDD
 
-Quand tester un logiciel vous aide à mieux le concevoir !
+Quand tester un logiciel vous aidera à mieux le concevoir !
 
 ---
 
@@ -1302,7 +1304,7 @@ Trois situations qu'on a toutes et tous vécues, et qui ont <b>une seule cause p
 <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1rem;">
 
 <div style="background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.9rem 1rem; border-radius: 8px; font-size: 1.5rem;">
-<div style="margin-top: 0.3rem;"><span style="font-size: 2rem; line-height: 1;">📦</span> Vous livrez un TP qui marchait chez vous, et il <b>plante</b> chez le prof.</div>
+<div style="margin-top: 0.3rem;"><span style="font-size: 2rem; line-height: 1;">📦</span> Vous livrez un projet qui marchait chez vous, et il <b>plante</b> chez le prof.</div>
 </div>
 
 <div style="background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.9rem 1rem; border-radius: 8px; font-size: 1.5rem;">
@@ -1315,34 +1317,8 @@ Trois situations qu'on a toutes et tous vécues, et qui ont <b>une seule cause p
 
 </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.2rem;">
-
-<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #e74c3c; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">💀 Sans tests</div>
-<div style="background: #fdecea; padding: 0.7rem 1rem; flex: 1; font-size: 1.5rem;">
-<ul style="margin: 0; padding-left: 1.2rem;">
-<li><b>Peur</b> de modifier le code</li>
-<li><b>Temps perdu</b> à tester manuellement</li>
-<li>Bugs qui <b>se multiplient silencieusement</b></li>
-</ul>
-</div>
-</div>
-
-<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🛡️ Avec tests</div>
-<div style="background: #e8f6ec; padding: 0.7rem 1rem; flex: 1; font-size: 1.5rem;">
-<ul style="margin: 0; padding-left: 1.2rem;">
-<li>Modification <b>sereine</b></li>
-<li>Feedback <b>instantané</b> (secondes)</li>
-<li>Comportement attendu <b>documenté</b></li>
-</ul>
-</div>
-</div>
-
-</div>
-
-<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-La cause profonde : <b>aucun filet de tests</b> qui vous prévient quand vous cassez quelque chose.
+<div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 1.2rem; border-radius: 10px; text-align: center; font-size: 1.5rem;">
+La cause profonde : <b>aucun filet de sécurité</b> qui vous prévient quand vous cassez quelque chose, vous n'avez aucune assurance que votre logiciel continue à fonctionner comme attendu.
 </div>
 
 ---
