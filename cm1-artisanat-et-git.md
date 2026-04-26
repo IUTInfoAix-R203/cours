@@ -1817,34 +1817,40 @@ Toujours commencer par <b>fake it</b>. Trianguler quand un seul cas ne suffit pl
 
 ## 👣 Baby steps : petits pas, toujours
 
-<div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.2rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+La <b>règle d'or du TDD</b> : un test = un petit pas de code = un point de contrôle. Si vous modifiez 30 lignes entre deux exécutions de tests, vous codez <b>à l'ancienne</b>, en priant.
+</p>
 
-**Règle absolue du TDD** : un test = une modification de code = un commit (ou au moins un point de contrôle mental).
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
 
-Si vous ouvrez un fichier et vous modifiez 30 lignes entre deux exécutions de tests, **vous n'êtes plus en TDD** : vous êtes en train de coder "à l'ancienne" en priant pour que ça marche.
-
-</div>
-
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ Bon rythme</b>
-<ul style="margin-top: 0.3rem;">
-<li>Activer 1 test</li>
-<li>Le voir rouge (15s)</li>
-<li>Écrire 3 lignes</li>
-<li>Le voir vert (15s)</li>
-<li>Cycle suivant</li>
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎯 Bon rythme</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Activer <b>1 test</b> → le voir rouge <span style="opacity: 0.7;">(15 s)</span></li>
+<li>Écrire <b>3 lignes</b> → le voir vert <span style="opacity: 0.7;">(15 s)</span></li>
+<li><b>Refactor</b> si besoin → suite verte <span style="opacity: 0.7;">(15 s)</span></li>
+<li>Tour suivant</li>
 </ul>
 </div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>❌ Mauvais rythme</b>
-<ul style="margin-top: 0.3rem;">
-<li>Activer 5 tests d'un coup</li>
-<li>Écrire 40 lignes sans tester</li>
-<li>Lancer les tests : 3 verts, 2 rouges</li>
-<li>Débugger sans savoir qui a cassé quoi</li>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">💥 Mauvais rythme</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Activer <b>5 tests</b> d'un coup</li>
+<li>Écrire <b>40 lignes</b> sans tester</li>
+<li>Lancer la suite : 3 verts, 2 rouges</li>
+<li>Débugger <b>sans savoir</b> qui a cassé quoi</li>
 </ul>
 </div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Plus le pas est petit, plus le <b>diagnostic</b> en cas d'échec est immédiat. C'est tout l'intérêt.
 </div>
 
 ---
