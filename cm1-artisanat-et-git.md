@@ -2006,3 +2006,28 @@ On approfondira le TDD, on découvrira le <b>pair programming</b>, et on prépar
 <div style="margin-top: 4rem; text-align: center; font-size: 1.3rem; color: #888;">
 📅 Sem. 2 · 4 mai 2026
 </div>
+
+---
+
+<!-- _class: lead -->
+
+# Des questions ?
+
+**Sébastien Nedjar**
+IUT d'Aix-Marseille - Département Informatique
+
+<div style="margin-top: 2rem; font-size: 1.1rem;">
+
+🌐 [github.com/IUTInfoAix-R203/tp1](https://github.com/IUTInfoAix-R203/tp1)
+
+📧 sebastien.nedjar@univ-amu.fr
+
+</div>
+
+<div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 12px; font-size: 1.1rem;">
+<b>🎯 Dès maintenant</b> : dans votre Codespace, faites un petit commit, ouvrez une PR, et lancez <code>./mvnw test</code>. Plus tôt vos doigts connaissent ces gestes, plus tôt le métier rentre.
+</div>
+
+<div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
+🛠️ <b>L'artisan, au fond, c'est vous.</b> Ce CM1 a posé le <em>pourquoi</em> - un historique qu'on relit sans honte, un code qui dit <em>quand</em> il casse. Le TP1 et le TP2 vont transformer ces idées en <b>gestes quotidiens</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
+</div>
