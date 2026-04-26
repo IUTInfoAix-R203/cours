@@ -1469,6 +1469,48 @@ Pas de magie : du <b>pur Java</b>, une annotation <code>@Test</code>, et un <cod
 
 ---
 
+## ▶️ Lancer ses tests : le feedback loop
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Vous lancez vos tests d'une commande ou d'un clic, et JUnit vous répond <b>en quelques secondes</b> : tout vert, ou rouge avec le détail précis de l'échec.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold;">💻 En ligne de commande</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.3rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 0 !important; font-family: 'Courier New', Consolas, monospace; white-space: pre; flex: 1;">$ ./mvnw test</pre>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold;">🖱️ Dans l'IDE (VS Code, Codespace)</div>
+<div style="background: #eaf2fb; padding: 0.7rem 1rem; flex: 1; font-size: 1.3rem;">
+Clic sur l'icône ▶ dans la marge à côté d'<code>@Test</code>, ou clic droit sur la méthode → <i>Run Test</i>.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold;">⏱️ Tout vert</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.3rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 0 !important; font-family: 'Courier New', Consolas, monospace; white-space: pre; flex: 1;">[INFO] Tests run: 12, Failures: 0
+[INFO] BUILD SUCCESS</pre>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold;">🐛 Un test échoue</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.8rem 1rem; font-size: 1.3rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 0 !important; font-family: 'Courier New', Consolas, monospace; white-space: pre; flex: 1;">[ERROR] additionne_deux_et_trois...
+  expected: 5
+   but was: 6
+[ERROR] BUILD FAILURE</pre>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+🔁 Code → tests → résultat <b>en quelques secondes</b> : c'est le <b>feedback loop</b>. Plus il est court, plus vous l'éxécutez souvent et plus vous codez en confiance.
+</div>
+
+---
+
 ## ✅ TDD : l'idée contre-intuitive
 
 <div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
