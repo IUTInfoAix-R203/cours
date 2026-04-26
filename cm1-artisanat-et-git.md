@@ -247,7 +247,7 @@ Le <b>"Software Craftsmanship"</b> est un mouvement né dans les années 2000, e
 ## 🔨 Le manifeste de l'artisanat logiciel (2009)
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-✊ Snowbird, Utah, décembre 2008 — en écho au Manifeste Agile de 2001, 4 principes, toujours sur le même modèle : <b>non seulement X, mais aussi Y</b>.
+✊ Snowbird, Utah, décembre 2008, en écho au Manifeste Agile de 2001, 4 principes, toujours sur le même modèle : <b>non seulement X, mais aussi Y</b>.
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
@@ -346,7 +346,7 @@ Conséquence : <b>quasi-faillite et rachat en urgence</b>.<br/><br/> Cause : un 
 ## 💳 La dette technique
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Métaphore de <b>Ward Cunningham</b> (1992) : écrire du code sale pour livrer vite, c'est comme <b>emprunter</b> de l'argent. Ça aide à court terme — mais il faut <b>rembourser</b>, <b>avec intérêts</b>.
+Métaphore de <b>Ward Cunningham</b> (1992) : écrire du code sale pour livrer vite, c'est comme <b>emprunter</b> de l'argent. Ça aide à court terme, mais il faut <b>rembourser</b>, <b>avec intérêts</b>.
 </p>
 
 <div style="display: flex; align-items: center; gap: 0.6rem; margin: 2rem 0;">
@@ -826,7 +826,7 @@ Dans vos Codespaces, <b>Copilot Code Review</b> peut commenter automatiquement u
 
 <!-- _transition: fade -->
 
-## 🔀 `git merge` — avant la fusion
+## 🔀 `git merge` : avant la fusion
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
@@ -841,13 +841,13 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 <img src="assets/git-before.svg" alt="Situation initiale : main A-B-C, ma-feature avec D et E non fusionnés" style="width: 55%; max-width: 550px;" />
 </div>
 
-<div style="margin-top: 4rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">/home/nedjar/sandbox/R203/cours/_site/cm1-artisanat-et-git.html
+<div style="margin-top: 4rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
 <span style="font-size: 1.8rem; vertical-align: middle; margin-right: 0.4rem;">🕐</span> <b>Situation initiale</b> : la branche <code>main</code> continue d'avancer (commit C) pendant que la branche <code>ma-feature</code> travaille sur D puis sur E.
 </div>
 
 ---
 
-## 🔀 `git merge` — après la fusion
+## 🔀 `git merge` : après la fusion
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
@@ -886,7 +886,7 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 <!-- _transition: fade -->
 
-## 🔀 `git rebase` — avant le rebase
+## 🔀 `git rebase` : avant le rebase
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
@@ -907,7 +907,7 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 
 ---
 
-## 🔀 `git rebase` — après le rebase
+## 🔀 `git rebase` : après le rebase
 
 <style scoped>
 h2 { view-transition-name: titre-integration; }
@@ -994,9 +994,9 @@ pick g7h8i9 fix typo
 <div style="background: #4a90d9; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold;">🎯 3 actions utiles au quotidien</div>
 <div style="padding: 0.8rem 1rem; font-size: 1.4rem; line-height: 1.6;">
 
-- **`reword`** — corriger un message de commit
-- **`squash`** / **`fixup`** — fusionner les petits commits de travail
-- **`drop`** — retirer un commit indésirable
+- **`reword`** : corriger un message de commit
+- **`squash`** / **`fixup`** : fusionner les petits commits de travail
+- **`drop`** : retirer un commit indésirable
 
 </div>
 </div>
@@ -1041,7 +1041,7 @@ Refaire son historique avant la PR, c'est un acte de <b>respect</b> envers le re
 
 <!-- _transition: fade -->
 
-## 🍒 `cherry-pick` — avant
+## 🍒 `cherry-pick` : avant
 
 <style scoped>
 h2 { view-transition-name: titre-cherry; }
@@ -1077,7 +1077,7 @@ Sur une branche expérimentale <code>exp</code>, le commit <code>D</code> contie
 
 ---
 
-## 🍒 `cherry-pick` — après
+## 🍒 `cherry-pick` : après
 
 <style scoped>
 h2 { view-transition-name: titre-cherry; }
@@ -1236,7 +1236,7 @@ Cycle complet en direct : <b>brancher, commiter, rebaser, pousser sans casser le
 </div>
 
 <div style="margin-top: 1.2rem; background: #fdecea; border: 2px solid #e74c3c; padding: 0.8rem 1.1rem; border-radius: 8px; font-size: 1.5rem;">
-<b style="color: #c0392b;">⚠️ Mise en scène pédagogique</b> — je vais volontairement simuler un commit mal formé pour montrer comment le rebase interactif le corrige. <b>Ne reproduisez pas ce style en vrai.</b>
+<b style="color: #c0392b;">⚠️ Mise en scène pédagogique</b> : je vais volontairement simuler un commit mal formé pour montrer comment le rebase interactif le corrige. <b>Ne reproduisez pas ce style en vrai.</b>
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
@@ -1375,17 +1375,17 @@ Un test <b>unitaire</b> vérifie <b>une seule unité de code</b> (une méthode, 
 
 <div style="display: flex; align-items: center; gap: 0.9rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
 <div style="font-size: 2.2rem;">⚡</div>
-<div style="font-size: 1.4rem;"><b>Rapide</b> — moins d'une seconde par test</div>
+<div style="font-size: 1.4rem;"><b>Rapide</b> : moins d'une seconde par test</div>
 </div>
 
 <div style="display: flex; align-items: center; gap: 0.9rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
 <div style="font-size: 2.2rem;">🧪</div>
-<div style="font-size: 1.4rem;"><b>Isolé</b> — aucune dépendance externe</div>
+<div style="font-size: 1.4rem;"><b>Isolé</b> : aucune dépendance externe</div>
 </div>
 
 <div style="display: flex; align-items: center; gap: 0.9rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
 <div style="font-size: 2.2rem;">🔢</div>
-<div style="font-size: 1.4rem;"><b>Nombreux</b> — souvent des centaines par projet</div>
+<div style="font-size: 1.4rem;"><b>Nombreux</b> : souvent des centaines par projet</div>
 </div>
 
 </div>
@@ -1441,17 +1441,17 @@ void additionne_deux_et_trois_retourne_cinq() {
 
 <div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #eaf2fb; border-left: 5px solid #4a90d9; padding: 0.7rem 0.9rem; border-radius: 8px;">
 <div style="font-size: 1.6rem;">🛠️</div>
-<div style="font-size: 1.5rem;"><b>Given</b> — préparer les objets dont on a besoin</div>
+<div style="font-size: 1.5rem;"><b>Given</b> : préparer les objets dont on a besoin</div>
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.7rem 0.9rem; border-radius: 8px;">
 <div style="font-size: 1.6rem;">▶️</div>
-<div style="font-size: 1.4rem;"><b>When</b> — appeler la méthode qu'on veut tester</div>
+<div style="font-size: 1.4rem;"><b>When</b> : appeler la méthode qu'on veut tester</div>
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #e8f6ec; border-left: 5px solid #27ae60; padding: 0.7rem 0.9rem; border-radius: 8px;">
 <div style="font-size: 1.6rem;">✅</div>
-<div style="font-size: 1.4rem;"><b>Then</b> — vérifier que le résultat correspond à l'attendu</div>
+<div style="font-size: 1.4rem;"><b>Then</b> : vérifier que le résultat correspond à l'attendu</div>
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #fdecea; border-left: 5px solid #e74c3c; padding: 0.7rem 0.9rem; border-radius: 8px;">
@@ -1590,14 +1590,14 @@ C'est l'<b>accumulation</b> qui transforme des tests isolés en <b>filet de séc
 <div style="background: #fff; border: 2px solid #27ae60; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
 <div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold;">⏱️ All checks have passed</div>
 <div style="padding: 0.7rem 1rem; font-size: 1.4rem; color: #444;">
-✓ <b>Maven build</b> — successful in 12s
+✓ <b>Maven build</b> : successful in 12s
 </div>
 </div>
 
 <div style="background: #fff; border: 2px solid #e74c3c; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
 <div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold;">🐛 Some checks were not successful</div>
 <div style="padding: 0.7rem 1rem; font-size: 1.4rem; color: #444;">
-✗ <b>Maven build</b> — failed in 8s
+✗ <b>Maven build</b> : failed in 8s
 </div>
 </div>
 
@@ -1621,22 +1621,22 @@ Toutes les suites de tests ne se valent pas. Une <b>bonne</b> suite tient sur <b
 
 <div style="display: flex; align-items: flex-start; gap: 1rem; background: #eaf2fb; border-left: 5px solid #4a90d9; padding: 0.9rem 1.1rem; border-radius: 8px;">
 <div style="font-size: 2.4rem; line-height: 1;">🎯</div>
-<div style="font-size: 1.4rem;"><b>Pertinente</b> — couvre les cas qui comptent : nominal, limites, erreurs.</div>
+<div style="font-size: 1.4rem;"><b>Pertinente</b> : couvre les cas qui comptent : nominal, limites, erreurs.</div>
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 1rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.9rem 1.1rem; border-radius: 8px;">
 <div style="font-size: 2.4rem; line-height: 1;">📖</div>
-<div style="font-size: 1.4rem;"><b>Lisible</b> — un humain comprend ce qui est testé en lisant le test.</div>
+<div style="font-size: 1.4rem;"><b>Lisible</b> : un humain comprend ce qui est testé en lisant le test.</div>
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 1rem; background: #e8f6ec; border-left: 5px solid #27ae60; padding: 0.9rem 1.1rem; border-radius: 8px;">
 <div style="font-size: 2.4rem; line-height: 1;">🚀</div>
-<div style="font-size: 1.4rem;"><b>Rapide</b> — on doit pouvoir la lancer souvent, sans attendre.</div>
+<div style="font-size: 1.4rem;"><b>Rapide</b> : on doit pouvoir la lancer souvent, sans attendre.</div>
 </div>
 
 <div style="display: flex; align-items: flex-start; gap: 1rem; background: #ede5f7; border-left: 5px solid #8e44ad; padding: 0.9rem 1.1rem; border-radius: 8px;">
 <div style="font-size: 2.4rem; line-height: 1;">🧱</div>
-<div style="font-size: 1.4rem;"><b>Maintenable</b> — on peut faire évoluer le code sans tout réécrire.</div>
+<div style="font-size: 1.4rem;"><b>Maintenable</b> : on peut faire évoluer le code sans tout réécrire.</div>
 </div>
 
 </div>
@@ -1690,7 +1690,7 @@ Quand le code marche déjà, écrire des tests devient fastidieux. Et on ne sait
 ## ✅ TDD : l'idée contre-intuitive
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Le <b>D</b> de TDD, c'est <b>Driven</b> — <i>dirigé</i>. Un test à la fois <b>commande</b> ce que vous codez ensuite. La conception <b>émerge pas à pas</b>, elle n'est pas planifiée à l'avance.
+Le <b>D</b> de TDD, c'est <b>Driven</b>, <i>dirigé</i>. Un test à la fois <b>commande</b> ce que vous codez ensuite. La conception <b>émerge pas à pas</b>, elle n'est pas planifiée à l'avance.
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; align-items: stretch;">
@@ -1760,7 +1760,7 @@ Nettoyer le code <b>sans casser les tests</b>. C'est le moment d'extraire, renom
 </div>
 
 <div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; margin-top: 1.2rem; font-size: 1.4rem; color: #555;">
-<span style="font-size: 2rem;">🔁</span><span>... puis on <b>reprend en 1.</b> avec le test suivant — un petit pas de plus dans la conception.</span>
+<span style="font-size: 2rem;">🔁</span><span>... puis on <b>reprend en 1.</b> avec le test suivant : un petit pas de plus dans la conception.</span>
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
@@ -1947,7 +1947,7 @@ Mettre en pratique les <b>deux moitiés</b> du cours d'aujourd'hui.
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; align-items: stretch;">
 
 <div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.18);">
-<div style="background: #4a90d9; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">🔀 TP1 — Git avancé</div>
+<div style="background: #4a90d9; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">🔀 TP1 : Git avancé</div>
 <div style="background: #eaf2fb; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.4rem;">
 <div style="font-size: 1.4rem; color: #888; margin-bottom: 0.4rem;">2 h : non noté</div>
 Historique lisible, PR, review, intégration propre.
@@ -1955,7 +1955,7 @@ Historique lisible, PR, review, intégration propre.
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.18);">
-<div style="background: #27ae60; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">🧪 TP2 — TDD</div>
+<div style="background: #27ae60; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">✅ TP2 : TDD</div>
 <div style="background: #e8f6ec; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.4rem;">
 <div style="font-size: 1.4rem; color: #888; margin-bottom: 0.4rem;">4 h : noté (CC1)</div>
 Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
