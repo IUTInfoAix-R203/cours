@@ -1647,6 +1647,46 @@ Une suite mal calibrée devient un <b>fardeau</b> au lieu d'un filet : l'équili
 
 ---
 
+## ⚖️ Le piège de tester APRÈS coder
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Quand le code marche déjà, écrire des tests devient fastidieux. Et on ne sait pas <b>quand s'arrêter</b>, parce qu'aucun test n'est <i>nécessaire</i> par construction. Deux dérives symétriques s'installent.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">😴 Suite anémique</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<i>"Le code marche, j'ajouterai les tests plus tard..."</i>
+<ul style="margin: 0.6rem 0 0; padding-left: 1.2rem;">
+<li>La suite <b>stagne</b>, le filet ne se forme jamais</li>
+<li>Régressions silencieuses à chaque modification</li>
+<li>La <b>peur</b> de modifier revient</li>
+</ul>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🐘 Suite obèse</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<i>"Dans le doute, je teste tout, encore et encore..."</i>
+<ul style="margin: 0.6rem 0 0; padding-left: 1.2rem;">
+<li>Suite <b>lente</b>, on la lance moins souvent</li>
+<li>Tests <b>fragiles</b> qui cassent à la moindre refonte</li>
+<li>Devient un <b>frein</b> à l'évolution du code</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+💡 Et si on écrivait le test <b>avant</b> le code ? Chaque test deviendrait <b>nécessaire par construction</b>...
+</div>
+
+---
+
 ## ✅ TDD : l'idée contre-intuitive
 
 <div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
