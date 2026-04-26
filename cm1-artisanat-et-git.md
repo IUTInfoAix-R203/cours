@@ -1511,6 +1511,46 @@ Clic sur l'icône ▶ dans la marge à côté d'<code>@Test</code>, ou clic droi
 
 ---
 
+## 🪢 La suite de tests : votre filet de sécurité
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un test isolé, c'est un seul point d'ancrage. Ce qui vous <b>tient vraiment</b>, c'est la <b>suite</b> qui s'accumule au fil du projet, et qui se relance <b>en entier</b> à chaque modification.
+</p>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">1 test isolé</div>
+<div style="background: #fdecea; padding: 1rem; flex: 1; text-align: center; font-size: 1.4rem;">
+<div style="font-size: 2.4rem; line-height: 1.2;">🪝</div>
+<div style="margin-top: 0.6rem;">Couvre <b>un seul cas</b>. Tout le reste du code peut casser sans alerte.</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">10 tests accumulés</div>
+<div style="background: #f9f5e8; padding: 1rem; flex: 1; text-align: center; font-size: 1.4rem;">
+<div style="font-size: 2.4rem; line-height: 1.2; letter-spacing: -0.3rem;">🪝🪝🪝</div>
+<div style="margin-top: 0.6rem;">Un <b>filet qui prend forme</b>. Les régressions sur les cas testés sont attrapées.</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">100+ tests (la suite)</div>
+<div style="background: #e8f6ec; padding: 1rem; flex: 1; text-align: center; font-size: 1.4rem;">
+<div style="font-size: 2.4rem; line-height: 1.2; letter-spacing: -0.3rem;">🪝🪝🪝🪝🪝🪝🪝</div>
+<div style="margin-top: 0.6rem;">Filet <b>dense</b>. Plus votre filet devient efficace, plus vous modifiez votre code <b>sereinement</b>.</div>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+C'est l'<b>accumulation</b> qui transforme des tests isolés en <b>filet de sécurité</b>. Grâce à votre suite de tests, vous pouvez coder en confiance.
+</div>
+
+---
+
 ## ✅ TDD : l'idée contre-intuitive
 
 <div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
