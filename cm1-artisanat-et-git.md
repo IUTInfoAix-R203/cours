@@ -1197,21 +1197,50 @@ Règle de survie : <b>privilégiez toujours la variante qui refuse d'écraser si
 
 ## 🎬 Démo live : rebase d'une branche sur main
 
-Je vais faire la démo suivante, posez des questions pendant :
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Cycle complet en direct : <b>brancher, commiter, rebaser, pousser sans casser le travail des autres</b>. Posez vos questions pendant la démo.
+</p>
 
-<div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 0.6rem 1.2rem; margin-top: 1rem;">
 
-1. Je clone `github.com/IUTInfoAix-R203/tp1` dans un Codespace
-2. Je fais deux commits sur `main` pour simuler le travail d'un collègue
-3. Je crée une branche `feat-exemple` et j'y fais deux commits
-4. Je rebase ma branche sur `main` : `git rebase origin/main`
-5. J'affiche l'historique avec `git log --oneline --graph --all`
-6. Je pousse avec `git push --force-with-lease`
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; font-size: 1.5rem;">
+<span style="background: #4a90d9; color: #fff; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">1</span>
+<span>Clone <code>IUTInfoAix-R203/tp1</code> dans un Codespace</span>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; font-size: 1.5rem;">
+<span style="background: #4a90d9; color: #fff; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">2</span>
+<span>Création de la branche <code>feat-exemple</code> + deux commits</span>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; font-size: 1.5rem;">
+<span style="background: #4a90d9; color: #fff; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">3</span>
+<span>Deux commits sur <code>main</code> pour simuler le travail d'un collègue</span>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; font-size: 1.5rem;">
+<span style="background: #4a90d9; color: #fff; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">4</span>
+<span>Rebase sur <code>main</code> : <code>git rebase origin/main</code></span>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; font-size: 1.5rem;">
+<span style="background: #4a90d9; color: #fff; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">5</span>
+<span>Visualisation : <code>git log --oneline --graph --all</code></span>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; font-size: 1.5rem;">
+<span style="background: #4a90d9; color: #fff; width: 1.8rem; height: 1.8rem; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">6</span>
+<span>Push sécurisé : <code>git push --force-with-lease</code></span>
+</div>
 
 </div>
 
-<div style="margin-top: 1rem; background: #e74c3c; color: white; padding: 1rem; border-radius: 8px;">
-⚠️ Ce que vous allez voir que je <b>ne conseille pas en vrai</b> : je vais volontairement simuler un commit mal formé, pour vous montrer le rebase interactif pour le corriger.
+<div style="margin-top: 1.2rem; background: #fdecea; border: 2px solid #e74c3c; padding: 0.8rem 1.1rem; border-radius: 8px; font-size: 1.5rem;">
+<b style="color: #c0392b;">⚠️ Mise en scène pédagogique</b> — je vais volontairement simuler un commit mal formé pour montrer comment le rebase interactif le corrige. <b>Ne reproduisez pas ce style en vrai.</b>
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+👁️ Observez : l'historique de <code>main</code> reste <b>linéaire</b> et <b>lisible</b> avant et après le push.
 </div>
 
 ---
