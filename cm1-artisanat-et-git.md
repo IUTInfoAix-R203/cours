@@ -1857,23 +1857,39 @@ Plus le pas est petit, plus le <b>diagnostic</b> en cas d'échec est immédiat. 
 
 ## 🎬 Kata live : HelloWorld en TDD
 
-<div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+On va écrire <b>ensemble</b> une méthode <code>saluer(String nom)</code>. Quatre tests fournis, activés <b>un par un</b>, dans l'ordre. Vous observez, je code.
+</p>
 
-On va écrire ensemble une méthode `saluer(String nom)` qui retourne :
+<div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
 
-- `"Hello, World!"` si `nom` est `null` ou vide
-- `"Hello, <nom>!"` sinon
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📋 Spécification</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.25rem;">
+La méthode <code>saluer(String nom)</code> retourne :
+<ul style="margin: 0.5rem 0 0; padding-left: 1.2rem;">
+<li><code>"Hello, World!"</code> si <code>nom</code> est <code>null</code> ou vide</li>
+<li><code>"Hello, &lt;nom&gt;!"</code> sinon</li>
+</ul>
+</div>
+</div>
 
-**Tests** (fournis, je vais les activer un par un) :
-1. `saluerSansNomRetourneHelloWorld()`
-2. `saluerChaineVideRetourneHelloWorld()`
-3. `saluerAliceRetourneHelloAlice()`
-4. `saluerBobRetourneHelloBob()`
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🧪 Les 4 tests à activer (dans l'ordre)</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.15rem;">
+<ol style="margin: 0; padding-left: 1.4rem;">
+<li><code>saluerSansNomRetourneHelloWorld()</code></li>
+<li><code>saluerChaineVideRetourneHelloWorld()</code></li>
+<li><code>saluerAliceRetourneHelloAlice()</code></li>
+<li><code>saluerBobRetourneHelloBob()</code></li>
+</ol>
+</div>
+</div>
 
 </div>
 
-<div style="margin-top: 1.2rem; font-size: 1.1rem; text-align: center; color: #666;">
-Observez le rythme : <b>activer → rouge → écrire → vert → commit</b>. Ne pas coder en avance.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+👁️ Observez le rythme : <b>activer → rouge → écrire le minimum → vert → refactor → tour suivant</b>. <b>Pas de code en avance.</b>
 </div>
 
 ---
