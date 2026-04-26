@@ -22,7 +22,7 @@ IUT d'Aix-Marseille - BUT Informatique, première année
 
 ---
 
-## Le module R2.03 en un coup d'oeil
+## Le module R2.03 en un coup d'œil
 
 <style scoped>
 blockquote { font-size: 1rem; margin-bottom: 0; }
@@ -74,7 +74,7 @@ blockquote { font-size: 1rem; margin-bottom: 0; }
 </div>
 </div>
 
-<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.1rem;">
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.5rem;">
 Chaque CM prépare les <b>gestes concrets</b> mis en pratique dans les TP qui suivent.
 </div>
 
@@ -207,7 +207,7 @@ Pourquoi on parle de "qualité" ?
 ## 🔨 Qu'est-ce que l'artisanat logiciel ?
 
 <p style="font-size : 1.5rem;">
-Un <b>artisan meunuisier</b> livre une table <b>bien finie</b>, robuste, belle, facile à réparer. Un <b>artisan logiciel</b> livre du code qui doit être :
+Un <b>artisan menuisier</b> livre une table <b>bien finie</b>, robuste, belle, facile à réparer. Un <b>artisan logiciel</b> livre du code qui doit être :
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1rem; margin: 3rem 0;">
@@ -239,7 +239,7 @@ Un <b>artisan meunuisier</b> livre une table <b>bien finie</b>, robuste, belle, 
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem 1.5rem; border-radius: 10px; font-size: 1.5rem; text-align: left;">
-Le <b>"Software Craftsmanship"</b> est mouvement né dans les années 2000, en réaction à l'industrialisation du monde du logiciel qui pressait les développeurs à livrer vite au détriment de la qualité.
+Le <b>"Software Craftsmanship"</b> est un mouvement né dans les années 2000, en réaction à l'industrialisation du monde du logiciel qui pressait les développeurs à livrer vite au détriment de la qualité.
 </div>
 
 ---
@@ -331,7 +331,7 @@ Plus un bug est détecté <b>tard</b>, plus il coûte cher à corriger. Ordre de
 <div style="background: #e74c3c; color: white; padding: 1.3rem 1.5rem; border-radius: 12px; font-size: 1.4rem;">
 <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.6rem;">💥 Knight Capital (2012)</div>
 Un bug de déploiement sur un système de trading a fait perdre <b>440 M$ en 45 minutes</b>.<br/><br/>
-Conséquence : <b>Faillite !</b><br/><br/> Cause : un drapeau mal réinitialisé dans un module obsolète.
+Conséquence : <b>quasi-faillite et rachat en urgence</b>.<br/><br/> Cause : un drapeau mal réinitialisé dans un module obsolète.
 </div>
 
 </div>
@@ -609,7 +609,7 @@ refactor(facture): extrait appliquerTVA</pre>
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
-<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">🎯</span> Un message clair aujourd'hui = l'origine d'un bug est retrouvé en 30 secondes dans 6 mois.
+<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">🎯</span> Un message clair aujourd'hui = l'origine d'un bug se retrouve en 30 secondes dans 6 mois.
 </div>
 
 ---
@@ -621,7 +621,7 @@ Un standard universel pour structurer vos messages et rendre votre historique li
 </p>
 
 <div style="text-align: center; margin-top: 1.2rem; background: #f5f7fa; border: 2px dashed #bdc3c7; padding: 1.2rem; border-radius: 10px; font-family: monospace; font-size: 1.6rem;">
-<b>&lt;type&gt;</b>(<b>&lt;scope&gt;</b>) : <b>&lt;description&gt;</b>
+<b>&lt;type&gt;</b>(<b>&lt;scope&gt;</b>): <b>&lt;description&gt;</b>
 </div>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1.2rem;">
@@ -819,7 +819,7 @@ Dans vos Codespaces, <b>Copilot Code Review</b> peut commenter automatiquement u
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
-<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">💡</span> <b>Copilot suggère</b> mais c'est <b>un humain qui décide.</b> Une vraie review commence par comprendre l'intention du contributeur et de vérifier qu'elle est correctement mise en oeuvre dans le code.
+<span style="font-size: 2rem; vertical-align: middle; margin-right: 0.4rem;">💡</span> <b>Copilot suggère</b> mais c'est <b>un humain qui décide.</b> Une vraie review commence par comprendre l'intention du contributeur et vérifier qu'elle est correctement mise en œuvre dans le code.
 </div>
 
 ---
@@ -834,14 +834,14 @@ h2 { view-transition-name: titre-integration; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la première façons de les intégrer à la branche <code>main</code> : <code>git merge</code>.
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la première façon de les intégrer à la branche <code>main</code> : <code>git merge</code>.
 </p>
 
 <div class="git-diagram" style="text-align: center; margin-top: 3rem;">
-<img src="assets/git-before.svg" alt="Situation initiale : main A-B-C, ma-feature avec D non fusionné" style="width: 55%; max-width: 550px;" />
+<img src="assets/git-before.svg" alt="Situation initiale : main A-B-C, ma-feature avec D et E non fusionnés" style="width: 55%; max-width: 550px;" />
 </div>
 
-<div style="margin-top: 4rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.4rem; text-align: center;">
+<div style="margin-top: 4rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">/home/nedjar/sandbox/R203/cours/_site/cm1-artisanat-et-git.html
 <span style="font-size: 1.8rem; vertical-align: middle; margin-right: 0.4rem;">🕐</span> <b>Situation initiale</b> : la branche <code>main</code> continue d'avancer (commit C) pendant que la branche <code>ma-feature</code> travaille sur D puis sur E.
 </div>
 
@@ -855,7 +855,7 @@ h2 { view-transition-name: titre-integration; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la première façons de les intégrer à la branche <code>main</code> : <code>git merge</code>. Après cette opération un nouveau commit de merge fait la jointure entre les deux branches.
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la première façon de les intégrer à la branche <code>main</code> : <code>git merge</code>. Après cette opération, un nouveau commit de merge fait la jointure entre les deux branches.
 </p>
 
 <div class="git-diagram" style="text-align: center; margin-top: 1rem;">
@@ -894,14 +894,14 @@ h2 { view-transition-name: titre-integration; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la seconde façons de les intégrer à la branche <code>main</code> : <code>git rebase</code>.
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la seconde façon de les intégrer à la branche <code>main</code> : <code>git rebase</code>.
 </p>
 
 <div class="git-diagram" style="text-align: center; margin-top: 4rem;">
-<img src="assets/git-before.svg" alt="Situation initiale : main A-B-C, ma-feature avec D" style="width: 55%; max-width: 550px;" />
+<img src="assets/git-before.svg" alt="Situation initiale : main A-B-C, ma-feature avec D et E" style="width: 55%; max-width: 550px;" />
 </div>
 
-<div style="margin-top: 2.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.4rem; text-align: center;">
+<div style="margin-top: 2.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem; text-align: center;">
 <span style="font-size: 1.8rem; vertical-align: middle; margin-right: 0.4rem;">🕐</span> <b>Même situation initiale</b> : on part de <code>main</code> = A-B-C et <code>ma-feature</code> = D-E.
 </div>
 
@@ -915,7 +915,7 @@ h2 { view-transition-name: titre-integration; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la seconde façons de les intégrer à la branche <code>main</code> : <code>git rebase</code>. Le rebase <b>rejoue</b> les commits D et E sur la pointe de <code>main</code>. D et E devienent D' et E' : même contenu, mais nouveau commit avec un nouveau SHA.
+Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagés. Voici la seconde façon de les intégrer à la branche <code>main</code> : <code>git rebase</code>. Le rebase <b>rejoue</b> les commits D et E sur la pointe de <code>main</code>. D et E deviennent D' et E' : même contenu, mais nouveaux commits avec de nouveaux SHA.
 </p>
 
 <div class="git-diagram" style="text-align: center; margin-top: 4rem;">
@@ -952,7 +952,7 @@ Vos commits sur la branche <code>ma-feature</code> sont prêts à être partagé
 </div>
 
 <div style="margin-top: 1.5rem; font-size: 1.5rem; text-align: center;">
-<b>Pourquoi ?</b> Le rebase <b>change les SHAs</b>. Si ton coéquipier a déjà basé du travail sur ta branche publique, ton rebase lui fait <b>perdre ses commits</b>.
+<b>Pourquoi ?</b> Le rebase <b>change les SHAs</b>. Si votre coéquipier a déjà basé du travail sur votre branche publique, votre rebase lui fait <b>perdre ses commits</b>.
 </div>
 
 <div style="display: flex; gap: 1.5rem; margin-top: 1.5rem; align-items: stretch;">
@@ -1506,7 +1506,7 @@ Clic sur l'icône ▶ dans la marge à côté d'<code>@Test</code>, ou clic droi
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-🔁 Code → tests → résultat <b>en quelques secondes</b> : c'est le <b>feedback loop</b>. Plus il est court, plus vous l'éxécutez souvent et plus vous codez en confiance.
+🔁 Code → tests → résultat <b>en quelques secondes</b> : c'est le <b>feedback loop</b>. Plus il est court, plus vous l'exécutez souvent et plus vous codez en confiance.
 </div>
 
 ---
@@ -1647,7 +1647,7 @@ Une suite mal calibrée devient un <b>fardeau</b> au lieu d'un filet : l'équili
 
 ---
 
-## ⚖️ Le piège de tester APRÈS coder
+## ⚖️ Le piège de tester APRÈS avoir codé
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
 Quand le code marche déjà, écrire des tests devient fastidieux. Et on ne sait pas <b>quand s'arrêter</b>, parce qu'aucun test n'est <i>nécessaire</i> par construction. Deux dérives symétriques s'installent.
@@ -1718,7 +1718,7 @@ TDD inverse la logique : on exprime <b>un besoin</b> sous forme de test, puis on
 
 </div>
 
-<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.4rem;">
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
 ⚠️ TDD ≠ <b>Test First</b> (écrire tous les tests d'avance, puis coder). TDD c'est <b>un test à la fois</b>, suivi d'un petit pas de code, suivi d'un nettoyage. Une procédure précise, qu'on va découvrir maintenant.
 </div>
 
@@ -1921,7 +1921,7 @@ Sur les TP de R2.03, Copilot est configuré comme <b>tuteur TDD</b>. Il aide à 
 <li><i>« Écris tout le TP à ma place »</i></li>
 <li>Donner une solution dès le premier prompt</li>
 <li>Coder avant que vous ayez vu le rouge</li>
-<li>Donner le commandes git si l'exercice n'est pas terminer</li>
+<li>Donner les commandes Git si l'exercice n'est pas terminé</li>
 </ul>
 </div>
 </div>
@@ -1955,7 +1955,7 @@ Historique lisible, PR, review, intégration propre.
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.18);">
-<div style="background: #27ae60; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">✅ TP2 — TDD</div>
+<div style="background: #27ae60; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">🧪 TP2 — TDD</div>
 <div style="background: #e8f6ec; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.4rem;">
 <div style="font-size: 1.4rem; color: #888; margin-bottom: 0.4rem;">4 h : noté (CC1)</div>
 Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
@@ -2018,13 +2018,13 @@ IUT d'Aix-Marseille - Département Informatique
 
 <div style="margin-top: 2rem; font-size: 1.1rem;">
 
-🌐 [github.com/IUTInfoAix-R203/tp1](https://github.com/IUTInfoAix-R203/tp1)
+🌐 [github.com/IUTInfoAix-R203/tp1](https://github.com/IUTInfoAix-R203/tp)
 
 📧 sebastien.nedjar@univ-amu.fr
 
 </div>
 
-<div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 12px; font-size: 1.1rem;">
+<div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 12px; font-size: 1.5rem;">
 <b>🎯 Dès maintenant</b> : dans votre Codespace, faites un petit commit, ouvrez une PR, et lancez <code>./mvnw test</code>. Plus tôt vos doigts connaissent ces gestes, plus tôt le métier rentre.
 </div>
 
