@@ -1904,7 +1904,7 @@ Sur les TP de R2.03, Copilot est configuré comme <b>tuteur TDD</b>. Il aide à 
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
 <div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎓 Ce que Copilot fera</div>
-<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
 <ul style="margin: 0; padding-left: 1.2rem;">
 <li>Expliquer un concept TDD</li>
 <li>Vous orienter vers la Javadoc</li>
@@ -1916,11 +1916,12 @@ Sur les TP de R2.03, Copilot est configuré comme <b>tuteur TDD</b>. Il aide à 
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
 <div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🙅 Ce qu'il refusera</div>
-<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
 <ul style="margin: 0; padding-left: 1.2rem;">
 <li><i>« Écris tout le TP à ma place »</i></li>
 <li>Donner une solution dès le premier prompt</li>
 <li>Coder avant que vous ayez vu le rouge</li>
+<li>Donner le commandes git si l'exercice n'est pas terminer</li>
 </ul>
 </div>
 </div>
@@ -1928,29 +1929,47 @@ Sur les TP de R2.03, Copilot est configuré comme <b>tuteur TDD</b>. Il aide à 
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-Copilot est un <b>tuteur pendant les TP</b>. Au CC3, vos réflexes devront être <b>les vôtres</b>.
+Copilot sera votre <b>tuteur pendant les TP</b> mais n'oubliez pas qu'au CC3, vos réflexes devront être <b>les vôtres</b>.
 </div>
 
 ---
 
 <!-- _class: lead -->
+<!-- _header: "" -->
+<!-- _footer: "" -->
 
-# Ce qu'on fait maintenant
+# 🎯 Ce qu'on fait maintenant
 
-Le prochain cap est simple : mettre en pratique les deux moitiés du cours d'aujourd'hui.
+<p style="font-size: 1.5rem; color: #555;">
+Mettre en pratique les <b>deux moitiés</b> du cours d'aujourd'hui.
+</p>
 
-**🔀 TP1 - Git avancé** (~2h, non noté)
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.18);">
+<div style="background: #4a90d9; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">🔀 TP1 — Git avancé</div>
+<div style="background: #eaf2fb; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+<div style="font-size: 1.1rem; color: #888; margin-bottom: 0.4rem;">~2 h · non noté</div>
 Historique lisible, PR, review, intégration propre.
-
-**✅ TP2 - TDD** (~4h, noté)
-Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
-
-<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
-🎯 <b>Dès le prochain TP</b> : écrivez des commits relisibles, ouvrez une PR comme une vraie conversation, et laissez toujours un test vous dire quand vous avez cassé quelque chose.
+</div>
 </div>
 
-<div style="margin-top: 1rem; text-align: center;">
-👉 Lien Classroom : [github.com/IUTInfoAix-R203/tp](https://github.com/IUTInfoAix-R203/tp)
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.18);">
+<div style="background: #27ae60; color: #fff; padding: 0.7rem 1rem; font-size: 1.6rem; font-weight: bold; text-align: center;">✅ TP2 — TDD</div>
+<div style="background: #e8f6ec; padding: 1.1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+<div style="font-size: 1.1rem; color: #888; margin-bottom: 0.4rem;">~4 h · noté (CC1)</div>
+Cycle RED-GREEN-REFACTOR, fake-it, triangulation, ApprovalTests.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 10px; text-align: center; font-size: 1.5rem;">
+<b>Dès le prochain TP</b> : commits relisibles, PR comme une conversation, et un test qui vous dit quand vous avez cassé quelque chose.
+</div>
+
+<div style="margin-top: 1rem; text-align: center; font-size: 1.2rem;">
+👉 Classroom : <a href="https://github.com/IUTInfoAix-R203/tp1" style="color: #4a90d9; font-weight: bold;">github.com/IUTInfoAix-R203/tp1</a>
 </div>
 
 ---
