@@ -1611,6 +1611,42 @@ C'est l'<b>accumulation</b> qui transforme des tests isolés en <b>filet de séc
 
 ---
 
+## 🌟 Qu'est-ce qu'une bonne suite de tests ?
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Toutes les suites de tests ne se valent pas. Une <b>bonne</b> suite tient sur <b>quatre propriétés</b>, et chacune compte autant que les autres.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+
+<div style="display: flex; align-items: flex-start; gap: 1rem; background: #eaf2fb; border-left: 5px solid #4a90d9; padding: 0.9rem 1.1rem; border-radius: 8px;">
+<div style="font-size: 2.4rem; line-height: 1;">🎯</div>
+<div style="font-size: 1.4rem;"><b>Pertinente</b> — couvre les cas qui comptent : nominal, limites, erreurs.</div>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 1rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.9rem 1.1rem; border-radius: 8px;">
+<div style="font-size: 2.4rem; line-height: 1;">📖</div>
+<div style="font-size: 1.4rem;"><b>Lisible</b> — un humain comprend ce qui est testé en lisant le test.</div>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 1rem; background: #e8f6ec; border-left: 5px solid #27ae60; padding: 0.9rem 1.1rem; border-radius: 8px;">
+<div style="font-size: 2.4rem; line-height: 1;">🚀</div>
+<div style="font-size: 1.4rem;"><b>Rapide</b> — on doit pouvoir la lancer souvent, sans attendre.</div>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 1rem; background: #ede5f7; border-left: 5px solid #8e44ad; padding: 0.9rem 1.1rem; border-radius: 8px;">
+<div style="font-size: 2.4rem; line-height: 1;">🧱</div>
+<div style="font-size: 1.4rem;"><b>Maintenable</b> — on peut faire évoluer le code sans tout réécrire.</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Une suite mal calibrée devient un <b>fardeau</b> au lieu d'un filet : l'équilibre entre les quatre est délicat.
+</div>
+
+---
+
 ## ✅ TDD : l'idée contre-intuitive
 
 <div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
