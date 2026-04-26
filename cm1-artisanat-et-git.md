@@ -1358,7 +1358,51 @@ Un test automatisé, c'est <b>du code qui exécute d'autres bouts de code</b> et
 </div>
 
 <div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-Le test automatisé c'est un assistant invisible qui <b>refait toutes vos vérifications en quelques secondes</b>, à chaque modification.
+Le test automatisé c'est un robot assistant invisible qui <b>refait toutes vos vérifications en quelques secondes</b>, à chaque fois que vous lui demandez.
+</div>
+
+---
+
+## 🎯 Le test unitaire : zoomer sur une seule unité
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un test <b>unitaire</b> vérifie <b>une seule unité de code</b> (une méthode, ou une classe), <b>isolée</b> du reste de l'application : pas de base de données, pas de réseau, pas de fichiers.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; gap: 0.7rem;">
+
+<div style="display: flex; align-items: center; gap: 0.9rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="font-size: 2.2rem;">⚡</div>
+<div style="font-size: 1.4rem;"><b>Rapide</b> — moins d'une seconde par test</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 0.9rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="font-size: 2.2rem;">🧪</div>
+<div style="font-size: 1.4rem;"><b>Isolé</b> — aucune dépendance externe</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 0.9rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="font-size: 2.2rem;">🔢</div>
+<div style="font-size: 1.4rem;"><b>Nombreux</b> — souvent des centaines par projet</div>
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+
+<div style="background: #e74c3c; color: #fff; padding: 1.2rem 0.8rem; width: 45%; text-align: center; border-radius: 6px 6px 0 0; font-size: 1.2rem;">E2E <span style="opacity: 0.85;">(peu)</span></div>
+<div style="background: #e8a838; color: #fff; padding: 1.5rem 0.8rem; width: 65%; text-align: center; font-size: 1.3rem; border-radius: 6px 6px 0 0;">Intégration <span style="opacity: 0.85;">(moyen)</span></div>
+<div style="background: #27ae60; color: #fff; padding: 1.8rem 0.8rem; width: 90%; text-align: center; font-size: 1.4rem; font-weight: bold; border-radius: 6px 6px 0px 0px; box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.25);">Tests unitaires <span style="opacity: 0.9;">(la base, beaucoup)</span></div>
+<div style="margin-top: 0.7rem; font-size: 1.1rem; color: #888;">👉 La pyramide des tests, détaillée au <b>CM2</b></div>
+
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+En <b>TP2</b>, <b>TP3</b> et <b>TP4</b>, vous verrez <b>uniquement</b> des tests unitaires.
 </div>
 
 ---
