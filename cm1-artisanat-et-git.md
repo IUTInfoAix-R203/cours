@@ -1149,25 +1149,48 @@ HEAD is now at g7h8i9 feat: ajoute X
 
 ## ⚠️ Commandes destructrices et leurs alternatives
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>❌ git reset --hard</b><br/>Perd toutes les modifications non commitées.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Certaines commandes Git détruisent du travail <b>sans demander confirmation</b>. Pour chacune, il existe une variante équivalente qui refuse d'écraser silencieusement.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.4rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">💀 Dangereux</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1;">
+<code style="font-size: 1.3rem; color: #c0392b; font-weight: bold;">git reset --hard</code><br/>
+<span style="font-size: 1.1rem;">Perd toutes les modifications non commitées.</span>
 </div>
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ git reset (mixed par défaut)</b><br/>Déstage sans perdre le contenu.
 </div>
 
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>❌ git push --force</b><br/>Écrase la branche distante, même si d'autres ont poussé après toi.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🛡️ Plus sûr</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1;">
+<code style="font-size: 1.3rem; color: #1e8449; font-weight: bold;">git reset</code><br/>
+<span style="font-size: 1.1rem;">Déstage sans toucher au contenu (mode <code>--mixed</code> par défaut).</span>
 </div>
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ git push --force-with-lease</b><br/>Refuse le push si quelqu'un a poussé entre-temps.
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.4rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">💀 Dangereux</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1;">
+<code style="font-size: 1.3rem; color: #c0392b; font-weight: bold;">git push --force</code><br/>
+<span style="font-size: 1.1rem;">Écrase la branche distante, même si un collègue a poussé entre-temps.</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🛡️ Plus sûr</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1;">
+<code style="font-size: 1.3rem; color: #1e8449; font-weight: bold;">git push --force-with-lease</code><br/>
+<span style="font-size: 1.1rem;">Refuse le push si quelqu'un a poussé entre-temps pour ne pas perdre son travail.</span>
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
-Règle de survie : <b>privilégiez toujours la variante qui refuse d'écraser silencieusement le travail</b>.
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Règle de survie : <b>privilégiez toujours la variante qui refuse d'écraser silencieusement</b>.
 </div>
 
 ---
