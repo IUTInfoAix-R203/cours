@@ -1407,6 +1407,68 @@ En <b>TP2</b>, <b>TP3</b> et <b>TP4</b>, vous verrez <b>uniquement</b> des tests
 
 ---
 
+## 📝 À quoi ressemble un test JUnit ?
+
+<style scoped>
+section .junit-card pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 0.9rem 1.1rem !important; }
+section .junit-card pre code { font-size: 0.9rem !important; line-height: 1.5 !important; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un test JUnit, c'est <b>juste une méthode Java</b> qui en appelle une autre et vérifie le résultat. Trois phases, toujours les mêmes : <b>Given · When · Then</b>.
+</p>
+
+<div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.5rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div class="junit-card" style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+<div style="background: #2c3e50; color: #fff; padding: 0.4rem 1rem; font-size: 1.4rem; font-weight: bold;">📄 <code style="background: transparent; color: #fff;">CalculatriceTest.java</code></div>
+
+```java
+@Test
+void additionne_deux_et_trois_retourne_cinq() {
+    // Given : on a une calculatrice
+    Calculatrice calc = new Calculatrice();
+    // When : on additionne 2 et 3
+    int resultat = calc.additionne(2, 3);
+    // Then : on attend 5
+    assertThat(resultat).isEqualTo(5);
+}
+```
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 0.6rem;">
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #eaf2fb; border-left: 5px solid #4a90d9; padding: 0.7rem 0.9rem; border-radius: 8px;">
+<div style="font-size: 1.6rem;">🛠️</div>
+<div style="font-size: 1.5rem;"><b>Given</b> — préparer les objets dont on a besoin</div>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.7rem 0.9rem; border-radius: 8px;">
+<div style="font-size: 1.6rem;">▶️</div>
+<div style="font-size: 1.4rem;"><b>When</b> — appeler la méthode qu'on veut tester</div>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #e8f6ec; border-left: 5px solid #27ae60; padding: 0.7rem 0.9rem; border-radius: 8px;">
+<div style="font-size: 1.6rem;">✅</div>
+<div style="font-size: 1.4rem;"><b>Then</b> — vérifier que le résultat correspond à l'attendu</div>
+</div>
+
+<div style="display: flex; align-items: flex-start; gap: 0.7rem; background: #fdecea; border-left: 5px solid #e74c3c; padding: 0.7rem 0.9rem; border-radius: 8px;">
+<div style="font-size: 1.6rem;">📛</div>
+<div style="font-size: 1.4rem;">Le <b>nom du test</b> raconte ce qu'on vérifie</div>
+</div>
+
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Pas de magie : du <b>pur Java</b>, une annotation <code>@Test</code>, et un <code>assertThat(...)</code> qui décide.
+</div>
+
+---
+
 ## ✅ TDD : l'idée contre-intuitive
 
 <div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
