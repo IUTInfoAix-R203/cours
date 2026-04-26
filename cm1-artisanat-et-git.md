@@ -1876,7 +1876,7 @@ La méthode <code>saluer(String nom)</code> retourne :
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
 <div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🧪 Les 4 tests à activer (dans l'ordre)</div>
-<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.15rem;">
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
 <ol style="margin: 0; padding-left: 1.4rem;">
 <li><code>saluerSansNomRetourneHelloWorld()</code></li>
 <li><code>saluerChaineVideRetourneHelloWorld()</code></li>
@@ -1896,30 +1896,39 @@ La méthode <code>saluer(String nom)</code> retourne :
 
 ## 🤖 Copilot Chat : votre tuteur, pas votre code-monkey
 
-Au TP2, Copilot est configuré comme **tuteur TDD** : il peut aider à raisonner, mais pas court-circuiter la démarche.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Sur les TP de R2.03, Copilot est configuré comme <b>tuteur TDD</b>. Il aide à raisonner, mais <b>refuse</b> de court-circuiter la démarche.
+</p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>✅ Ce que Copilot fera</b>
-<ul style="margin-top: 0.3rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎓 Ce que Copilot fera</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
 <li>Expliquer un concept TDD</li>
 <li>Vous orienter vers la Javadoc</li>
 <li>Vous aider à débloquer une impasse</li>
-<li>Refuser de coder à votre place si un test n'est pas encore activé</li>
+<li>Refuser de coder si un test n'est pas encore activé</li>
 </ul>
 </div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>❌ Ce qu'il refusera</b>
-<ul style="margin-top: 0.3rem;">
-<li>"Écris tout le TP à ma place"</li>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🙅 Ce qu'il refusera</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li><i>« Écris tout le TP à ma place »</i></li>
 <li>Donner une solution dès le premier prompt</li>
 <li>Coder avant que vous ayez vu le rouge</li>
 </ul>
 </div>
 </div>
 
-<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; text-align: center; font-size: 1.1rem;">
-Copilot est un <b>tuteur</b> pendant les TP ; au contrôle, vos réflexes doivent être les vôtres.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Copilot est un <b>tuteur pendant les TP</b>. Au CC3, vos réflexes devront être <b>les vôtres</b>.
 </div>
 
 ---
