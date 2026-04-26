@@ -1771,33 +1771,46 @@ Chaque tour ajoute <b>un petit bout de comportement validé</b>. La conception <
 
 ## 🎣 Les 3 stratégies de Kent Beck
 
-Pour passer du **RED** au **GREEN**, trois approches :
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Pour passer du <b>RED</b> au <b>GREEN</b>, trois approches au choix selon la complexité du test à faire passer.
+</p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #27ae60; color: white; padding: 1.2rem; border-radius: 10px;">
-<div style="font-size: 2rem;">🟢 <b>Fake it</b></div>
-<div style="margin-top: 0.5rem;">Retourner une <b>valeur en dur</b> qui fait passer le test.</div>
-<pre style="background: rgba(0,0,0,0.2); padding: 0.6rem; border-radius: 4px; margin-top: 0.5rem; font-size: 0.85rem;">// Test : saluer("Alice") == "Hello, Alice!"
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎭 Fake it</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>Retourner une <b>valeur en dur</b> qui fait passer le test.</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.6rem 0.8rem; font-size: 1rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 6px !important; font-family: 'Courier New', Consolas, monospace; white-space: pre;">// saluer("Alice") == "Hello, Alice!"
 return "Hello, Alice!";</pre>
-<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;">Premier réflexe. Toujours.</div>
+<div style="font-size: 1.05rem; opacity: 0.85; margin-top: auto;">💡 <b>Premier réflexe</b>. Toujours commencer ici.</div>
+</div>
 </div>
 
-<div style="background: #e8a838; color: white; padding: 1.2rem; border-radius: 10px;">
-<div style="font-size: 2rem;">🔺 <b>Triangulation</b></div>
-<div style="margin-top: 0.5rem;">Un <b>2e test</b> avec une autre valeur t'oblige à généraliser.</div>
-<pre style="background: rgba(0,0,0,0.2); padding: 0.6rem; border-radius: 4px; margin-top: 0.5rem; font-size: 0.85rem;">// Test 1 : saluer("Alice")
-// Test 2 : saluer("Bob")
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📐 Triangulation</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>Un <b>2<sup>e</sup> test</b> avec une autre valeur vous oblige à généraliser.</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.6rem 0.8rem; font-size: 1rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 6px !important; font-family: 'Courier New', Consolas, monospace; white-space: pre;">// saluer("Alice"), saluer("Bob")
 return "Hello, " + nom + "!";</pre>
-<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;">Quand fake it ne suffit plus.</div>
+<div style="font-size: 1.05rem; opacity: 0.85; margin-top: auto;">💡 Quand <b>fake it</b> ne suffit plus.</div>
+</div>
 </div>
 
-<div style="background: #4a90d9; color: white; padding: 1.2rem; border-radius: 10px;">
-<div style="font-size: 2rem;">✅ <b>Obvious</b></div>
-<div style="margin-top: 0.5rem;">L'implémentation tient en <b>une ligne évidente</b>.</div>
-<pre style="background: rgba(0,0,0,0.2); padding: 0.6rem; border-radius: 4px; margin-top: 0.5rem; font-size: 0.85rem;">// Test : additionner(2, 3) == 5
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">💡 Obvious</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>L'implémentation tient en <b>une ligne évidente</b>.</div>
+<pre style="background: #1e1e1e; color: #e8e8e8; margin: 0; padding: 0.6rem 0.8rem; font-size: 1rem; line-height: 1.4; border: none !important; box-shadow: none !important; border-radius: 6px !important; font-family: 'Courier New', Consolas, monospace; white-space: pre;">// additionner(2, 3) == 5
 return a + b;</pre>
-<div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9;">Rare. Mais OK si la solution est triviale.</div>
+<div style="font-size: 1.05rem; opacity: 0.85; margin-top: auto;">💡 <b>Rare</b>. OK si la solution est vraiment triviale.</div>
 </div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Toujours commencer par <b>fake it</b>. Trianguler quand un seul cas ne suffit plus. Aller à l'évidence si elle est vraiment évidente.
 </div>
 
 ---
