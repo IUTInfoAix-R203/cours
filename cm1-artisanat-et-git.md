@@ -1551,6 +1551,66 @@ C'est l'<b>accumulation</b> qui transforme des tests isolés en <b>filet de séc
 
 ---
 
+## 🤖 La CI : le filet qui se déploie automatiquement
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+À chaque <code>git push</code>, GitHub Actions relance votre suite de tests <b>sans même que vous demandiez</b>. C'est l'<b>Intégration Continue (CI)</b>.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1.2rem; align-items: center;">
+
+<div style="display: flex; flex-direction: column;">
+
+<div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.4rem; background: #eaf2fb; border-left: 5px solid #4a90d9;">
+<span style="font-size: 1.8rem;">📤</span><span><b>git push</b> sur GitHub</span>
+</div>
+
+<div style="text-align: center; color: #888; font-size: 1.5rem; line-height: 1; margin: 0.2rem 0;">⬇</div>
+
+<div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.4rem; background: #f9f5e8; border-left: 5px solid #e8a838;">
+<span style="font-size: 1.8rem;">🤖</span><span><b>GitHub Actions</b> s'active automatiquement</span>
+</div>
+
+<div style="text-align: center; color: #888; font-size: 1.5rem; line-height: 1; margin: 0.2rem 0;">⬇</div>
+
+<div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.4rem; background: #e8f6ec; border-left: 5px solid #27ae60;">
+<span style="font-size: 1.8rem;">⏱️</span><span><b>Toute la suite</b> de tests s'exécute</span>
+</div>
+
+<div style="text-align: center; color: #888; font-size: 1.5rem; line-height: 1; margin: 0.2rem 0;">⬇</div>
+
+<div style="display: flex; align-items: center; gap: 0.7rem; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.4rem; background: #ede5f7; border-left: 5px solid #8e44ad;">
+<span style="font-size: 1.8rem;">🚦</span><span><b>Statut visible</b> sur la Pull Request</span>
+</div>
+
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 1rem;">
+
+<div style="background: #fff; border: 2px solid #27ae60; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold;">⏱️ All checks have passed</div>
+<div style="padding: 0.7rem 1rem; font-size: 1.4rem; color: #444;">
+✓ <b>Maven build</b> — successful in 12s
+</div>
+</div>
+
+<div style="background: #fff; border: 2px solid #e74c3c; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold;">🐛 Some checks were not successful</div>
+<div style="padding: 0.7rem 1rem; font-size: 1.4rem; color: #444;">
+✗ <b>Maven build</b> — failed in 8s
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+🛡️ Le filet <b>se déploie tout seul</b>. Plus moyen de pousser du code cassé sans le savoir.
+</div>
+
+---
+
 ## ✅ TDD : l'idée contre-intuitive
 
 <div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
