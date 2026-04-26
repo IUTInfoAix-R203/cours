@@ -1682,39 +1682,44 @@ Quand le code marche déjà, écrire des tests devient fastidieux. Et on ne sait
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-💡 Et si on écrivait le test <b>avant</b> le code ? Chaque test deviendrait <b>nécessaire par construction</b>...
+💡 Et si chaque petit bout de code <b>naissait</b> d'un test qui en a besoin ? Le test ne se contenterait pas de précéder le code : il <b>dirigerait</b> son écriture, un pas à la fois.
 </div>
 
 ---
 
 ## ✅ TDD : l'idée contre-intuitive
 
-<div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
-<b>Écrire le test <em>avant</em> le code</b> qu'il vérifie.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le <b>D</b> de TDD, c'est <b>Driven</b> — <i>dirigé</i>. Un test à la fois <b>commande</b> ce que vous codez ensuite. La conception <b>émerge</b> du cycle, elle n'est pas planifiée à l'avance.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🚀 Pourquoi c'est puissant</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Le test <b>précise</b> le comportement attendu, ligne par ligne</li>
+<li>Vous n'écrivez que le code <b>strictement nécessaire</b></li>
+<li>Le filet de sécurité <b>se construit en même temps</b> que le code</li>
+<li>L'API est <b>guidée</b> par l'usage : pénible à tester = mal pensée</li>
+</ul>
+</div>
 </div>
 
-<div style="display: flex; gap: 2rem; margin-top: 1.5rem;">
-<div style="flex: 1;">
-
-**Pourquoi c'est puissant ?**
-
-1. Le test **précise** le comportement attendu (comme un cahier des charges)
-2. Il **garantit** que vous n'écrivez que le code nécessaire
-3. Il **sert** de filet quand vous refactorez ensuite
-4. Il **guide** la conception de l'API (si le test est pénible à écrire, c'est que l'API est mal pensée)
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🤔 Pourquoi c'est contre-intuitif</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem;">
+Notre réflexe : <i>"j'écris le code, je testerai si j'ai le temps"</i>. On finit par tester <b>ce qu'on a codé</b>, au lieu de <b>ce qu'il fallait faire</b>.
+<br/><br/>
+TDD inverse la logique : on exprime <b>un besoin</b> sous forme de test, puis on code le minimum pour y répondre. Et on recommence.
+</div>
+</div>
 
 </div>
-<div style="flex: 1;">
 
-**Pourquoi c'est contre-intuitif ?**
-
-Notre réflexe naturel est : "j'écris le code, puis je testerai si j'ai le temps".
-
-Résultat : on teste peu, on teste mal, et on teste **ce qu'on a codé** au lieu de **ce qu'il faudrait faire**.
-
-TDD inverse la logique : on teste d'abord **le besoin**, puis on code le minimum pour y répondre.
-
-</div>
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.4rem;">
+⚠️ TDD ≠ <b>Test First</b> (écrire tous les tests d'avance, puis coder). TDD c'est <b>un test à la fois</b>, dans un cycle court qu'on va voir maintenant.
 </div>
 
 ---
