@@ -1323,6 +1323,46 @@ La cause profonde : <b>aucun filet de sécurité</b> qui vous prévient quand vo
 
 ---
 
+## 🤖 Qu'est-ce qu'un test automatisé ?
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un test automatisé, c'est <b>du code qui exécute d'autres bouts de code</b> et vérifie automatiquement le résultat attendu. Pas de clic manuel, pas de vérif à l'œil.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">👀 Test manuel</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Lancer l'appli, cliquer, regarder l'écran</li>
+<li><b>Lent</b> : refaire chaque vérification à la main</li>
+<li><b>Oubliable</b> : on ne re-teste que ce qu'on pense à re-tester</li>
+<li><b>Pas reproductible</b> entre deux personnes ou deux moments différents</li>
+</ul>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.4rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🤖 Test automatisé</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Du code qui appelle votre code et compare le résultat</li>
+<li><b>Rapide</b> : des centaines de vérifications en quelques secondes</li>
+<li><b>Répétable</b> : relançable à volonté, à l'identique</li>
+<li><b>Déterministe</b> : même résultat à chaque exécution</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Le test automatisé c'est un assistant invisible qui <b>refait toutes vos vérifications en quelques secondes</b>, à chaque modification.
+</div>
+
+---
+
 ## ✅ TDD : l'idée contre-intuitive
 
 <div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 1rem; font-size: 1.3rem; text-align: center;">
