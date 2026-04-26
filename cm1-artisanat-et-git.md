@@ -1726,31 +1726,45 @@ TDD inverse la logique : on exprime <b>un besoin</b> sous forme de test, puis on
 
 ## 🔁 Le cycle RED - GREEN - REFACTOR
 
-<div style="text-align: center; margin-top: 1rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois étapes, dans cet ordre, pour chaque petit comportement à ajouter. À la fin du tour, on reprend avec le test suivant.
+</p>
 
-```mermaid
-graph LR
-    A[🔴 RED : test qui échoue] -->|écrire code| B[🟢 GREEN : test passe]
-    B -->|améliorer| C[🧹 REFACTOR : code propre, tests verts]
-    C -->|test suivant| A
-    
-    style A fill:#e74c3c,color:#fff
-    style B fill:#27ae60,color:#fff
-    style C fill:#4a90d9,color:#fff
-```
+<div style="display: grid; grid-template-columns: 1fr 0.2fr 1fr 0.2fr 1fr; gap: 0.6rem; margin-top: 1.5rem; align-items: stretch;">
 
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="background: #e74c3c; color: #fff; padding: 0.6rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">1. 🔴 RED</div>
+<div style="background: #fdecea; padding: 1rem; flex: 1; font-size: 1.25rem;">
+Écrire <b>un test qui échoue</b>. C'est la preuve qu'il vérifie vraiment quelque chose. Ne <b>pas coder</b> avant d'avoir vu le rouge.
+</div>
 </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem;">
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px;">
-<b>🔴 RED</b><br/>Écrire un test qui échoue. Preuve qu'il teste vraiment quelque chose. <b>Ne pas coder</b> avant d'avoir vu le rouge.
+<div style="display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #999;">▶</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="background: #27ae60; color: #fff; padding: 0.6rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">2. 🟢 GREEN</div>
+<div style="background: #e8f6ec; padding: 1rem; flex: 1; font-size: 1.25rem;">
+Écrire le <b>minimum</b> de code pour que le test passe. Oui, même si c'est moche. <b>Fake it</b> si besoin.
 </div>
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px;">
-<b>🟢 GREEN</b><br/>Écrire le <b>minimum</b> de code pour que le test passe. Oui, même si c'est moche. <b>Fake it</b> si besoin.
 </div>
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px;">
-<b>🧹 REFACTOR</b><br/>Nettoyer le code <b>sans casser les tests</b>. C'est le moment d'extraire, renommer, simplifier.
+
+<div style="display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #999;">▶</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="background: #4a90d9; color: #fff; padding: 0.6rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">3. 🧹 REFACTOR</div>
+<div style="background: #eaf2fb; padding: 1rem; flex: 1; font-size: 1.25rem;">
+Nettoyer le code <b>sans casser les tests</b>. C'est le moment d'extraire, renommer, simplifier.
 </div>
+</div>
+
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; margin-top: 1.2rem; font-size: 1.4rem; color: #555;">
+<span style="font-size: 2rem;">🔁</span><span>... puis on <b>reprend en 1.</b> avec le test suivant — un petit pas de plus dans la conception.</span>
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Chaque tour ajoute <b>un petit bout de comportement validé</b>. La conception <b>émerge</b> tour après tour.
 </div>
 
 ---
