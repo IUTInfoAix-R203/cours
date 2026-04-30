@@ -2028,6 +2028,6 @@ IUT d'Aix-Marseille - Département Informatique
 <b>🎯 Dès maintenant</b> : dans votre Codespace, faites un petit commit, ouvrez une PR, et lancez <code>./mvnw test</code>. Plus tôt vos doigts connaissent ces gestes, plus tôt le métier rentre.
 </div>
 
-<div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
+<div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1.5rem;">
 🛠️ <b>L'artisan, au fond, c'est vous.</b> Ce CM1 a posé le <em>pourquoi</em> - un historique qu'on relit sans honte, un code qui dit <em>quand</em> il casse. Le TP1 et le TP2 vont transformer ces idées en <b>gestes quotidiens</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
 </div>

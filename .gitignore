@@ -1,2 +1,6 @@
 node_modules/
 _site/
+
+# Démos privées locales (scripts demo-magic, ne pas pousser)
+demo-rebase/
+demo-*/
