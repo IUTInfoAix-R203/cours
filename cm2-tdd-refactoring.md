@@ -1661,33 +1661,37 @@ Un smell n'est pas une <b>faute</b>, c'est un <b>signal</b> qu'une zone va deven
 
 ## 🔧 Qu'est-ce qu'un refactoring ?
 
-<div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; font-size: 1.2rem; line-height: 1.6; margin-top: 0.5rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le mot <i>refactoring</i> (en français : <b>remaniement</b>) est utilisé à toutes les sauces. La définition est plus <b>exigeante</b> qu'on ne le croit :
+</p>
 
-> **Refactoring** : modifier la **structure interne** du code<br/>
-> <b>sans changer son comportement observable</b>.
-
-<div style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
-Martin Fowler, <em>Refactoring: Improving the Design of Existing Code</em> (1999, 2018)
+<div style="background: #fff8e1; border-left: 5px solid #e8a838; padding: 1rem 1.2rem; border-radius: 6px; margin-top: 0.8rem; font-size: 1.5rem;">
+💬 <i>"Modifier la <b>structure interne</b> du code <b>sans changer son comportement observable</b>."</i><br/>
+<span style="font-size: 1.2rem;">- <b>Martin Fowler</b>, <i>Refactoring: Improving the Design of Existing Code</i> (1999, 2018)</span>
 </div>
 
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">✅ C'est un refactoring</div>
+<div style="background: #e8f6ec; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+Renommer une variable, extraire une méthode, déplacer un champ dans une autre classe.<br/>
+<b>→ Les tests existants continuent de passer.</b>
+</div>
 </div>
 
-<div style="display: flex; gap: 1.5rem; margin-top: 1rem;">
-<div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>✅ Refactoring</b><br/>
-Renommer une variable, extraire une méthode, bouger un champ dans une autre classe.<br/>
-→ <b>Les tests existants continuent de passer.</b>
-</div>
-
-<div style="flex: 1; background: #fde8e6; padding: 1rem; border-radius: 10px;">
-<b>❌ Pas un refactoring</b><br/>
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🙅 Pas un refactoring</div>
+<div style="background: #fdecea; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
 Changer ce que fait une méthode, ajouter une fonctionnalité, corriger un bug.<br/>
-→ Là, les tests changent (ou en deviennent rouges).
+<b>→ Là, les tests changent (ou deviennent rouges).</b>
 </div>
 </div>
 
-<div style="margin-top: 0.8rem; background: #e8a838; color: white; padding: 0.8rem; border-radius: 8px; text-align: center;">
-🛡️ <b>Prérequis absolu</b> : une suite de tests qui couvre le comportement. Sinon vous faites du <em>rewriting</em>, pas du refactoring.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+🛡️ Prérequis absolu : une <b>suite de tests</b> qui couvre le comportement. Sinon, c'est de la <b>réécriture</b> (<i>rewriting</i>), pas un <b>remaniement</b> (<i>refactoring</i>).
 </div>
 
 ---
