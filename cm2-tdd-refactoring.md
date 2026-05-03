@@ -1019,6 +1019,42 @@ Comment on devient meilleur ? En répétant des gestes simples.
 
 ---
 
+## 🥋 Le coding dojo : pratiquer pour apprendre
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Comment apprend-on à mieux coder ? Pas en regardant des tutos, ni en lisant des livres seul. Comme dans les arts martiaux : par la <b>pratique régulière, répétée et en groupe</b>.
+</p>
+
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="background: #fff8e1; border-left: 5px solid #e8a838; padding: 0.9rem 1.1rem; border-radius: 8px; display: flex; flex-direction: column; gap: 0.5rem;">
+<div style="font-size: 1.5rem; line-height: 1.5;">
+💬 <em>« Si je veux apprendre le judo, je vais m'inscrire au dojo du coin et y passer une heure par semaine pendant deux ans, au bout de quoi j'aurai peut-être envie de pratiquer plus assidûment. Si je veux apprendre la programmation objet, mon employeur va me trouver une formation de trois jours à Java dans le catalogue. Cherchez l'erreur. »</em>
+</div>
+<div style="margin-top: auto; font-size: 1.1rem; opacity: 0.8; text-align: right;">
+— <b>Laurent Bossavit</b>, <em>The Leprechauns of Software Engineering</em>, 2013
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🥋 Le coding dojo</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li><b>Origine</b> : transposition du dojo des arts martiaux à la programmation. Premiers coding dojos vers 2005 (Paris, Londres).</li>
+<li><b>Forme typique</b> : 1 à 2 h, en groupe, sur un kata, avec un facilitateur.</li>
+<li><b>Fréquence</b> : régulière (hebdo / mensuelle). La régularité prime sur la durée.</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Le métier s'apprend par la <b>pratique régulière</b>, pas par une formation one-shot.
+</div>
+
+---
+
 ## 🥋 Qu'est-ce qu'un kata ?
 
 <div style="display: flex; gap: 2rem; margin-top: 1rem;">
@@ -1186,6 +1222,86 @@ Un cas particulier très puissant de pair programming :
 <div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
 <b>✅ Avantage 3</b> : on voit <b>immédiatement</b> si un test est mal écrit - l'autre ne sait pas quoi coder.
 </div>
+</div>
+
+---
+
+## 👨‍👩‍👧 Le mob programming
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Quand le pair programming s'étend à toute l'équipe : un seul écran, <b>tout le monde sur le même problème</b>, en même temps. Inventé par <b>Woody Zuill</b> chez Hunter Industries (~2014).
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">⚙️ Le principe</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li><b>1 driver</b> aux mains du clavier</li>
+<li><b>N navigators</b> qui dirigent à voix haute</li>
+<li><b>Rotation</b> du driver toutes les 5 à 10 min</li>
+<li>Tout le monde dans la <b>même pièce</b> (ou même Zoom)</li>
+</ul>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎯 À quoi ça sert</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Problèmes <b>complexes</b> à découper en équipe</li>
+<li>Démarrage d'un <b>nouveau projet</b> ou d'un module critique</li>
+<li><b>Onboarding</b> rapide d'un nouvel arrivant</li>
+<li>Décisions d'<b>architecture</b> partagées par tous</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+À 2 = <b>pair</b>, à 3+ = <b>mob</b>. Plus on est, plus la décision se construit en commun, au prix du débit individuel.
+</div>
+
+---
+
+## 🏢 La pratique en entreprise
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Ces pratiques (kata, pair, mob) ne sont pas réservées à l'école. Elles sont <b>utilisées au quotidien</b> dans les équipes qui prennent au sérieux la qualité du code.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🌍 Où on les trouve</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Équipes de <b>craftsmanship</b> : Pivotal Labs, ThoughtWorks, ekino, Octo, Zenika...</li>
+<li>Projets <b>open source</b> de référence (Linux kernel, Mozilla)</li>
+<li>Entreprises avec culture <b>XP / agilité forte</b></li>
+<li>Hackathons et conférences (Devoxx, AgileFrance, BDX I/O...)</li>
+</ul>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎯 Pourquoi c'est viable</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li><b>Moins de bugs</b> : la revue est intégrée à l'écriture</li>
+<li><b>Montée en compétence cross-team</b> : tout le monde apprend de tout le monde</li>
+<li><b>Onboarding</b> beaucoup plus rapide</li>
+<li>Réduction du <b>bus factor</b> (personne n'est seul à connaître un module)</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Apprendre par la pratique régulière, en groupe, ce n'est pas un luxe d'école. C'est <b>comment les meilleures équipes restent meilleures</b>.
 </div>
 
 ---
