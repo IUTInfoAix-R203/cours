@@ -2137,32 +2137,40 @@ La <b>situation typique</b> en entreprise : du code qu'on n'a pas écrit, sans d
 
 ## 🌄 Où s'arrête le refactoring ?
 
-<div style="display: flex; gap: 1.2rem; margin-top: 0.8rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Refactorer a un <b>coût</b> : du temps, un risque résiduel, une PR à relire. C'est une <b>décision</b>, pas un automatisme. Comment savoir si ça vaut le coup ?
+</p>
 
-<div style="flex: 1; background: #e6f5ec; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<b>Refactorer vaut le coup quand...</b>
-<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">✅ Ça vaut le coup quand...</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
 <li>vous <b>allez toucher</b> cette zone dans les prochains mois</li>
 <li>le smell <b>ralentit</b> concrètement une feature ou un bug fix</li>
-<li>vous avez des tests qui <b>prouvent</b> que rien ne casse</li>
-<li>c'est <b>l'endroit précis</b> où vous intervenez (règle du scout)</li>
+<li>les <b>tests</b> prouvent que rien ne casse</li>
+<li>c'est <b>l'endroit précis</b> où vous intervenez</li>
 </ul>
 </div>
+</div>
 
-<div style="flex: 1; background: #fde8e6; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
-<b>Refactorer est un piège quand...</b>
-<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
-<li>le code <b>marche</b>, est <b>stable</b> et <b>personne ne le touche</b></li>
-<li>vous le faites juste parce que "c'est pas joli"</li>
-<li>il n'y a pas de <b>tests</b> pour sécuriser - vous allez casser</li>
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">⚠️ C'est un piège quand...</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>le code <b>marche</b>, est <b>stable</b>, personne ne le touche</li>
+<li>vous le faites juste parce que <i>"c'est pas joli"</i></li>
+<li>il n'y a <b>pas de tests</b> : vous allez casser</li>
 <li>vous refactorez <b>et</b> ajoutez une feature en même temps</li>
 </ul>
 </div>
+</div>
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1.5rem;">
-🛠️ L'artisan qui retourne son atelier <b>tous les jours</b> ne travaille plus - il range. Le refactoring a un <b>coût</b> : du temps, un risque résiduel, une PR à relire. On le justifie toujours par un bénéfice concret à venir, pas par un idéal d'esthétique.
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 5px solid #e8a838; padding: 0.9rem 1.2rem; border-radius: 6px; font-size: 1.5rem;">
+🛠️ L'artisan qui retourne son atelier <b>les jours</b> où il ne travaille plus, il range. On justifie un refactoring par un <b>bénéfice concret à venir</b>, pas par un idéal d'esthétique.
 </div>
 
 ---
