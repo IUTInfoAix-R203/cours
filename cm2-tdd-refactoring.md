@@ -799,10 +799,19 @@ Vous voulez <b>vérifier une interaction</b> → c'est un <b>mock</b>. Sinon →
 
 ## 📸 ApprovalTests : quand la sortie est textuelle
 
-Pour du code qui produit une sortie complexe (grille, JSON, rapport), écrire l'attendu à la main est pénible.
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 0.7rem 0.9rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { font-size: 13px !important; line-height: 1.45 !important; }
+</style>
 
-<div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-<div style="flex: 1.2;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Pour du code qui produit une <b>sortie complexe</b> (grille, JSON, rapport), écrire l'attendu à la main est pénible. <b>ApprovalTests</b> automatise le rituel.
+</p>
+
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+<div style="background: #2c3e50; color: #fff; padding: 0.4rem 1rem; font-size: 1.1rem; font-weight: bold;">📄 <code style="background: transparent; color: #fff;">GrilleDemineurTest.java</code></div>
 
 ```java
 @Test
@@ -821,24 +830,24 @@ void grille_demineur_5x5() {
 ```
 
 </div>
-<div style="flex: 1;">
 
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-
-**Principe**
-1. Je lance le test
-2. La sortie va dans `...received.txt`
-3. Je <b>vérifie visuellement</b>
-4. Je renomme `received` → `approved`
-5. Le test compare ensuite `received` à `approved`
-
-</div>
-
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #17a2b8; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🔁 Le rituel d'approbation</div>
+<div style="background: #e6f5f7; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
+<ol style="margin: 0; padding-left: 1.4rem;">
+<li>Je lance le test</li>
+<li>La sortie va dans <code>...received.txt</code></li>
+<li>Je <b>vérifie visuellement</b></li>
+<li>Je renomme <code>received</code> → <code>approved</code></li>
+<li>Le test compare ensuite <code>received</code> à <code>approved</code></li>
+</ol>
 </div>
 </div>
 
-<div style="margin-top: 0.5rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center;">
-Utilisé au TP2 exercice 5 (Démineur) - gain énorme sur les grandes grilles.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Utilisé au <b>TP2 exercice 5</b> (Démineur) — gain énorme sur les grandes grilles ou les sorties textuelles riches.
 </div>
 
 ---
