@@ -53,29 +53,42 @@ Ce CM prépare le <b>TP3 - Kata</b> et le <b>TP4 - Refactoring</b>.
 
 ## Où on en est
 
-<div style="display: flex; gap: 0.8rem; margin-top: 1rem;">
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center; opacity: 0.55;">
-<b>✓ CM1</b><br/><span style="font-size: 0.9rem;">Artisanat + Git + TDD intro</span>
-</div>
-<div style="background: #e8a838; color: white; padding: 1rem; border-radius: 10px; flex: 1.3; text-align: center; border: 3px solid #c87d00;">
-<b>📍 CM2 (vous êtes ici)</b><br/><span style="font-size: 0.9rem;">TDD + Refactoring</span>
-</div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
-<b>TP3</b><br/><span style="font-size: 0.9rem;">Kata + pair prog</span>
-</div>
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
-<b>TP4</b><br/><span style="font-size: 0.9rem;">Refactoring</span>
-</div>
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; flex: 1; text-align: center;">
-<b>CC3</b><br/><span style="font-size: 0.9rem;">Kata sur feuille</span>
-</div>
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Aujourd'hui, on <b>approfondit</b> le socle du CM1 et on prépare les <b>TP3</b>, <b>TP4</b> et la logique du <b>CC3</b>.
+</p>
+
+<!-- Ligne 1 : les 2 CMs -->
+<div style="display: flex; gap: 0.5rem; margin-top: 1.5rem;">
+  <div style="background: #4a90d9; color: white; padding: 1rem 1.2rem; border-radius: 10px 10px 0 0; flex: 1; text-align: center; opacity: 0.6;">
+    <b>✓ CM1</b><br/><span style="font-size: 1.05rem;">Artisanat + Git + TDD intro</span>
+  </div>
+  <div style="background: #e8a838; color: white; padding: 1rem 1.2rem; border-radius: 10px 10px 0 0; flex: 1; text-align: center; border: 3px solid #c87d00; box-shadow: 0 4px 12px rgba(232,168,56,0.4);">
+    <b>📍 CM2 (vous êtes ici)</b><br/><span style="font-size: 1.05rem;">TDD + Refactoring</span>
+  </div>
 </div>
 
-<div style="margin-top: 1.5rem; font-size: 1.1rem; text-align: center;">
-Le socle posé en CM1 puis en TP1/TP2 est là. Aujourd'hui, on l'<b>approfondit</b> et on prépare directement <b>TP3</b>, <b>TP4</b> et la logique du <b>CC3</b>.
+<!-- Ligne 2 : les 4 TPs (légèrement espacés des CMs ci-dessus) -->
+<div style="display: flex; gap: 0.5rem; margin-top: 0.4rem;">
+  <div style="background: #d0e2f3; color: #2c5f8a; padding: 0.7rem; border-radius: 0 0 10px 10px; flex: 1; text-align: center; font-weight: bold; font-size: 1.05rem;">TP1</div>
+  <div style="background: #d0e2f3; color: #2c5f8a; padding: 0.7rem; border-radius: 0 0 10px 10px; flex: 1; text-align: center; font-weight: bold; font-size: 1.05rem;">TP2</div>
+  <div style="background: #fae5c0; color: #8a6a1f; padding: 0.7rem; border-radius: 0 0 10px 10px; flex: 1; text-align: center; font-weight: bold; font-size: 1.05rem;">TP3</div>
+  <div style="background: #fae5c0; color: #8a6a1f; padding: 0.7rem; border-radius: 0 0 10px 10px; flex: 1; text-align: center; font-weight: bold; font-size: 1.05rem;">TP4</div>
 </div>
 
-<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+<!-- Flèches convergentes TP2 + TP3 + TP4 -> CC3 -->
+<div style="display: flex; gap: 0.5rem; text-align: center; font-size: 1.5rem; color: #999; margin: 0.2rem 0;">
+  <div style="flex: 1;">&nbsp;</div>
+  <div style="flex: 1;">↓</div>
+  <div style="flex: 1;">↓</div>
+  <div style="flex: 1;">↓</div>
+</div>
+
+<!-- Ligne 3 : CC3 (pleine largeur, violet plein, ligne unique) -->
+<div style="background: #8e44ad; color: white; padding: 0.9rem 1rem; border-radius: 10px; text-align: center; font-weight: bold; font-size: 1.4rem;">
+  🎯 CC3 — kata sur feuille (2 h) : <span style="font-weight: normal; opacity: 0.9;"> évalue les acquis de TP2 + TP3 + TP4</span>
+</div>
+
+<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem;">
 🛠️ <b>En CM1 on a vu <em>pourquoi</em> l'artisan prend soin de son code.</b> Aujourd'hui, on voit <b>comment il s'y prend au quotidien</b> : tester avant, refactorer souvent, nommer juste. Les gestes qui transforment l'intention en habitude.
 </div>
 
