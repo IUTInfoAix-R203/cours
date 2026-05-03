@@ -1011,6 +1011,8 @@ L'artisan connaît ses outils et leurs <b>limites</b>. Le TDD est un outil puiss
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
+![bg left:50%](assets/kata-pair-programming.jpg)
+
 # Partie 2 - Le kata et le pair programming
 
 Comment on devient meilleur ? En répétant des gestes simples.
