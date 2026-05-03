@@ -892,20 +892,40 @@ Le TDD ne pardonne pas les <b>raccourcis</b> : chaque écart efface une garantie
 
 ## 📊 Pyramide des tests
 
-<div style="margin-top: 0.5rem; display: flex; gap: 1rem;">
-<div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 8px;">
-<b>Beaucoup</b> de tests unitaires : rapides, ciblés, relancés tout le temps.
-</div>
-<div style="flex: 1; background: #fff3cd; padding: 1rem; border-radius: 8px;">
-<b>Moins</b> de tests d'intégration : plusieurs briques ensemble.
-</div>
-<div style="flex: 1; background: #fde8e6; padding: 1rem; border-radius: 8px;">
-<b>Encore moins</b> de tests bout-en-bout : lents, fragiles, coûteux.
-</div>
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Pour rappel (CM1) : <b>3 niveaux</b> de tests, en pyramide. Plus on monte, moins on en a — et plus chaque test coûte cher.
+</p>
+
+<div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.5rem; margin-top: 1.5rem; align-items: center;">
+
+<div style="display: flex; flex-direction: column; align-items: center;">
+
+<div style="background: #e74c3c; color: #fff; padding: 1.2rem 0.8rem; width: 45%; text-align: center; border-radius: 6px 6px 0 0; font-size: 1.2rem;">E2E <span style="opacity: 0.85;">(peu)</span></div>
+<div style="background: #e8a838; color: #fff; padding: 1.5rem 0.8rem; width: 65%; text-align: center; font-size: 1.3rem; border-radius: 6px 6px 0 0;">Intégration <span style="opacity: 0.85;">(moyen)</span></div>
+<div style="background: #27ae60; color: #fff; padding: 1.8rem 0.8rem; width: 90%; text-align: center; font-size: 1.4rem; font-weight: bold; border-radius: 6px 6px 0 0; box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.25);">Tests unitaires <span style="opacity: 0.9;">(la base, beaucoup)</span></div>
+
 </div>
 
-<div style="margin-top: 0.5rem; text-align: center; font-size: 1rem; color: #555;">
-Dans ce module, on travaille surtout la <b>base</b> : les tests unitaires. C'est là que le TDD vit vraiment.
+<div style="display: flex; flex-direction: column; gap: 0.8rem;">
+
+<div style="background: #fdecea; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c; font-size: 1.15rem;">
+<b>E2E</b> — toute l'application, du clic à la base. Lents, fragiles, coûteux.
+</div>
+
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e8a838; font-size: 1.15rem;">
+<b>Intégration</b> — plusieurs briques ensemble (service + DB, par ex).
+</div>
+
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #27ae60; font-size: 1.15rem;">
+<b>Unitaires</b> — une méthode, une classe, isolés. Rapides, ciblés, relancés en permanence.
+</div>
+
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+👉 Dans ce module, on travaille la <b>base</b> de la pyramide. C'est là que le TDD vit vraiment.
 </div>
 
 ---
