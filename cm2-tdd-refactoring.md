@@ -2037,32 +2037,58 @@ Sans ces tests, refactorer ce genre de cascade = <b>roulette russe</b> avec la p
 
 ## 🎯 Le pattern du TP4
 
-Chaque exercice du TP4 suit le même squelette, avec **deux familles de tests** :
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Chaque exercice du TP4 suit le même squelette, avec <b>deux familles de tests</b> complémentaires : un filet anti-régression et un filet qui certifie le geste.
+</p>
 
-```mermaid
-graph LR
-    A[1. Lire le code<br/>smelly] --> B[2. Vérifier que<br/>les caractérisations<br/>passent en vert]
-    B --> C[3. Identifier le smell<br/>+ choisir le refactoring]
-    C --> D[4. Refactorer par<br/>petits pas - caract<br/>reste verte]
-    D --> E[5. Retirer @Disabled<br/>des tests de structure<br/>que le refactoring débloque]
-    E --> F[6. Commit à<br/>chaque étape sûre]
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin: 1rem 0; align-items: stretch;">
 
-    style A fill:#e74c3c,color:#fff
-    style B fill:#27ae60,color:#fff
-    style C fill:#e8a838,color:#fff
-    style D fill:#4a90d9,color:#fff
-    style E fill:#27ae60,color:#fff
-    style F fill:#2c3e50,color:#fff
-```
-
-<div style="margin-top: 0.5rem; background: #eef6fb; padding: 0.8rem 1rem; border-left: 4px solid #4a90d9; border-radius: 6px; font-size: 0.95rem;">
-<b>Deux filets de tests, deux rôles</b> :<br/>
-• <b>Caractérisation</b> (active, verte dès le départ) : pin le comportement. Elle doit <b>rester verte</b> après chaque transformation - c'est votre garde-fou anti-régression.<br/>
-• <b>Structure</b> (<code>@Disabled</code> au départ) : vérifie que votre refactoring a produit la bonne extraction (méthode, constante, classe, record). Vous la débloquez <b>au fur et à mesure</b>. Elle prouve que le geste a été fait, pas juste que rien n'est cassé.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 0.8rem; font-size: 1.4rem; font-weight: bold; text-align: center;">1. 📖 Lire</div>
+<div style="background: #fdecea; padding: 0.8rem 1rem; flex: 1; font-size: 1.15rem;">
+Survoler le code <i>smelly</i> sans chercher à <b>tout</b> comprendre. Repérer les zones qui semblent <b>bizarres</b> (longues, dupliquées, opaques).
+</div>
 </div>
 
-<div style="margin-top: 0.5rem; background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; text-align: center;">
-⚠️ <b>Si une caractérisation casse</b>, ne la modifiez pas pour la faire passer. Annulez votre dernière transformation (<code>git restore .</code>). Votre "refactoring" était un <b>bug</b>.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 0.8rem; font-size: 1.4rem; font-weight: bold; text-align: center;">2. ✅ Vérifier</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; flex: 1; font-size: 1.15rem;">
+Lancer les <b>caractérisations</b>. Toutes vertes ? On a un point de départ stable. Une qui échoue ? On corrige <b>avant</b> de toucher au reste.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 0.8rem; font-size: 1.4rem; font-weight: bold; text-align: center;">3. 🔍 Identifier</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; flex: 1; font-size: 1.15rem;">
+Choisir <b>un seul</b> smell à traiter (Long Method, Magic Number...) et le refactoring associé du catalogue Fowler.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 0.8rem; font-size: 1.4rem; font-weight: bold; text-align: center;">4. 🔧 Refactorer</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; flex: 1; font-size: 1.15rem;">
+Appliquer le refactoring via l'IDE (<kbd>Ctrl+.</kbd> / <kbd>F2</kbd>). Lancer les tests <b>à chaque pas</b>. Caract verte ? On continue. Rouge ? On annule.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #16a085; color: #fff; padding: 0.5rem 0.8rem; font-size: 1.4rem; font-weight: bold; text-align: center;">5. 🔓 Débloquer</div>
+<div style="background: #e6f5f1; padding: 0.8rem 1rem; flex: 1; font-size: 1.15rem;">
+Retirer les <code>@Disabled</code> des tests de structure que le refactoring vient de <b>rendre vrais</b>. Ils passent : le geste est <b>fait</b>.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: #fff; padding: 0.5rem 0.8rem; font-size: 1.4rem; font-weight: bold; text-align: center;">6. 💾 Commit</div>
+<div style="background: #f3eaf7; padding: 0.8rem 1rem; flex: 1; font-size: 1.15rem;">
+Commit dès que <b>tous</b> les tests passent. Petits commits = retour arrière facile. Message clair : <code>refactor: extract calculerTotalHT</code>.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.4rem;">
+⚠️ Si une caractérisation casse : <b>ne la modifiez pas</b>. Annulez la dernière transformation.
 </div>
 
 ---
