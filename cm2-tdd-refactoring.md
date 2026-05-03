@@ -1926,37 +1926,111 @@ Le refactoring le plus <b>fréquent</b>, et celui pour lequel l'IDE est <b>indis
 
 ## 🛡️ Characterization tests : sécuriser du legacy
 
-<div style="display: flex; gap: 1.5rem; margin-top: 0.3rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Concept de <b>Michael Feathers</b> (<i>Working Effectively with Legacy Code</i>, 2004). <b>Legacy</b> = code <b>sans tests</b> qu'on doit faire évoluer. Sans filet, pas de refactoring en sécurité.
+</p>
 
-Concept de **Michael Feathers** (*Working Effectively with Legacy Code*, 2004).
+<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-top: 1rem; align-items: stretch;">
 
-> **Legacy code** = du code **sans tests**, qu'on doit faire évoluer.
-
-**Problème** : on veut refactorer, mais sans tests on n'a pas de filet.
-
-**Solution** : des **characterization tests** - des tests qui **décrivent le comportement actuel** du code, qu'il soit "juste" ou non.
-
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem; font-size: 1.4rem; font-weight: bold; text-align: center;">1. 🔍 Observer</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Lancer le code sur des entrées variées, <b>noter</b> ce qu'il sort.
 </div>
-<div style="flex: 1;">
-
-<div style="background: #2c3e50; color: white; padding: 1.2rem; border-radius: 12px;">
-
-**Démarche**
-
-1. Je prends le code en entrée.
-2. Je lance le code, j'observe la sortie.
-3. J'écris un test qui **attend cette sortie**.
-4. Le test passe - je l'ai **figé**.
-5. Maintenant je peux refactorer : si un test casse, j'ai changé le comportement (donc j'ai un bug, pas un refactoring).
-
 </div>
 
-<div style="margin-top: 0.8rem; background: #e8a838; color: white; padding: 0.8rem; border-radius: 8px; text-align: center; font-size: 0.95rem;">
-Ces tests <b>ne valident pas</b> que le code est juste - ils le <b>pinnent</b>.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem; font-size: 1.4rem; font-weight: bold; text-align: center;">2. ✍️ Figer</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Écrire un test qui <b>attend exactement cette sortie</b>, juste ou pas.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem; font-size: 1.4rem; font-weight: bold; text-align: center;">3. ✅ Verrouiller</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Le test passe : le comportement actuel est <b>fixé</b>, vous avez un filet.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: #fff; padding: 0.5rem; font-size: 1.4rem; font-weight: bold; text-align: center;">4. 🔧 Refactorer</div>
+<div style="background: #f3eaf7; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Si un test casse : vous avez <b>changé le comportement</b>, donc créé un bug.
+</div>
 </div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Ces tests ne valident pas que le code est <b>juste</b>. Ils le <b>pinnent</b>. C'est à dire qu'ils figent ce qui sort, pour que le refactoring n'introduise pas de régression.
+</div>
+
+---
+
+## 🛡️ Exemple : un code opaque à caractériser
+
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; background: transparent !important; padding: 0.4rem 0.2rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { background: transparent !important; font-size: 0.8rem !important; line-height: 1.35 !important; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Une méthode <code>fraisPort</code> empile <b>5 règles</b> qui s'additionnent, s'écrasent, se multiplient. Impossible de prédire le résultat <i>juste en lisant</i>.
+</p>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12); margin-top: 1rem;">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🦴 Le code legacy (en production, pas un seul test)</div>
+<div style="background: #fdecea; padding: 0.8rem 1.2rem;">
+
+```java
+double fraisPort(double poids, boolean express, String pays) {
+  double frais = 5;
+  if (poids > 1) frais += 2;
+  if (poids > 5) frais = 15;
+  if (express) frais *= 1.5;
+  if (pays.equals("FR")) frais -= 1;
+  return frais;
+}
+```
+
+</div>
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Combien coûte un colis de <b>6 kg en express vers la France</b> ? <b>Personne ne sait</b> sans le lancer.
+</div>
+
+---
+
+## 🛡️ Exemple : pinner le comportement avec des tests
+
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; background: transparent !important; padding: 0.4rem 0.2rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { background: transparent !important; font-size: 0.85rem !important; line-height: 1.4 !important; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+On <b>lance</b> la méthode avec des entrées variées, on <b>note</b> ce qu'elle retourne, on <b>colle</b> les valeurs dans des <code>assertEquals</code>. On n'invente rien : on copie ce que la prod fait <b>déjà</b>.
+</p>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12); margin-top: 1rem;">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🛡️ 5 tests qui figent les sorties observées</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1.2rem;">
+
+```java
+@Test void colis_leger_FR()       { assertEquals(4.0,  fraisPort(0.5, false, "FR")); }
+@Test void colis_2kg_FR()         { assertEquals(6.0,  fraisPort(2.0, false, "FR")); }
+@Test void colis_6kg_FR()         { assertEquals(14.0, fraisPort(6.0, false, "FR")); }
+@Test void colis_6kg_express_FR() { assertEquals(21.5, fraisPort(6.0, true,  "FR")); }
+@Test void colis_2kg_express_DE() { assertEquals(10.5, fraisPort(2.0, true,  "DE")); }
+```
+
+</div>
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Sans ces tests, refactorer ce genre de cascade = <b>roulette russe</b> avec la production. Avec ces tests, on s'assure que le comportement reste identique.
 </div>
 
 ---
