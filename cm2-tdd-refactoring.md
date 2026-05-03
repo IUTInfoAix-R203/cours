@@ -23,26 +23,30 @@ IUT d'Aix-Marseille - BUT Informatique, première année
 
 ## Au programme de ce CM
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; font-size: 1.3rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois axes pour transformer les bases du CM1 en <b>réflexes</b> : approfondir le TDD, pratiquer ensemble, sécuriser du legacy.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 3rem 0; font-size: 1.5rem;">
 <div style="background: #27ae60; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">✅</div>
 <b>TDD approfondi</b><br/>
-<span style="font-size: 0.9rem; opacity: 0.9;">F.I.R.S.T., stratégies de Beck, ApprovalTests</span>
+<span style="font-size: 1.3rem; opacity: 0.9;">F.I.R.S.T., stratégies de Beck, ApprovalTests</span>
 </div>
 <div style="background: #e8a838; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">🥋</div>
 <b>Kata et pair programming</b><br/>
-<span style="font-size: 0.9rem; opacity: 0.9;">Driver, navigator, ping-pong</span>
+<span style="font-size: 1.3rem; opacity: 0.9;">Driver, navigator, ping-pong</span>
 </div>
 <div style="background: #e74c3c; color: white; padding: 1.2rem; border-radius: 10px; text-align: center;">
 <div style="font-size: 2.5rem;">🧹</div>
 <b>Code smells et refactoring</b><br/>
-<span style="font-size: 0.9rem; opacity: 0.9;">Fowler, characterization tests</span>
+<span style="font-size: 1.3rem; opacity: 0.9;">Fowler, characterization tests</span>
 </div>
 </div>
 
-<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.1rem;">
-Ce CM prépare <b>TP3 - Kata</b> et <b>TP4 - Refactoring</b>.
+<div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.5rem;">
+Ce CM prépare le <b>TP3 - Kata</b> et le <b>TP4 - Refactoring</b>.
 </div>
 
 ---
