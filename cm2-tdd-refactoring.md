@@ -1153,103 +1153,179 @@ Au <b>TP3</b>, vous en ferez <b>cinq</b> par vous-même : Années bissextiles, T
 
 ## 🤔 Pourquoi refaire un kata qu'on sait résoudre ?
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le débutant croit que refaire = perdre du temps. L'expert sait que <b>chaque passage</b> apporte autre chose. Voici ce qui change au fil des répétitions.
+</p>
 
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>🏃 1ère fois</b> : je galère, je découvre les règles. Je code "quelque chose qui marche".
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.8rem; margin: 3.2rem 0; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">1<sup>re</sup> fois — la lutte</div>
+<div style="background: #fdecea; padding: 0.8rem 1rem; flex: 1; font-size: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+<div style="font-size: 4rem; line-height: 1;">😰</div>
+<div>Je galère, je découvre les règles. Je code <em>quelque chose qui marche</em>.</div>
+</div>
 </div>
 
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>2ème fois</b> : je vais plus vite, je vois les pièges. Je soigne le nommage.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">2<sup>e</sup> fois : l'aisance</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; flex: 1; font-size: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+<div style="font-size: 4rem; line-height: 1;">😅</div>
+<div>Je vais plus vite, je vois les <b>pièges</b>. Je soigne le <b>nommage</b>.</div>
+</div>
 </div>
 
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>3ème fois</b> : je teste une autre approche (fake-it seulement, triangulation seulement).
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">3<sup>e</sup> fois : l'aventure</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; flex: 1; font-size: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+<div style="font-size: 4rem; line-height: 1;">🤔</div>
+<div>Je teste une <b>autre approche</b> : que du Fake it, ou que de la Triangulation.</div>
+</div>
 </div>
 
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>10ème fois</b> : je suis fluide. Je peux me concentrer sur le <b>style</b>, pas le problème.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">10<sup>e</sup> fois : la maîtrise</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; flex: 1; font-size: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+<div style="font-size: 4rem; line-height: 1;">😎</div>
+<div>Je suis <b>fluide</b>. Je peux me concentrer sur le <b>style</b>, pas le problème.</div>
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.1rem;">
-Un sportif ne s'entraîne pas le jour du match. Un développeur non plus.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Un sportif ne s'entraîne pas le jour du match. <b>Un développeur non plus.</b>
 </div>
 
 ---
 
 ## 👥 Le pair programming
 
-<div style="display: flex; gap: 1.5rem; margin-top: 0.3rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Deux personnes, un clavier. Pratique née de l'<b>eXtreme Programming</b> (Kent Beck, 1996) : <b>chaque ligne</b> de code est écrite à deux.
+</p>
 
-**Deux personnes, un clavier.**
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem; align-items: stretch;">
 
-<div style="background: #4a90d9; color: white; padding: 1rem; border-radius: 10px; margin-top: 0.8rem;">
-<b>🎮 Driver</b><br/>Celui qui tape. Se concentre sur le <b>comment</b> (syntaxe, IDE, tests qui passent).
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎮 Driver</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; flex: 1; font-size: 1.4rem;">
+Celui qui tape. Se concentre sur le <b>comment</b> : syntaxe, IDE, faire passer le test courant.
+</div>
 </div>
 
-<div style="background: #27ae60; color: white; padding: 1rem; border-radius: 10px; margin-top: 0.5rem;">
-<b>🧭 Navigator</b><br/>Celui qui pense. Se concentre sur le <b>quoi</b> (design, edge cases, lisibilité).
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🧭 Navigator</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; flex: 1; font-size: 1.4rem;">
+Celui qui pense. Se concentre sur le <b>quoi</b> : design, cas limites, lisibilité, prochaine étape.
+</div>
 </div>
 
-<div style="background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; margin-top: 0.8rem; text-align: center;">
-On <b>échange</b> les rôles toutes les 7 à 10 minutes.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">✅ Bénéfices</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+Moins de bugs, revue de code en continu, montée en compétence croisée, <i>bus factor</i> réduit, effet antisomnolent 😴.
+</div>
 </div>
 
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">⚠️ Pièges</div>
+<div style="background: #fdecea; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+Ce n'est <b>pas</b> "un qui code, un qui regarde son téléphone". Fatigant : <b>pauses</b> toutes les heures et rotation toutes les <b>7 à 10 min</b>.
 </div>
-<div style="flex: 1;">
-
-<div style="background: #e8a838; color: white; padding: 1.5rem; border-radius: 12px;">
-
-**Bénéfices**
-
-- Moins de bugs (deux cerveaux sur chaque ligne)
-- Montée en compétences croisée
-- Moins de "bus factor" sur le code
-- Revue de code permanente, en temps réel
-- Effet antisomnolent 😴
-
-</div>
-
-<div style="margin-top: 1rem; background: #fde8e6; padding: 1rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
-
-**⚠ Attention**
-- Pas le même que "un qui code, un qui regarde son téléphone"
-- Fatigant - faire des pauses toutes les heures
-
 </div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Le pair, ce n'est pas un duo regardeur / codeur. C'est <b>deux esprits qui pensent ensemble</b> au même problème.
 </div>
 
 ---
 
-## 🏓 Le ping-pong TDD
+## 🏓 Variante du pair programming : le ping-pong
 
-Un cas particulier très puissant de pair programming :
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Variante <b>ludique</b> du pair programming : on combine pair et <b>cycle TDD strict</b>. Chacun à son tour <b>défie</b> l'autre avec un test ; l'autre doit le faire <b>passer</b>. Puis on inverse.
+</p>
 
-<div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 0.5rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3.8rem 0; align-items: stretch;">
 
-1. **A écrit un test** qui échoue (RED).
-2. **B écrit le code** qui fait passer (GREEN).
-3. **B écrit le test suivant** qui échoue (RED).
-4. **A écrit le code** qui fait passer (GREEN).
-5. À tour de rôle pour **REFACTOR**.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: white; padding: 0.5rem; text-align: center; font-size: 1.5rem; font-weight: bold;">🏓 Manche 1 : 🅰️ sert</div>
+<div style="background: #f8f9fa; padding: 0.8rem; flex: 1;">
+
+<div style="background: #fdecea; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.3rem; border-left: 5px solid #e74c3c;">
+<b>🅰️ </b> écrit un <b>test</b> qui échoue 🔴
+</div>
+
+<div style="text-align: center; font-size: 1.8rem; color: #999; margin: 0.2rem 0;">⬇</div>
+
+<div style="background: #e8f6ec; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.3rem; border-left: 5px solid #27ae60;">
+<b>🅱️ </b>  fait <b>passer</b> le test 🟢
+</div>
+
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: white; padding: 0.5rem; text-align: center; font-size: 1.5rem; font-weight: bold;">🏓 Manche 2 : 🅱️ sert</div>
+<div style="background: #f8f9fa; padding: 0.8rem; flex: 1;">
+
+<div style="background: #fdecea; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.3rem; border-left: 5px solid #e74c3c;">
+<b>🅱️ </b> écrit un <b>nouveau test</b> qui échoue 🔴
+</div>
+
+<div style="text-align: center; font-size: 1.8rem; color: #999; margin: 0.2rem 0;">⬇</div>
+
+<div style="background: #e8f6ec; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.3rem; border-left: 5px solid #27ae60;">
+<b>🅰️ </b> fait <b>passer</b> le test 🟢
+</div>
+
+</div>
+</div>
 
 </div>
 
-<div style="display: flex; gap: 1rem; margin-top: 0.8rem;">
-<div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>✅ Avantage 1</b> : chacun des deux <b>devine l'intention</b> de l'autre. Excellent pour le design.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+À chaque manche, <b>les rôles s'inversent</b> : celui qui posait la question doit maintenant y répondre. Entre les manches : <b>refactor à deux</b>.
 </div>
-<div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>✅ Avantage 2</b> : impossible d'écrire du code "en douce" sans test. Le coéquipier impose la discipline.
+
+---
+
+## 🏓 Pourquoi faire du ping-pong ?
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le jeu n'est pas gratuit : cette alternance forcée produit <b>trois bénéfices</b> impossibles à obtenir en solo.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎨 Design partagé</div>
+<div style="background: #f9f5e8; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+Chacun <b>devine l'intention</b> de l'autre. Le design émerge à <b>deux têtes</b>, pas une seule.
 </div>
-<div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-<b>✅ Avantage 3</b> : on voit <b>immédiatement</b> si un test est mal écrit - l'autre ne sait pas quoi coder.
 </div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🛡️ Discipline imposée</div>
+<div style="background: #f3eaf7; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+Impossible d'écrire du code <i>en douce</i> sans test : le coéquipier <b>veille</b> au cycle.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #16a085; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🔍 Tests lisibles</div>
+<div style="background: #e6f5f1; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+Un test mal écrit se voit <b>tout de suite</b> : l'autre ne sait pas quoi coder.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+On ne peut pas tricher : le test et le code sont écrits par <b>deux personnes différentes</b>.
 </div>
 
 ---
@@ -1329,33 +1405,48 @@ Ces pratiques (kata, pair, mob) ne sont pas réservées à l'école. Elles sont 
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-Apprendre par la pratique régulière, en groupe, ce n'est pas un luxe d'école. C'est <b>comment les meilleures équipes restent meilleures</b>.
+Apprendre par la pratique régulière, en groupe, ce n'est pas un luxe d'école mais de la <b>formation continue</b>. C'est comme ça que <b>les meilleures équipes</b> restent <b>les meilleures</b>.
 </div>
 
 ---
 
 ## 🎯 Démo en ouverture du TP3
 
-Au début du TP3, on fera **20 min de kata live** en pair programming.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Au début du TP3, on fera <b>20 minutes de kata live</b> en <b>mob programming</b> : tout le groupe sur le même problème, l'enseignant au clavier. Objectif : voir <b>à quoi ressemble</b> une séance TDD avant de passer en binôme sur les exercices.
+</p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.8rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
-<div style="background: #e6f0f9; padding: 1rem; border-radius: 10px;">
-<b>Kata retenu</b> : <em>Tennis scoring</em><br/>
-Un état (jeu en cours) + un comportement (marquer un point) → l'affichage du score.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🥋 Le kata retenu</div>
+<div style="background: #eaf2fb; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+<b><i>Tennis scoring</i></b>, un classique du dojo :
+<ul style="margin: 0.4rem 0 0 0; padding-left: 1.2rem;">
+<li><b>États</b> : 0, 15, 30, 40, deuce, advantage, win</li>
+<li><b>Transition</b> : marquer un point pour A ou B</li>
+<li><b>Sortie</b> textuelle : <i>"Player 1 : 30 / Player 2 : 15"</i></li>
+<li><b>Pièges</b> : égalité à 40-40, regagner l'avantage</li>
+</ul>
+</div>
 </div>
 
-<div style="background: #e6f0f9; padding: 1rem; border-radius: 10px;">
-<b>Ce que vous verrez</b> :<br/>
-- Alternance driver/navigator toutes les ~5 min<br/>
-- Commit à chaque GREEN<br/>
-- Pas de shortcut IDE (vous devez suivre)
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">👀 Ce que vous verrez</div>
+<div style="background: #e8f6ec; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>L'enseignant reste <b>driver</b> (au clavier)</li>
+<li>Le <b>navigator</b> tourne dans le groupe toutes les <b>2 min</b> au chronomètre</li>
+<li>Comment une solution se construit par <b>consensus</b> du groupe</li>
+<li><b>Commit</b> à chaque fin de <b>cycle TDD</b> (après le refactor)</li>
+</ul>
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #e8a838; color: white; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.1rem;">
-🥋 Le but : que vous voyiez <b>à quoi ressemble</b> une séance TDD en binôme - pas juste lire le texte d'un kata.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Après la démo, c'est <b>à vous</b> : 6 kata en binôme, vous tournez les rôles toutes les 5 à 10 minutes.
 </div>
 
 ---
