@@ -333,23 +333,60 @@ Règle simple : <b>Fake it</b> par défaut, <b>Triangulation</b> quand un seul c
 
 ## ✅ Qu'est-ce qu'un bon test ? Le principe F.I.R.S.T.
 
-<div style="background: #2c3e50; color: white; padding: 1.5rem; border-radius: 12px; margin-top: 0.3rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Robert C. Martin (<em>Clean Code</em>, 2008) a énoncé <b>5 critères</b> d'un bon test, l'acronyme <b>FIRST</b>.
+</p>
 
-| Lettre | Signifie | Pourquoi |
-|---|---|---|
-| **F**ast | Rapide (quelques ms) | On les lance des dizaines de fois par heure |
-| **I**ndependent | Indépendants entre eux | Changer l'ordre ne doit rien casser |
-| **R**epeatable | Reproductible | Pas de dépendance au réseau, à l'heure, à un fichier temporaire |
-| **S**elf-validating | Auto-vérifiant | Rouge ou vert, pas de "regardez le log" |
-| **T**imely | Écrit au bon moment | **Avant** le code, pas après |
+<div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; margin: 3rem 0; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.7rem 0.5rem; text-align: center; line-height: 1;">
+<span style="font-size: 2.4rem; font-weight: bold;">F</span><span style="font-size: 1rem;">ast</span>
+</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.8rem; flex: 1; font-size: 1.3rem;">
+<b>Rapide</b> (quelques ms). On les lance des dizaines de fois par heure.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.7rem 0.5rem; text-align: center; line-height: 1;">
+<span style="font-size: 2.4rem; font-weight: bold;">I</span><span style="font-size: 1rem;">ndependent</span>
+</div>
+<div style="background: #e8f6ec; padding: 0.7rem 0.8rem; flex: 1; font-size: 1.3rem;">
+<b>Indépendants</b> entre eux. Changer l'ordre ne doit rien casser.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.7rem 0.5rem; text-align: center; line-height: 1;">
+<span style="font-size: 2.4rem; font-weight: bold;">R</span><span style="font-size: 1rem;">epeatable</span>
+</div>
+<div style="background: #f9f5e8; padding: 0.7rem 0.8rem; flex: 1; font-size: 1.3rem;">
+<b>Reproductible</b>. Pas de dépendance au réseau, à l'heure, à un fichier temporaire.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.7rem 0.5rem; text-align: center; line-height: 1;">
+<span style="font-size: 2.4rem; font-weight: bold;">S</span><span style="font-size: 1rem;">elf-validating</span>
+</div>
+<div style="background: #fdecea; padding: 0.7rem 0.8rem; flex: 1; font-size: 1.3rem;">
+<b>Auto-vérifiant</b>. Rouge ou vert, pas de « regardez le log ».
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: #fff; padding: 0.7rem 0.5rem; text-align: center; line-height: 1;">
+<span style="font-size: 2.4rem; font-weight: bold;">T</span><span style="font-size: 1rem;">imely</span>
+</div>
+<div style="background: #ede5f7; padding: 0.7rem 0.8rem; flex: 1; font-size: 1.3rem;">
+Écrit au <b>bon moment</b> : <b>avant</b> le code, pas après.
+</div>
+</div>
 
 </div>
 
-<div style="margin-top: 1rem; text-align: center; font-size: 1.1rem;">
-Robert C. Martin (<em>Clean Code</em>, 2008)
-</div>
-
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 1.5rem;">
 🛠️ F.I.R.S.T., c'est la <b>check-list de l'artisan</b> qui vérifie que son banc de tests reste un banc, pas un gouffre. Un test lent, fragile, dépendant des voisins, c'est un outil émoussé qu'il faut <b>affûter ou jeter</b>.
 </div>
 
