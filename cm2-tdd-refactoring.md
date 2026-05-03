@@ -555,51 +555,76 @@ Pas de meilleur pattern : la <b>cohérence dans le projet</b> prime sur le style
 
 ## 🥋 Grounding : ces principes sur un vrai kata
 
-Le kata **Tennis** du TP3 illustre tout ce qu'on vient de voir. Voici 3 tests pris dans leur ordre d'écriture :
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 6px !important; padding: 0.6rem 0.8rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { font-size: 13px !important; line-height: 1.45 !important; }
+</style>
 
-<div style="display: flex; gap: 1rem; margin-top: 0.4rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le kata <b>Tennis</b> du TP3 illustre tout ce qu'on vient de voir. Voici les 3 premiers tests pris dans <b>leur ordre d'écriture</b>.
+</p>
 
-<div style="flex: 1; background: #e6f5ec; padding: 0.9rem; border-radius: 8px; border-left: 4px solid #27ae60;">
-<b>Test 1 - Fake it</b>
-<pre style="font-size: 0.82rem; margin-top: 0.3rem;">@Test
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🎭 Test 1 — Fake it</div>
+<div style="background: #e8f6ec; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+
+```java
+@Test
 void debut_de_partie_est_0_0() {
   assertThat(new Tennis().score())
     .isEqualTo("0-0");
 }
 
-// Impl: return "0-0";</pre>
-<div style="font-size: 0.85rem; margin-top: 0.3rem;">Le test passe avec une constante. On sait que le test est juste.</div>
+// Impl : return "0-0";
+```
+
+<div style="margin-top: auto;">Le test passe avec une constante. On sait que le test est <b>juste</b>.</div>
+</div>
 </div>
 
-<div style="flex: 1; background: #fff3cd; padding: 0.9rem; border-radius: 8px; border-left: 4px solid #e8a838;">
-<b>Test 2 - Triangulation</b>
-<pre style="font-size: 0.82rem; margin-top: 0.3rem;">@Test
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">📐 Test 2 — Triangulation</div>
+<div style="background: #f9f5e8; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+
+```java
+@Test
 void apres_point_serveur_15_0() {
   Tennis t = new Tennis();
   t.pointPourServeur();
   assertThat(t.score())
     .isEqualTo("15-0");
-}</pre>
-<div style="font-size: 0.85rem; margin-top: 0.3rem;">Force à stocker un état. La constante ne suffit plus.</div>
+}
+```
+
+<div style="margin-top: auto;">Force à stocker un <b>état</b>. La constante ne suffit plus.</div>
+</div>
 </div>
 
-<div style="flex: 1; background: #e6f0f9; padding: 0.9rem; border-radius: 8px; border-left: 4px solid #4a90d9;">
-<b>Test 3 - Triangulation</b>
-<pre style="font-size: 0.82rem; margin-top: 0.3rem;">@Test
-void apres_deux_points_serveur_30_0() {
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">📐 Test 3 — Triangulation</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+
+```java
+@Test
+void apres_2_points_serveur_30_0() {
   Tennis t = new Tennis();
   t.pointPourServeur();
   t.pointPourServeur();
   assertThat(t.score())
     .isEqualTo("30-0");
-}</pre>
-<div style="font-size: 0.85rem; margin-top: 0.3rem;">Force une vraie table (0, 15, 30, 40). La logique émerge.</div>
+}
+```
+
+<div style="margin-top: auto;">Force une vraie <b>table</b> (0, 15, 30, 40). La logique émerge.</div>
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 0.6rem; text-align: center; font-size: 0.95rem; color: #555;">
-<em>Chaque test est <b>un pas</b>. La conception s'invente au fur et à mesure - pas avant.</em>
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Chaque test est <b>un pas</b>. La conception <b>s'invente au fur et à mesure</b>, pas avant.
 </div>
 
 ---
