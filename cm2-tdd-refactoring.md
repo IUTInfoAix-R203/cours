@@ -451,50 +451,104 @@ Un test <b>bien structuré</b> (AAA) et <b>bien nommé</b> se lit comme une phra
 ## 📝 Exemple : noms de tests parlants
 
 <style scoped>
-section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 0.7rem 0.9rem !important; }
-section pre code { font-size: 0.78rem !important; line-height: 1.5 !important; }
+section pre { 
+  margin: 0 !important; 
+  border: none !important; 
+  box-shadow: none !important; 
+  border-radius: 6px !important; 
+  padding: 0.7rem 0.9rem !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  transform: none !important;
+  overflow-x: auto !important;
+}
+section pre code,
+section pre code[class*="language-"] { 
+  font-size: 13px !important; 
+  line-height: 1.5 !important;
+}
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Le nom du test est sa <b>première ligne de documentation</b>. Il doit raconter <b>quoi</b> est testé et <b>quel comportement</b> est attendu.
+Le nom du test est sa <b>première ligne de documentation</b>. Il doit raconter le <b>quoi</b> du test et <b>quel comportement</b> est attendu.
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; align-items: stretch;">
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
 <div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🤦 Pas clair</div>
-<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem; display: flex; flex-direction: column; gap: 0.6rem;">
 
 ```java
-@Test void test1() { ... }
-@Test void testAdd() { ... }
-@Test void testCalc() { ... }
-@Test void bugFix12345() { ... }
+@Test void test1()
+@Test void testAdd() 
+@Test void testCalc() 
+@Test void bugFix12345() 
 ```
 
-<div style="margin-top: auto;">On ne sait <b>pas ce qui est testé</b>, ni <b>quel comportement</b> est attendu.</div>
+<div>On ne sait <b>pas ce qui est testé</b>, ni <b>quel comportement</b> est attendu.</div>
 </div>
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
 <div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎯 Clair</div>
-<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem; display: flex; flex-direction: column; gap: 0.6rem;">
 
 ```java
-@Test void additionne_deux_positifs()
-@Test void additionne_avec_zero_retourne_lautre_nombre()
-@Test void solde_negatif_leve_exception()
-@Test void panier_vide_a_un_total_zero()
+@Test void additionne_deux_positifs_retourne_un_positif()
+@Test void additionne_zero_et_dix_retourne_dix()
+@Test void montant_total_d_un_panier_negatif_leve_exception()
+@Test void un_panier_vide_a_un_montant_total_de_zero()
 ```
 
-<div style="margin-top: auto;">On lit le test comme une <b>spécification</b>.</div>
+<div style="margin-top: auto;">On lit le test comme une <b>spécification</b> du comportement de chaque cas.</div>
 </div>
 </div>
 
 </div>
 
 <div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 1.5rem;">
-🥋 <b>Ce qu'on vise au TP3</b> (kata Tennis) : des tests qui racontent une partie, pas des numéros. <code>partie_tombe_a_egalite_apres_deux_points_partout()</code>, <code>le_serveur_gagne_la_partie_apres_quatre_points()</code>, etc.
+🥋 <b>Ce qu'on vise au TP3</b> : des tests qui racontent une partie, pas des numéros ou des noms génériques : <code>partie_tombe_a_egalite_apres_deux_points_partout()</code>, <code>le_serveur_gagne_la_partie_apres_quatre_points()</code>, etc.
+</div>
+
+---
+
+## 📛 Conventions de nommage
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le <b>snake_case</b> est la norme JUnit pour la lisibilité. Trois <b>patterns</b> structurent le contenu du nom : choisissez-en un et tenez-vous-y.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 3.2rem 0; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">📝 Descriptif simple</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1rem; flex: 1; font-size: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>Décrit le comportement <b>sans structure imposée</b>. Le plus naturel à lire.</div>
+<div style="font-family: 'Courier New', Consolas, monospace; background: #fff; padding: 0.5rem; border-radius: 4px; font-size: 0.95rem; margin-top: auto;">additionne_deux_positifs_retourne_la_somme()</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">📛 should / when</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1rem; flex: 1; font-size: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>Pattern <b>should_X_when_Y</b>. Très répandu en Java/Kotlin.</div>
+<div style="font-family: 'Courier New', Consolas, monospace; background: #fff; padding: 0.5rem; border-radius: 4px; font-size: 0.95rem; margin-top: auto;">should_return_sum_when_adding_two_positives()</div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎬 Given / When / Then</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1rem; flex: 1; font-size: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>Pattern BDD : <b>given_X_<br/>when_Y_then_Z</b>. Aligne le test sur le scénario métier.</div>
+<div style="font-family: 'Courier New', Consolas, monospace; background: #fff; padding: 0.5rem; border-radius: 4px; font-size: 0.95rem; margin-top: auto;">given_two_positives_when_adding_then_returns_sum()</div>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Pas de meilleur pattern : la <b>cohérence dans le projet</b> prime sur le style.
 </div>
 
 ---
