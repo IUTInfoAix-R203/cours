@@ -237,46 +237,96 @@ Tu n'écriras <b>pas plus de code de production</b> qu'il n'en faut pour faire p
 
 ---
 
+<!-- _transition: fade -->
+
 ## 🎯 Fake it / Triangulation / Obvious : laquelle choisir ?
 
-On les a vues au CM1. Au TP2, vous vous êtes probablement demandé : *laquelle appliquer à ce test-là ?* Voici la **décision rapide** :
+<style scoped>
+.hidden { visibility: hidden; }
+</style>
 
-<div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+On les a vues au CM1. Voici la <b>décision rapide</b> au moment d'écrire le code de production.
+</p>
 
-<div style="flex: 1; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
-<b>🎭 Fake it d'abord, toujours</b>
-<div style="font-size: 0.95rem; margin-top: 0.3rem;">
-Même quand la solution semble évidente. <b>Pourquoi</b> : fake it vérifie que le <em>test</em> est juste, avant de se soucier du code.
-</div>
-<div style="font-size: 0.85rem; margin-top: 0.4rem; background: rgba(255,255,255,0.1); padding: 0.4rem 0.6rem; border-radius: 4px;">
-<em>Le test passe avec une constante en dur ? OK, le test est bien formulé.</em>
-</div>
-</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
-<div style="flex: 1; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
-<b>📐 Triangulation quand...</b>
-<div style="font-size: 0.95rem; margin-top: 0.3rem;">
-... le 2e ou 3e test vous <b>force</b> à généraliser. Ajoutez un cas différent, et le comportement commun émerge <em>tout seul</em>.
-</div>
-<div style="font-size: 0.85rem; margin-top: 0.4rem; background: rgba(255,255,255,0.1); padding: 0.4rem 0.6rem; border-radius: 4px;">
-<em>FizzBuzz : après 3 tests (1, 3, 5), la logique if/else se dessine.</em>
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎭 Fake it d'abord, toujours</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>Même si la solution semble évidente. Fake it vérifie que le <b>test</b> est juste, <b>avant</b> de se soucier du code.</div>
+<div style="font-size: 1rem; opacity: 0.85; margin-top: auto;">💡 <em>Le test passe avec une constante en dur ? OK, il est bien formulé.</em></div>
 </div>
 </div>
 
-<div style="flex: 1; background: #2c3e50; color: white; padding: 1rem 1.2rem; border-radius: 10px;">
-<b>💡 Obvious seulement si...</b>
-<div style="font-size: 0.95rem; margin-top: 0.3rem;">
-... la solution <b>tient en une ligne</b> et vous ne pouvez <em>pas</em> vous tromper. <b>Doute</b> = pas obvious.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📐 Triangulation quand...</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>... le 2<sup>e</sup> ou 3<sup>e</sup> test vous <b>force</b> à généraliser. Le comportement commun émerge <em>tout seul</em>.</div>
+<div style="font-size: 1rem; opacity: 0.85; margin-top: auto;">💡 <em>FizzBuzz : après 3 tests (1, 3, 5), la logique if/else se dessine.</em></div>
 </div>
-<div style="font-size: 0.85rem; margin-top: 0.4rem; background: rgba(255,255,255,0.1); padding: 0.4rem 0.6rem; border-radius: 4px;">
-<em>return a + b; dans un addArithmetique(int, int).</em>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">💡 Obvious seulement si...</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>... la solution <b>tient en une ligne</b> et vous ne pouvez <em>pas</em> vous tromper. <b>Le moindre doute</b> = pas obvious.</div>
+<div style="font-size: 1rem; opacity: 0.85; margin-top: auto;">💡 <em><code>return a + b;</code> dans <code>addition(int, int)</code>.</em></div>
 </div>
 </div>
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #fde8e6; border-left: 5px solid #e74c3c; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
-⚠️ <b>Anti-pattern fréquent en BUT1</b> : "je sais déjà comment coder, je vais directement en obvious." Résultat : le test n'est jamais rouge, vous ne savez pas s'il vérifie vraiment quelque chose. <b>Fake it d'abord</b>, toujours - même 10 secondes, pour voir le test passer du rouge au vert.
+<div class="hidden" style="margin-top: 1rem; background: #fdecea; border-left: 5px solid #e74c3c; padding: 0.7rem 1rem; border-radius: 6px; font-size: 1.1rem;">
+⚠️ <b>Anti-pattern fréquent</b> : « je sais coder ça, je passe direct en obvious ». Le test n'est jamais rouge, vous ne savez pas s'il vérifie vraiment quelque chose. <b>Fake it d'abord</b>, même 10 secondes, pour voir le test passer du rouge au vert.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Règle simple : <b>Fake it</b> par défaut, <b>Triangulation</b> quand un seul cas ne suffit plus, <b>Obvious</b> seulement quand l'évidence est totale.
+</div>
+
+---
+
+## 🎯 Fake it / Triangulation / Obvious : laquelle choisir ?
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+On les a vues au CM1. Voici la <b>décision rapide</b> au moment d'écrire le code de production.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎭 Fake it d'abord, toujours</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>Même si la solution semble évidente. Fake it vérifie que le <b>test</b> est juste, <b>avant</b> de se soucier du code.</div>
+<div style="font-size: 1rem; opacity: 0.85; margin-top: auto;">💡 <em>Le test passe avec une constante en dur ? OK, il est bien formulé.</em></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📐 Triangulation quand...</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>... le 2<sup>e</sup> ou 3<sup>e</sup> test vous <b>force</b> à généraliser. Le comportement commun émerge <em>tout seul</em>.</div>
+<div style="font-size: 1rem; opacity: 0.85; margin-top: auto;">💡 <em>FizzBuzz : après 3 tests (1, 3, 5), la logique if/else se dessine.</em></div>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">💡 Obvious seulement si...</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.2rem; display: flex; flex-direction: column; gap: 0.6rem;">
+<div>... la solution <b>tient en une ligne</b> et vous ne pouvez <em>pas</em> vous tromper. <b>Le moindre doute</b> = pas obvious.</div>
+<div style="font-size: 1rem; opacity: 0.85; margin-top: auto;">💡 <em><code>return a + b;</code> dans <code>addition(int, int)</code>.</em></div>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #fdecea; border-left: 5px solid #e74c3c; padding: 0.7rem 1rem; border-radius: 6px; font-size: 1.1rem;">
+⚠️ <b>Anti-pattern fréquent</b> : « je sais coder ça, je passe direct en obvious ». Le test n'est jamais rouge, vous ne savez pas s'il vérifie vraiment quelque chose. <b>Fake it d'abord</b>, même 10 secondes, pour voir le test passer du rouge au vert.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Règle simple : <b>Fake it</b> par défaut, <b>Triangulation</b> quand un seul cas ne suffit plus, <b>Obvious</b> seulement quand l'évidence est totale.
 </div>
 
 ---
