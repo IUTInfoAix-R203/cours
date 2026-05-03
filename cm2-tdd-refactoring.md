@@ -85,7 +85,7 @@ Aujourd'hui, on <b>approfondit</b> le socle du CM1 et on prépare les <b>TP3</b>
 
 <!-- Ligne 3 : CC3 (pleine largeur, violet plein, ligne unique) -->
 <div style="background: #8e44ad; color: white; padding: 0.9rem 1rem; border-radius: 10px; text-align: center; font-weight: bold; font-size: 1.4rem;">
-  🎯 CC3 — kata sur feuille (2 h) : <span style="font-weight: normal; opacity: 0.9;"> évalue les acquis de TP2 + TP3 + TP4</span>
+  🎯 CC3 : kata sur feuille (2 h) : <span style="font-weight: normal; opacity: 0.9;"> évalue les acquis de TP2 + TP3 + TP4</span>
 </div>
 
 <div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem;">
@@ -209,21 +209,21 @@ Trois règles formelles, énoncées par <b>Robert C. Martin</b> (Uncle Bob), pou
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; margin: 3.2rem 0; align-items: stretch;">
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🙅 Loi 1 — Interdit</div>
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🙅 Loi 1 : Interdit</div>
 <div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
 Tu n'écriras <b>pas de code de production</b> tant qu'un test qui <b>échoue</b> ne l'exige.
 </div>
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">⏸️ Loi 2 — Limite</div>
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">⏸️ Loi 2 : Limite</div>
 <div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
 Tu n'écriras <b>pas plus de test</b> qu'il n'en faut pour échouer. Une erreur de compilation compte comme un échec.
 </div>
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">✋ Loi 3 — Juste assez</div>
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">✋ Loi 3 : Juste assez</div>
 <div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
 Tu n'écriras <b>pas plus de code de production</b> qu'il n'en faut pour faire passer le test qui échoue.
 </div>
@@ -409,17 +409,17 @@ Trois phases pour structurer chaque test : <b>Arrange · Act · Assert</b>. Lisi
 
 <div style="flex: 1; display: flex; align-items: center; gap: 0.7rem; background: #eaf2fb; border-left: 5px solid #4a90d9; padding: 0.8rem 1rem; border-radius: 8px;">
 <div style="font-size: 1.6rem;">🛠️</div>
-<div style="font-size: 1.4rem;"><b>Arrange</b> — préparer l'environnement, les données, les dépendances</div>
+<div style="font-size: 1.4rem;"><b>Arrange</b> : préparer l'environnement, les données, les dépendances</div>
 </div>
 
 <div style="flex: 1; display: flex; align-items: center; gap: 0.7rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
 <div style="font-size: 1.6rem;">▶️</div>
-<div style="font-size: 1.4rem;"><b>Act</b> — déclencher le comportement testé (<b>une seule</b> action)</div>
+<div style="font-size: 1.4rem;"><b>Act</b> : déclencher le comportement testé (<b>une seule</b> action)</div>
 </div>
 
 <div style="flex: 1; display: flex; align-items: center; gap: 0.7rem; background: #e8f6ec; border-left: 5px solid #27ae60; padding: 0.8rem 1rem; border-radius: 8px;">
 <div style="font-size: 1.6rem;">✅</div>
-<div style="font-size: 1.4rem;"><b>Assert</b> — vérifier le résultat (idéalement <b>une</b> assertion principale)</div>
+<div style="font-size: 1.4rem;"><b>Assert</b> : vérifier le résultat (idéalement <b>une</b> assertion principale)</div>
 </div>
 
 </div>
@@ -567,7 +567,7 @@ Le kata <b>Tennis</b> du TP3 illustre tout ce qu'on vient de voir. Voici les 3 p
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🎭 Test 1 — Fake it</div>
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🎭 Test 1 : Fake it</div>
 <div style="background: #e8f6ec; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem;">
 
 ```java
@@ -585,7 +585,7 @@ void debut_de_partie_est_0_0() {
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">📐 Test 2 — Triangulation</div>
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">📐 Test 2 : Triangulation</div>
 <div style="background: #f9f5e8; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem;">
 
 ```java
@@ -603,7 +603,7 @@ void apres_point_serveur_15_0() {
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">📐 Test 3 — Triangulation</div>
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">📐 Test 3 : Triangulation</div>
 <div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.5rem;">
 
 ```java
@@ -847,7 +847,7 @@ void grille_demineur_5x5() {
 </div>
 
 <div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
-Utilisé au <b>TP2 exercice 5</b> (Démineur) — gain énorme sur les grandes grilles ou les sorties textuelles riches.
+Utilisé au <b>TP2 exercice 5</b> (Démineur) : gain énorme sur les grandes grilles ou les sorties textuelles riches.
 </div>
 
 ---
@@ -893,7 +893,7 @@ Le TDD ne pardonne pas les <b>raccourcis</b> : chaque écart efface une garantie
 ## 📊 Pyramide des tests
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Pour rappel (CM1) : <b>3 niveaux</b> de tests, en pyramide. Plus on monte, moins on en a — et plus chaque test coûte cher.
+Pour rappel (CM1) : <b>3 niveaux</b> de tests, en pyramide. Plus on monte, moins on en a, et plus chaque test coûte cher.
 </p>
 
 <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.5rem; margin-top: 1.5rem; align-items: center;">
@@ -909,15 +909,15 @@ Pour rappel (CM1) : <b>3 niveaux</b> de tests, en pyramide. Plus on monte, moins
 <div style="display: flex; flex-direction: column; gap: 0.8rem;">
 
 <div style="background: #fdecea; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c; font-size: 1.15rem;">
-<b>E2E</b> — toute l'application, du clic à la base. Lents, fragiles, coûteux.
+<b>E2E</b> : toute l'application, du clic à la base. Lents, fragiles, coûteux.
 </div>
 
 <div style="background: #f9f5e8; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e8a838; font-size: 1.15rem;">
-<b>Intégration</b> — plusieurs briques ensemble (service + DB, par ex).
+<b>Intégration</b> : plusieurs briques ensemble (service + DB, par ex).
 </div>
 
 <div style="background: #e8f6ec; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #27ae60; font-size: 1.15rem;">
-<b>Unitaires</b> — une méthode, une classe, isolés. Rapides, ciblés, relancés en permanence.
+<b>Unitaires</b> : une méthode, une classe, isolés. Rapides, ciblés, relancés en permanence.
 </div>
 
 </div>
@@ -1096,7 +1096,7 @@ Le but n'est pas de <b>résoudre le problème</b> (vous le connaissez), c'est d'
 ## 🥋 Quelques kata célèbres
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-La communauté des coding dojos a accumulé un <b>répertoire</b> de kata classiques. En voici six qu'on retrouve partout — chacun éclaire un aspect différent du métier.
+La communauté des coding dojos a accumulé un <b>répertoire</b> de kata classiques. En voici six qu'on retrouve partout, chacun éclaire un aspect différent du métier.
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 1.2rem; align-items: stretch;">
@@ -1160,7 +1160,7 @@ Le débutant croit que refaire = perdre du temps. L'expert sait que <b>chaque pa
 <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.8rem; margin: 3.2rem 0; align-items: stretch;">
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">1<sup>re</sup> fois — la lutte</div>
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">1<sup>re</sup> fois : la lutte</div>
 <div style="background: #fdecea; padding: 0.8rem 1rem; flex: 1; font-size: 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
 <div style="font-size: 4rem; line-height: 1;">😰</div>
 <div>Je galère, je découvre les règles. Je code <em>quelque chose qui marche</em>.</div>
@@ -1320,7 +1320,7 @@ Variante <b>ludique</b> du pair programming : on combine pair et <b>cycle TDD st
 <div style="text-align: center; font-size: 1.8rem; color: #999; margin: 0.2rem 0;">⬇</div>
 
 <div style="background: #e8f6ec; padding: 0.7rem 1rem; border-radius: 8px; font-size: 1.3rem; border-left: 5px solid #27ae60;">
-<b>🅱️ </b>  fait <b>passer</b> le test 🟢
+<b>🅱️</b> fait <b>passer</b> le test 🟢
 </div>
 
 </div>
@@ -2284,7 +2284,7 @@ section pre, section pre code, section pre code[class*="language-"] { background
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Un commentaire qui dit <b>ce que fait le code</b> est un échec : il faut <b>renommer</b>. Un commentaire utile dit le <b>pourquoi</b> — le contexte que le code ne peut pas exprimer.
+Un commentaire qui dit <b>ce que fait le code</b> est un échec : il faut <b>renommer</b>. Un commentaire utile dit le <b>pourquoi</b>, le contexte que le code ne peut pas exprimer.
 </p>
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
