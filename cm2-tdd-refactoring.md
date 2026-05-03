@@ -1744,7 +1744,7 @@ Au TP4, vous pratiquerez ces <b>4 grands classiques</b> avec l'aide de votre IDE
 
 <style scoped>
 section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; background: transparent !important; padding: 0.4rem 0.2rem !important; }
-section pre code { background: transparent !important; font-size: 0.43rem !important; line-height: 1.35 !important; }
+section pre, section pre code, section pre code[class*="language-"] { background: transparent !important; font-size: 0.55rem !important; line-height: 1.25 !important; }
 </style>
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
@@ -1804,7 +1804,6 @@ double calculerTotalHT(List<Article> a) {
     .mapToDouble(x -> x.prix() * x.qte()).sum();
 }
 ```
-
 </div>
 </div>
 
@@ -1818,15 +1817,24 @@ Avant il falait <b>tout lire</b> pour comprendre, après, on lit <code>imprimerF
 
 ## 🧪 Exemple : Replace Conditional with Polymorphism
 
-<div style="display: flex; gap: 1rem;">
-<div style="flex: 1; background: #fde8e6; padding: 0.8rem; border-radius: 8px; font-size: 0.8rem;">
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; background: transparent !important; padding: 0.4rem 0.2rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { background: transparent !important; font-size: 0.45rem !important; line-height: 1.25 !important; }
+</style>
 
-**Avant (smell : Switch Statements)**
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+On remplace un <code>switch</code> sur un <b>type</b> par une <b>hiérarchie de sous-classes</b>. Chaque branche devient une méthode dans sa sous-classe.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.8rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🦴 Avant : Switch Statements</div>
+<div style="background: #fdecea; padding: 0.6rem 0.9rem; flex: 1;">
 
 ```java
 class Animal {
   String type;
-
   String faireDuBruit() {
     switch (type) {
       case "chien":  return "Wouf !";
@@ -1839,39 +1847,39 @@ class Animal {
 }
 ```
 
-Chaque nouveau type → modifier cette classe.<br/>
-Un <code>switch</code> sur le type est souvent dupliqué.
+<p style="font-size: 1.1rem; margin: 0.3rem 0 0 0;">Chaque nouveau type oblige à <b>rouvrir</b> cette classe. Le <code>switch</code> est souvent <b>dupliqué</b> ailleurs (parler, manger, dormir...).</p>
 
 </div>
-<div style="flex: 1; background: #e6f5ec; padding: 0.8rem; border-radius: 8px; font-size: 0.8rem;">
+</div>
 
-**Après**
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">✨ Après : Polymorphisme</div>
+<div style="background: #e8f6ec; padding: 0.6rem 0.9rem; flex: 1;">
 
 ```java
 abstract class Animal {
   abstract String faireDuBruit();
 }
-
 class Chien extends Animal {
   String faireDuBruit() { return "Wouf !"; }
 }
-
 class Chat extends Animal {
   String faireDuBruit() { return "Miaou !"; }
 }
-
 class Vache extends Animal {
   String faireDuBruit() { return "Meuh !"; }
 }
 ```
 
-Nouveau type → nouvelle classe. **Pas touche** au reste.
+<p style="font-size: 1.1rem; margin: 0.3rem 0 0 0;">Nouveau type = <b>nouvelle classe</b>. On ne touche <b>pas à l'existant</b>.</p>
 
 </div>
 </div>
 
-<div style="margin-top: 0.5rem; text-align: center; background: #2c3e50; color: white; padding: 0.5rem; border-radius: 6px; font-size: 0.95rem;">
-Principe <b>Open/Closed</b> : ouvert à l'extension, fermé à la modification.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Principe <b>Open/Closed</b> : ouvert à l'<b>extension</b> (ajouter une classe), fermé à la <b>modification</b> (ne pas toucher l'existant).
 </div>
 
 ---
