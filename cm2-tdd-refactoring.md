@@ -108,27 +108,45 @@ Comment tirer le meilleur du cycle du TDD au quotidien ?
 
 ## 🔁 Rappel : le cycle RED-GREEN-REFACTOR
 
-```mermaid
-graph LR
-    R[RED<br/>Écrire un test<br/>qui échoue] --> G[GREEN<br/>Faire passer<br/>le test au plus vite]
-    G --> F[REFACTOR<br/>Nettoyer<br/>sans casser]
-    F --> R
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Pour rappel : <b>3 étapes</b>, dans cet ordre, pour chaque petit comportement à ajouter.
+</p>
 
-    style R fill:#e74c3c,color:#fff
-    style G fill:#27ae60,color:#fff
-    style F fill:#4a90d9,color:#fff
-```
+<div style="display: grid; grid-template-columns: 1fr 0.2fr 1fr 0.2fr 1fr; gap: 0.6rem; margin-top: 1.5rem; align-items: stretch;">
 
-<div style="display: flex; gap: 1.5rem; margin-top: 1rem;">
-<div style="flex: 1; background: #fde8e6; padding: 1rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
-<b>RED</b> : j'écris <b>un seul</b> test. Il doit échouer pour la <b>bonne raison</b> (le comportement manque, pas une coquille de syntaxe).
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="background: #e74c3c; color: #fff; padding: 0.6rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">1. 🔴 RED</div>
+<div style="background: #fdecea; padding: 1rem; flex: 1; font-size: 1.25rem;">
+J'écris <b>un seul</b> test. Il doit échouer pour la <b>bonne raison</b> : un comportement qui manque, pas une coquille de syntaxe.
 </div>
-<div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<b>GREEN</b> : je code le <b>minimum</b> pour passer. Je n'ai <b>pas</b> le droit d'anticiper.
 </div>
-<div style="flex: 1; background: #e6f0f9; padding: 1rem; border-radius: 10px; border-left: 5px solid #4a90d9;">
-<b>REFACTOR</b> : je nettoie (noms, duplication, lisibilité). La suite de tests reste <b>verte</b>.
+
+<div style="display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #999;">▶</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="background: #27ae60; color: #fff; padding: 0.6rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">2. 🟢 GREEN</div>
+<div style="background: #e8f6ec; padding: 1rem; flex: 1; font-size: 1.25rem;">
+Je code le <b>minimum</b> pour passer. Je n'ai <b>pas</b> le droit d'anticiper sur les tests à venir.
 </div>
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #999;">▶</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 12px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.15);">
+<div style="background: #4a90d9; color: #fff; padding: 0.6rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">3. 🧹 REFACTOR</div>
+<div style="background: #eaf2fb; padding: 1rem; flex: 1; font-size: 1.25rem;">
+Je nettoie (noms, duplication, lisibilité). La suite de tests reste <b>verte</b> en permanence.
+</div>
+</div>
+
+</div>
+
+<div style="display: flex; align-items: center; justify-content: center; gap: 0.8rem; margin-top: 1.2rem; font-size: 1.4rem; color: #555;">
+<span style="font-size: 2rem;">🔁</span><span>... puis on <b>reprend en 1.</b> avec le test suivant.</span>
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+La force du cycle vient de sa <b>discipline</b> : 3 étapes, dans l'ordre, à chaque tour.
 </div>
 
 ---
