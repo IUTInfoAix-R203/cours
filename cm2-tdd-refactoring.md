@@ -1698,15 +1698,44 @@ Changer ce que fait une méthode, ajouter une fonctionnalité, corriger un bug.<
 
 ## 📖 Le catalogue de Fowler (70+ refactorings)
 
-<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.8rem; margin-top: 0.3rem; font-size: 0.95rem;">
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>🏷️ Rename</b><br/>Le plus fréquent.</div>
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>✂️ Extract Method</b><br/>Pour rendre une intention lisible.</div>
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>📦 Extract Class</b><br/>Quand une classe fait trop de choses.</div>
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;"><b>🦎 Polymorphism</b><br/>Quand un switch devient pénible.</div>
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Fowler a normalisé ce vocabulaire : <b>70+ transformations</b> cataloguées, chacune avec son <b>nom</b>, son <b>contexte d'usage</b> et sa <b>procédure pas-à-pas</b>. Tout est en ligne sur <a href="https://refactoring.com/catalog/" style="color: #4a90d9;">refactoring.com/catalog</a>.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 0.8rem; margin: 4rem 0; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🏷️ Rename</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1rem; flex: 1; font-size: 1.3rem;">
+Le plus fréquent. Pour un <b>nom plus juste</b>, qui révèle l'intention.
+</div>
 </div>
 
-<div style="margin-top: 0.7rem; text-align: center; background: #2c3e50; color: white; padding: 0.7rem; border-radius: 8px; font-size: 0.95rem;">
-Il existe un <b>vocabulaire commun</b> pour nommer ces transformations. Les TP4 vous font justement pratiquer quelques entrées très classiques de ce catalogue.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">✂️ Extract Method</div>
+<div style="background: #f3eaf7; padding: 0.9rem 1rem; flex: 1; font-size: 1.3rem;">
+Découper une <b>longue méthode</b> en plus petites, chacune avec une intention claire.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📦 Extract Class</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1rem; flex: 1; font-size: 1.3rem;">
+Sortir un <b>sous-ensemble cohérent</b> de la classe trop chargée dans sa propre classe.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🦎 Polymorphism</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1rem; flex: 1; font-size: 1.3rem;">
+Remplacer un <code style="background: rgba(0,0,0,0.05); padding: 0 0.3rem; border-radius: 3px;">switch</code> sur un type par des <b>sous-classes</b>.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Au TP4, vous pratiquerez ces <b>4 grands classiques</b> avec l'aide de votre IDE.
 </div>
 
 ---
