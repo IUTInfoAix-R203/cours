@@ -1597,54 +1597,64 @@ Le code <b>compile</b>, les tests <b>passent</b>, l'utilisateur ne voit rien. Ma
 
 ## 📚 Les smells qu'on va surtout rencontrer au TP4
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.3rem; font-size: 0.92rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Fowler en référence une vingtaine. Voici les <b>6 smells</b> que vous croiserez au TP4, chacun avec son refactoring associé.
+</p>
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>📏 Long Method</b><br/>
-Une méthode de 50 lignes qu'on scroll pour la lire.<br/>
-<em>Solution</em> : Extract Method.
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📏 Long Method</div>
+<div style="background: #fdecea; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Une méthode de 50 lignes qu'on doit scroller pour la lire.<br/>
+<b>→ Extract Method</b>
+</div>
 </div>
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🏢 Large Class</b><br/>
-Une classe qui fait trop de choses.<br/>
-<em>Solution</em> : Extract Class.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🏢 Large Class</div>
+<div style="background: #f3eaf7; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Une classe qui fait <b>trop de choses</b> à la fois.<br/>
+<b>→ Extract Class</b>
+</div>
 </div>
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>📋 Long Parameter List</b><br/>
-Une méthode à 7 paramètres, imbuvable à l'appel.<br/>
-<em>Solution</em> : Introduce Parameter Object.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📋 Long Parameter List</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Une méthode à <b>7 paramètres</b>, imbuvable à l'appel.<br/>
+<b>→ Introduce Parameter Object</b>
+</div>
 </div>
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>👯 Duplicated Code</b><br/>
-Le même bloc copié-collé en 3 endroits.<br/>
-<em>Solution</em> : Extract Method / Move Method.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #c19a3a; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">👯 Duplicated Code</div>
+<div style="background: #f5f0dc; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Le même bloc <b>copié-collé</b> en 3 endroits.<br/>
+<b>→ Extract Method / Move Method</b>
+</div>
 </div>
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🔢 Magic Numbers</b><br/>
-<code>if (age > 65)</code>, <code>total *= 1.20</code>.<br/>
-<em>Solution</em> : Replace Magic Number with Constant.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🔢 Magic Numbers</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+<code style="background: rgba(0,0,0,0.05); padding: 0 0.3rem; border-radius: 3px;">if (age &gt; 65)</code>, <code style="background: rgba(0,0,0,0.05); padding: 0 0.3rem; border-radius: 3px;">total *= 1.20</code>.<br/>
+<b>→ Replace Magic Number with Constant</b>
+</div>
 </div>
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🔀 Switch Statements</b><br/>
-Un <code>switch</code> sur un type, dupliqué en 5 endroits.<br/>
-<em>Solution</em> : Replace Conditional with Polymorphism.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🔀 Switch Statements</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; flex: 1; font-size: 1.2rem;">
+Un <code style="background: rgba(0,0,0,0.05); padding: 0 0.3rem; border-radius: 3px;">switch</code> sur un type, <b>dupliqué</b> en 5 endroits.<br/>
+<b>→ Replace Conditional with Polymorphism</b>
 </div>
-
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<b>🧩 Data Clumps / Primitive Obsession</b><br/>
-Des données voyagent toujours ensemble sans avoir de vrai type.<br/>
-<em>Solution</em> : Introduce Parameter Object / Replace Primitive with Object.
 </div>
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center;">
-Retenez surtout le réflexe : <b>un smell n'est pas une faute</b>, c'est un signal qu'une zone du code va devenir pénible à modifier.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Un smell n'est pas une <b>faute</b>, c'est un <b>signal</b> qu'une zone va devenir pénible à modifier.
 </div>
 
 ---
