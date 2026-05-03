@@ -1199,6 +1199,64 @@ Un sportif ne s'entraîne pas le jour du match. <b>Un développeur non plus.</b>
 
 ---
 
+## 🎲 Varier les contraintes pour progresser
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Refaire un kata avec une <b>règle du jeu différente</b> force à explorer d'autres chemins.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🙅 Pas de <code style="background: rgba(255,255,255,0.2); padding: 0 0.3rem; border-radius: 3px;">if</code> / <code style="background: rgba(255,255,255,0.2); padding: 0 0.3rem; border-radius: 3px;">else</code></div>
+<div style="background: #fdecea; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+Force le <b>polymorphisme</b> et les <i>lookup tables</i>. Apprend à remplacer les branches par des objets.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🔁 Pas de boucles</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+Force la <b>récursion</b> ou les <code style="background: rgba(0,0,0,0.05); padding: 0 0.3rem; border-radius: 3px;">Stream</code>. Apprend la programmation fonctionnelle.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📦 Pas de primitives</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+Force à créer de vrais <b>objets métier</b>. Apprend <i>Tell, Don't Ask</i>.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #8e44ad; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">✂️ 4 lignes max</div>
+<div style="background: #f3eaf7; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+Méthodes courtes obligatoires. Apprend <b>Extract Method</b> à fond et la décomposition fine.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🤐 Silence</div>
+<div style="background: #e8f6ec; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+En pair, communiquer <b>uniquement</b> par le code et les tests. Apprend à l'expressivité.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #16a085; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🏓 Mute ping-pong</div>
+<div style="background: #e6f5f1; padding: 0.8rem 1rem; flex: 1; font-size: 1.3rem;">
+A écrit le test, B le fait passer, <b>sans parler</b>. Apprend la rigueur TDD pure.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Une <b>contrainte arbitraire</b> transforme un kata connu en <b>nouveau terrain d'exploration</b>.
+</div>
+
+---
+
 ## 👥 Le pair programming
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
