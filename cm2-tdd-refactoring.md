@@ -2278,22 +2278,34 @@ boolean estInscrit = true;
 
 ## 💬 Les commentaires : utiliser avec parcimonie
 
-<div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
-<div style="flex: 1; background: #fde8e6; padding: 1rem; border-radius: 10px; font-size: 0.95rem;">
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; background: transparent !important; padding: 0.4rem 0.2rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { background: transparent !important; font-size: 0.85rem !important; line-height: 1.3 !important; }
+</style>
 
-**❌ Commente pour compenser**
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un commentaire qui dit <b>ce que fait le code</b> est un échec : il faut <b>renommer</b>. Un commentaire utile dit le <b>pourquoi</b> — le contexte que le code ne peut pas exprimer.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🙅 Commente pour compenser</div>
+<div style="background: #fdecea; padding: 0.7rem 1rem; flex: 1; font-size: 1.2rem;">
 
 ```java
 // Vérifie si l'utilisateur a plus de 18 ans
 if (u.getA() > 18) { ... }
 ```
 
-→ Renomme plutôt : `if (utilisateur.estMajeur())`.
+<p style="margin: 0.4rem 0 0 0;">Renommez plutôt : <code>if (utilisateur.estMajeur())</code>.</p>
 
 </div>
-<div style="flex: 1; background: #e6f5ec; padding: 1rem; border-radius: 10px; font-size: 0.95rem;">
+</div>
 
-**✅ Commente le pourquoi**
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">✅ Commente le pourquoi</div>
+<div style="background: #e8f6ec; padding: 0.7rem 1rem; flex: 1; font-size: 1.2rem;">
 
 ```java
 // Le SDK distant exige un id positif strict ;
@@ -2301,13 +2313,15 @@ if (u.getA() > 18) { ... }
 if (id <= 0) throw ...;
 ```
 
-→ Information qui ne peut **pas** être déduite du code.
+<p style="margin: 0.4rem 0 0 0;">Information qui <b>ne peut pas</b> être déduite du code.</p>
 
 </div>
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center;">
-<b>Règle</b> : avant d'écrire un commentaire, demandez-vous si un <b>meilleur nom</b> ou une <b>méthode extraite</b> rendrait le commentaire inutile.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Avant d'écrire un commentaire : un <b>meilleur nom</b> ou une <b>méthode extraite</b> ne le rendraient-ils pas inutile ?
 </div>
 
 ---
@@ -2324,33 +2338,40 @@ Le prochain cap est simple : mettre ces gestes en pratique, d'abord à deux, pui
 
 ## 📅 Ce qui vous attend
 
-<div style="display: flex; gap: 0.8rem; margin-top: 0.5rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois étapes pour transformer ces concepts en <b>réflexes</b> : pratiquer en binôme, sécuriser du legacy, démontrer la démarche TDD seul·e sur feuille.
+</p>
 
-<div style="background: #e8a838; color: white; padding: 1rem; border-radius: 10px; flex: 1;">
-<div style="font-size: 1.4rem; font-weight: bold;">🥋 TP3</div>
-<div style="font-size: 0.95rem; margin-top: 0.4rem;">
-5 kata en <b>pair programming</b> :<br/>
-années bissextiles, tennis, employés, pagination, yahtzee.<br/><br/>
-Driver / navigator, ping-pong TDD.
-</div>
-</div>
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
-<div style="background: #e74c3c; color: white; padding: 1rem; border-radius: 10px; flex: 1;">
-<div style="font-size: 1.4rem; font-weight: bold;">🧹 TP4</div>
-<div style="font-size: 0.95rem; margin-top: 0.4rem;">
-6 exercices de refactoring : Facture (Extract Method), CalculPrix (Magic Number), Menu (Extract Class), Animal (Polymorphisme), ServiceNotification (Parameter Object), <b>Gilded Rose</b>.<br/><br/>
-Caractérisation <b>active et verte</b> + tests de structure <code>@Disabled</code> à débloquer.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🥋 TP3 - Kata</div>
+<div style="background: #f9f5e8; padding: 1rem 1.2rem; flex: 1; font-size: 1.2rem;">
+<b>5 kata</b> en <b>pair programming</b> : années bissextiles, tennis, employés, pagination, yahtzee.<br/><br/>
+Driver / navigator, ping-pong TDD, rotation toutes les 5 à 10 min.
 </div>
 </div>
 
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; flex: 1;">
-<div style="font-size: 1.4rem; font-weight: bold;">💻 CC3</div>
-<div style="font-size: 0.95rem; margin-top: 0.4rem;">
-Mini-kata TDD <b>sur feuille</b>, 2 h.<br/><br/>
-Pas d'IDE, pas de compilateur - juste la démarche TDD appliquée à un problème simple.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🧹 TP4 - Refactoring</div>
+<div style="background: #fdecea; padding: 1rem 1.2rem; flex: 1; font-size: 1.2rem;">
+<b>6 exercices</b> : Facture (Extract Method), CalculPrix (Magic Number), Menu (Extract Class), Animal (Polymorphisme), ServiceNotification (Parameter Object), <b>Gilded Rose</b>.<br/><br/>
+Caractérisation verte + tests <code>@Disabled</code> à débloquer.
 </div>
 </div>
 
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">💻 CC3 - Mini-kata</div>
+<div style="background: #eaf2fb; padding: 1rem 1.2rem; flex: 1; font-size: 1.2rem;">
+Mini-kata TDD <b>sur feuille</b>, 2 heures.<br/><br/>
+Pas d'IDE, pas de compilateur. Juste la <b>démarche TDD</b> appliquée à un problème simple.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+À chaque étape, le même fil rouge : <b>petit pas, test d'abord, refactor ensuite</b>.
 </div>
 
 ---
