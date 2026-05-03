@@ -202,16 +202,36 @@ Le TDD ne supprime pas le travail ; il le <b>déplace là où il coûte le moins
 
 ## 🚦 Les 3 lois du TDD (Uncle Bob)
 
-<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.25rem; line-height: 1.7;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois règles formelles, énoncées par <b>Robert C. Martin</b> (Uncle Bob), pour <b>forcer la discipline du baby-step</b>.
+</p>
 
-1. Tu n'écriras **pas de code de production** tant qu'un test **échoue** ne l'exige.
-2. Tu n'écriras **pas plus de test** qu'il n'en faut pour **échouer** (une erreur de compilation compte comme un échec).
-3. Tu n'écriras **pas plus de code de production** qu'il n'en faut pour faire **passer** le test qui échoue.
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; margin: 3.2rem 0; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🙅 Loi 1 — Interdit</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
+Tu n'écriras <b>pas de code de production</b> tant qu'un test qui <b>échoue</b> ne l'exige.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">⏸️ Loi 2 — Limite</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
+Tu n'écriras <b>pas plus de test</b> qu'il n'en faut pour échouer. Une erreur de compilation compte comme un échec.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">✋ Loi 3 — Juste assez</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
+Tu n'écriras <b>pas plus de code de production</b> qu'il n'en faut pour faire passer le test qui échoue.
+</div>
+</div>
 
 </div>
 
-<div style="margin-top: 1rem; text-align: center; font-size: 1.1rem; color: #555;">
-Ces lois semblent extrêmes. Elles sont là pour <b>forcer les baby-steps</b>.<br/>
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
 À chaque cycle, vous alternez entre production et test toutes les <b>30 secondes à 2 minutes</b>.
 </div>
 
