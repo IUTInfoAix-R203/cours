@@ -1032,7 +1032,7 @@ Comment apprend-on à mieux coder ? Pas en regardant des tutos, ni en lisant des
 💬 <em>« Si je veux apprendre le judo, je vais m'inscrire au dojo du coin et y passer une heure par semaine pendant deux ans, au bout de quoi j'aurai peut-être envie de pratiquer plus assidûment. Si je veux apprendre la programmation objet, mon employeur va me trouver une formation de trois jours à Java dans le catalogue. Cherchez l'erreur. »</em>
 </div>
 <div style="margin-top: auto; font-size: 1.1rem; opacity: 0.8; text-align: right;">
-— <b>Laurent Bossavit</b>, <em>The Leprechauns of Software Engineering</em>, 2013
+<b>Laurent Bossavit</b>, <em>The Leprechauns of Software Engineering</em>, 2013
 </div>
 </div>
 
@@ -1057,36 +1057,38 @@ Le métier s'apprend par la <b>pratique régulière</b>, pas par une formation o
 
 ## 🥋 Qu'est-ce qu'un kata ?
 
-<div style="display: flex; gap: 2rem; margin-top: 1rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Dans le coding dojo, l'unité de pratique s'appelle un <b>kata</b>. Le mot vient directement des arts martiaux.
+</p>
 
-Dans les arts martiaux, un **kata** est une séquence de mouvements qu'on répète jusqu'à ce que le corps l'exécute sans y penser.
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
 
-En programmation, un **coding kata** est un petit exercice qu'on refait **plusieurs fois** pour :
-
-- **automatiser** des gestes (raccourcis IDE, TDD, refactoring)
-- **essayer** des approches différentes
-- **comparer** avec d'autres développeurs
-
-Concept popularisé par **Dave Thomas** (*The Pragmatic Programmer*, 2003).
-
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🥋 Arts martiaux</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.25rem;">
+Une <b>séquence de mouvements</b> qu'on répète jusqu'à ce que le corps l'exécute sans y penser.
+<br/><br/>
+On ne cherche pas à <em>vaincre un adversaire</em> : on travaille la <b>posture</b>, le <b>souffle</b>, la <b>précision</b>.
 </div>
-<div style="flex: 1;">
-
-<div style="background: #e8a838; color: white; padding: 1.5rem; border-radius: 12px; font-size: 1.1rem;">
-
-🎯 **Le but n'est pas de résoudre le problème.**
-Le problème, vous le connaissez déjà.
-
-Le but, c'est d'améliorer **votre façon** de le résoudre.
-
 </div>
 
-<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; font-size: 0.95rem;">
-Analogie : un pianiste ne joue pas ses gammes pour "réussir les gammes". Il les joue pour <b>garder la main</b>.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">💻 Coding kata</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.25rem;">
+Un <b>petit exercice</b> qu'on refait <b>plusieurs fois</b> pour :
+<ul style="margin: 0.5rem 0 0; padding-left: 1.2rem;">
+<li><b>automatiser</b> des gestes (raccourcis IDE, TDD, refactoring)</li>
+<li><b>essayer</b> des approches différentes</li>
+<li><b>comparer</b> avec d'autres développeurs</li>
+</ul>
+<div style="font-size: 1rem; opacity: 0.8; margin-top: 0.6rem;">Popularisé par <b>Dave Thomas</b> (<em>The Pragmatic Programmer</em>, 2003).</div>
+</div>
 </div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Le but n'est pas de <b>résoudre le problème</b> (vous le connaissez), c'est d'améliorer <b>votre façon</b> de le résoudre. Comme un pianiste qui joue ses gammes pour <b>garder la main</b>.
 </div>
 
 ---
