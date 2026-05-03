@@ -450,10 +450,20 @@ Un test <b>bien structuré</b> (AAA) et <b>bien nommé</b> se lit comme une phra
 
 ## 📝 Exemple : noms de tests parlants
 
-<div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
-<div style="flex: 1; background: #fde8e6; padding: 1.2rem; border-radius: 10px;">
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 0.7rem 0.9rem !important; }
+section pre code { font-size: 0.78rem !important; line-height: 1.5 !important; }
+</style>
 
-**❌ Pas clair**
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le nom du test est sa <b>première ligne de documentation</b>. Il doit raconter <b>quoi</b> est testé et <b>quel comportement</b> est attendu.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🤦 Pas clair</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.6rem;">
 
 ```java
 @Test void test1() { ... }
@@ -462,12 +472,13 @@ Un test <b>bien structuré</b> (AAA) et <b>bien nommé</b> se lit comme une phra
 @Test void bugFix12345() { ... }
 ```
 
-On ne sait **pas ce qui est testé**, ni **quel comportement** est attendu.
-
+<div style="margin-top: auto;">On ne sait <b>pas ce qui est testé</b>, ni <b>quel comportement</b> est attendu.</div>
 </div>
-<div style="flex: 1; background: #e6f5ec; padding: 1.2rem; border-radius: 10px;">
+</div>
 
-**✅ Clair**
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎯 Clair</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.1rem; display: flex; flex-direction: column; gap: 0.6rem;">
 
 ```java
 @Test void additionne_deux_positifs()
@@ -476,16 +487,14 @@ On ne sait **pas ce qui est testé**, ni **quel comportement** est attendu.
 @Test void panier_vide_a_un_total_zero()
 ```
 
-On lit le test comme une **spécification**.
-
+<div style="margin-top: auto;">On lit le test comme une <b>spécification</b>.</div>
 </div>
 </div>
 
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.95rem;">
-<b>🥋 Ce qu'on vise au TP3</b> (kata Tennis) : des tests qui racontent une partie, pas des numéros.
-<pre style="background: rgba(0,0,0,0.04); padding: 0.5rem 0.7rem; border-radius: 4px; margin-top: 0.4rem; font-size: 0.9rem;">@Test void partie_tombe_a_egalite_apres_deux_points_partout()
-@Test void le_serveur_gagne_la_partie_apres_quatre_points()
-@Test void avantage_au_receveur_apres_egalite_puis_point_receveur()</pre>
+</div>
+
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.7rem 1rem; border-radius: 6px; font-size: 1.5rem;">
+🥋 <b>Ce qu'on vise au TP3</b> (kata Tennis) : des tests qui racontent une partie, pas des numéros. <code>partie_tombe_a_egalite_apres_deux_points_partout()</code>, <code>le_serveur_gagne_la_partie_apres_quatre_points()</code>, etc.
 </div>
 
 ---
@@ -712,7 +721,7 @@ Une ligne peut être couverte à 100 % avec un test sans assertion. La couvertur
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1.5rem;">
 🛠️ L'artisan connaît ses outils - et leurs <b>limites</b>. Un marteau ne visse pas une vis, même très bien utilisé. Le TDD est un outil puissant pour <b>le code qui prend en charge une logique claire</b> ; il ne remplace ni les tests d'intégration, ni la relecture humaine, ni l'entretien avec le client qui dira si l'ouvrage correspond à son besoin.
 </div>
 
@@ -933,7 +942,7 @@ Un état (jeu en cours) + un comportement (marquer un point) → l'affichage du 
 
 Du code qui marche, mais qui pue. On fait quoi ?
 
-<div style="margin-top: 1.5rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
+<div style="margin-top: 1.5rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1.5rem;">
 🛠️ <b>Un artisan entretient ses outils.</b><br/>
 Le menuisier aiguise sa scie entre deux chantiers. Le chef récure ses couteaux en fin de service. Pas par perfectionnisme - parce que demain ils s'en servent <em>encore</em>. Refactorer, c'est exactement ce geste : on ne le fait pas pour faire joli, on le fait pour <b>rester rapide ensuite</b>. Le code qu'on lit cette semaine, c'est celui qu'on modifiera le mois prochain.
 </div>
@@ -1374,7 +1383,7 @@ Ajouter Conjured **directement** dans le code spaghetti est très risqué. Le re
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1.5rem;">
 🛠️ L'artisan qui retourne son atelier <b>tous les jours</b> ne travaille plus - il range. Le refactoring a un <b>coût</b> : du temps, un risque résiduel, une PR à relire. On le justifie toujours par un bénéfice concret à venir, pas par un idéal d'esthétique.
 </div>
 
@@ -1409,7 +1418,7 @@ Chaque fois que vous <b>touchez</b> un fichier, vous le laissez <b>un peu mieux<
 Un nom plus clair, une méthode extraite, un test ajouté.
 </div>
 
-<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1rem;">
+<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1.5rem;">
 🛠️ C'est <b>le geste de l'artisan qui range son atelier</b> avant de partir. Pas pour la démonstration, pas pour la photo - parce que demain matin il veut retrouver un atelier où il peut travailler vite. La règle du scout appliquée au code, c'est la même économie : l'artisan soigne son environnement parce que <em>c'est là qu'il vit</em>.
 </div>
 
@@ -1553,6 +1562,6 @@ IUT d'Aix-Marseille - Département Informatique
 <b>🎯 Dès maintenant</b> : dans votre Codespace, essayez <code>F2</code> pour renommer un identifiant, puis sélectionnez quelques lignes et lancez <code>Ctrl+.</code> → <em>Extract to method</em>. Le plus tôt vos doigts connaissent ces deux gestes, le mieux vous vivrez les TP3 et TP4.
 </div>
 
-<div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
+<div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1.5rem;">
 🛠️ <b>L'artisan, au fond, c'est vous.</b> Le CM1 a posé le <em>pourquoi</em> - du code dont on peut être fier, qu'on n'a pas peur de relire dans six mois. Ce CM2 a posé les <em>gestes</em> - tester avant, refactorer souvent, nommer juste, ranger en partant. À partir du TP3, le seul objectif est que ces gestes deviennent des <b>réflexes</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
 </div>
