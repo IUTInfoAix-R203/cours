@@ -1526,29 +1526,30 @@ Le menuisier aiguise sa scie entre deux chantiers. Le chef récure ses couteaux 
 
 ## 👃 Qu'est-ce qu'un code smell ?
 
-<div style="display: flex; gap: 2rem; align-items: center; margin-top: 0.5rem;">
-<div style="flex: 1.2;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Terme inventé par <b>Kent Beck</b> et popularisé par <b>Martin Fowler</b> (<i>Refactoring</i>, 1999). Un code smell est un <b>indice</b> que quelque chose ne va pas, pas un bug ni une erreur de compilation.
+</p>
 
-Terme inventé par **Kent Beck** et popularisé par **Martin Fowler** (*Refactoring*, 1999).
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
-Un **code smell** est un **indice** que quelque chose ne va pas dans votre code. Pas un bug, pas une erreur de compilation - juste un signal qui dit :
-
-> "Attention, cette zone devient difficile à maintenir."
-
-Un peu comme un aliment qui sent bizarre : **pas forcément périmé, mais il faut regarder de près.**
-
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🚨 Un signal, pas une alarme</div>
+<div style="background: #fdecea; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+Le code <b>compile</b>, les tests <b>passent</b>, l'utilisateur ne voit rien. Mais le développeur qui le lit pense : <i>"cette zone va devenir difficile à maintenir"</i>.
 </div>
-<div style="flex: 1; text-align: center;">
-
-<div style="background: #e74c3c; color: white; padding: 2rem; border-radius: 12px; font-size: 3rem;">
-👃
 </div>
 
-<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 0.9rem;">
-"If it stinks, change it." - Kent Beck
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🍞 Comme un aliment qui sent bizarre</div>
+<div style="background: #f9f5e8; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+<b>Pas forcément périmé</b>, mais il faut <b>regarder de près</b>. Le smell est un signal d'enquête, pas une condamnation.
+</div>
 </div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+<i>"If it stinks, change it."</i> &nbsp; - &nbsp; <b>Kent Beck</b>
 </div>
 
 ---
