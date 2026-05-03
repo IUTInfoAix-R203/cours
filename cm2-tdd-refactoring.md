@@ -2095,48 +2095,42 @@ Commit dès que <b>tous</b> les tests passent. Petits commits = retour arrière 
 
 ## 🌹 Le kata Gilded Rose
 
-<div style="display: flex; gap: 1.5rem;">
-<div style="flex: 1.2;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Créé par <b>Terry Hughes</b>, popularisé par <b>Emily Bache</b>. Un classique : <b>35 lignes</b> de code spaghetti à comprendre et faire évoluer <b>sans rien casser</b>.
+</p>
 
-**Créé par Terry Hughes, popularisé par Emily Bache.**
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
-Un magasin vend des articles qui évoluent tous les jours :
-- Articles normaux (perdent en qualité)
-- Aged Brie (gagne en qualité)
-- Sulfuras (immuable)
-- Backstage passes (complexe)
-- **Conjured** (à ajouter)
-
-Le code source tient en **35 lignes** - mais quelles lignes. `if` imbriqués, noms cryptiques, duplication partout.
-
-**Votre mission** :
-1. Comprendre (*characterization tests*)
-2. Refactorer (sans casser)
-3. **Ajouter la fonctionnalité Conjured**
-
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🛍️ Le magasin</div>
+<div style="background: #f9f5e8; padding: 1rem 1.2rem; flex: 1; font-size: 1.2rem;">
+Chaque jour, les articles évoluent selon leur type :
+<ul style="margin: 0.4rem 0 0 0; padding-left: 1.2rem;">
+<li><b>Articles normaux</b> : perdent en qualité</li>
+<li><b>Aged Brie</b> : gagne en qualité avec le temps</li>
+<li><b>Sulfuras</b> : immuable, légendaire</li>
+<li><b>Backstage passes</b> : règle complexe</li>
+<li><b>Conjured</b> 🆕 : à <b>ajouter</b></li>
+</ul>
 </div>
-<div style="flex: 1;">
-
-<div style="background: #8e44ad; color: white; padding: 1.2rem; border-radius: 12px;">
-
-**Pourquoi ce kata est devenu un classique**
-
-C'est exactement la situation d'un développeur qui arrive dans une entreprise :
-
-- du code qu'il n'a pas écrit
-- sans docs
-- qu'il faut **modifier**
-- sans **casser** l'existant
-
-Ajouter Conjured **directement** dans le code spaghetti est très risqué. Le refactoring **d'abord** rend le changement trivial.
-
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center;">
-🎬 <b>Démo live en ouverture du TP4</b> (20 min).
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎯 Votre mission</div>
+<div style="background: #eaf2fb; padding: 1rem 1.2rem; flex: 1; font-size: 1.2rem;">
+<ol style="margin: 0; padding-left: 1.4rem;">
+<li><b>Comprendre</b> le code via des <i>characterization tests</i></li>
+<li><b>Refactorer</b> sans casser une seule caractérisation</li>
+<li><b>Ajouter Conjured</b> sur le code propre</li>
+</ol>
+<p style="margin: 0.5rem 0 0 0;">L'<code>if</code> imbriqué qui faisait peur est devenu <b>trivial</b> à étendre.</p>
+</div>
 </div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+La <b>situation typique</b> en entreprise : du code qu'on n'a pas écrit, sans docs, à faire évoluer. <b>Refactoring d'abord</b>, feature ensuite. 🎬 Démo live au TP4.
 </div>
 
 ---
