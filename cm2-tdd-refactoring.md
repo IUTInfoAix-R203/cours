@@ -1561,22 +1561,29 @@ Le code qu'on lit cette semaine, c'est celui qu'on <b>modifiera</b> le mois proc
 ## 👃 Qu'est-ce qu'un code smell ?
 
 <p style="font-size: 1.5rem; margin-top: -0.3rem;">
-Terme inventé par <b>Kent Beck</b> et popularisé par <b>Martin Fowler</b> (<i>Refactoring</i>, 1999). Un code smell est un <b>indice</b> que quelque chose ne va pas, pas un bug ni une erreur de compilation.
+Terme inventé par <b>Kent Beck</b> et popularisé par <b>Martin Fowler</b> dans <i>Refactoring</i> (1999, ~20 smells catalogués). Un code smell est un <b>indice</b> que quelque chose ne va pas, pas un bug ni une erreur de compilation.
 </p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🚨 Un signal, pas une alarme</div>
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🚨 Un signal, pas une alarme</div>
 <div style="background: #fdecea; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
-Le code <b>compile</b>, les tests <b>passent</b>, l'utilisateur ne voit rien. Mais le développeur qui le lit pense : <i>"cette zone va devenir difficile à maintenir"</i>.
+Le code <b>compile</b>, les tests <b>passent</b>, l'utilisateur ne voit rien. Mais quand on essaie de le <b>modifier</b>, ça résiste : la zone va devenir pénible pour les développeurs.
 </div>
 </div>
 
 <div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🍞 Comme un aliment qui sent bizarre</div>
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 0rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🍞 Comme un aliment qui sent</div>
 <div style="background: #f9f5e8; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
 <b>Pas forcément périmé</b>, mais il faut <b>regarder de près</b>. Le smell est un signal d'enquête, pas une condamnation.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">📏 Un vocabulaire partagé</div>
+<div style="background: #eaf2fb; padding: 1rem 1.2rem; flex: 1; font-size: 1.4rem;">
+<i>Long Method</i>, <i>Magic Number</i>, <i>Duplicated Code</i>... un <b>nom commun</b> qui rend les revues de code plus rapides : pas besoin de réexpliquer le problème à chaque fois.
 </div>
 </div>
 
