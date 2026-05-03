@@ -11,7 +11,13 @@ paginate: true
 
 **R2.03 - Qualité de développement**
 
-IUT d'Aix-Marseille - BUT Informatique, 1re année
+IUT d'Aix-Marseille - BUT Informatique, première année
+
+<div style="display: flex; justify-content: center; gap: 9rem; margin-top: 6rem; color: #555;">
+<div style="text-align: center;"><div style="font-size: 6.5rem; opacity: 0.8;">✅</div><div style="font-size: 1.3rem; font-weight: 400; letter-spacing: 0.03em; color: #888;">TDD</div></div>
+<div style="text-align: center;"><div style="font-size: 6.5rem; opacity: 0.8;">🥋</div><div style="font-size: 1.3rem; font-weight: 400; letter-spacing: 0.03em; color: #888;">Kata</div></div>
+<div style="text-align: center;"><div style="font-size: 6.5rem; opacity: 0.8;">🧹</div><div style="font-size: 1.3rem; font-weight: 400; letter-spacing: 0.03em; color: #888;">Refactoring</div></div>
+</div>
 
 ---
 
