@@ -969,32 +969,40 @@ La couverture mesure <b>l'exécution</b>, pas la <b>validation</b>. Un beau 99% 
 
 ## 🌄 Où s'arrête le TDD ?
 
-<div style="display: flex; gap: 1.2rem; margin-top: 0.8rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Connaître les <b>limites</b> de l'outil, c'est déjà bien le maîtriser. Le TDD résout certains problèmes très bien mais il en laisse d'autres entiers.
+</p>
 
-<div style="flex: 1; background: #e6f5ec; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<b>Ce que le TDD fait bien</b>
-<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎯 Ce que le TDD fait bien</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
 <li>Cadrer une <b>intention</b> avant de coder</li>
 <li>Donner un <b>filet</b> pour refactorer sereinement</li>
 <li>Produire une <b>documentation vivante</b> du comportement</li>
 <li>Forcer un <b>découplage</b> (sinon le test devient injouable)</li>
 </ul>
 </div>
+</div>
 
-<div style="flex: 1; background: #fde8e6; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
-<b>Ce que le TDD ne fait PAS</b>
-<ul style="font-size: 0.95rem; margin-top: 0.3rem;">
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🚧 Ce que le TDD ne fait PAS</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
 <li><b>Garantir</b> que le produit est utile pour le client</li>
 <li>Remplacer la <b>revue de code</b> et le <b>pair programming</b></li>
 <li>Couvrir les bugs d'<b>intégration</b>, de <b>perf</b>, d'<b>ergonomie</b></li>
-<li>Dispenser de <b>penser</b> - un test tautologique passera toujours</li>
+<li>Dispenser de <b>penser</b> : un test tautologique passera toujours</li>
 </ul>
 </div>
+</div>
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1.5rem;">
-🛠️ L'artisan connaît ses outils - et leurs <b>limites</b>. Un marteau ne visse pas une vis, même très bien utilisé. Le TDD est un outil puissant pour <b>le code qui prend en charge une logique claire</b> ; il ne remplace ni les tests d'intégration, ni la relecture humaine, ni l'entretien avec le client qui dira si l'ouvrage correspond à son besoin.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem;">
+L'artisan connaît ses outils et leurs <b>limites</b>. Le TDD est un outil puissant pour <b>le code qui porte une logique claire</b> ; il ne remplace ni les tests d'intégration, ni la relecture humaine, ni la validation par le client qui dira si l'ouvrage correspond bien à ses exigences.
 </div>
 
 ---
