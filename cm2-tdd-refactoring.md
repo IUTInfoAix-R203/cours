@@ -1886,38 +1886,40 @@ Principe <b>Open/Closed</b> : ouvert à l'<b>extension</b> (ajouter une classe),
 
 ## 🛠️ Votre IDE fait le gros du travail
 
-<div style="display: flex; gap: 1.5rem; margin-top: 0.5rem;">
-<div style="flex: 1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un refactoring <b>manuel</b> est risqué : un oubli, un remplacement raté → le comportement change. L'IDE fait le travail à votre place, <b>sans erreur</b>. Au TP4, on abuse de deux raccourcis dans le <b>Codespace VS Code</b> (extension Java Red Hat).
+</p>
 
-Un refactoring **manuel** est risqué. Un oubli, un mauvais remplacement → comportement changé.
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
 
-Les TP se font dans le **Codespace VS Code** avec l'extension Java officielle (Red Hat). Les gestes de refactoring passent par deux entrées :
-
-- **`Ctrl+.`** (ou `Cmd+.` sur Mac) : menu **Quick Fix + Refactor** contextuel. Propose *Extract to method*, *Extract to constant*, *Extract to variable / field*, *Move...*, *Inline...*, *Add unimplemented methods* selon ce que le curseur touche.
-- **`F2`** : **Rename** (propage partout, imports + Javadoc inclus).
-
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">⌨️ <kbd>Ctrl+.</kbd> &nbsp; Quick Fix + Refactor</div>
+<div style="background: #eaf2fb; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+Menu <b>contextuel</b> selon ce que touche le curseur :
+<ul style="margin: 0.4rem 0 0 0; padding-left: 1.2rem;">
+<li><i>Extract to method</i> / <i>constant</i> / <i>variable</i></li>
+<li><i>Move</i>, <i>Inline</i></li>
+<li><i>Add unimplemented methods</i></li>
+</ul>
 </div>
-<div style="flex: 1;">
-
-<div style="background: #4a90d9; color: white; padding: 1.5rem; border-radius: 12px;">
-
-**💡 Règle pragmatique**
-
-> Si tu peux faire le refactoring **avec un raccourci IDE**, fais-le avec. Si tu dois le faire à la main, **ajoute d'abord des tests**.
-
 </div>
 
-<div style="margin-top: 1rem; background: #fff3cd; padding: 1rem; border-radius: 8px; font-size: 0.95rem;">
-
-**Au TP4**, on abuse de <code>Ctrl+.</code> et <code>F2</code>. Le README liste la correspondance raccourci → refactoring pour chaque exercice.
-
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🏷️ <kbd>F2</kbd> &nbsp; Rename</div>
+<div style="background: #e8f6ec; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+Renomme <b>partout</b> en un coup : déclaration, usages, imports, Javadoc.<br/><br/>
+Le refactoring le plus <b>fréquent</b>, et celui pour lequel l'IDE est <b>indispensable</b>.
 </div>
-
-<div style="margin-top: 0.5rem; font-size: 0.85rem; color: #666;">
-<em>IntelliJ IDEA fait les mêmes refactorings avec <code>Ctrl+Alt+M</code>, <code>Ctrl+Alt+V</code>, <code>Shift+F6</code>... si vous préférez l'utiliser en dehors des TP.</em>
 </div>
 
 </div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+💡 Si l'IDE sait faire le refactoring : <b>laissez-le</b> faire. Si vous devez le faire à la main : <b>ajoutez d'abord des nouveaux tests</b>.
+</div>
+
+<div style="margin-top: 0.5rem; font-size: 1rem; color: #666; text-align: center;">
+<em>IntelliJ IDEA propose les mêmes refactorings avec <kbd>Ctrl+Alt+M</kbd>, <kbd>Ctrl+Alt+V</kbd>, <kbd>Shift+F6</kbd>...</em>
 </div>
 
 ---
