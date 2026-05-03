@@ -2187,29 +2187,36 @@ Trois habitudes simples pour la suite : ranger un peu, nommer mieux, commenter m
 
 ## 🏕️ La règle du scout
 
-<div style="background: #2c3e50; color: white; padding: 2rem; border-radius: 12px; font-size: 1.3rem; line-height: 1.6; text-align: center;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Une règle adaptée du <b>scoutisme</b> au code par Robert C. Martin. Pas un grand refactoring : juste <b>un peu mieux</b> à chaque fois.
+</p>
 
-> "Leave the campground cleaner than you found it."
->
-> **Laisse le campement plus propre que tu ne l'as trouvé.**
+<div style="background: #fff8e1; border-left: 5px solid #e8a838; padding: 1rem 1.2rem; border-radius: 6px; margin-top: 0.8rem; font-size: 1.5rem;">
+💬 <i>"Leave the campground cleaner than you found it."</i><br/>
+<b>Laisse le campement plus propre que tu ne l'as trouvé.</b><br/>
+<span style="font-size: 1.2rem;">- <b>Robert C. Martin</b>, <i>Clean Code</i> (2008)</span>
+</div>
 
-<div style="margin-top: 0.8rem; font-size: 0.95rem; opacity: 0.85;">
-Adapté du scoutisme par Robert C. Martin (<em>Clean Code</em>, 2008)
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🧹 Le geste quotidien</div>
+<div style="background: #eaf2fb; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+Chaque fois que vous <b>touchez</b> un fichier, laissez-le <b>un peu mieux</b> qu'à l'arrivée : un nom plus clair, une méthode extraite, un test ajouté.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">📈 L'effet cumulé</div>
+<div style="background: #e8f6ec; padding: 1rem 1.2rem; flex: 1; font-size: 1.3rem;">
+20 développeurs qui améliorent <b>2 lignes</b> à chaque PR = la base de code <b>s'auto-nettoie</b>. C'est l'inverse de la spirale de la dette technique.
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 1rem; text-align: center; font-size: 1.2rem;">
-Chaque fois que vous <b>touchez</b> un fichier, vous le laissez <b>un peu mieux</b>.<br/>
-Un nom plus clair, une méthode extraite, un test ajouté.
-</div>
-
-<div style="margin-top: 1rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.8rem 1rem; border-radius: 6px; font-size: 1.5rem;">
-🛠️ C'est <b>le geste de l'artisan qui range son atelier</b> avant de partir. Pas pour la démonstration, pas pour la photo - parce que demain matin il veut retrouver un atelier où il peut travailler vite. La règle du scout appliquée au code, c'est la même économie : l'artisan soigne son environnement parce que <em>c'est là qu'il vit</em>.
-</div>
-
-<div style="margin-top: 0.8rem; background: #e6f5ec; padding: 1rem; border-radius: 10px;">
-💡 <b>Effet cumulé</b> : 20 développeurs qui améliorent 2 lignes à chaque PR = la base de code s'<b>auto-nettoie</b>. Inverse du cercle vicieux de la dette technique.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+🛠️ Le geste de l'artisan qui <b>range son atelier</b> avant de partir. Pas pour la photo : pour <b>retrouver demain</b> un endroit où il peut travailler vite.
 </div>
 
 ---
