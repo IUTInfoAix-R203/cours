@@ -2223,36 +2223,55 @@ Chaque fois que vous <b>touchez</b> un fichier, laissez-le <b>un peu mieux</b> q
 
 ## 🏷️ Le nommage : première victoire
 
-<div style="background: #2c3e50; color: white; padding: 1rem; border-radius: 10px; font-size: 1.1rem; text-align: center; margin-bottom: 0.8rem;">
-"There are only <b>two hard things</b> in Computer Science: cache invalidation and <b>naming things</b>." - Phil Karlton
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Avant de refactorer, <b>renommez</b>. Un bon nom <b>révèle l'intention</b> sans qu'on lise le corps. C'est le geste qui rend tout le reste plus facile.
+</p>
+
+<div style="background: #fff8e1; border-left: 5px solid #e8a838; padding: 0.8rem 1.2rem; border-radius: 6px; margin-top: 0.8rem; font-size: 1.4rem; text-align: center;">
+💬 <i>"There are only <b>two hard things</b> in Computer Science: cache invalidation and <b>naming things</b>."</i> &nbsp; - &nbsp; <b>Phil Karlton</b>
 </div>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; font-size: 0.92rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.8rem; align-items: stretch;">
 
-<div style="background: #fde8e6; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🙅 Opaque</div>
+<div style="background: #fdecea; padding: 0.7rem 1rem; flex: 1; font-size: 1.2rem; font-family: monospace;">
+int d;<br/>
+List&lt;Integer&gt; list;<br/>
+void doStuff() { ... }<br/>
+boolean flag = true;
+</div>
+</div>
 
-❌ `int d;`<br/>
-❌ `List<Integer> list;`<br/>
-❌ `void doStuff() { ... }`<br/>
-❌ `boolean flag = true;`
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">✅ Parlant</div>
+<div style="background: #e8f6ec; padding: 0.7rem 1rem; flex: 1; font-size: 1.2rem; font-family: monospace;">
+int joursRestants;<br/>
+List&lt;Integer&gt; agesEtudiants;<br/>
+void envoyerRappel() { ... }<br/>
+boolean estInscrit = true;
+</div>
+</div>
 
 </div>
 
-<div style="background: #e6f5ec; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem; margin-top: 0.8rem; align-items: stretch;">
 
-✅ `int joursRestants;`<br/>
-✅ `List<Integer> ageEtudiants;`<br/>
-✅ `void envoyerRappel() { ... }`<br/>
-✅ `boolean estInscrit = true;`
-
+<div style="display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<div style="background: #4a90d9; color: #fff; padding: 0.4rem; font-size: 1.2rem; font-weight: bold; text-align: center;">📦 Classe : nom commun</div>
+<div style="background: #eaf2fb; padding: 0.5rem 0.8rem; flex: 1; font-size: 1.1rem; text-align: center;"><code>Commande</code>, <code>Facture</code></div>
 </div>
 
+<div style="display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<div style="background: #8e44ad; color: #fff; padding: 0.4rem; font-size: 1.2rem; font-weight: bold; text-align: center;">⚡ Méthode : verbe</div>
+<div style="background: #f3eaf7; padding: 0.5rem 0.8rem; flex: 1; font-size: 1.1rem; text-align: center;"><code>calculer</code>, <code>envoyer</code></div>
 </div>
 
-<div style="margin-top: 0.8rem; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; font-size: 0.9rem;">
-<div style="background: #e6f0f9; padding: 0.7rem; border-radius: 8px;"><b>Classe</b> : nom commun<br/><code>Commande</code>, <code>Facture</code></div>
-<div style="background: #e6f0f9; padding: 0.7rem; border-radius: 8px;"><b>Méthode</b> : verbe<br/><code>calculer</code>, <code>envoyer</code></div>
-<div style="background: #e6f0f9; padding: 0.7rem; border-radius: 8px;"><b>Booléen</b> : question<br/><code>estValide</code>, <code>aPaye</code></div>
+<div style="display: flex; flex-direction: column; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+<div style="background: #16a085; color: #fff; padding: 0.4rem; font-size: 1.2rem; font-weight: bold; text-align: center;">❓ Booléen : question</div>
+<div style="background: #e6f5f1; padding: 0.5rem 0.8rem; flex: 1; font-size: 1.1rem; text-align: center;"><code>estValide</code>, <code>aPaye</code></div>
+</div>
+
 </div>
 
 ---
