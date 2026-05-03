@@ -932,17 +932,37 @@ Pour rappel (CM1) : <b>3 niveaux</b> de tests, en pyramide. Plus on monte, moins
 
 ## 🧬 Aparté : couverture != qualité des tests
 
-<div style="background: #e6f0f9; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #4a90d9; margin-top: 0.5rem;">
-<b>Couverture</b> = "quelles lignes ont été exécutées ?"<br/>
-<b>Qualité des tests</b> = "est-ce qu'ils détectent vraiment un bug ?"
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 6px !important; padding: 0.6rem 0.8rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { font-size: 13px !important; line-height: 1.45 !important; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Deux mesures qu'on confond souvent. La <b>couverture</b> répond à <em>quelles lignes ont été exécutées ?</em> La <b>qualité</b> répond à <em>les tests détectent-ils de vrais bugs ?</em>
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin: 3rem 0; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">📊 Couverture</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+Quelles <b>lignes / branches</b> ont été exécutées par la suite de tests.
+<div style="opacity: 0.85; font-size: 1.3rem;">Mesurée par <b>JaCoCo</b> (plugin Maven), inline IntelliJ, etc.</div>
+</div>
 </div>
 
-<div style="margin-top: 0.8rem; background: #fff3cd; padding: 0.8rem 1rem; border-radius: 8px; font-size: 0.95rem;">
-Une ligne peut être couverte à 100 % avec un test sans assertion. La couverture est utile, mais elle ne suffit pas à dire qu'une suite de tests est bonne.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.4rem; font-weight: bold; text-align: center;">🎯 Qualité</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+Les tests <b>détectent-ils vraiment un bug</b> si le code est cassé ?
+<div style="opacity: 0.85; font-size: 1.3rem;">Mesurée par <b>mutation testing</b> (CM2 bonus) ou par <b>lecture critique</b> (pendant la revue de code).</div>
+</div>
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.7rem 1rem; border-radius: 8px; font-size: 0.95rem; text-align: center;">
-À retenir sans en faire une obsession : un beau pourcentage de couverture ne prouve pas, à lui seul, qu'une suite de tests est utile.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+La couverture mesure <b>l'exécution</b>, pas la <b>validation</b>. Un beau 99% ne prouve rien à lui seul.
 </div>
 
 ---
