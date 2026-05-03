@@ -854,38 +854,38 @@ Utilisé au <b>TP2 exercice 5</b> (Démineur) — gain énorme sur les grandes g
 
 ## 💡 Règles pour ne pas se planter en TDD
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois pièges à éviter, trois réflexes à cultiver. Les premiers tuent le filet de sécurité, les seconds le renforcent.
+</p>
 
-<div style="background: #fde8e6; padding: 1rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
-<b>❌ Ne pas écrire plusieurs tests à la suite sans coder.</b><br/>
-<span style="font-size: 0.9rem;">Un test écrit, un test codé. Sinon vous perdez le filet de sécurité.</span>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🤦 Pièges à éviter</div>
+<div style="background: #fdecea; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li><b>Écrire plusieurs tests d'affilée</b> sans coder entre. Un test écrit, un test codé.</li>
+<li><b>Ajouter du code sans test qui l'exige.</b> Une branche <code>if</code> en plus = un test à écrire avant.</li>
+<li><b>Sauter le REFACTOR.</b> Le cycle est à 3 étapes, pas à 2. Sinon la dette explose.</li>
+</ul>
+</div>
 </div>
 
-<div style="background: #fde8e6; padding: 1rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
-<b>❌ Ne pas écrire du code qui n'est pas couvert par un test.</b><br/>
-<span style="font-size: 0.9rem;">Si vous écrivez une branche <code>if</code> en plus, un test doit l'exiger.</span>
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #27ae60; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎯 Réflexes à cultiver</div>
+<div style="background: #e8f6ec; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li><b>Vérifier que le test échoue</b> avant de coder. Sinon = faux positif (un test qui passait déjà).</li>
+<li><b>Commit à chaque GREEN ou REFACTOR.</b> Chaque état vert = un point de sauvegarde.</li>
+<li><b>Un seul test rouge à la fois.</b> Focaliser l'attention, pas 5 rouges en parallèle.</li>
+</ul>
+</div>
 </div>
 
-<div style="background: #fde8e6; padding: 1rem; border-radius: 10px; border-left: 5px solid #e74c3c;">
-<b>❌ Ne pas sauter le REFACTOR.</b><br/>
-<span style="font-size: 0.9rem;">Le cycle est à 3 étapes, pas à 2. Sinon la dette technique explose.</span>
 </div>
 
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<b>✅ Vérifier que le test <u>échoue</u> avant de coder.</b><br/>
-<span style="font-size: 0.9rem;">Sinon vous risquez un faux positif : un test qui passait déjà.</span>
-</div>
-
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<b>✅ Commit à chaque GREEN ou REFACTOR.</b><br/>
-<span style="font-size: 0.9rem;">Chaque état vert est un point de sauvegarde exploitable.</span>
-</div>
-
-<div style="background: #e6f5ec; padding: 1rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<b>✅ Un seul test qui échoue à la fois.</b><br/>
-<span style="font-size: 0.9rem;">Focaliser l'attention. Pas 5 rouges en parallèle.</span>
-</div>
-
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Le TDD ne pardonne pas les <b>raccourcis</b> : chaque écart efface une garantie acquise.
 </div>
 
 ---
