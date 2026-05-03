@@ -629,26 +629,170 @@ Chaque test est <b>un pas</b>. La conception <b>s'invente au fur et à mesure</b
 
 ---
 
-## 🎭 Test doubles : à quoi ça sert ?
+## 🎭 La doublure de test : à quoi ça sert ?
 
-Quand le code testé dépend d'autre chose (base de données, service externe, horloge), on peut remplacer la vraie dépendance par un **double**.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Au cinéma, le héros a une <b>doublure</b> pour les cascades. En test, on fait pareil avec les dépendances qu'on ne contrôle pas (base de données, réseau, horloge) : on les remplace par une <b>doublure de test</b> (anglais : <em>test double</em>).
+</p>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.5rem;">
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
 
-<div style="background: #e6f0f9; padding: 1rem; border-radius: 10px;">
-<b>🪨 Stub / Fake</b><br/>
-Renvoyer une réponse contrôlée ou une implémentation simplifiée.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🪨 Stub / Fake</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
+<b>Forcer les valeurs retournées</b> par la dépendance. On contrôle la valeur qu'elle nous <em>renvoie</em> pendant le test.<br/><br/>
+<span style="opacity: 0.85; font-size: 1.4rem;">Exemple : une horloge qui retourne toujours <code>1<sup>er</sup> janvier 2026</code>.</span>
+</div>
 </div>
 
-<div style="background: #fff3cd; padding: 1rem; border-radius: 10px;">
-<b>🎯 Mock / Spy</b><br/>
-Observer comment une dépendance est appelée.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🎯 Mock / Spy</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.5rem;">
+<b>Observer l'appel</b>. On vérifie <em>comment</em> la dépendance a été utilisée (méthode, arguments, fréquence).<br/><br/>
+<span style="opacity: 0.85; font-size: 1.4rem;">Exemple : vérifier qu'un service mail a bien été appelé une fois avec la bonne adresse.</span>
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px; text-align: center; font-size: 0.95rem;">
-Dans ce module, l'outillage vraiment pratiqué est surtout <b>ApprovalTests</b> (TP2) et le <b>pair programming ping-pong</b> (TP3). Retenez surtout <b>l'idée générale</b> : isoler ce qu'on ne contrôle pas.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+<b>Isoler</b> ce qu'on ne contrôle pas, pour <b>tester</b> ce que l'on souhaite maitriser.
+</div>
+
+---
+
+## 🪨 Le stub : forcer le retour
+
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 6px !important; padding: 0.6rem 0.8rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { font-size: 0.7rem !important; line-height: 1.45 !important; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un <b>stub</b> remplace une dépendance par une <b>réponse pré-définie</b>. Vous décidez ce que la dépendance retourne et vos tests deviennent <b>reproductibles</b>.
+</p>
+
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; margin: 3.2rem 0; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold;">📄 Exemple : une horloge stub</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1;">
+
+```java
+// Production : dépend de l'horloge système
+Clock horlogeStub = Clock.fixed(
+    Instant.parse("2026-01-01T00:00:00Z"),
+    ZoneOffset.UTC);
+
+LocalDate date = LocalDate.now(horlogeStub);
+// → toujours 2026-01-01, peu importe le jour réel
+```
+
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">💡 Quand l'utiliser</div>
+<div style="background: #eaf2fb; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.3rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Tester un code qui dépend du <b>temps</b>, du <b>hasard</b>, d'un <b>fichier</b></li>
+<li>Rendre les tests <b>reproductibles</b> (même résultat à chaque exécution)</li>
+<li>Éviter d'appeler une <b>vraie</b> base de données ou un <b>vrai</b> service externe</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Un stub <b>FORCE le retour</b> de la dépendance. On ne vérifie <b>pas</b> comment elle a été appelée.
+</div>
+
+---
+
+## 🎯 Le mock : vérifier l'appel
+
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 6px !important; padding: 0.6rem 0.8rem !important; }
+section pre, section pre code, section pre code[class*="language-"] { font-size: 0.7rem !important; line-height: 1.45 !important; }
+</style>
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Un <b>mock</b> vérifie <b>comment</b> une dépendance est utilisée : <em>quelle méthode</em>, <em>avec quels arguments</em>, <em>combien de fois</em>.
+</p>
+
+<div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.2rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold;">📄 Exemple : un service mail mock (Mockito)</div>
+<div style="background: #f9f5e8; padding: 0.7rem 0.9rem; flex: 1;">
+
+```java
+ServiceMail mail = mock(ServiceMail.class);
+GestionnaireCommande gc 
+    = new GestionnaireCommande(mail);
+
+gc.confirmer(new Commande("alice@iut.fr"));
+
+// On VÉRIFIE l'appel
+verify(mail).envoyer(eq("alice@iut.fr"),
+    contains("confirmation"));
+```
+
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e8a838; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">💡 Quand l'utiliser</div>
+<div style="background: #f9f5e8; padding: 0.9rem 1.1rem; flex: 1; font-size: 1.4rem;">
+<ul style="margin: 0; padding-left: 1.2rem;">
+<li>Vérifier qu'une <b>action</b> a bien eu lieu (envoi, log, notification)</li>
+<li>Tester une <b>interaction</b> entre deux composants</li>
+<li>S'assurer du <b>contrat</b> entre votre code et la dépendance</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Un mock <b>VÉRIFIE l'appel</b>. La valeur de retour est secondaire.
+</div>
+
+---
+
+## 🎭 Stub vs Mock : la synthèse
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Quatre aspects pour distinguer les deux doublures, dans un seul coup d'œil.
+</p>
+
+<div style="display: grid; grid-template-columns: 1.1fr 1.4fr 1.4fr; gap: 0.5rem; margin-top: 1.2rem; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+
+<div style="background: #2c3e50; color: #fff; padding: 0.7rem 1rem; font-weight: bold; font-size: 1.2rem;">Aspect</div>
+<div style="background: #4a90d9; color: #fff; padding: 0.7rem 1rem; font-weight: bold; font-size: 1.3rem; text-align: center;">🪨 Stub</div>
+<div style="background: #e8a838; color: #fff; padding: 0.7rem 1rem; font-weight: bold; font-size: 1.3rem; text-align: center;">🎯 Mock</div>
+
+<div style="background: #f5f5f5; padding: 0.8rem 1rem; font-weight: bold; font-size: 1.2rem;">But</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; font-size: 1.2rem;">Forcer le <b>retour</b></div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; font-size: 1.2rem;">Vérifier <b>l'appel</b></div>
+
+<div style="background: #f5f5f5; padding: 0.8rem 1rem; font-weight: bold; font-size: 1.2rem;">Question</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; font-size: 1.2rem;"><em>Que renvoie X ?</em></div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; font-size: 1.2rem;"><em>Comment X est appelé ?</em></div>
+
+<div style="background: #f5f5f5; padding: 0.8rem 1rem; font-weight: bold; font-size: 1.2rem;">Assertion porte sur</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; font-size: 1.2rem;">Le <b>résultat</b></div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; font-size: 1.2rem;">L'<b>interaction</b></div>
+
+<div style="background: #f5f5f5; padding: 0.8rem 1rem; font-weight: bold; font-size: 1.2rem;">Exemple typique</div>
+<div style="background: #eaf2fb; padding: 0.8rem 1rem; font-size: 1.15rem;">Horloge fixe, base de données en mémoire</div>
+<div style="background: #f9f5e8; padding: 0.8rem 1rem; font-size: 1.15rem;">Service mail, logger</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Vous voulez <b>vérifier une interaction</b> → c'est un <b>mock</b>. Sinon → c'est un <b>stub</b>.
 </div>
 
 ---
