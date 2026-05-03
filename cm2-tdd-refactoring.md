@@ -394,40 +394,56 @@ Robert C. Martin (<em>Clean Code</em>, 2008) a énoncé <b>5 critères</b> d'un 
 
 ## 🧪 La structure AAA d'un test
 
-<div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-<div style="flex: 1; background: #e6f0f9; padding: 1rem; border-radius: 10px;">
+<style scoped>
+section pre { margin: 0 !important; border: none !important; box-shadow: none !important; border-radius: 0 !important; padding: 0.9rem 1.1rem !important; }
+section pre code { font-size: 0.78rem !important; line-height: 1.5 !important; }
+</style>
 
-**Arrange**
-Préparer l'environnement, les données, les dépendances.
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Trois phases pour structurer chaque test : <b>Arrange · Act · Assert</b>. Lisible comme une phrase.
+</p>
 
-**Act**
-Déclencher le comportement testé (UNE seule action).
+<div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 1.5rem; margin-top: 1.2rem; align-items: stretch;">
 
-**Assert**
-Vérifier le résultat (idéalement UNE assertion principale).
+<div style="display: flex; flex-direction: column; gap: 0.7rem;">
+
+<div style="flex: 1; display: flex; align-items: center; gap: 0.7rem; background: #eaf2fb; border-left: 5px solid #4a90d9; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="font-size: 1.6rem;">🛠️</div>
+<div style="font-size: 1.4rem;"><b>Arrange</b> — préparer l'environnement, les données, les dépendances</div>
+</div>
+
+<div style="flex: 1; display: flex; align-items: center; gap: 0.7rem; background: #f9f5e8; border-left: 5px solid #e8a838; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="font-size: 1.6rem;">▶️</div>
+<div style="font-size: 1.4rem;"><b>Act</b> — déclencher le comportement testé (<b>une seule</b> action)</div>
+</div>
+
+<div style="flex: 1; display: flex; align-items: center; gap: 0.7rem; background: #e8f6ec; border-left: 5px solid #27ae60; padding: 0.8rem 1rem; border-radius: 8px;">
+<div style="font-size: 1.6rem;">✅</div>
+<div style="font-size: 1.4rem;"><b>Assert</b> — vérifier le résultat (idéalement <b>une</b> assertion principale)</div>
+</div>
 
 </div>
-<div style="flex: 1.3;">
+
+<div class="aaa-card" style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.18);">
+<div style="background: #2c3e50; color: #fff; padding: 0.4rem 1rem; font-size: 1.1rem; font-weight: bold;">📄 <code style="background: transparent; color: #fff;">CalculatriceTest.java</code></div>
 
 ```java
 @Test
 void additionne_deux_entiers_positifs() {
-  // Arrange
-  Calculatrice c = new Calculatrice();
-
-  // Act
-  int resultat = c.additionner(2, 3);
-
-  // Assert
-  assertThat(resultat).isEqualTo(5);
+    // Arrange
+    Calculatrice c = new Calculatrice();
+    // Act
+    int resultat = c.additionner(2, 3);
+    // Assert
+    assertThat(resultat).isEqualTo(5);
 }
 ```
-
-</div>
 </div>
 
-<div style="margin-top: 0.8rem; background: #2c3e50; color: white; padding: 0.8rem 1rem; border-radius: 8px;">
-💡 <b>Astuce nommage</b> : <code>nom_scenario_comportement_attendu</code> ou <code>should_X_when_Y</code>. Un bon nom de test se lit comme une phrase.
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Un test <b>bien structuré</b> (AAA) et <b>bien nommé</b> se lit comme une phrase.
 </div>
 
 ---
