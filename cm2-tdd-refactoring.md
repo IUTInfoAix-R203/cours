@@ -153,27 +153,49 @@ La force du cycle vient de sa <b>discipline</b> : 3 étapes, dans l'ordre, à ch
 
 ## 💰 Pourquoi ce cycle, économiquement
 
-<div style="display: flex; gap: 2rem; margin-top: 0.5rem;">
-<div style="flex: 1.1;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+Le CM1 a montré que les bugs coûtent jusqu'à <b>100×</b> plus cher quand ils sont détectés tard. Le TDD attaque la courbe <b>au moment le moins cher</b>.
+</p>
 
-Le CM1 a montré la **courbe du coût d'un bug** : plus on le découvre tard, plus il coûte cher.
+<div style="display: grid; gap: 1.2rem; margin: 3.5rem 0;">
 
-Le TDD attaque cette courbe **au moment le moins cher** : vous écrivez d'abord la condition qui devra être vraie, puis le code qui la rend vraie.
-
-Autrement dit : au lieu de passer du temps à **débugger après**, vous investissez quelques secondes à **sécuriser avant**.
-
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 200px; font-size: 1.3rem; color: #555;">Développement</div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.4rem; overflow: hidden; position: relative;">
+<div style="background: #27ae60; width: 1%; height: 100%;"></div>
+<div style="position: absolute; left: 3%; top: 50%; transform: translateY(-50%); background: #27ae60; color: white; padding: 0.2rem 0.7rem; border-radius: 999px; font-size: 1rem; font-weight: bold; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">👈 le TDD agit ici</div>
 </div>
-<div style="flex: 1;">
-
-<div style="background: #e6f5ec; padding: 1rem 1.2rem; border-radius: 10px; border-left: 5px solid #27ae60;">
-<b>1 test écrit = 1 bug potentiel neutralisé<br/>au moment le moins cher</b>
-</div>
-
-<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 1rem; border-radius: 8px; font-size: 1rem;">
-Le TDD ne supprime pas le travail ; il le <b>déplace vers le moment où il est le moins coûteux</b>.
+<div style="width: 80px; text-align: right; font-weight: bold; font-size: 1.3rem; color: #27ae60;">1×</div>
 </div>
 
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 200px; font-size: 1.3rem; color: #555;">Tests</div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.4rem; overflow: hidden;">
+<div style="background: #e8a838; width: 6%; height: 100%;"></div>
 </div>
+<div style="width: 80px; text-align: right; font-weight: bold; font-size: 1.3rem; color: #e8a838;">6×</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 200px; font-size: 1.3rem; color: #555;">Pré-production</div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.4rem; overflow: hidden;">
+<div style="background: #e67e22; width: 15%; height: 100%;"></div>
+</div>
+<div style="width: 80px; text-align: right; font-weight: bold; font-size: 1.3rem; color: #e67e22;">15×</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 0.8rem;">
+<div style="width: 200px; font-size: 1.3rem; color: #555;"><b>Chez le client</b></div>
+<div style="flex: 1; background: #eee; border-radius: 6px; height: 2.4rem; overflow: hidden;">
+<div style="background: #e74c3c; width: 100%; height: 100%;"></div>
+</div>
+<div style="width: 80px; text-align: right; font-weight: bold; font-size: 1.5rem; color: #e74c3c;">100×</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1.2rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Le TDD ne supprime pas le travail ; il le <b>déplace là où il coûte le moins cher</b>.
 </div>
 
 ---
