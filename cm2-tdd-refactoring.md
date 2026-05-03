@@ -2385,12 +2385,16 @@ IUT d'Aix-Marseille - Département Informatique
 
 <div style="margin-top: 2rem; font-size: 1.1rem;">
 
-🌐 [github.com/IUTInfoAix-R203/tp](https://github.com/IUTInfoAix-R203/tp)
+🌐 [github.com/IUTInfoAix-R203](https://github.com/IUTInfoAix-R203)
 
 📧 sebastien.nedjar@univ-amu.fr
 
 </div>
 
+<div style="margin-top: 2rem; background: #2c3e50; color: white; padding: 1rem 2rem; border-radius: 12px; font-size: 1.5rem;">
+<b>🎯 Dès maintenant</b> : dans votre Codespace, essayez <kbd>F2</kbd> pour renommer un identifiant, puis sélectionnez quelques lignes et lancez <kbd>Ctrl+.</kbd> &rarr; <em>Extract to method</em>. Plus tôt vos doigts connaissent ces deux gestes, mieux vous vivrez les TP3 et TP4.
+</div>
+
 <div style="margin-top: 1.2rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1.5rem;">
-🛠️ <b>L'artisan, au fond, c'est vous.</b> Le CM1 a posé le <em>pourquoi</em> - du code dont on peut être fier, qu'on n'a pas peur de relire dans six mois. Ce CM2 a posé les <em>gestes</em> - tester avant, refactorer souvent, nommer juste, ranger en partant. À partir du TP3, le seul objectif est que ces gestes deviennent des <b>réflexes</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
+🛠️ <b>L'artisan, au fond, c'est vous.</b> Le CM1 a posé le <em>pourquoi</em> : du code dont on peut être fier, qu'on n'a pas peur de relire dans six mois. Ce CM2 a posé les <em>gestes</em> : tester avant, refactorer souvent, nommer juste, ranger en partant. À partir du TP3, le seul objectif est que ces gestes deviennent des <b>réflexes</b>. On n'aiguise pas sa scie le jour où on doit couper la planche ; on l'aiguise la veille.
 </div>
