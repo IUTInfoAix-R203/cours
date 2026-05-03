@@ -1095,32 +1095,58 @@ Le but n'est pas de <b>résoudre le problème</b> (vous le connaissez), c'est d'
 
 ## 🥋 Quelques kata célèbres
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-top: 0.5rem; font-size: 0.95rem;">
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+La communauté des coding dojos a accumulé un <b>répertoire</b> de kata classiques. En voici six qu'on retrouve partout — chacun éclaire un aspect différent du métier.
+</p>
 
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🗓️ Années bissextiles</b><br/>
-Petit kata idéal pour travailler les règles booléennes.
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; margin-top: 1.2rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🔢 FizzBuzz</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem;">
+Le plus <b>iconique</b> : intro TDD, branchements simples. La porte d'entrée.
+</div>
 </div>
 
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🎾 Tennis scoring</b><br/>
-Afficher le score d'un jeu de tennis. Idéal pour les state machines.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🗓️ Années bissextiles</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem;">
+Petit kata idéal pour travailler les <b>règles booléennes</b> imbriquées.
+</div>
 </div>
 
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🎲 Yahtzee</b><br/>
-Scorer les combinaisons d'un jet de 5 dés. Bon terrain pour la stratégie.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🎾 Tennis scoring</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem;">
+Afficher le score d'un jeu de tennis. Idéal pour les <b>state machines</b>.
+</div>
 </div>
 
-<div style="background: #e6f0f9; padding: 0.8rem 1rem; border-radius: 8px;">
-<b>🏪 Gilded Rose (Emily Bache)</b><br/>
-Kata de <b>refactoring</b> sur du legacy volontairement horrible.
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🎳 Bowling</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem;">
+Kata classique d'<b>Uncle Bob</b>. Marquer une partie de bowling avec strikes et spares.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🎲 Yahtzee</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem;">
+Scorer les combinaisons d'un jet de 5 dés. Bon terrain pour la <b>stratégie</b>.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.3rem; font-weight: bold; text-align: center;">🏪 Gilded Rose</div>
+<div style="background: #eaf2fb; padding: 0.7rem 0.9rem; flex: 1; font-size: 1.1rem;">
+Par <b>Emily Bache</b>. Kata de <b>refactoring</b> sur du legacy volontairement horrible.
+</div>
 </div>
 
 </div>
 
-<div style="margin-top: 0.8rem; text-align: center; background: #2c3e50; color: white; padding: 0.8rem; border-radius: 8px;">
-Au TP3, on en fera <b>5</b> : Années bissextiles, Tennis, Gestion employés, Pagination, Yahtzee.
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Au <b>TP3</b>, vous en ferez <b>cinq</b> par vous-même : Années bissextiles, Tennis, Gestion employés, Pagination, Yahtzee.
 </div>
 
 ---
