@@ -89,7 +89,7 @@ Aujourd'hui, on <b>approfondit</b> le socle du CM1 et on prépare les <b>TP3</b>
 </div>
 
 <div style="margin-top: 1.5rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; font-size: 1.5rem;">
-🛠️ <b>En CM1 on a vu <em>pourquoi</em> l'artisan prend soin de son code.</b> Aujourd'hui, on voit <b>comment il s'y prend au quotidien</b> : tester avant, refactorer souvent, nommer juste. Les gestes qui transforment l'intention en habitude.
+<b>En CM1 on a vu <em>pourquoi</em> l'artisan prend soin de son code.</b> Aujourd'hui, on voit <b>comment il s'y prend au quotidien</b> : tester avant, refactorer souvent, nommer juste. Les gestes qui transforment l'intention en habitude.
 </div>
 
 ---
@@ -98,14 +98,11 @@ Aujourd'hui, on <b>approfondit</b> le socle du CM1 et on prépare les <b>TP3</b>
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
+![bg left:50%](assets/tdd-approfondi-tools.jpg)
+
 # Partie 1 - TDD approfondi
 
-On a vu le cycle RED-GREEN-REFACTOR. Maintenant, comment en tirer le maximum ?
-
-<div style="margin-top: 1.5rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1rem;">
-🛠️ <b>Un artisan n'expose jamais un outil qu'il n'a pas essayé lui-même.</b><br/>
-Le TDD, c'est exactement ce geste : <b>écrire le test d'abord</b>, c'est s'obliger à savoir ce que l'outil doit faire <em>avant</em> de le forger. La table ne part chez le client qu'une fois essayée sur l'établi.
-</div>
+Comment tirer le meilleur du cycle du TDD au quotidien ?
 
 ---
 
