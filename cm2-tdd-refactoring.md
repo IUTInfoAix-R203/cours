@@ -1513,13 +1513,47 @@ Après la démo, c'est <b>à vous</b> : 6 kata en binôme, vous tournez les rôl
 <!-- _header: "" -->
 <!-- _footer: "" -->
 
+![bg left:50%](assets/refactoring-horloger.jpg)
+
 # Partie 3 - Code smells et refactoring
 
-Du code qui marche, mais qui pue. On fait quoi ?
+Comment vivre avec du code qui marche, mais nous fait honte ?
 
-<div style="margin-top: 1.5rem; background: #fff8e1; border-left: 4px solid #e8a838; padding: 0.9rem 1rem; border-radius: 6px; font-size: 1.5rem;">
-🛠️ <b>Un artisan entretient ses outils.</b><br/>
-Le menuisier aiguise sa scie entre deux chantiers. Le chef récure ses couteaux en fin de service. Pas par perfectionnisme - parce que demain ils s'en servent <em>encore</em>. Refactorer, c'est exactement ce geste : on ne le fait pas pour faire joli, on le fait pour <b>rester rapide ensuite</b>. Le code qu'on lit cette semaine, c'est celui qu'on modifiera le mois prochain.
+---
+
+## 🛠️ Refactorer, c'est entretenir ses outils
+
+<p style="font-size: 1.5rem; margin-top: -0.3rem;">
+L'artisan ne nettoie pas ses outils par perfectionnisme. Il le fait parce que demain, <b>il s'en sert encore</b>. Remanier son code, c'est exactement ce même geste et ce même besoin mais pour un développeur qui maitrise sa dette technique.
+</p>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-top: 1rem; align-items: stretch;">
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #b8772a; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🪚 Le menuisier</div>
+<div style="background: #f5e9d8; padding: 1rem 1.2rem; flex: 1; font-size: 1.5rem;">
+Aiguise sa scie <b>entre deux chantiers</b>. Une lame émoussée fait perdre du temps à chaque coupe et elle peut blesser.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #e74c3c; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">🍳 Le chef</div>
+<div style="background: #fdecea; padding: 1rem 1.2rem; flex: 1; font-size: 1.5rem;">
+Récure et aiguise ses couteaux <b>en fin de service</b>. Demain, on ne commence pas avec une cuisine sale et des couteaux émoussés.
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
+<div style="background: #4a90d9; color: #fff; padding: 0.5rem 1rem; font-size: 1.5rem; font-weight: bold; text-align: center;">💻 Le développeur</div>
+<div style="background: #eaf2fb; padding: 1rem 1.2rem; flex: 1; font-size: 1.5rem;">
+Remanie son code <b>après chaque GREEN</b>. Pas pour faire joli mais pour <b>rester rapide</b> sur la fonctionnalité suivante tout en conservant la confiance en son code.
+</div>
+</div>
+
+</div>
+
+<div style="margin-top: 1rem; background: #2c3e50; color: white; padding: 0.9rem 1.2rem; border-radius: 8px; text-align: center; font-size: 1.5rem;">
+Le code qu'on lit cette semaine, c'est celui qu'on <b>modifiera</b> le mois prochain. Le garder propre à chaque instant garantit qu'on pourra compter sur lui quand on en aura besoin.
 </div>
 
 ---
